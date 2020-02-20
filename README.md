@@ -1,7 +1,7 @@
 ## Welcome to GitHub Pages
 
 - [Linux](/linux.md)
-- [Python](/python.md)
+- [Python](/python)
 
 You can use the [editor on GitHub](https://github.com/olexsyn/wiki/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
