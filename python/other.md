@@ -1,5 +1,7 @@
 # test
 
+- [заголовок на кириллице](#title-on-cyrillic)
+
 ## [заголовок на кириллице](title-on-cyrillic)
 
 ```python
