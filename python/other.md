@@ -37,4 +37,4 @@ def get_stroke_name(stroke_id, long=0):
 
 #def
 ```
-[top](#Заголовок-на-кириллице)
+[top](#заголовок-на-кириллице)
