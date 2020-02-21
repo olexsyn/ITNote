@@ -1,7 +1,7 @@
 ## Welcome to GitHub Pages
 
 - [Linux](/linux.md)
-- [Python](/wiki/python/)
+- [Python](/python.md)
 
 [привязать свой домен](https://info.nic.ua/blog/github-pages-website/)
 [интересно...](https://andrdi.com/blog/byistroe-razvertyivanie-sajta-na-github-pages-s-pomoshhyu-generatora-staticheskogo-html-hugo.html)
