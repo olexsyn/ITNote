@@ -4,6 +4,7 @@
 - [Python](/python/)
 
 [привязать свой домен](https://info.nic.ua/blog/github-pages-website/)
+[интересно...](https://andrdi.com/blog/byistroe-razvertyivanie-sajta-na-github-pages-s-pomoshhyu-generatora-staticheskogo-html-hugo.html)
 
 You can use the [editor on GitHub](https://github.com/olexsyn/wiki/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
