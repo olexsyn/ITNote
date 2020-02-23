@@ -1,6 +1,6 @@
 ## Welcome to ITNote
 
-[link to Page](http://olexsyn.github.io/itnote)
+[olexsyn.github.io/itnote/](https://olexsyn.github.io/itnote/)
 
 - [Linux](/linux.md)
 - [Python](/python.md)
