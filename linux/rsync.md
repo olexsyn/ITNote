@@ -108,7 +108,7 @@ $ sudo rsync --daemon
 
 Листинг 5. Простая конфигурация для обмена файлами
 
-```
+```ini
 motd file = /home/strike/rsyncd/rsync.motd_file
 pid file = /home/strike/rsyncd/rsyncd.pid
 port = 7777
