@@ -1,7 +1,7 @@
 GitHub Flavored Markdown
 ------------------------
 
-GitHub Flavored Markdown Spec | https://github.github.com/gfm/
+[GitHub Flavored Markdown Spec](https://github.github.com/gfm/) 
 
 Настоящий документ предназначен для ознакомления с функциональными возможностями языка разметки Markdown. 
 Markdown – это упрощенный язык разметки, который является инструментом преобразования кода в HTML.
@@ -346,7 +346,7 @@ b.	С помощью метки-идентификатора.  Синтакси�
 
 «\»  - слеш;  
 
-«`»  - обратный апостроф;  
+«\`»  - обратный апостроф;  
 
 «*»  - звездочка;  
 
@@ -390,8 +390,8 @@ Markdown поддерживает упрощённый порядок автом
 См. также
 ---------
 
-- https://guides.github.com/features/mastering-markdown/
-- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-- https://help.github.com/en/github/writing-on-github/working-with-advanced-formatting
-- https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Working with advanced formatting](https://help.github.com/en/github/writing-on-github/working-with-advanced-formatting)
+- [linguist/languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 
