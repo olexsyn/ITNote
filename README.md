@@ -5,6 +5,9 @@
 - [Linux](/linux.md)
 - [Python](/python.md)
 
+- [linux](/linux)
+- [python](/python)
+
 TODO
 
 [привязать свой домен](https://info.nic.ua/blog/github-pages-website/)
