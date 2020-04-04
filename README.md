@@ -5,8 +5,8 @@
 - [Linux](/linux.md)
 - [Python](/python.md)
 
-- [linux](/linux)
-- [python](/python)
+- [linux](./linux)
+- [python](./python)
 
 TODO
 
