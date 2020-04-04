@@ -2,11 +2,11 @@
 
 https://olexsyn.github.io/technote/
 
-- [Linux](/linux.md)
-- [Python](/python.md)
+- [Linux](/linux.md) это ссылка `/linux.md`
+- [Python](/python.md) это ссылка `/python.md`
 
-- [linux](./linux)
-- [python](./python)
+- [linux](./linux) это ссылка `/python`
+- [python](./python) это ссылка `/python`
 
 TODO
 
