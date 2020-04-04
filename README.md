@@ -8,6 +8,8 @@ https://olexsyn.github.io/technote/
 
 Но на github.io первая пара ссылок, как и вторая ведут на страницы `*.md`, только в строке браузера для первой пары ссылок отображается суффикс `.html`, а для второй - нет.
 
+[GitHub](./github)
+
 TODO
 
 [привязать свой домен](https://info.nic.ua/blog/github-pages-website/)
