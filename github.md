@@ -1,8 +1,6 @@
 GitHub
 ------
 
-content
+[GitHub Pages](./github/pages)
 
-[GitHub Pages](github/pages.md)
-
-[./pages](./github/pages)
+[GitHub Flavored Markdown](./github/gfm)
