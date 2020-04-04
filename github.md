@@ -5,4 +5,4 @@ content
 
 [GitHub Pages](github/pages.md)
 
-[./pages](./pages)
+[./pages](./github/pages)
