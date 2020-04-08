@@ -393,5 +393,5 @@ Markdown поддерживает упрощённый порядок автом
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - <https://help.github.com/en/github/writing-on-github/working-with-advanced-formatting>
 - <https://github.com/github/linguist/blob/master/lib/linguist/languages.yml>
-- [emoji](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#using-emoji)
+- [emoji](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#using-emoji) / [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet)
 
