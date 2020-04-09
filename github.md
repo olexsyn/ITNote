@@ -4,9 +4,9 @@ GitHub
 Pages (links to .md)
 -----
 
-[GitHub Pages](./github/pages)
+[GitHub Pages](./github/pages.md)
 
-[GitHub Flavored Markdown](./github/gfm)
+[GitHub Flavored Markdown](./github/gfm.md)
 
 Links (external)
 -----
