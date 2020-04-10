@@ -22,7 +22,7 @@ Sublime Text
 - :ok: **rainbow_csv** https://packagecontrol.io/packages/rainbow_csv https://habr.com/post/429548/
 
 
-- :no: https://github.com/ggordan/GutterColor - (потребовалось установить http://www.imagemagick.org/ а для него - **_GNU C compiler_** (пакет `gcc`)
-- :no: https://github.com/Monnoroch/ColorHighlighter - вместо GutterColor - подсвечивает кодировку цвета (#337ab7, red и др.) в файлах, указанных в его настройках.
-- ZenTabs - ?
-- https://facelessuser.github.io/RegReplace/usage/ - Позволяет сохранять последовательности рег.выражений для обработки текстовіх файлов
+- :shit: https://github.com/ggordan/GutterColor - (потребовалось установить http://www.imagemagick.org/ а для него - **_GNU C compiler_** (пакет `gcc`)
+- :shit: https://github.com/Monnoroch/ColorHighlighter - вместо GutterColor - подсвечивает кодировку цвета (#337ab7, red и др.) в файлах, указанных в его настройках.
+- ZenTabs - не помню, не использую
+:question: https://facelessuser.github.io/RegReplace/usage/ - Позволяет сохранять последовательности рег.выражений для обработки текстовіх файлов. <font color="red">Пока не разобрался</font>
