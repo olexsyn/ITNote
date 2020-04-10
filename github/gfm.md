@@ -5,7 +5,7 @@
 
 ---
 
-**Markdown** – это упрощенный язык разметки, который который интерпретируется в код HTML. GitHub расширил возможности стандартного Markdown, добавив возможность интерпретации таблиц (![?](/i/qu.png) только?). Markdown может содержать в себе вставки обычного HTML-кода.
+**[Markdown](https://ru.wikipedia.org/wiki/Markdown)** – визуально понятный и удобный при редактировании язык разметки для оформления текстовых документов. Обычно преобразуется в код [HTML](https://ru.wikipedia.org/wiki/HTML) для отображения информации в Интернет. [GitHub](https://github.com) расширил стандартный Markdown, добавив возможность оформления таблиц (![?](/i/qu.png) только?). Кроме собственной разметки Markdown-текст может содержать в себе вставки обычного HTML-кода.
 
 1. Блочные элементы
  + [Параграфы и разрывы строк](#Parag);
@@ -106,7 +106,7 @@ ___
 
 ###### This is an `<h6>` tag
 
-[top]
+[вверх]
 
 
 
@@ -115,7 +115,7 @@ ___
 
 ## Code
 
-[top]
+
 
 
 
@@ -490,3 +490,4 @@ Markdown поддерживает упрощённый порядок автом
 - <https://github.com/github/linguist/blob/master/lib/linguist/languages.yml>
 - [emoji](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#using-emoji) / [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet)
 
+[вверх]
