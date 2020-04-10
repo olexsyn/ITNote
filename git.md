@@ -11,6 +11,7 @@ GitHub
 
 - [GitHub Pages](./github/pages.md)
 - [GitHub Flavored Markdown](./github/gfm.md)
+- [GitHub Icons](/github/github_icons.md)
 
 Links
 -----
