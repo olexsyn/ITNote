@@ -1,9 +1,14 @@
-# Linux
+Linux
+=====
 
-## Команды
+Команды
+-------
 
 - [mkdir](/linux/mkdir.md)
 
-## Программы
+Программы
+---------
 
 - [rsync](/linux/rsync.md)
+
+- [Sublime-text](/linux/soft/sublime-text.md)
