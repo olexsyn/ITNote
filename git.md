@@ -9,9 +9,9 @@ Git
 GitHub
 -----
 
-- [GitHub Pages](./github/pages.md)
-- [GitHub Flavored Markdown](./github/gfm.md)
-- [GitHub Icons](/github/github_icons.md)
+- [GitHub Pages](/git/pages.md)
+- [GitHub Flavored Markdown](/git/gfm.md)
+- [GitHub Icons](/git/github_icons.md)
 
 Links
 -----
