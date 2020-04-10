@@ -490,4 +490,4 @@ Markdown поддерживает упрощённый порядок автом
 - <https://github.com/github/linguist/blob/master/lib/linguist/languages.yml>
 - [emoji](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#using-emoji) / [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet)
 
-[вверх]
+> [вверх]
