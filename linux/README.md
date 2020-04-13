@@ -4,11 +4,11 @@ Linux
 Команды
 -------
 
-- [mkdir](/linux/mkdir.md)
+- [mkdir](mkdir.md)
 
 Программы
 ---------
 
-- [rsync](/linux/rsync.md)
+- [rsync](rsync.md)
 
-- [Sublime-text](/linux/soft/sublime-text.md)
+- [Sublime-text](soft/sublime-text.md)
