@@ -3,6 +3,27 @@
 [вверх]: #top
 [GitHub Flavored Markdown Spec](https://github.github.com/gfm/) 
 
+
+---
+
+- This text contains <i>italic</i> text.  `<i></i>`
+- This text contains <em>emphasized</em> text.  `<em></em>`
+- This text contains <b>bold</b> text.  `<b></b>`
+- This text contains <strong>strong</strong> text.  `<strong></strong>`
+- This text contains <code>code</code> text.  `<code></code>` аналог  \`\`
+- This text contains <samp>samp</samp> text.  `<samp></samp>`
+- This text contains <kbd>kbd</kbd> text.  `<kbd></kbd>`
+- This text contains <var>var</var> text.  `<var></var>`
+- This text contains <sup>superscript</sup> text.  `<sup></sup>`
+- This text contains <sub>subscript</sub> text.  `<sub></sub>`
+- This text contains <pre>pre</pre> text.  `<pre></pre>`
+
+<h1>h1</h1>
+
+<h6>h6</h6>
+
+Таблиці: `<table>`, `<thead>` :question:, `<tbody>`, `<tr>`, `<td>`
+
 ---
 
 **[Markdown](https://ru.wikipedia.org/wiki/Markdown)** – визуально понятный и удобный при редактировании язык разметки для оформления текстовых документов. Обычно преобразуется в код [HTML](https://ru.wikipedia.org/wiki/HTML) для отображения информации в Интернет. [GitHub](https://github.com) расширил стандартный Markdown, добавив возможность оформления таблиц (![?](/i/qu.png) только?). Кроме собственной разметки Markdown-текст может содержать в себе вставки обычного HTML-кода.
