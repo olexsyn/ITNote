@@ -6,18 +6,15 @@ Apache
 
 <samp>sudo apt install apache2</samp>
 
-<code>
-<samp>sudo apt install apache2</samp>
-</code>
+<code><samp>sudo apt install apache2</samp></code>
 
 `sudo apt install apache2`
 
 ```
 sudo apt install apache2
 ```
-<pre>
-<samp>sudo apt install apache2</samp>
-</pre>
+<pre><samp>sudo apt install apache2</samp></pre>
+
 
 Подключить сайт
 ---------------
