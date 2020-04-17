@@ -31,7 +31,7 @@ mv /home/user/temp/project /home/user/dev/project
 
 ```
 git add --all
-git commit -m "Welcome GitHub!"
+git commit -m "Hello GitHub!"
 git push origin master
 ```
 
