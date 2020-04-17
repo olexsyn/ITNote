@@ -1,20 +1,20 @@
 # Перенести на сервер локальный репозиторий
 
-Есть [такая инструкция](https://webhamster.ru/mytetrashare/index/mtb0/1339098198thylclyapv), но мне кажется, что мой метод проще.
+Есть [такая инструкция](https://webhamster.ru/mytetrashare/index/mtb0/1339098198thylclyapv) ![ext][ext], но мне кажется, что мой метод проще.
 
 ## Как делаю я
 
-Допустим, есть созревший для публикации проект: `/home/user/dev/project`, который мы хотим положить на GitHub.
+Допустим, есть созревший проект: `/home/user/dev/project`, который мы хотим опубликовать.
 
-На GitHub создаем репозиторий с файлом `README.md`, например, такой `https://github.com/user/project.git`
+На GitHub создаем репозиторий, например, такой `https://github.com/user/project.git`
 
-На локальной машине временно "очистим"" директорию проекта:
+На локальной машине временно "освободим" директорию проекта:
 
 ```
 mv /home/user/dev/project /home/user/temp/project
 ```
 
-Клонируем репозиторий с сервера (там только файл README.md) в директорию разработки:
+Клонируем пустой репозиторий с сервера в директорию разработки:
 
 ```
 cd /home/user/dev
@@ -35,4 +35,4 @@ git commit -m "Welcome GitHub!"
 git push origin master
 ```
 
-Все!
+[ext]: /i/link_ext.webp "External Link"
