@@ -8,39 +8,39 @@
 Теперь, я знаю, как добавлять цвет на GitHub Pages!
 
 Однако, надо уточнить, что выбор цветов невелик и цвет начинает "работать" только на _**USERNAME.github.io**_,
-на **github.com/USERNAME/** он невидим! Т.е. Preview не покажет его, что неудобно. Но, все же...
+на **github.com/USERNAME/** он невидим! Т.е. _Preview_ не покажет его, что неудобно. Но, все же...
 
 Пример:
 
 ```html
-Test color <span class="text-blue">text-blue</span>.
-Test color <span class="text-red ">text-red </span>.
-Test color <span class="text-gray-light">text-gray-light</span>.
-Test color <span class="text-gray">text-gray</span>.
-Test color <span class="text-gray-dark">text-gray-dark</span>.
-Test color <span class="text-green">text-green</span>.
-Test color <span class="text-orange">text-orange</span>.
-Test color <span class="text-orange-light">text-orange-light</span>.
-Test color <span class="text-purple">text-purple</span>.
-Test color <span class="text-white">text-white</span>.
-Test color <span class="text-inherit">text-inherit</span>.
-Test color <span class="text-pending">text-pending</span>.
-Test color <span class="bg-pending">bg-pending</span>.
+Test color of <span class="text-blue">text-blue</span> style.  
+Test color of <span class="text-red ">text-red </span> style.  
+Test color of <span class="text-gray-light">text-gray-light</span> style.  
+Test color of <span class="text-gray">text-gray</span> style.  
+Test color of <span class="text-gray-dark">text-gray-dark</span> style.  
+Test color of <span class="text-green">text-green</span> style.  
+Test color of <span class="text-orange">text-orange</span> style.  
+Test color of <span class="text-orange-light">text-orange-light</span> style.  
+Test color of <span class="text-purple">text-purple</span> style.  
+Test color of <span class="text-white bg-gray-dark">text-white</span> style.  
+Test color of <span class="text-inherit">text-inherit</span> style.  
+Test color of <span class="text-pending">text-pending</span> style.  
+Test color of <span class="bg-pending">bg-pending</span> style.  
 ```
 
-Test color <span class="text-blue">text-blue</span>.  
-Test color <span class="text-red ">text-red </span>.  
-Test color <span class="text-gray-light">text-gray-light</span>.  
-Test color <span class="text-gray">text-gray</span>.  
-Test color <span class="text-gray-dark">text-gray-dark</span>.  
-Test color <span class="text-green">text-green</span>.  
-Test color <span class="text-orange">text-orange</span>.  
-Test color <span class="text-orange-light">text-orange-light</span>.  
-Test color <span class="text-purple">text-purple</span>.  
-Test color <span class="text-white bg-gray-dark">text-white</span>.  
-Test color <span class="text-inherit">text-inherit</span>.  
-Test color <span class="text-pending">text-pending</span>.  
-Test color <span class="bg-pending">bg-pending</span>.  
+Test color of <span class="text-blue">text-blue</span> style.  
+Test color of <span class="text-red ">text-red </span> style.  
+Test color of <span class="text-gray-light">text-gray-light</span> style.  
+Test color of <span class="text-gray">text-gray</span> style.  
+Test color of <span class="text-gray-dark">text-gray-dark</span> style.  
+Test color of <span class="text-green">text-green</span> style.  
+Test color of <span class="text-orange">text-orange</span> style.  
+Test color of <span class="text-orange-light">text-orange-light</span> style.  
+Test color of <span class="text-purple">text-purple</span> style.  
+Test color of <span class="text-white bg-gray-dark">text-white</span> style.  
+Test color of <span class="text-inherit">text-inherit</span> style.  
+Test color of <span class="text-pending">text-pending</span> style.  
+Test color of <span class="bg-pending">bg-pending</span> style.  
 
 
 ```css
