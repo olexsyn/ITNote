@@ -5,8 +5,10 @@
 ```html
 <link rel="stylesheet" href="/YOUR_REPOSITORY/assets/css/style.css?v=...">
 ```
-Теперь, я знаю, как добавлять цвет на GitHub Pages! Но, надо уточнить, что выбор цветов не велик и цвет начинает "работать" только на _**USERNAME.github.io**_,
-на github.com/USERNAME/ он невидим!
+Теперь, я знаю, как добавлять цвет на GitHub Pages!
+
+Однако, надо уточнить, что выбор цветов невелик и цвет начинает "работать" только на _**USERNAME.github.io**_,
+на **github.com/USERNAME/** он невидим! Т.е. Preview не покажет его, что неудобно. Но, все же...
 
 Пример:
 
@@ -35,7 +37,7 @@ Test color <span class="text-green">text-green</span>.
 Test color <span class="text-orange">text-orange</span>.  
 Test color <span class="text-orange-light">text-orange-light</span>.  
 Test color <span class="text-purple">text-purple</span>.  
-Test color <span class="text-white">text-white</span>.  
+Test color <span class="text-white bg-gray-dark">text-white</span>.  
 Test color <span class="text-inherit">text-inherit</span>.  
 Test color <span class="text-pending">text-pending</span>.  
 Test color <span class="bg-pending">bg-pending</span>.  
