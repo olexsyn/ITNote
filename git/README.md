@@ -64,6 +64,7 @@ GitHub
 -----
 
 - [Перенести на сервер локальный репозиторий](repo2server.md)
+- [Цвет шрифта и фона на GitHub Pages](pages_css.md)
 - [GitHub Pages](pages.md)
 - [GitHub Flavored Markdown](gfm.md)
 - [GitHub Icons](github_icons.md)
