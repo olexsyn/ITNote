@@ -68,6 +68,7 @@ GitHub
 - [GitHub Pages](pages.md)
 - [GitHub Flavored Markdown](gfm.md)
 - [GitHub Icons](github_icons.md)
+- [Что такое pull request](http://ivan.rolik.name/2013/01/29/pull-request-without-fork-github/) ![ext][ext]
 
 ----
 
