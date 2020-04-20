@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/technote/my_style.css" />
+<link rel="stylesheet" type="text/css" href="/technote/my.css" />
 
 # Test
 
