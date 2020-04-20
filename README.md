@@ -18,8 +18,8 @@ no       | ![no](/i/no.png) | `![no](/i/no.png)`
 fire     | ![fi](/i/fi.png) | `![fi](/i/fi.png)`
 
 
- desc    |  img  | code 
- ---:    | :---: | :---:
-FIX ME   | ![!](/i/FIX.png) | `![FIXME!](/i/FIX.png)`
-DELETE   | ![i](/i/DEL.png) | `![DELETE](/i/DEL.png)`
-WTF      | ![?](/i/WTF.png) | `![WTF?](/i/WTF.png)`
+ desc    |  img  | code | text
+ ---:    | :---: | :---: | ---:
+FIX ME   | ![!](/i/FIX.png) | `![FIXME!](/i/FIX.png)` | <span class="r">FIX ME!<span>
+DELETE   | ![i](/i/DEL.png) | `![DELETE](/i/DEL.png)` | <span class="r">DELETE!<span>
+WTF      | ![?](/i/WTF.png) | `![WTF?](/i/WTF.png)` |  <span class=r>WTF?<span>
