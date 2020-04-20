@@ -15,6 +15,8 @@ sudo apt install apache2
 ```
 <pre><samp>sudo apt install apache2</samp></pre>
 
+* [Apache HTTP Server Version 2.4 Documentation](http://httpd.apache.org/docs/2.4/)
+  * [Introduction to Server Side Includes](http://httpd.apache.org/docs/2.4/howto/ssi.html)
 
 Подключить сайт
 ---------------
