@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="/technote/my.css" />
 
 &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;
 ------ | ----- | ----- | ----- | ----- | ----- 
