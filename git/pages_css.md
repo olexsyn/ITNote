@@ -5,12 +5,7 @@
 ```html
 <link rel="stylesheet" href="/YOUR_REPOSITORY/assets/css/style.css?v=...">
 ```
-Теперь, я знаю, как добавлять цвет на GitHub Pages!
-
-Однако, надо уточнить, что выбор цветов невелик и цвет начинает "работать" только на _**USERNAME.github.io**_,
-на **github.com/USERNAME/** он невидим! Т.е. _Preview_ не покажет его, что неудобно. Но, все же...
-
-Пример:
+Используя некоторые классы мы можем добавлять цвет на GitHub Pages:
 
 ```html
 Test color of <span class="text-blue">text-blue</span> style.  
@@ -42,6 +37,18 @@ Test color of <span class="text-inherit">text-inherit</span> style.
 Test color of <span class="text-pending">text-pending</span> style.  
 Test color of <span class="bg-pending">bg-pending</span> style.  
 
+Кроме этого, мы можем использовать атрибут style для HTML-тегов:
+
+```html
+<p><span style="color: red; font-size: 2em">U</span>t wisis enim ad minim veniam...</p>
+```
+
+<p><span style="color: red; font-size: 2em">U</span>t wisis enim ad minim veniam...</p>
+
+
+:exclamation: ![!](/i/wa.png) Однако, надо уточнить, что выбор цветов невелик и цвет начинает "работать" только на _**USERNAME.github.io**_, на **github.com/USERNAME/** он невидим! Т.е. _Preview_ не покажет его, что неудобно. Но, все же...
+
+Пример куска css-кода, подключаемого к дефолтной теме GitHub Pages:
 
 ```css
 
