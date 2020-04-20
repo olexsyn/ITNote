@@ -6,13 +6,13 @@
 
 desc    |  img  | code 
  ---:    | :---: | :---:
-warning  | ![!](/i/wa.png) | `![!](/i/wa.png)`
 info     | ![i](/i/in.png) | `![i](/i/in.png)`
-pin      | ![i](/i/pi.png) | `![*](/i/pi.png)`
+warning  | ![!](/i/wa.png) | `![!](/i/wa.png)`
 question | ![?](/i/qu.png) | `![?](/i/qu.png)`
-ok       | ![i](/i/ok.png) | `![ok](/i/ok.png)`
-no       | ![i](/i/no.png) | `![no](/i/no.png)`
-fire     | ![i](/i/fi.png) | `![i](/i/fi.png)`
+pin      | ![pi](/i/pi.png) | `![pi](/i/pi.png)`
+ok       | ![ok](/i/ok.png) | `![ok](/i/ok.png)`
+no       | ![no](/i/no.png) | `![no](/i/no.png)`
+fire     | ![fi](/i/fi.png) | `![fi](/i/fi.png)`
 
 
  desc    |  img  | code 
