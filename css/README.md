@@ -2,6 +2,9 @@
 
 # CSS
 
+* [Единицы измерения: px, em, rem и другие](https://learn.javascript.ru/css-units)
+* [REM vs EM – Великий спор](https://habr.com/ru/post/280125/)
+
 ## Bootstrap
 
 * <https://getbootstrap.com/>
