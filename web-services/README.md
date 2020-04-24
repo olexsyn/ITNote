@@ -5,7 +5,7 @@
 ## Code / Text
 
 * Dirtymarkup - <https://www.10bestdesign.com/dirtymarkup/> `HTML` `CSS`  `JavaScript`
-* Lorem Ipsum - <https://ru.lipsum.com>
+* Lorem Ipsum - <https://ru.lipsum.com> | <https://www.lipsum.com> | https://www.blindtextgenerator.com/lorem-ipsum
 
 ## Graphics
 
