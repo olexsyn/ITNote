@@ -511,6 +511,7 @@ Markdown поддерживает упрощённый порядок автом
 
 - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- <https://paulradzkov.com/2014/markdown_cheatsheet/> 
 - <https://help.github.com/en/github/writing-on-github/working-with-advanced-formatting>
 - <https://github.com/github/linguist/blob/master/lib/linguist/languages.yml>
 - [emoji](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#using-emoji) / [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet)
