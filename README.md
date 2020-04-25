@@ -1,3 +1,6 @@
+---
+layout: null
+---
 
 * [Apache](apache)
 * [Linux](linux)
