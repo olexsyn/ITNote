@@ -1,7 +1,4 @@
----
-layout: dafault
-title: You're up and running!
----
+## List
 
 * [Apache](apache)
 * [Linux](linux)
