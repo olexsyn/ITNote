@@ -1,4 +1,7 @@
-<link rel="stylesheet" type="text/css" href="/technote/my.css" />
+---
+layout: page
+title: Main
+---
 
 
 * [Apache](apache)
