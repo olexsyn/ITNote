@@ -1,8 +1,3 @@
----
-layout: default
-title: Main
----
-
 
 * [Apache](apache)
 * [Linux](linux)
