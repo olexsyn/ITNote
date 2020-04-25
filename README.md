@@ -1,4 +1,5 @@
 ---
+layout: dafault
 title: You're up and running!
 ---
 
