@@ -1,3 +1,6 @@
+---
+title: You're up and running!
+---
 
 * [Apache](apache)
 * [Linux](linux)
