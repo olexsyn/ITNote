@@ -1,6 +1,3 @@
----
-layout: null
----
 
 * [Apache](apache)
 * [Linux](linux)
@@ -10,7 +7,7 @@ layout: null
 * [CSS](css)
 * [Web Services](web-services)
 
-----
 ___
 
 <https://webhamster.ru/mytetrashare/index/mtb0> - много статей
+
