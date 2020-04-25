@@ -1,4 +1,6 @@
-<link rel="stylesheet" type="text/css" href="/technote/my.css" />
+---
+layout: default
+---
 
 # Test
 
