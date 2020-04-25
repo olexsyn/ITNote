@@ -82,4 +82,4 @@ Links
 
 
 
-[ext]: /i/link_ext.webp "External Link"
+[ext]: {{ site.baseurl }}/i/link_ext.webp "External Link"
