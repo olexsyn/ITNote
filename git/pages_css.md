@@ -45,8 +45,7 @@ Test color of <span class="bg-pending">bg-pending</span> style.
 
 <p><span style="color: red; font-size: 2em">U</span>t wisis enim ad minim veniam...</p>
 
-
-:exclamation: ![!](/technote/i/wa.png) Однако, надо уточнить, что выбор цветов невелик и цвет начинает "работать" только на _**USERNAME.github.io**_, на **github.com/USERNAME/** он невидим! Т.е. _Preview_ не покажет его, что неудобно. Но, все же...
+![!](/i/warn.png) Однако, надо уточнить, что выбор цветов невелик и цвет начинает "работать" только на _**USERNAME.github.io**_, на **github.com/USERNAME/** он невидим! Т.е. _Preview_ не покажет его, что неудобно. Но, все же...
 
 Пример куска css-кода, подключаемого к дефолтной теме GitHub Pages:
 
