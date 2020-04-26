@@ -5222,6 +5222,6 @@ pre {
   font-size: 1em;
   font-weight: bold;
 }
-a[href ^= "http"] {
+a[href ^= "http|mailto"] {
   color: #0366d6;
 }
