@@ -1,1 +1,1 @@
-[2Home]({{ site.baseurl }}) | [Apache]({{ site.baseurl }}/apache/)
+[2Home]({{ site.baseurl }}) > [Apache]({{ site.baseurl }}/apache/)
