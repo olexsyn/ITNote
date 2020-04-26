@@ -4768,20 +4768,20 @@ pre {
 	border-bottom: 1px solid #eaecef
 */
 	padding-top: 0.70em;
-	font-size: 1em;
+	font-size: 1.75em;
 	border-top: 1px solid #d5d5d5;
 }
 .markdown-body h3 {
-	font-size: 1.25em
+	font-size: 1.50em  /* 1.25em */
 }
 .markdown-body h4 {
-	font-size: 1em
+	font-size: 1.25em  /* 1em */
 }
 .markdown-body h5 {
-	font-size: 0.875em
+	font-size: 1em  /* 0.875em */
 }
 .markdown-body h6 {
-	font-size: 0.85em;
+	font-size: 1em;  /* 0.85em */
 	color: #6a737d
 }
 .markdown-body ul, .markdown-body ol {
