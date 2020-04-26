@@ -48,6 +48,7 @@ git diff --cached
 - [Работа с удалёнными репозиториями](remote.md)
 - [Работа с удалёнными репозиториями](https://git-scm.com/book/ru/v2/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git-%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D1%83%D0%B4%D0%B0%D0%BB%D1%91%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F%D0%BC%D0%B8)
 - [.gitignore templates](https://github.com/github/gitignore)
+- [Изучаем команды pull и push](https://monsterlessons.com/project/lessons/git-izuchaem-komandy-pull-i-push)
 
 <a href="github"></a>
 
@@ -67,3 +68,4 @@ git diff --cached
 
 - <https://jekyllrb.com/docs/>
 - <https://frontender.info/build-blog-jekyll-github-pages/>
+- <https://github.com/barryclark/jekyll-now> - <https://www.barryclark.co/>
