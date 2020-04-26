@@ -4699,10 +4699,10 @@ pre {
 	margin-bottom: 16px
 }
 .markdown-body hr {
-	height: .25em;
+	height: 1px;  /* .25em */
 	padding: 0;
 	margin: 24px 0;
-	background-color: #e1e4e8;
+	background-color: #d5d5d5;  /* e1e4e8 */
 	border: 0
 }
 .markdown-body blockquote {
@@ -4740,6 +4740,7 @@ pre {
 	vertical-align: middle;
 	visibility: hidden
 }
+/*
 .markdown-body h1:hover .anchor, .markdown-body h2:hover .anchor, .markdown-body h3:hover .anchor, .markdown-body h4:hover .anchor, .markdown-body h5:hover .anchor, .markdown-body h6:hover .anchor {
 	text-decoration: none
 }
@@ -4749,15 +4750,26 @@ pre {
 .markdown-body h1 tt, .markdown-body h1 code, .markdown-body h2 tt, .markdown-body h2 code, .markdown-body h3 tt, .markdown-body h3 code, .markdown-body h4 tt, .markdown-body h4 code, .markdown-body h5 tt, .markdown-body h5 code, .markdown-body h6 tt, .markdown-body h6 code {
 	font-size: inherit
 }
+*/
 .markdown-body h1 {
+/*
 	padding-bottom: 0.3em;
 	font-size: 2em;
 	border-bottom: 1px solid #eaecef
+*/
+	padding-top: 0.75em;
+	font-size: 2em;
+	border-top: 2px solid #d5d5d5;
 }
 .markdown-body h2 {
+/*
 	padding-bottom: 0.3em;
 	font-size: 1.5em;
 	border-bottom: 1px solid #eaecef
+*/
+	padding-top: 0.70em;
+	font-size: 1em;
+	border-top: 1px solid #d5d5d5;
 }
 .markdown-body h3 {
 	font-size: 1.25em
