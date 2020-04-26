@@ -11,18 +11,18 @@ Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit
 
 | desc           | img           | code           |
 | -------------: | :-----------: | :------------- |
-| **a**dd        |  ![](a.png)   |  `![](a.png)`  |
-| **b**ook       |  ![](b.png)   |  `![](b.png)`  |
-| **c**ancel     |  ![](c.png)   |  `![](c.png)`  |
-| **f**ire       |  ![](f.png)   |  `![](f.png)`  |
-| bu**g**        |  ![](g.png)   |  `![](g.png)`  |
-| **h**eart      |  ![](h.png)   |  `![](h.png)`  |
-| **i**nfo       |  ![](i.png)   |  `![](i.png)`  |
-| **k**ey        |  ![](k.png)   |  `![](k.png)`  |
-| **l**amp       |  ![](l.png)   |  `![](l.png)`  |
-| **q**uestion   |  ![](q.png)   |  `![](q.png)`  |
-| chek           |  ![](v.png)   |  `![](v.png)`  |
-| delete         |  ![](x.png)   |  `![](x.png)`  |
-| check **c**ube |  ![](vc.png)  |  `![](vc.png)` |
-| delete **c**ube|  ![](xc.png)  |  `![](xc.png)` |
-| **w**arning    |  ![](w.png)   |  `![](w.png)`  |
+| **a**dd        |  ![](/i/a.png)   |  `![](/i/a.png)`  |
+| **b**ook       |  ![](/i/b.png)   |  `![](/i/b.png)`  |
+| **c**ancel     |  ![](/i/c.png)   |  `![](/i/c.png)`  |
+| **f**ire       |  ![](/i/f.png)   |  `![](/i/f.png)`  |
+| bu**g**        |  ![](/i/g.png)   |  `![](/i/g.png)`  |
+| **h**eart      |  ![](/i/h.png)   |  `![](/i/h.png)`  |
+| **i**nfo       |  ![](/i/i.png)   |  `![](/i/i.png)`  |
+| **k**ey        |  ![](/i/k.png)   |  `![](/i/k.png)`  |
+| **l**amp       |  ![](/i/l.png)   |  `![](/i/l.png)`  |
+| **q**uestion   |  ![](/i/q.png)   |  `![](/i/q.png)`  |
+| chek           |  ![](/i/v.png)   |  `![](/i/v.png)`  |
+| delete         |  ![](/i/x.png)   |  `![](/i/x.png)`  |
+| check **c**ube |  ![](/i/vc.png)  |  `![](/i/vc.png)` |
+| delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
+| **w**arning    |  ![](/i/w.png)   |  `![](/i/w.png)`  |
