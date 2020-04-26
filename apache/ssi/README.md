@@ -12,3 +12,4 @@ SSI
     * [Условные выражения 2.4](http://httpd.apache.org/docs/2.4/expr.html)
     * [Переменные окружения 2.4](http://httpd.apache.org/docs/2.4/env.html)
 
+[path](path)
