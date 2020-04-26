@@ -5225,3 +5225,6 @@ pre {
 a[href ^= "http|mailto"] {
   color: #0366d6;
 }
+a[href ^= "mailto"] {
+  color: #0366d6;
+}
