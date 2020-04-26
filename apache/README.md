@@ -1,6 +1,6 @@
 # Apache
 
-## Установка
+## Установка Test
 
 <samp>sudo apt install apache2</samp>
 
