@@ -160,7 +160,7 @@ input, select, textarea, button {
 }
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 14px;
+	font-size: 16px;  /* 14px */
 	line-height: 1.5;
 	color: #24292e;
 	background-color: #fff
@@ -4659,7 +4659,7 @@ pre {
 }
 .markdown-body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 16px;
+	font-size: 18px;  /* 16px */
 	line-height: 1.5;
 	word-wrap: break-word
 }
@@ -4696,7 +4696,7 @@ pre {
 }
 .markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre {
 	margin-top: 0;
-	margin-bottom: 16px
+	margin-bottom: 18px
 }
 .markdown-body hr {
 	height: 1px;  /* .25em */
