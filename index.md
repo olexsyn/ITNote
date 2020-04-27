@@ -1,15 +1,9 @@
-## TechNote
+## E-Note
 
 > <small>Просто немного записей для экспериментов с GitHub.</small>  
 > <small>Не теряйте времени, проходите. ;)</small>
 
 ---
-
-А как такое название?
-
-### E-Note
-
-e-note
 
 - [Apache](apache)
 - [Linux](linux)
