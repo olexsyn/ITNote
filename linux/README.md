@@ -2,9 +2,9 @@
 
 ## Команды
 
-- [mkdir](mkdir.md)
+- [mkdir](command/mkdir)
 
 ## Программы
 
-- [rsync](rsync.md)
-- [Sublime-text](soft/sublime-text.md)
+- [rsync](soft/rsync)
+- [Sublime-text](soft/sublime-text)
