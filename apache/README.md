@@ -1,6 +1,8 @@
 # Apache
 
-{% include footer.md content="Yahoo!" %}
+{% include footer.md content=page.url %}
+
+{{ page.url }}
 
 ## Установка Test
 
