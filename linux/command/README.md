@@ -2,5 +2,5 @@
 
 ## Команды
 
-- [mkdir](mkdir.md)
+- [mkdir](mkdir)
 
