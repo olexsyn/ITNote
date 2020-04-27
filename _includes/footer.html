@@ -1,0 +1,10 @@
+
+<hr>
+
+<p>Address of page: {{ page.url }}</p>
+
+{% assign lnk = page.url | split: "/" %}
+
+{% for p in lnk %}
+  <br>{{ p }}
+{% endfor %}
