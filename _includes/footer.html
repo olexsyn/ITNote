@@ -2,19 +2,3 @@
 <hr>
 
 <p>Address of page: {{ page.url }}</p>
-
-{% assign lnk = page.url | split: "/" %}
-{% assign full_url = "" %}
-
-<p>
-{% for p in lnk %}
-  {% if p == '' %}
-    <a href="{{ site.baseurl }}">Home</a>
-    {% assign full_url = full_url | append: site.baseurl %}
-  {% else %}
-    {% assign full_url = full_url | append: "/" %}
-    {% assign full_url = full_url | append: p %}
-    &gt; <a href="{{ full_url }}">{{ p }}</a>
-  {% endif %}
-{% endfor %}
-</p>
