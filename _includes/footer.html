@@ -5,6 +5,12 @@
 
 {% assign lnk = page.url | split: "/" %}
 
+<p>
 {% for p in lnk %}
-  <br>{{ p }}
+  {% if p == '' %}
+    <a href="{{ site.baseurl }}">Home</a>
+  {% else %}
+  | <a href="{{ p }}">{{ p }}</a>
+  {% endif %}
 {% endfor %}
+</p>
