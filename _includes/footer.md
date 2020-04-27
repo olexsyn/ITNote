@@ -1,4 +1,4 @@
 
 ---
 
-This is footer: {{ include.content | default: empty }}
+This is footer: {{ include.content | default: empty }}, {{ page.url }}
