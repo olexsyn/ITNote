@@ -21,8 +21,8 @@
     {% else %}
       {% assign full_url = full_url | append: "/" %}
       {% assign full_url = full_url | append: item %}
-      {% assign item = item | remove: ".html" %}
-      / <a href="{{ full_url }}">{{ item }}</a>
+      {% assign dir = item | remove: ".html" %}
+      / <a href="{{ full_url }}">{{ dir }}</a>
     {% endif %}
   {% endfor %}
   </p>
