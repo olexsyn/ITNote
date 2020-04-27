@@ -8,34 +8,34 @@
 Используя некоторые классы мы можем добавлять цвет на GitHub Pages:
 
 ```html
-Test color of <span class="text-blue">text-blue</span> style.  
-Test color of <span class="text-red ">text-red </span> style.  
-Test color of <span class="text-gray-light">text-gray-light</span> style.  
-Test color of <span class="text-gray">text-gray</span> style.  
-Test color of <span class="text-gray-dark">text-gray-dark</span> style.  
-Test color of <span class="text-green">text-green</span> style.  
-Test color of <span class="text-orange">text-orange</span> style.  
-Test color of <span class="text-orange-light">text-orange-light</span> style.  
-Test color of <span class="text-purple">text-purple</span> style.  
-Test color of <span class="text-white bg-gray-dark">text-white</span> style.  
-Test color of <span class="text-inherit">text-inherit</span> style.  
-Test color of <span class="text-pending">text-pending</span> style.  
-Test color of <span class="bg-pending">bg-pending</span> style.  
+Test color of <span class="text-blue">text-blue</span> style.
+Test color of <span class="text-red ">text-red </span> style.
+Test color of <span class="text-gray-light">text-gray-light</span> style.
+Test color of <span class="text-gray">text-gray</span> style.
+Test color of <span class="text-gray-dark">text-gray-dark</span> style.
+Test color of <span class="text-green">text-green</span> style.
+Test color of <span class="text-orange">text-orange</span> style.
+Test color of <span class="text-orange-light">text-orange-light</span> style.
+Test color of <span class="text-purple">text-purple</span> style.
+Test color of <span class="text-white bg-gray-dark">text-white</span> style.
+Test color of <span class="text-inherit">text-inherit</span> style.
+Test color of <span class="text-pending">text-pending</span> style.
+Test color of <span class="bg-pending">bg-pending</span> style.
 ```
 
-Test color of <span class="text-blue">text-blue</span> style.  
-Test color of <span class="text-red ">text-red </span> style.  
-Test color of <span class="text-gray-light">text-gray-light</span> style.  
-Test color of <span class="text-gray">text-gray</span> style.  
-Test color of <span class="text-gray-dark">text-gray-dark</span> style.  
-Test color of <span class="text-green">text-green</span> style.  
-Test color of <span class="text-orange">text-orange</span> style.  
-Test color of <span class="text-orange-light">text-orange-light</span> style.  
-Test color of <span class="text-purple">text-purple</span> style.  
-Test color of <span class="text-white bg-gray-dark">text-white</span> style.  
-Test color of <span class="text-inherit">text-inherit</span> style.  
-Test color of <span class="text-pending">text-pending</span> style.  
-Test color of <span class="bg-pending">bg-pending</span> style.  
+Test color of <span class="text-blue">text-blue</span> style.
+Test color of <span class="text-red ">text-red </span> style.
+Test color of <span class="text-gray-light">text-gray-light</span> style.
+Test color of <span class="text-gray">text-gray</span> style.
+Test color of <span class="text-gray-dark">text-gray-dark</span> style.
+Test color of <span class="text-green">text-green</span> style.
+Test color of <span class="text-orange">text-orange</span> style.
+Test color of <span class="text-orange-light">text-orange-light</span> style.
+Test color of <span class="text-purple">text-purple</span> style.
+Test color of <span class="text-white bg-gray-dark">text-white</span> style.
+Test color of <span class="text-inherit">text-inherit</span> style.
+Test color of <span class="text-pending">text-pending</span> style.
+Test color of <span class="bg-pending">bg-pending</span> style.
 
 Кроме этого, мы можем использовать атрибут style для HTML-тегов:
 
@@ -141,4 +141,4 @@ Test color of <span class="bg-pending">bg-pending</span> style.
 }
 ```
 
-[полная версия css-файла](github.css)
+[полная версия css-файла]({{ site.baseurl }}/github.css)

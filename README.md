@@ -1,6 +1,6 @@
 ## E-Note
 
-> <small>Просто немного записей для экспериментов с GitHub.</small>  
+> <small>Просто немного записей для экспериментов с GitHub.</small>
 
 ---
 
@@ -12,14 +12,5 @@
 - [HTML](html)
 - [CSS](css)
 - [Web Services](web-services)
-
----
-
-<https://webhamster.ru/mytetrashare/index/mtb0> - здесь много статей
-
-[test1](test)
-
-[test2](test2)
-
-[test3](test3)
+- [Test](test)
 
