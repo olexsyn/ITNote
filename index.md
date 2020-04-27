@@ -1,12 +1,13 @@
 ## TechNote
 
-<small>Просто записи для личного пользования и экспериментов с GitHub. Здесь нет ничего такого, чем бы я хотел поделиться с Вами. Извините.</small>
+<small>Просто личные записи и эксперименты с GitHub. Здесь нет ничего, чем бы я хотел поделиться с Миром. Извините.</small>
 
 * [Apache](apache)
 * [Linux](linux)
 * [Python](python)
 * [Git](git)
 * [MySQL](mysql)
+* [HTML](html)
 * [CSS](css)
 * [Web Services](web-services)
 
