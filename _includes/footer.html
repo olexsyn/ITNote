@@ -12,9 +12,9 @@
     <a href="{{ site.baseurl }}">Home</a>
     {% assign full_url = full_url | append: site.baseurl %}
   {% else %}
-    &gt; <a href="{{ p }}">{{ p }}</a>
     {% assign full_url = full_url | append: "/" %}
     {% assign full_url = full_url | append: p %}
+    &gt; <a href="{{ full_url }}">{{ p }}</a>
   {% endif %}
 {% endfor %}
 </p>
