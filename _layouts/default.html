@@ -10,12 +10,13 @@
 <body>
 	<div class="container-lg px-3 my-5 markdown-body">
 {% if page.title != "TechNote" %}
-	  <p><a href="{{ site.baseurl }}">Home</a> {{ include.url }}</p>
+	  <p><a href="{{ site.baseurl }}">Home</a></p>
 {% endif %}
 		
 
 {{ content }}
 
+{% include footer.html %}
 	</div>
 </body>
 </html>
