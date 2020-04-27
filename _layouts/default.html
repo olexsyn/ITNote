@@ -16,7 +16,7 @@
   <p>
   {% for item in arr_pages %}
     {% if item == '' %}
-      <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/img/tech.svg" alt="home" /></a>
+      <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/img/home.svg" alt="home" /></a>
       {% assign full_url = full_url | append: site.baseurl %}
     {% else %}
       {% assign full_url = full_url | append: "/" %}
