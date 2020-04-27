@@ -6,16 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ page.title }}</title>
 	<link href="{{ site.baseurl }}/github.css" rel="stylesheet">
-	<style>
-div.breadcr {
-   height: 1em;
-   position: relative }
-div.breadcr p {
-   margin: 0;
-   position: absolute;
-   top: 50%;
-   transform: translate(0, -50%) }
-	</style>
 </head>
 <body>
 	<div class="container-lg px-3 my-5 markdown-body">
@@ -26,7 +16,7 @@ div.breadcr p {
   <div class="breadcr"><p>
   {% for item in arr_pages %}
     {% if item == '' %}
-      <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/i/home.svg" alt="home" /></a>
+      <a href="{{ site.baseurl }}">home</a>
       {% assign full_url = full_url | append: site.baseurl %}
     {% else %}
       {% assign full_url = full_url | append: "/" %}
