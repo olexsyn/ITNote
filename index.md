@@ -1,19 +1,21 @@
 ## TechNote
 
-<small>Просто личные заблуждения и эксперименты с GitHub. Не теряйте время, проходите. `¯\_(ツ)_/¯`</small>
+> <small>Просто немного записей для экспериментов с GitHub. Не теряйте времени, проходите. ;)</small>
 
-* [Apache](apache)
-* [Linux](linux)
-* [Python](python)
-* [Git](git)
-* [MySQL](mysql)
-* [HTML](html)
-* [CSS](css)
-* [Web Services](web-services)
+---
 
-___
+- [Apache](apache)
+- [Linux](linux)
+- [Python](python)
+- [Git](git)
+- [MySQL](mysql)
+- [HTML](html)
+- [CSS](css)
+- [Web Services](web-services)
 
-<https://webhamster.ru/mytetrashare/index/mtb0> - много статей
+---
+
+<https://webhamster.ru/mytetrashare/index/mtb0> - здесь много статей
 
 [test1](test)
 
