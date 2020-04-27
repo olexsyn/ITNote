@@ -1,16 +1,16 @@
-# Apache
+## Apache
 
-{{ page.url }}
+### Установка
 
-## Установка Test
-
-<samp>sudo apt install apache2</samp>
+```
+sudo apt install apache2
+```
 
 * [Apache HTTP Server Version 2.4 Documentation](http://httpd.apache.org/docs/2.4/)
   * [Introduction to Server Side Includes](http://httpd.apache.org/docs/2.4/howto/ssi.html)
   * [nginx в связке с ssi](http://nginx.org/ru/docs/http/ngx_http_ssi_module.html) - [nginx](http://nginx.org/ru/)
 
-## Подключить сайт
+### Подключить сайт
 
 Конфигурационные файлы для виртуальных хостов хранятся в `/etc/apache2/sites-available/`
 
