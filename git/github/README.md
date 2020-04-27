@@ -1,6 +1,7 @@
 ## GitHub
 
 * [Jekyll](jekyll)
+* [Liquid](https://shopify.github.io/liquid/)
 
 - [Перенести на сервер локальный репозиторий](repo2server)
 - [Цвет шрифта и фона на GitHub Pages](pages_css)
