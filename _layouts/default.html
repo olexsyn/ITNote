@@ -21,7 +21,7 @@
     {% else %}
       {% assign full_url = full_url | append: "/" %}
       {% assign full_url = full_url | append: p %}
-      &gt; <a href="{{ full_url }}">{{ p }}</a>
+      / <a href="{{ full_url }}">{{ p }}</a>
     {% endif %}
   {% endfor %}
   </p>
