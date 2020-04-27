@@ -1,5 +1,7 @@
 # Apache
 
+{% include footer.md content="Yahoo!" %}
+
 ## Установка Test
 
 <samp>sudo apt install apache2</samp>
