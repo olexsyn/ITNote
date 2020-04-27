@@ -1,7 +1,5 @@
 # Apache
 
-{% include footer.md content=page.url %}
-
 {{ page.url }}
 
 ## Установка Test
