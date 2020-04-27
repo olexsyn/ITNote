@@ -4,13 +4,17 @@
 <p>Address of page: {{ page.url }}</p>
 
 {% assign lnk = page.url | split: "/" %}
+{% assign full_url = "" %}
 
 <p>
 {% for p in lnk %}
   {% if p == '' %}
     <a href="{{ site.baseurl }}">Home</a>
+    {{ full_url | append: site.baseurl }}
   {% else %}
-    | <a href="{{ p }}">{{ p }}</a>
+    &gt; <a href="{{ p }}">{{ p }}</a>
+    {{ full_url | append: "/" }}
+    {{ full_url | append: p }}
   {% endif %}
 {% endfor %}
 </p>
