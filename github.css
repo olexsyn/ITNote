@@ -1,5 +1,29 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url(/css/fonts/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url(/css/fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  src: url(/css/fonts/OpenSans-Italic.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  src: url(/css/fonts/OpenSans-Semibold.ttf);
+}
+@font-face {
+  font-family: "Droid Sans Mono";
+  font-weight: bold; /* здесь специально указан bold, чтобы рисовать ключевые слова жирным - так красивше */
+  src: url(/css/fonts/DroidSansMono.ttf);
+}
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -77,7 +101,7 @@ svg:not(:root) {
 	overflow: hidden
 }
 code, kbd, pre, samp {
-	font-family: monospace, monospace;
+	font-family: "Droid Sans Mono", "Courier New", monospace;
 	font-size: 1em
 }
 figure {
@@ -158,8 +182,8 @@ input, select, textarea, button {
 	line-height: inherit
 }
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 16px;  /* 14px */
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 14px;
 	line-height: 1.5;
 	color: #24292e;
 	background-color: #fff
@@ -264,13 +288,13 @@ dd {
 	margin-left: 0
 }
 tt, code {
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-family: "Droid Sans Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	font-size: 13px  /* 12 px */
 }
 pre {
 	margin-top: 0;
 	margin-bottom: 0;
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-family: "Droid Sans Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	font-size: 13px  /* 12 px */
 }
 .octicon {
@@ -3907,7 +3931,7 @@ pre {
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
 }
 .text-mono {
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace
+	font-family: "Droid Sans Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 .user-select-none {
 	user-select: none !important
@@ -4657,8 +4681,8 @@ pre {
 	}
 }
 .markdown-body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 18px;  /* 16px */
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 14px;
 	line-height: 1.5;
 	word-wrap: break-word
 }
@@ -4719,7 +4743,7 @@ pre {
 	display: inline-block;
 	padding: 5px;  /* 3px 5px; */
 	margin: 0 4px;  /* + */
-	font-size: 14px;  /* 11px */
+	font-size: 13px;  /* 11px */
 	line-height: 10px;
 	color: #444d56;
 	vertical-align: middle;
@@ -4730,9 +4754,11 @@ pre {
 	box-shadow: inset 0 -1px 0 #959da5;
 }
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+	font-family: "Roboto Condensed";
+	padding: 0;
 	margin-top: 24px;
 	margin-bottom: 16px;
-	font-weight: 600;
+	font-weight: normal; /* 600 */
 	line-height: 1.25
 }
 .markdown-body h1 .octicon-link, .markdown-body h2 .octicon-link, .markdown-body h3 .octicon-link, .markdown-body h4 .octicon-link, .markdown-body h5 .octicon-link, .markdown-body h6 .octicon-link {
