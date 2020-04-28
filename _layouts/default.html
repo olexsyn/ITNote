@@ -16,7 +16,7 @@
   <div class="breadcr"><p>
   {% for item in arr_pages %}
     {% if item == '' %}
-      <a href="{{ site.baseurl }}">home</a>
+      <a href="{{ site.baseurl }}">&Delta;</a>
       {% assign full_url = full_url | append: site.baseurl %}
     {% else %}
       {% assign full_url = full_url | append: "/" %}
