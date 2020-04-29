@@ -2,7 +2,7 @@
 
 ## `compet` - соревнования
 
-```mysql
+```sql
 CREATE TABLE compet (
   compid    MEDIUMINT     UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   compname  VARCHAR(70)            NOT NULL,         /* название */
