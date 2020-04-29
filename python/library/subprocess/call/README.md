@@ -13,6 +13,9 @@
 ```python
 import subprocess
 
-info = "Hello world!"
-subprocess.call(['notify-send', info])
+def notify(title, mess):
+    subprocess.call(['notify-send', title, mess])
+
+path = "/home/user/tmp"
+notify('Copied to', path)
 ```
