@@ -1,10 +1,3 @@
----
-layout: default
-title: Test3
----
-
-{{ site.baseurl }}
-
 # Test
 
 <https://webhamster.ru/mytetrashare/index/mtb0> - здесь много статей
