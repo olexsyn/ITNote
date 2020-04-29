@@ -1,6 +1,6 @@
 # MySQL
 
-## `compet` - соревнования
+## compet - соревнования
 
 ```sql
 CREATE TABLE compet (
@@ -21,9 +21,9 @@ CREATE TABLE compet (
   * пример: соревнования стартуют 2017-11-10: значит 1711100 (если еще какие-то соревнования, то 1711101
 
 
-## `prot` - протоколы
+## prot - протоколы
 
-```mysql
+```sql
 CREATE TABLE prot (
   resid    INT       UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   compid   MEDIUMINT UNSIGNED              NOT NULL DEFAULT '0', /* NULL, например, временно для заграничных */
@@ -48,9 +48,9 @@ CREATE TABLE prot (
 ```
 
 
-## `res` - результаты
+## res - результаты
 
-```mysql
+```sql
 CREATE TABLE res (
   resid    INT       UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   compid   MEDIUMINT UNSIGNED              NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE res (
 
 Таблица результаты и др. информация из протокола. для естафет - надо другую таблицу
 
-```mysql
+```sql
 CREATE TABLE res (
   id       int          unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
   compid   mediumint(7) unsigned NOT NULL,             /* id соревнования (см. выше) */
@@ -141,11 +141,11 @@ FEATURES:
 * если эстафета swrid - id команды, в таблице team есть id пловцов
 
 
-## `res` future
+## res - future
 
 Вся информация о заплыве пловца (на будущее, когда и организация и проведение будет через БД).
 
-```mysql
+```sql
 DROP TABLE IF EXISTS heat;
 CREATE TABLE heat (
   id       int unsigned  NOT NULL AUTO_INCREMENT PRIMARY KEY, /* не , тк не ищем id, только для правок */
@@ -204,7 +204,7 @@ CREATE TABLE heat (
 
 ## DB simple
 
-```mysql
+```sql
 CREATE TABLE compet (
   compid    SMALLINT      UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   compname  VARCHAR(70)            NOT NULL,         /* название */
@@ -220,7 +220,7 @@ CREATE TABLE compet (
 
 :warning: желательно, чтобы данные ENUM имели одинаковое кол-во симв., что удобно для правки и просмотра
 
-```mysql
+```sql
 CREATE TABLE res (
   resid    INT      UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   compid   SMALLINT UNSIGNED               NOT NULL,
@@ -265,7 +265,7 @@ PRIMARY KEY USING BTREE(id)
 [Принимайте во внимание соответствие типа индекса типу операции сравнения](/mysql/indexes/choose_index#prinimajte_vo_vnimanie_sootvetstvie_tipa_indeksa_tipu_operacii_sravnenija)
 ### rank_st (st - stable)
 
-```mysql
+```sql
 CREATE TABLE rank_st (
   id     smallint(5)  unsigned NOT NULL PRIMARY KEY,
   rid    tinyint      unsigned NOT NULL,
@@ -321,7 +321,7 @@ UNLOCK TABLES;
 Можем узнать разряд пловца на конкретной дистанции, когда был установлен лучший разряд - есть действительный.
 
 
-```mysql
+```sql
 CREATE TABLE rank_st (
   id     int  unsigned NOT NULL PRIMARY KEY AUTOINCREMENT,
   datecr /* дата установления */
