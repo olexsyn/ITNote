@@ -4,10 +4,7 @@
 
 {% include cmdln.html comm="mkdir newdir" %}
 
-Создать цепочку директорий:
-
-{% include cmdln.html comm="mkdir -p ./dir1/dir2/dir3" %}
-
+Создать цепочку директорий
 
 ```
 dir1
@@ -15,14 +12,19 @@ dir1
          |___ dir3`
 ```
 
+{% include cmdln.html comm="mkdir -p ./dir1/dir2/dir3" %}
+
+
+
 Удаляем созданные директории и добавляем к опцию `-v`: получаем подтверждение о каждом созданном каталоге
 
 {% include cmdln.html comm="rm -rf ./dir1" %}
 
+{% include cmdout.html comm="mkdir -pv ./dir1/dir2/dir3"
+out="test" %}
+
 
 ```
-
-$ mkdir -pv ./dir1/dir2/dir3
 mkdir: created directory './dir1'
 mkdir: created directory './dir1/dir2'
 mkdir: created directory './dir1/dir2/dir3'
