@@ -4742,7 +4742,7 @@ pre {
 	padding: 0;
 	margin-top: 24px;
 	margin-bottom: 16px;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 1.25
 }
 .markdown-body h1 .octicon-link, .markdown-body h2 .octicon-link, .markdown-body h3 .octicon-link, .markdown-body h4 .octicon-link, .markdown-body h5 .octicon-link, .markdown-body h6 .octicon-link {
