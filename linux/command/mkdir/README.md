@@ -1,8 +1,13 @@
 # mkdir
 
-Создать директорию _'newdir'_: `mkdir newdir`
+Создать директорию _'newdir'_:
 
-Создать цепочку директорий: `mkdir -p ./dir1/dir2/dir3`
+{% include cmdln.html command="mkdir newdir" %}
+
+Создать цепочку директорий:
+
+{% include cmdln.html command="mkdir -p ./dir1/dir2/dir3" %}
+
 
 ```
 dir1
