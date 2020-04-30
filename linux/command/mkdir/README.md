@@ -39,24 +39,22 @@ drwxrwxrwx  2 olex olex 4,0K 20-02-23 public/" %}
 
 А сейчас, дискотека!
 
-```
-$ mkdir -pv ./one/{two1,two2,two3}/three
-mkdir: created directory './one'
+{% include cmdlgout.html comm="mkdir -pv ./one/{two1,two2,two3}/three"
+out="mkdir: created directory './one'
 mkdir: created directory './one/two1'
 mkdir: created directory './one/two1/three'
 mkdir: created directory './one/two2'
 mkdir: created directory './one/two2/three'
 mkdir: created directory './one/two3'
-mkdir: created directory './one/two3/three'
-```
+mkdir: created directory './one/two3/three'" %}
+
 
 Удаляем все и делаем еще круче:
 
 {% include cmdln.html comm="rm -rf ~/temp/*" %}
 
-```
-$ mkdir -pv ./one/{two1,two2,two3}/{th1,th2,th3}
-mkdir: created directory './one'
+{% include cmdlgout.html comm="mkdir -pv ./one/{two1,two2,two3}/{th1,th2,th3}"
+out="mkdir: created directory './one'
 mkdir: created directory './one/two1'
 mkdir: created directory './one/two1/th1'
 mkdir: created directory './one/two1/th2'
@@ -68,14 +66,13 @@ mkdir: created directory './one/two2/th3'
 mkdir: created directory './one/two3'
 mkdir: created directory './one/two3/th1'
 mkdir: created directory './one/two3/th2'
-mkdir: created directory './one/two3/th3'
-```
+mkdir: created directory './one/two3/th3'" %}
+
 
 Такой фокус работает не только с командой mkdir, например:
 
-```
-$ rm -rfv one/{two1,two2,two3}
-removed directory 'one/two1/th2'
+{% include cmdlgout.html comm="rm -rfv one/{two1,two2,two3}"
+out="removed directory 'one/two1/th2'
 removed directory 'one/two1/th1'
 removed directory 'one/two1/th3'
 removed directory 'one/two1'
@@ -86,11 +83,14 @@ removed directory 'one/two2'
 removed directory 'one/two3/th2'
 removed directory 'one/two3/th1'
 removed directory 'one/two3/th3'
-removed directory 'one/two3'
+removed directory 'one/two3'" %}
 
-$ ls -lah
-total 12
+
+
+{% include cmdout.html comm="ls -lah"
+out="total 12
 drwxrwxr-x  3 olex olex 4096 20-02-23 ./
 drwxr-xr-x 38 olex olex 4096 20-02-22 ../
-drwxrwxr-x  2 olex olex 4096 20-02-23 one/
-```
+drwxrwxr-x  2 olex olex 4096 20-02-23 one/" %}
+
+
