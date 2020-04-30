@@ -4940,11 +4940,12 @@ pre {
 	overflow: hidden;
 	text-align: right
 }
+/* одиночные ` и тройные ``` */
 .markdown-body code, .markdown-body tt {
 	padding: 0.2em 0.4em;
 	margin: 0;
 	font-size: 100%;  /* 85% */
-	background-color: rgba(27, 31, 35, 0.05);
+	background-color: #f6f8fa; /* rgba(27, 31, 35, 0.05); */
 	border-radius: 3px
 }
 .markdown-body code br, .markdown-body tt br {
