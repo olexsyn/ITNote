@@ -4833,7 +4833,8 @@ pre {
 	overflow: auto
 }
 .markdown-body table th {
-	font-weight: 600
+	font-weight: 600;
+	background-color: #f6f8fa
 }
 .markdown-body table th, .markdown-body table td {
 	padding: 6px 13px;
@@ -4843,9 +4844,9 @@ pre {
 	background-color: #fff;
 	border-top: 1px solid #c6cbd1
 }
-.markdown-body table tr:nth-child(2n) {
+/* .markdown-body table tr:nth-child(2n) {
 	background-color: #f6f8fa
-}
+} */
 .markdown-body table img {
 	background-color: transparent
 }
