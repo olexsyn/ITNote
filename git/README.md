@@ -40,6 +40,10 @@ git diff --cached
 
 ```git difftool --tool=meld```
 
+Принудительно обновить отдаленный репозиторий:
+
+    git push -f origin master
+              ^
 
 - [Ветки](branches)
 - [Работа с удалёнными репозиториями](remote)
