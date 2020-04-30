@@ -1,6 +1,8 @@
 # Test
 
-![keys](/i/k.png) | test | images | table 
+![keys][k] | test | images | table 
+
+
 
 <https://webhamster.ru/mytetrashare/index/mtb0> - здесь много статей
 
@@ -25,3 +27,9 @@ Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit
 | delete         |  ![](/i/x.png)   |  `![](/i/x.png)`  |
 | check **c**ube |  ![](/i/vc.png)  |  `![](/i/vc.png)` |
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
+
+
+![tags][k] : <var>test, images, table</var>
+
+[k]: /i/k.png "Tags" 
+
