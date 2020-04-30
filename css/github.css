@@ -5243,11 +5243,11 @@ a[href ^= "mailto"] {
 }
 .command-line {
 	background-color: #444 !important;
-	color: #F1F1F1;
+	color: #d0d0d0;
 	position: relative
 }
 .command {
-    color: #FFF;
+    color: #fff;
 }
 .output {
     color: #d9d9d9;
