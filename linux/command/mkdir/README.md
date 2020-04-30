@@ -26,25 +26,16 @@ mkdir: created directory './dir1/dir2'
 mkdir: created directory './dir1/dir2/dir3'" %}
 
 
-```
-mkdir: created directory './dir1'
-mkdir: created directory './dir1/dir2'
-mkdir: created directory './dir1/dir2/dir3'
-```
-
 Создаем директорию _'public'_ с правами _777_:
 
 {% include cmdln.html comm="mkdir -m777 public" %}
 
-
-``` 
-$ ls -lah
-total 16K
+{% include cmdout.html comm="ls -lah"
+out="total 16K
 drwxrwxr-x  4 olex olex 4,0K 20-02-23 ./
 drwxr-xr-x 38 olex olex 4,0K 20-02-22 ../
 drwxrwxr-x  3 olex olex 4,0K 20-02-23 dir1/
-drwxrwxrwx  2 olex olex 4,0K 20-02-23 public/
-````
+drwxrwxrwx  2 olex olex 4,0K 20-02-23 public/" %}
 
 А сейчас, дискотека!
 
