@@ -5241,16 +5241,13 @@ a[href ^= "http"] {
 a[href ^= "mailto"] {
   color: #0366d6;
 }
-.markdown-body term {
-	padding: 16px;
-	overflow: auto;
-	font-size: 100%;  /* 85% */
-	line-height: 1.45;
-	background-color: #444;
-	color: #eee;
-	border-radius: 6px;  /* 3px; */
-	border: 1px solid #e6e8ea;
+.command-line {
+    background-color: #444;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    position: relative;
 }
-.markdown-body term .command{
-	color: #F8F8F8;
+.command {
+    color: ##FBFF35;
 }
