@@ -21,7 +21,9 @@ dir1
 {% include cmdln.html comm="rm -rf ./dir1" %}
 
 {% include cmdout.html comm="mkdir -pv ./dir1/dir2/dir3"
-out="test" %}
+out="mkdir: created directory './dir1'
+mkdir: created directory './dir1/dir2'
+mkdir: created directory './dir1/dir2/dir3'" %}
 
 
 ```
