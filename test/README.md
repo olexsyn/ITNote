@@ -159,21 +159,26 @@ Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
 
 
+```<kbd>test</kbd>, <kbd>images</kbd>, <kbd>table</kbd>```
+
+<kbd>test</kbd>, <kbd>images</kbd>, <kbd>table</kbd>
+
+
+```![tags][k] : <var>test, images, table</var>```
+
 ![tags][k] : <var>test, images, table</var>
 
+
 ```
-![tags][k] : <var>test, images, table</var>
+**keys**: <i>test<i>, <i>images<i>, <i>table<i>
 ```
 
 **keys**: <i>test<i>, <i>images<i>, <i>table<i>
 
-```
-**keys**: <i>test<i>, <i>images<i>, <i>table<i>
-```
 
-<kbd>test</kbd>, <kbd>images<kbd/>, <kbd>table<kbd/>
+```<small><samp>test, images, table</samp></small>```
 
-<small><samp>test, images, table</samp><small>
+<small><samp>test, images, table</samp></small>
+
 
 [k]: /i/k.png "Tags" 
-
