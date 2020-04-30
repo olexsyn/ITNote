@@ -121,5 +121,15 @@ Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit
 
 ![tags][k] : <var>test, images, table</var>
 
+```
+![tags][k] : <var>test, images, table</var>
+```
+
+**keys**: <i>test<i>, <i>images<i>, <i>table<i>
+
+```
+**keys**: <i>test<i>, <i>images<i>, <i>table<i>
+```
+
 [k]: /i/k.png "Tags" 
 
