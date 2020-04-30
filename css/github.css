@@ -4946,7 +4946,8 @@ pre {
 	margin: 0;
 	font-size: 100%;  /* 85% */
 	background-color: #f6f8fa; /* rgba(27, 31, 35, 0.05); */
-	border-radius: 3px
+	border-radius: 3px;
+	border: 1px solid #e5e5e5;
 }
 .markdown-body code br, .markdown-body tt br {
 	display: none
