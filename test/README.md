@@ -6,6 +6,12 @@
 
 <kbd>Ctrl <kbd>K</kbd> <kbd>U</kbd></kbd> - Ctrl - удерживается, U и K - поочередно
 
+## new tag term
+
+<term>
+	test
+</term>
+
 ## Test code block
 
 ---
