@@ -7,8 +7,8 @@
 <kbd>Ctrl <kbd>K</kbd> <kbd>U</kbd></kbd> - Ctrl - удерживается, U и K - поочередно
 
 ## command-line
-
 <pre class="command-line"><span class="command">curl -i https://api.github.com/users/octocat/orgs</span>
+
 HTTP/1.1 200 OK
 Server: nginx
 Date: Fri, 12 Oct 2012 23:33:14 GMT
@@ -17,13 +17,28 @@ Connection: keep-alive
 Status: 200 OK
 </pre>
 
-<pre class="command-line2"><span class="command2">curl -i https://api.github.com/users/octocat/orgs</span>
-<span class="output2">HTTP/1.1 200 OK</span>
-<span class="output2">Server: nginx</span>
-<span class="output2">Date: Fri, 12 Oct 2012 23:33:14 GMT</span>
-<span class="output2">Content-Type: application/json; charset=utf-8</span>
-<span class="output2">Connection: keep-alive</span>
-<span class="output2">Status: 200 OK</span>
+---
+
+<pre class="command-line"><span class="command">curl -i https://api.github.com/users/octocat/orgs</span>
+
+<span class="output">HTTP/1.1 200 OK</span>
+<span class="output">Server: nginx</span>
+<span class="output">Date: Fri, 12 Oct 2012 23:33:14 GMT</span>
+<span class="output">Content-Type: application/json; charset=utf-8</span>
+<span class="output">Connection: keep-alive</span>
+<span class="output">Status: 200 OK</span>
+</pre>
+
+---
+
+<pre class="command-line"><span class="command">curl -i https://api.github.com/users/octocat/orgs</span>
+<span class="output">
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 12 Oct 2012 23:33:14 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Status: 200 OK</span>
 </pre>
 
 
