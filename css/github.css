@@ -5242,25 +5242,15 @@ a[href ^= "mailto"] {
   color: #0366d6;
 }
 .command-line {
-    background-color: #444 !important;
-    color: green;
-    border-radius: 3px;
-    border: none;
-    position: relative;
+	background-color: #444 !important;
+	color: #F1F1F1;
+	position: relative
 }
 .command {
-    color: #fff;
-}
-.command-line2 {
-    background-color: #444 !important;
-    color: #F1F1F1;
-    border-radius: 3px;
-    border: none;
-    position: relative;
-}
-.command2 {
     color: #FFF;
 }
-.output2 {
-    color: green;
+.output {
+    color: #d9d9d9;
+    font-size: 75%;
+    line-height: 1;
 }
