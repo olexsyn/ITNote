@@ -2,6 +2,10 @@
 
 ![keys][k] | test | images | table 
 
+<kbd>Ctrl Alt Del</kbd> - три кнопки нажаты одновременно
+
+<kbd>Ctrl <kbd>K</kbd> <kbd>U</kbd></kbd> - Ctrl - удерживается, U и K - поочередно
+
 ## Test code block
 
 ---
@@ -130,6 +134,10 @@ Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit
 ```
 **keys**: <i>test<i>, <i>images<i>, <i>table<i>
 ```
+
+<kbd>test</kbd>, <kbd>images<kbd/>, <kbd>table<kbd/>
+
+<small><samp>test, images, table</samp><small>
 
 [k]: /i/k.png "Tags" 
 
