@@ -2,11 +2,11 @@
 
 Создать директорию _'newdir'_:
 
-{% include cmdln.html command="mkdir newdir" %}
+{% include cmdln.html comm="mkdir newdir" %}
 
 Создать цепочку директорий:
 
-{% include cmdln.html command="mkdir -p ./dir1/dir2/dir3" %}
+{% include cmdln.html comm="mkdir -p ./dir1/dir2/dir3" %}
 
 
 ```
@@ -17,8 +17,11 @@ dir1
 
 Удаляем созданные директории и добавляем к опцию `-v`: получаем подтверждение о каждом созданном каталоге
 
+{% include cmdln.html comm="rm -rf ./dir1" %}
+
+
 ```
-$ rm -rf ./dir1
+
 $ mkdir -pv ./dir1/dir2/dir3
 mkdir: created directory './dir1'
 mkdir: created directory './dir1/dir2'
@@ -27,8 +30,10 @@ mkdir: created directory './dir1/dir2/dir3'
 
 Создаем директорию _'public'_ с правами _777_:
 
-```
-$ mkdir -m777 public
+{% include cmdln.html comm="mkdir -m777 public" %}
+
+
+``` 
 $ ls -lah
 total 16K
 drwxrwxr-x  4 olex olex 4,0K 20-02-23 ./
@@ -52,8 +57,9 @@ mkdir: created directory './one/two3/three'
 
 Удаляем все и делаем еще круче:
 
+{% include cmdln.html comm="rm -rf ~/temp/*" %}
+
 ```
-$ rm -rf ~/temp/*
 $ mkdir -pv ./one/{two1,two2,two3}/{th1,th2,th3}
 mkdir: created directory './one'
 mkdir: created directory './one/two1'
