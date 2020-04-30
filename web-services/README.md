@@ -10,9 +10,11 @@
 
 ## Graphics
 
-- [Free Online OCR](https://www.newocr.com)
 - [Icon Finder](https://www.iconfinder.com)
+- [Free Online OCR](https://www.newocr.com)
+- [Google Fonts](https://fonts.google.com)
 - [Карти Google](https://www.google.com.ua/maps)
+- [Waze livemap](https://www.waze.com/ru/livemap)
 
 ## Video
 
