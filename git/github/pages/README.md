@@ -2,6 +2,7 @@ GitHub Pages
 ============
 
 - [Favicon для сайта на Pages](favicon)
+- [CSS, подключаемый в дефолтной теме](css)
 - [Linux](/linux.md) это ссылка `/linux.md` \| на github.io - `/linux.html`
 - [Python](/python.md) это ссылка `/python.md` \| на github.io - `/python.html`
 
