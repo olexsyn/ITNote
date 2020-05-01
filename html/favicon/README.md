@@ -8,17 +8,13 @@
 ```
 ## Links
 
-видео: Какие нужны фавиконки - https://www.youtube.com/watch?v=iG9WF8VpogY
+- [видео: Какие нужны фавиконки](https://www.youtube.com/watch?v=iG9WF8VpogY
+- <https://github.com/audreyr/favicon-cheat-sheet>
+- см. [Everything you always wanted to know about touch icons](https://mathiasbynens.be/notes/touch-icons)
+- [App Icons on iPad and iPhone](https://developer.apple.com/library/ios/qa/qa1686/_index.html)
+- <http://www.favicomatic.com> - беспл. сервис
+- [Real FavIcon Generator](http://realfavicongenerator.net/blog/apple-touch-icon-the-good-the-bad-the-ugly/)
 
-<https://github.com/audreyr/favicon-cheat-sheet>
-
-см. [Everything you always wanted to know about touch icons](https://mathiasbynens.be/notes/touch-icons)
-
-[App Icons on iPad and iPhone](https://developer.apple.com/library/ios/qa/qa1686/_index.html)
-
-<http://www.favicomatic.com> - беспл. сервис
-
-[Real FavIcon Generator](http://realfavicongenerator.net/blog/apple-touch-icon-the-good-the-bad-the-ugly/)
 
 <span class="r">TODO!</span> наведи тут порядок
 
