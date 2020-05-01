@@ -11,4 +11,4 @@
 ```
 <small>тут у меня `favicon.ico` в реальности - файл `.png`, поэтому - `image/png`</small>
 
-см. больше на [{{ site.baseurl }}/html/favicon/](/html/favicon/)
+см. больше на [/html/favicon/]({{ site.baseurl }}/html/favicon/)
