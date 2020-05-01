@@ -20,6 +20,8 @@
 
 [Real FavIcon Generator](http://realfavicongenerator.net/blog/apple-touch-icon-the-good-the-bad-the-ugly/)
 
+<span class="r">TODO!</span> наведи тут порядок
+
 
 ## Примеры
 
@@ -110,9 +112,8 @@
 /images/safari-pinned-tab.svg
 ```
 
-<span class="r">TODO!</span> разберись с этим!
 
-```xml site.webmanifest
+```xml
 {
     "name": "Habr",
     "short_name": "Habr",
