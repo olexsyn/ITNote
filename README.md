@@ -12,6 +12,7 @@
 - [MySQL](mysql)
 - [HTML](html)
 - [CSS](css)
+  - [Bootstrap](css/bootstrap)
 - [Web Services](web-services)
 - [Test](test)
 
