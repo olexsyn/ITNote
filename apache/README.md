@@ -12,8 +12,8 @@
 
 ## Подключить сайт
 
-Конфигурационные файлы для виртуальных хостов хранятся в `/etc/apache2/sites-available/`
+Конфигурационные файлы для виртуальных хостов хранятся в _**/etc/apache2/sites-available/**_
 
 Для Apache, начиная с версии 2.4 у файла должно быть расширение .conf
 
-Пример файла конфигурации хоста "mysite.com" (файл /etc/apache2/sites-available/mysite_com.conf):
+Пример файла конфигурации хоста "mysite.com" (файл _/etc/apache2/sites-available/mysite_com.conf_):
