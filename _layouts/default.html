@@ -9,34 +9,15 @@
 	<link href="{{ site.baseurl }}/css/github.css" rel="stylesheet">
 </head>
 <body>
+	<a name="top"></a>
 	<div class="container-lg px-3 my-5 markdown-body">
 
-{% if page.url != "/" %}
-  {% assign arr_pages = page.url | split: "/" %}
-  {% assign last_page = page.url | split: "/" | last %}
-  {% assign full_url = "" %}
-  <div class="breadcr"><p>
-  {% for item in arr_pages %}
-    {% if item == '' %}
-      <a href="{{ site.baseurl }}">note</a>
-      {% assign full_url = full_url | append: site.baseurl %}
-    {% else %}
-      {% assign full_url = full_url | append: "/" %}
-      {% assign full_url = full_url | append: item %}
-      {% assign dir = item | remove: ".html" %}
-      {% if dir == last_page %}
-        / <b>{{ dir }}</b>
-      {% else %}
-        / <a href="{{ full_url }}">{{ dir }}</a>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-  </p></div>
-{% endif %}
+{% include breadcrumb.html %}
 
 {{ content }}
 
-{% include edit.html %}
+{% include footer.html %}
+
 	</div>
 </body>
 </html>

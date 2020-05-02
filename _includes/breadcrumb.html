@@ -1,0 +1,23 @@
+<!-- breadcrumb -->
+{% if page.url != "/" %}
+  {% assign arr_pages = page.url | split: "/" %}
+  {% assign last_page = page.url | split: "/" | last %}
+  {% assign full_url = "" %}
+  <p>
+  {% for item in arr_pages %}
+    {% if item == '' %}
+      <a href="{{ site.baseurl }}">note</a>
+      {% assign full_url = full_url | append: site.baseurl %}
+    {% else %}
+      {% assign full_url = full_url | append: "/" %}
+      {% assign full_url = full_url | append: item %}
+      {% assign dir = item | remove: ".html" %}
+      {% if dir == last_page %}
+        / <b>{{ dir }}</b>
+      {% else %}
+        / <a href="{{ full_url }}">{{ dir }}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </p>
+{% endif %}
