@@ -1,11 +1,4 @@
-<table>
-<tr><td><b>A</b></td><td><i>B</i></td><td><i>C</i></td><td><i>D</i></td><td><b>E</b></td><td><i>F</i></td><td><i>G</i></td><td><i>H</i></td><td><b>I</b></td></tr>
-<tr><td colspan="10"></td></tr>
-<tr><td><i>J</i></td><td><i>K</i></td><td><i>L</i></td><td><i>M</i></td><td><i>N</i></td><td><b>O</b></td><td><i>P</i></td><td><i>Q</i></td><td><i>R</i></td></tr>
-<tr><td colspan="10"></td></tr>
-<tr><td><i>S</i></td><td><i>T</i></td><td><b>U</b></td><td><i>V</i></td><td><i>W</i></td><td><i>X</i></td><td><b>Y</b></td><td><i>Z</i></td><td><i>’</i></td></tr>
-</table>
-## Мой breadcrumbs в шаблоне по умолчанию
+# Мой breadcrumbs в шаблоне по умолчанию
 
 _\_layouts/default.html_
 
