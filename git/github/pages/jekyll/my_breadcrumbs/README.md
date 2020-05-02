@@ -3,8 +3,8 @@
 /_layouts/default.html
 
 ```
-[ 1]  {% if page.title != "TechNote" %}
-[ 2]    {% assign arr_pages = page.url | split: "/" %}
+[ 1]  \{% if page.title != "TechNote" %}
+[ 2]    \{% assign arr_pages = page.url | split: "/" %}
 [ 3]    {% assign full_url = "" %}
 [ 4]    <p>
 [ 5]    {% for item in arr_pages %}
