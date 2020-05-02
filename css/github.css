@@ -4942,12 +4942,12 @@ pre {
 }
 /* одиночные ` и тройные ``` */
 .markdown-body code, .markdown-body tt {
-	padding: 0.2em 0.4em;
+	padding: 0.15em 0.4em;
 	margin: 0;
 	font-size: 100%;  /* 85% */
 	background-color: #f6f8fa; /* rgba(27, 31, 35, 0.05); */
 	border-radius: 3px;
-	border: 1px solid #e5e5e5;
+	border: 0;
 }
 .markdown-body code br, .markdown-body tt br {
 	display: none
@@ -4975,7 +4975,7 @@ pre {
 	word-break: normal
 }
 .markdown-body .highlight pre, .markdown-body pre {
-	padding: 16px;
+	padding: 6px 14px;  /* 16px */
 	overflow: auto;
 	font-size: 100%;  /* 85% */
 	line-height: 1.45;
