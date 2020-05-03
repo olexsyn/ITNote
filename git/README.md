@@ -27,11 +27,11 @@ M  lib/simplegit.rb
 - <code>M&middot;</code>
 - <samp>M&middot;</samp>
 
-- `{{ full_url }}`
-- ```{{ full_url }}```
-- <pre>{{ full_url }}</pre>
-- <code>{{ full_url }}</code>
-- <samp>{{ full_url }}</samp>
+- `{{ site.baseurl }}`
+- ```{{ site.baseurl }}```
+- <pre>{{ site.baseurl }}</pre>
+- <code>{{ site.baseurl }}</code>
+- <samp>{{ site.baseurl }}</samp>
 
 
 ```
