@@ -86,7 +86,7 @@ svg:not(:root) {
 }
 code, kbd, pre, samp {
 	font-family: "Droid Sans Mono", "Courier New", monospace;
-	font-size: 0.85em
+	font-size: 1em
 }
 figure {
 	margin: 1em 40px
