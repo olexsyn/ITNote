@@ -1,7 +1,7 @@
 # Git
 
 - [GitHub](github)
-  - [Jekyll конструктор](github/jekyll)
+  - [Jekyll конструктор](github/pages/jekyll)
 - [Книга Pro Git](#progit)
 
 ### Сокращенный вывод статуса
