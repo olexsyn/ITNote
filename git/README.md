@@ -11,6 +11,10 @@
 
 [подробно](https://git-scm.com/book/ru/v2/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git-%D0%97%D0%B0%D0%BF%D0%B8%D1%81%D1%8C-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B2-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9)
 
+### Сокращенный вывод статуса
+
+`-s` или `--short`
+
 {% include cmdout.htm cmd="git status -s" out=" M README
 MM Rakefile
 A  lib/git.rb
@@ -20,25 +24,11 @@ M  lib/simplegit.rb
 В выводе два столбца: в левом - статус, в правом - (не)модифицирован
 
 - `??` - новые неотслеживаемые файлы
-- `A&middot;` - файлы добавленные в отслеживаемые
-- `M&middot;` - модифицирован и проиндексирован
+- <code>A&middot;</code> - файлы добавленные в отслеживаемые
+- <code>&middot;M</code> - модифицирован и НЕ проиндексирован
+- <code>M&middot;</code> - модифицирован и проиндексирован
+- `MM` - модифицирован, проиндексирован и ещё раз модифицирован, т.е. на данный момент у него есть изменения которые попадут в коммит и те которые не попадут
 
-- <pre>M&middot;</pre>
-- <code>M&middot;</code>
-- <samp>M&middot;</samp>
-
-- `{{ site.baseurl }}`
-- ```{{ site.baseurl }}```
-- <pre>{{ site.baseurl }}</pre>
-- <code>{{ site.baseurl }}</code>
-- <samp>{{ site.baseurl }}</samp>
-
-
-```
-git status
-git status -s
-git status --short
-```
 
 ```
 git add file1.ext ... fileN.ext
