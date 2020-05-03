@@ -24,3 +24,7 @@
 ## Music
 
 - [Z1.FM](https://z1.fm) `mp3` `download`
+
+## Погода
+
+- [t° воды в Днепре](https://travel.org.ua/water/dnepr-(vozle-kieva)-temperatura-vody)
