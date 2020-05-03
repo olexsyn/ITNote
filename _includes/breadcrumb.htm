@@ -8,14 +8,10 @@
       <a href="{{ site.baseurl }}">home</a>
       {% assign full_url = site.baseurl %}
     {% else %}
-      {% comment %}
-      {% assign full_url = full_url | append: "/" %}
-      {% assign full_url = full_url | append: item %}
-      {% endcomment %}
       {% capture full_url %}{{ full_url }}/{{ item }}{% endcapture %}
       {% assign dir = item | remove: ".html" %}
       {% if dir == last_page %}
-        / <b>{{ dir }}</b>
+        / <span class="text-gray">{{ dir }}</span>
       {% else %}
         / <a href="{{ full_url }}">{{ dir }}</a>
       {% endif %}
