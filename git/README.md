@@ -17,6 +17,16 @@ A  lib/git.rb
 M  lib/simplegit.rb
 ?? LICENSE.txt" %}
 
+В выводе два столбца: в левом - статус, в правом - (не)модифицирован
+
+- `??` - новые неотслеживаемые файлы
+- `A&middot;` - файлы добавленные в отслеживаемые
+- `M&middot;` - модифицирован и проиндексирован
+
+- <pre>M&middot;</pre>
+- <code>M&middot;</code>
+- <samp>M&middot;</samp>
+
 ```
 git status
 git status -s
