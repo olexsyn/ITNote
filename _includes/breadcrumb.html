@@ -2,12 +2,13 @@
 {% if page.url != "/" %}
   {% assign arr_pages = page.url | split: "/" %}
   {% assign last_page = page.url | split: "/" | last %}
-  {% assign full_url = "" %}
+  {comment}{% assign full_url = "" %}{endcomment}
   <p>
   {% for item in arr_pages %}
     {% if item == '' %}
       <a href="{{ site.baseurl }}">note</a>
-      {% assign full_url = full_url | append: site.baseurl %}
+      {comment}{% assign full_url = full_url | append: site.baseurl %}{endcomment}
+      {% assign full_url = "" %}
     {% else %}
       {% assign full_url = full_url | append: "/" %}
       {% assign full_url = full_url | append: item %}

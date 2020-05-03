@@ -4,7 +4,7 @@
 
 ## Установка
 
-<pre class="command-line"><span class="command">sudo apt install apache2</span></pre>
+{% include cmd.htm cmd="sudo apt install apache2" %}
 
 * [Apache HTTP Server Version 2.4 Documentation](http://httpd.apache.org/docs/2.4/)
   * [Introduction to Server Side Includes](http://httpd.apache.org/docs/2.4/howto/ssi.html)

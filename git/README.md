@@ -48,7 +48,7 @@ git diff --cached
 
 #### Принудительно обновить отдаленный репозиторий:
 
-{% include cmdln.html comm="git push -f origin master" %}
+{% include cmd.htm cmd="git push -f origin master" %}
 
 Но, следует понимать, что на сервере затрутся все изменения в файлах, которые были сделаны после последнего `git push`, даже если ты отправляешь всего один файл.
 

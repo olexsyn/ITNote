@@ -2,7 +2,7 @@
 
 Создать директорию _'newdir'_:
 
-{% include cmdln.html comm="mkdir newdir" %}
+{% include cmd.htm cmd="mkdir newdir" %}
 
 Создать цепочку директорий
 
@@ -12,15 +12,15 @@ dir1
          |___ dir3`
 ```
 
-{% include cmdln.html comm="mkdir -p ./dir1/dir2/dir3" %}
+{% include cmd.htm cmd="mkdir -p ./dir1/dir2/dir3" %}
 
 
 
 Удаляем созданные директории и добавляем к опцию `-v`: получаем подтверждение о каждом созданном каталоге
 
-{% include cmdln.html comm="rm -rf ./dir1" %}
+{% include cmd.htm cmd="rm -rf ./dir1" %}
 
-{% include cmdout.html comm="mkdir -pv ./dir1/dir2/dir3"
+{% include cmdout.htm cmd="mkdir -pv ./dir1/dir2/dir3"
 out="mkdir: created directory './dir1'
 mkdir: created directory './dir1/dir2'
 mkdir: created directory './dir1/dir2/dir3'" %}
@@ -28,9 +28,9 @@ mkdir: created directory './dir1/dir2/dir3'" %}
 
 Создаем директорию _'public'_ с правами _777_:
 
-{% include cmdln.html comm="mkdir -m777 public" %}
+{% include cmd.htm cmd="mkdir -m777 public" %}
 
-{% include cmdout.html comm="ls -lah"
+{% include cmdout.htm cmd="ls -lah"
 out="total 16K
 drwxrwxr-x  4 olex olex 4,0K 20-02-23 ./
 drwxr-xr-x 38 olex olex 4,0K 20-02-22 ../
@@ -39,8 +39,8 @@ drwxrwxrwx  2 olex olex 4,0K 20-02-23 public/" %}
 
 А сейчас, дискотека!
 
-{% include cmdlgout.html comm="mkdir -pv ./one/{two1,two2,two3}/three"
-out="mkdir: created directory './one'
+{% include cmdsm.htm cmd="mkdir -pv ./one/{two1,two2,two3}/three"
+sm="mkdir: created directory './one'
 mkdir: created directory './one/two1'
 mkdir: created directory './one/two1/three'
 mkdir: created directory './one/two2'
@@ -51,10 +51,10 @@ mkdir: created directory './one/two3/three'" %}
 
 Удаляем все и делаем еще круче:
 
-{% include cmdln.html comm="rm -rf ~/temp/*" %}
+{% include cmd.htm cmd="rm -rf ~/temp/*" %}
 
-{% include cmdlgout.html comm="mkdir -pv ./one/{two1,two2,two3}/{th1,th2,th3}"
-out="mkdir: created directory './one'
+{% include cmdsm.htm cmd="mkdir -pv ./one/{two1,two2,two3}/{th1,th2,th3}"
+sm="mkdir: created directory './one'
 mkdir: created directory './one/two1'
 mkdir: created directory './one/two1/th1'
 mkdir: created directory './one/two1/th2'
@@ -71,8 +71,8 @@ mkdir: created directory './one/two3/th3'" %}
 
 Такой фокус работает не только с командой mkdir, например:
 
-{% include cmdlgout.html comm="rm -rfv one/{two1,two2,two3}"
-out="removed directory 'one/two1/th2'
+{% include cmdsm.htm cmd="rm -rfv one/{two1,two2,two3}"
+sm="removed directory 'one/two1/th2'
 removed directory 'one/two1/th1'
 removed directory 'one/two1/th3'
 removed directory 'one/two1'
@@ -86,8 +86,7 @@ removed directory 'one/two3/th3'
 removed directory 'one/two3'" %}
 
 
-
-{% include cmdout.html comm="ls -lah"
+{% include cmdout.htm cmd="ls -lah"
 out="total 12
 drwxrwxr-x  3 olex olex 4096 20-02-23 ./
 drwxr-xr-x 38 olex olex 4096 20-02-22 ../
