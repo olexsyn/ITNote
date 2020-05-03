@@ -6,7 +6,7 @@
   {% for item in arr_pages %}
     {% if item == '' %}
       <a href="{{ site.baseurl }}">home</a>
-      {% assign full_url = "" %}
+      {% assign full_url = site.baseurl %}
     {% else %}
       {% comment %}
       {% assign full_url = full_url | append: "/" %}
