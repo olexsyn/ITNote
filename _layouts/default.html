@@ -9,14 +9,16 @@
 	<link href="{{ site.baseurl }}/css/github.css" rel="stylesheet">
 </head>
 <body><a name="top"></a>
-	<div class="container-lg px-3 my-5 markdown-body">
-
-{% include breadcrumb.htm %}
-
-{{ content }}
-
-{% include footer.htm %}
-
-	</div>
+<div class="container-lg px-3 my-5 markdown-body">
+	<nav>
+		{% include breadcrumb.htm %}
+	</nav>
+	<article>
+		{{ content }}
+	</article>
+	<footer>
+		{% include footer.htm %}
+	<footer>
+</div>
 </body>
 </html>
