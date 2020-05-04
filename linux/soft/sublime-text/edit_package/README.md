@@ -1,11 +1,10 @@
-Как можно подправить package
-============================
+# Как подправить package
 
 На примере темы Afterglow, но аналогично, я так понимаю, можно подправить любой пакет.
 
 Итак, поставил понравившуюся тему (в ней же - подсветка синтаксиса) но шрифты слишком темные и плохо видны на темном фоне.
 
-Сам пакет находится здесь: `/home/olex/.config/sublime-text-3/Installed Packages/Theme - Afterglow.sublime-package`. Его можно открыть архиватором:
+Сам пакет находится здесь: **/home/user/.config/sublime-text-3/Installed Packages/Theme - Afterglow.sublime-package*(. Его можно открыть архиватором:
 
 ![package](st_package.png)
 
