@@ -4,6 +4,7 @@
 
 - [GitHub Flavored Markdown](gfm)
 
+- [Подключение к GitHub с SSH](ssh)
 - [Перенести на сервер локальный репозиторий](repo2server)
 - [GitHub Icons](github_icons)
 - [Что такое pull request](http://ivan.rolik.name/2013/01/29/pull-request-without-fork-github/)
