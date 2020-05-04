@@ -56,8 +56,7 @@
 Проверяем, что текущий протокол HTTP: "... _origin  https://_ ..."
 
 {% include cmdout.htm cmd="git remote -v"
-out="
-origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+out="origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
 origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 
 Изменяем протокол:
@@ -67,8 +66,7 @@ origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 Проверяем: "... _origin  git@github.com:_"
 
 {% include cmdout.htm cmd="git remote -v"
-out="
-origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+out="origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
 origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 
 Если ранее вводилась безопасная фраза-пароль, она может быть запрошена при операциях `git pull` и `git push`.
