@@ -1,6 +1,6 @@
 # Sublime Text
 
-[Как можно подправить package](./sublime-text/edit_package.md) (на примере темы Afterglow)
+[Как можно подправить package](edit_package) (на примере темы Afterglow)
 
 ## Плагины
 
