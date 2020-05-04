@@ -1,7 +1,7 @@
 # Мой breadcrumbs в шаблоне по умолчанию
 
-Код, который построит breadcrumb, расположим в **_includes\breadcrumb.htm**, и подключим его к шаблону **_layouts/default.html**:
-{% comment %}
+Код, который построит breadcrumb, расположим в **_includes/breadcrumb.htm**, и подключим его к шаблону **_layouts/default.html**:
+{% raw %}
 ```
 {% include breadcrumb.htm %}
 ```
@@ -30,7 +30,7 @@
 [20]  </p>
 [21]{% endif %}
 ```
-{% endcomment %}
+{% endraw %}
 
 ## Несколько слов для ясности
 
