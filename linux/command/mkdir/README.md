@@ -20,8 +20,8 @@ dir1
 
 {% include cmd.htm cmd="rm -rf ./dir1" %}
 
-{% include cmdout.htm cmd="mkdir -pv ./dir1/dir2/dir3"
-out="mkdir: created directory './dir1'
+{% include cmdsm.htm cmd="mkdir -pv ./dir1/dir2/dir3"
+sm="mkdir: created directory './dir1'
 mkdir: created directory './dir1/dir2'
 mkdir: created directory './dir1/dir2/dir3'" %}
 
