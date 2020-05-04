@@ -1,4 +1,5 @@
 # Soft
 
-- [rsync](rsync.md)
-- [Sublime-text](soft/sublime-text.md)
+- [apt](apt)
+- [rsync](rsync)
+- [Sublime Text](sublime-text)
