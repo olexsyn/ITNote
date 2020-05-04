@@ -55,7 +55,7 @@
 
 Переходим в директорию необходимого репозитория
 
-{% include cmd.htm cmd="cd path/to/REPOSITORY"" %}
+{% include cmd.htm cmd="cd path/to/REPOSITORY" %}
 
 Проверяем, что текущий протокол HTTP: "... _origin  https://_ ..."
 
