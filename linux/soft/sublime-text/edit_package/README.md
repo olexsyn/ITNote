@@ -7,25 +7,25 @@
 
 Сам пакет находится здесь: `/home/olex/.config/sublime-text-3/Installed Packages/Theme - Afterglow.sublime-package`. Его можно открыть архиватором:
 
-![package](./edit_package/st_package.png)
+![package](st_package.png)
 
 Я поставил тему "Orange", поэтому нашел и вытащил из архива соответствующий файл - **Afterglow-orange.sublime-theme**, в нем и делал правки.
 
 Имена файлов во вкладках (потом, правда, я их отключил) "fg" `[195, 195, 195]`: 
 
-![package](./edit_package/st_tabs.png)
+![package](st_tabs.png)
 
 Ползунки прокрутки вертикальные и горизонтальные, значения `[99, 99, 99]`:
 
-![package](./edit_package/st_polzunok.png)
+![package](st_polzunok.png)
 
 Для файлов сайдбара - "color" `[155, 155, 155]`, там же и папки `[160, 160, 160]`
 
-![package](./edit_package/st_sb_lab.png)
+![package](st_sb_lab.png)
 
 Текст в статус-строке "color" `[160, 160, 160]`:
 
-![package](./edit_package/st_status_bar.png)
+![package](st_status_bar.png)
 
 Не знаю, когда используется "brighter", поднял и его (со 160 до 180)
 
