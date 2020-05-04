@@ -1,4 +1,4 @@
-Подключение к GitHub с SSH
+# Подключение к GitHub с SSH
 
 [инструкция на англ.](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
@@ -19,7 +19,7 @@
 > Enter passphrase (empty for no passphrase): [Type a passphrase]
 > Enter same passphrase again: [Type passphrase again]" %} 
 
-Это создаст новый ключ ssh, используя предоставленное e-mail в качестве метки.
+Это создаст новый ключ ssh, используя предоставленный e-mail в качестве метки.
 
 Когда вам будет предложено «Введите файл, в котором вы хотите сохранить ключ», нажмите Enter. Это принимает местоположение файла по умолчанию.
 
@@ -45,13 +45,17 @@
 
 В поле «Title» добавьте описательную метку для нового ключа.
 
-Вставьте свой ключ в поле «Key»
+Вставьте свой ключ в поле «Key».
 
 Нажмите «Add SSH key». 
 
 Если будет предложено, подтвердите свой пароль GitHub. 
 
 ## Изменение протокола передачи данных репозитория с HTTP на SSH
+
+Переходим в директорию необходимого репозитория
+
+{% include cmd.htm cmd="cd path/to/REPOSITORY"" %}
 
 Проверяем, что текущий протокол HTTP: "... _origin  https://_ ..."
 
@@ -63,10 +67,10 @@ origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 
 {% include cmd.htm cmd="git remote set-url origin git@github.com:USERNAME/REPOSITORY.git" %}
 
-Проверяем: "... _origin  git@github.com:_"
+Проверяем, что протокол изменился на GIT: "... _origin  git@github.com:_"
 
 {% include cmdout.htm cmd="git remote -v"
 out="origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
 origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 
-Если ранее вводилась безопасная фраза-пароль, она может быть запрошена при операциях `git pull` и `git push`.
+Если ранее вводилась безопасная фраза-пароль, она может быть запрошена при командах `git pull` и `git push`.
