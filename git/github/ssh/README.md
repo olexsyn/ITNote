@@ -1,4 +1,4 @@
-# Подключение к GitHub с SSH
+# Подключение к GitHub через SSH
 
 [инструкция на англ.](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
