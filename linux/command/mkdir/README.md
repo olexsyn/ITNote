@@ -30,8 +30,8 @@ mkdir: created directory './dir1/dir2/dir3'" %}
 
 {% include cmd.htm cmd="mkdir -m777 public" %}
 
-{% include cmdout.htm cmd="ls -lah"
-out="total 16K
+{% include cmdsm.htm cmd="ls -lah"
+sm="total 16K
 drwxrwxr-x  4 olex olex 4,0K 20-02-23 ./
 drwxr-xr-x 38 olex olex 4,0K 20-02-22 ../
 drwxrwxr-x  3 olex olex 4,0K 20-02-23 dir1/
@@ -86,8 +86,8 @@ removed directory 'one/two3/th3'
 removed directory 'one/two3'" %}
 
 
-{% include cmdout.htm cmd="ls -lah"
-out="total 12
+{% include cmdsm.htm cmd="ls -lah"
+sm="total 12
 drwxrwxr-x  3 olex olex 4096 20-02-23 ./
 drwxr-xr-x 38 olex olex 4096 20-02-22 ../
 drwxrwxr-x  2 olex olex 4096 20-02-23 one/" %}
