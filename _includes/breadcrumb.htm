@@ -1,21 +1,21 @@
 <!-- breadcrumb -->
-{% if page.url != "/" %}
-  {% assign arr_pages = page.url | split: "/" %}
-  {% assign last_page = page.url | split: "/" | last %}
+{%- if page.url != "/" -%}
+  {%- assign arr_pages = page.url | split: "/" -%}
+  {%- assign last_page = page.url | split: "/" | last -%}
   <p>
-  {% for item in arr_pages %}
-    {% if item == '' %}
-      {% assign full_url = site.baseurl %}
+  {%- for item in arr_pages -%}
+    {%- if item == '' -%}
+      {%- assign full_url = site.baseurl -%}
       <a href="{{ full_url }}">home</a>
-    {% else %}
-      {% capture full_url %}{{ full_url }}/{{ item }}{% endcapture %}
-      {% assign dir = item | remove: ".html" %}
-      {% if dir == last_page %}
+    {%- else -%}
+      {%- capture full_url %}{{ full_url }}/{{ item }}{% endcapture -%}
+      {%- assign dir = item | remove: ".html" -%}
+      {%- if dir == last_page -%}
         / <span class="text-gray">{{ dir }}</span>
-      {% else %}
+      {%- else -%}
         / <a href="{{ full_url }}">{{ dir }}</a>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
   </p>
-{% endif %}
+{%- endif -%}
