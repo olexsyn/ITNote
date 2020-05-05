@@ -1,7 +1,3 @@
----
-my_variable: footer_company_a.html
----
-
 # Test
 
 ![keys][k] | test | images | table
@@ -102,14 +98,18 @@ my_variable: footer_company_a.html
 
 ---
 
-
 <https://webhamster.ru/mytetrashare/index/mtb0> - здесь много статей
 
 one | two | three
 
 Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+my_variable: footer_company_a.html
+
+
 {% include_relative images_example.md %}
+
+
 
 ```<kbd>test</kbd>, <kbd>images</kbd>, <kbd>table</kbd>```
 
