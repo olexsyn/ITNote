@@ -4740,7 +4740,7 @@ pre {
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
 	font-family: "Oswald";
 	padding: 0;
-	margin-top: 24px;
+	margin-top: 55px;
 	margin-bottom: 16px;
 	font-weight: 400;
 	line-height: 1.25
@@ -4763,6 +4763,7 @@ pre {
 */
 .markdown-body h1 {
 	padding-top: 0.75em;
+	margin-top: 24px;
 	border-top: 1px solid #d5d5d5;
 	font-size: 2em;
 /*
