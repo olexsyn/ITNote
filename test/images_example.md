@@ -17,5 +17,4 @@
 | check **c**ube |  ![](/i/vc.png)  |  `![](/i/vc.png)` |
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
 
----
-edit
+{% include footer.htm %}
