@@ -1,3 +1,7 @@
+---
+my_variable: footer_company_a.html
+---
+
 # Test
 
 ![keys][k] | test | images | table
