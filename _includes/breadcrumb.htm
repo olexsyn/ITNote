@@ -10,9 +10,9 @@
     {%- else -%}
       {%- capture full_url %}{{ full_url }}/{{ item }}{% endcapture -%}
       {%- assign dir = item | remove: ".html" -%}
-      {%- if dir == last_page -%}
+      {%- if dir == last_page %}
         / <span class="text-gray">{{ dir }}</span>
-      {%- else -%}
+      {%- else %}
         / <a href="{{ full_url }}">{{ dir }}</a>
       {%- endif -%}
     {%- endif -%}
