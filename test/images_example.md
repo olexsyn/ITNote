@@ -18,8 +18,6 @@
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
 
 
-{{ my_variable }}
-
-{% include edit.htm %}
+{% include edit.htm f="images_example.md" %}
 
 
