@@ -1,5 +1,8 @@
 # Test
 
+{% include_relative code.md %}
+
+
 ![keys][k] | test | images | table
 
 <kbd>Ctrl Alt Del</kbd> - три кнопки нажаты одновременно
