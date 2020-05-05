@@ -1,3 +1,6 @@
+---
+my_variable: footer_company_a.html
+---
 
 | desc           | img              | code              |
 | -------------: | :--------------: | :---------------- |
@@ -16,6 +19,9 @@
 | delete         |  ![](/i/x.png)   |  `![](/i/x.png)`  |
 | check **c**ube |  ![](/i/vc.png)  |  `![](/i/vc.png)` |
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
+
+
+{{ my_variable }}
 
 {% include edit.htm %}
 
