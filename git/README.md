@@ -28,6 +28,11 @@ git add file1.ext ... fileN.ext
 git add --all
 ```
 
+#### 
+
+$ git commit -m "description" filename.ext | коммит только одного файла
+
+
 #### Просмотр индексированных и неиндексированных изменений
 
 ```
@@ -66,6 +71,7 @@ git diff --cached
 
 - [Изучаем команды pull и push](https://monsterlessons.com/project/lessons/git-izuchaem-komandy-pull-i-push)
 - [7 советов по повышению производительности](https://nuancesprog.ru/p/5142/)
+- [Очистить историю коммитов](https://www.shellhacks.com/ru/git-remove-all-commits-clear-git-history-local-remote/)
 
 
 
