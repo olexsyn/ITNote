@@ -1,3 +1,4 @@
+{% assign part_name = "images_example.md" %}
 
 | desc           | img              | code              |
 | -------------: | :--------------: | :---------------- |
@@ -18,6 +19,6 @@
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
 
 
-{% include part.htm f="_images_example.md" %}
+{% include part.htm f=part_name %}
 
 
