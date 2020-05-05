@@ -1,6 +1,6 @@
 # Подключение к GitHub через SSH
 
-[инструкция на англ.](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+[help.github.com/en/](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 Используя протокол SSH, вы можете подключаться и аутентифицироваться на удаленных серверах и сервисах. С помощью ключей SSH вы можете подключаться к GitHub без указания имени пользователя или пароля когда отправляете локальные правки в GitHub-репозиторий.
 
