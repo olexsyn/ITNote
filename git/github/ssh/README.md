@@ -53,6 +53,8 @@
 
 ## Изменение протокола передачи данных репозитория с HTTP на SSH
 
+[help.github.com](https://help.github.com/en/github/using-git/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh)
+
 Переходим в директорию необходимого репозитория
 
 {% include cmd.htm cmd="cd path/to/REPOSITORY" %}
