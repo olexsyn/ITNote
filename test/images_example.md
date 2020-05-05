@@ -16,3 +16,6 @@
 | delete         |  ![](/i/x.png)   |  `![](/i/x.png)`  |
 | check **c**ube |  ![](/i/vc.png)  |  `![](/i/vc.png)` |
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
+
+---
+edit
