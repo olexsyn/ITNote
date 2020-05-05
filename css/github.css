@@ -4763,7 +4763,7 @@ pre {
 */
 .markdown-body h1 {
 	padding-top: 0.75em;
-	border-top: 1px solid #d5d5d5;
+	border-top: 1px solid #999;
 	font-size: 2em;
 /*
 	padding-bottom: 0.3em;
@@ -4777,7 +4777,7 @@ pre {
 	border-bottom: 1px solid #eaecef
 */
 	padding-top: 0.70em;
-	border-top: 1px solid #d5d5d5;
+	border-top: 1px solid #999;
 	font-size: 1.85em;
 }
 .markdown-body h3 {
