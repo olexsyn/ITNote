@@ -104,12 +104,9 @@ one | two | three
 
 Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-my_variable: footer_company_a.html
-
-
 {% include_relative images_example.md %}
 
-
+test test test test test
 
 ```<kbd>test</kbd>, <kbd>images</kbd>, <kbd>table</kbd>```
 
