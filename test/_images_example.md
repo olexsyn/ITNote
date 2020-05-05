@@ -18,6 +18,6 @@
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
 
 
-{% include edit.htm f="images_example.md" %}
+{% include part.htm f="_images_example.md" %}
 
 
