@@ -18,3 +18,5 @@
 | delete **c**ube|  ![](/i/xc.png)  |  `![](/i/xc.png)` |
 
 {% include edit.htm %}
+
+
