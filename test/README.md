@@ -106,6 +106,8 @@ Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit
 
 {% include_relative images_example.md %}
 
+{% include_relative test2.md %}
+
 test test test test test
 
 ```<kbd>test</kbd>, <kbd>images</kbd>, <kbd>table</kbd>```
