@@ -1,6 +1,3 @@
----
-my_variable: footer_company_a.html
----
 
 | desc           | img              | code              |
 | -------------: | :--------------: | :---------------- |
