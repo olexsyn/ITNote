@@ -28,9 +28,10 @@ git add file1.ext ... fileN.ext
 git add --all
 ```
 
-#### 
+#### TODO!
 
-$ git commit -m "description" filename.ext | коммит только одного файла
+
+`git commit -m "description" filename.ext` | коммит только одного файла
 
 
 #### Просмотр индексированных и неиндексированных изменений
