@@ -8,13 +8,13 @@
 
 ---
 
-<a href="code"></a>
+<a name="code"></a>
 {% include_relative code.md %}
 
-<a href="images"></a>
+<a name="images"></a>
 {% include_relative images_example.md %}
 
-<a href="test"></a>
+<a name="test"></a>
 {% include_relative test2.md %}
 
 ## Разное
