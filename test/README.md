@@ -1,6 +1,6 @@
 # Test
 
-{{ warn }}
+{% include constants.htm -%}
 
 ## Contents
 
