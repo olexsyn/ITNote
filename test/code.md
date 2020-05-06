@@ -87,4 +87,4 @@
 </code></pre>
 ```
 
-{% include part.htm f="code.md" %}
+{% include f.htm f="code.md" %}
