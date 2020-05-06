@@ -1,6 +1,6 @@
 # Fstab
 
-> ![tags](/i/tg.png) <kbd>fstab</kbd> <kbd>mount</kbd> <kbd>ext4</kbd> <kbd>vfat</kbd>
+> ![tags](/i/tg.png) <i>fstab</i> <i>mount</i> <i>ext4</i> <i>vfat</i>
 
 
 {% include_relative links.md %}
