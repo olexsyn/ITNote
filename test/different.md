@@ -1,6 +1,6 @@
 ## Разное
 
-![keys][k] | test | images | table
+![tags][tg] | test | images | table
 
 <kbd>Ctrl Alt Del</kbd> - три кнопки нажаты одновременно
 
@@ -37,7 +37,7 @@ test test test test test
 <small><samp>test, images, table</samp></small>
 
 
-[k]: /i/k.png "Tags"
+[k]: /i/tg.png "Tags"
 
 
 tags: ___test___, ___images___, ___table___
