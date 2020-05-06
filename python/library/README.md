@@ -4,6 +4,6 @@
 
 - [subprocess](subprocess)
 
-## Сообщество
+## Сторонние
 
 - [BeautifulSoup](beautifulsoup)
