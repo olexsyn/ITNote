@@ -1,8 +1,7 @@
-## Программы
+## Файлы конфигураций
 
-- [tar](/e-note/linux/soft/tar)
-- [rsync](/e-note/linux/soft/rsync)
-- [Sublime Text](/e-note/linux/soft/sublime-text)
+- [fstab](/e-note/linux/config/fstab)
+- [crontab](/e-note/linux/soft/crontab) none
 
 page.id | {{ page.id }}
 page.url | {{ page.url }}
