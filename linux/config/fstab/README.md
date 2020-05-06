@@ -12,5 +12,7 @@
 
 {% include_relative article01.md %}
 
+&nbsp;
+
 > ![tags](/i/tg.png) : <i>fstab</i>, <i>mount</i>, <i>ext4</i>, <i>vfat</i>
 
