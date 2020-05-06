@@ -1,7 +1,6 @@
 ## Тест картинок
 
-Hi
-{% include constants.htm -%}
+Hihi
 {{ warn }} Test {{ word }} abra
 
 | desc           | img              | code              |
