@@ -1,9 +1,20 @@
 # Test
 
+## Contents
+
+- [code](#code)
+- [images](#images)
+- [test](#test)
+
+---
+
+<a href="code"></a>
 {% include_relative code.md %}
 
+<a href="images"></a>
 {% include_relative images_example.md %}
 
+<a href="test"></a>
 {% include_relative test2.md %}
 
 ## Разное
