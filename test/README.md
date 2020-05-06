@@ -1,5 +1,7 @@
 # Test
 
+{{ warn }}
+
 ## Contents
 
 - [code](#code)
