@@ -9,8 +9,7 @@
 `-s` или `--short`
 
 {% include cl.htm cmd="git status -s"
-out="
- M README
+out=" M README
 MM Rakefile
 A  lib/git.rb
 M  lib/simplegit.rb
@@ -26,7 +25,7 @@ M  lib/simplegit.rb
 - `MM` - модифицирован, проиндексирован и ещё раз модифицирован, т.е. на данный момент у него есть изменения которые попадут в коммит и те которые не попадут
 
 
-{% include cl.htm cmd="git add file1.ext ... fileN.ext" %}
+{% include cl.htm cmd="git add file1.ext file2.ext ..." %}
 
 {% include cl.htm cmd="git add --all" %}
 
@@ -39,8 +38,7 @@ M  lib/simplegit.rb
 
 #### Просмотр индексированных и неиндексированных изменений
 
-{% include cl.htm cmd="
-git diff
+{% include cl.htm cmd="git diff
 git diff --staged
 git diff --cached
 " %}
