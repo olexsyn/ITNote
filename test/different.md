@@ -39,4 +39,9 @@ test test test test test
 
 [k]: /i/k.png "Tags"
 
+
+tags: <var>#test, #images, #table</var>
+
+
 {% include f.htm f="different.md" %}
+
