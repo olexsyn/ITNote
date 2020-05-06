@@ -1,4 +1,4 @@
-## Программы
+## Soft
 
 - [tar](/e-note/linux/soft/tar)
 - [rsync](/e-note/linux/soft/rsync)
