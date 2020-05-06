@@ -8,6 +8,6 @@
 
 
 - [Единицы измерения: px, em, rem и другие](https://learn.javascript.ru/css-units)
-- [REM vs EM – Великий спор](https://habr.com/ru/post/280125/)
+- [REM vs EM](https://habr.com/ru/post/280125/) habr
 - [Масштабирование векторных изображений](https://svg-art.ru/?p=1198)
 
