@@ -33,7 +33,7 @@ out="> Agent pid 59566" %}
 
 {% include cl.htm cmd="$ ssh-add -t &lt;timeout&gt;" %}
 
-где `&lt;timeout&gt;` имеет формат `&lt;n&gt;h` для _n_ часов, `&lt;n&gt;m` для _n_ минут, и так далее.
+где `<timeout>` имеет формат `<n>h` для _n_ часов, `<n>m` для _n_ минут, и так далее.
 
 Согласно ssh-agent инструкции :
 
