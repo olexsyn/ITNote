@@ -4,8 +4,5 @@
 
 - [mkdir](command/mkdir)
 
-## Программы
 
-- [tar](soft/tar)
-- [rsync](soft/rsync)
-- [Sublime-text](soft/sublime-text)
+{% include_relative soft/contents.md %}
