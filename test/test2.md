@@ -26,4 +26,4 @@ drwxr-xr-x        4096 2009/08/23 08:56:19 .
 {% include cl.htm cmd="rsync --port=7777 ONLY" %}
 
 
-{% include part.htm f="test2.md" %}
+{% include f.htm f="test2.md" %}
