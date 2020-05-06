@@ -20,9 +20,9 @@ test test test test test
 <kbd>test</kbd>, <kbd>images</kbd>, <kbd>table</kbd>
 
 
-```![tags][k] : <var>test, images, table</var>```
+```![tags][tg] : <var>test, images, table</var>```
 
-![tags][k] : <var>test, images, table</var>
+![tags][tg] : <var>test, images, table</var>
 
 
 ```
@@ -37,7 +37,7 @@ test test test test test
 <small><samp>test, images, table</samp></small>
 
 
-[k]: /i/tg.png "Tags"
+[tg]: /i/tg.png "Tags"
 
 
 tags: ___test___, ___images___, ___table___
