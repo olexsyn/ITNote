@@ -26,10 +26,10 @@ test test test test test
 
 
 ```
-**keys**: <i>test<i>, <i>images<i>, <i>table<i>
+**keys**: <i>test</i>, <i>images</i>, <i>table</i>
 ```
 
-**keys**: <i>test<i>, <i>images<i>, <i>table<i>
+**keys**: <i>test</i>, <i>images</i>, <i>table</i>
 
 
 ```<small><samp>test, images, table</samp></small>```
