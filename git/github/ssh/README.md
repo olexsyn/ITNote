@@ -16,10 +16,13 @@
 
 Если у вас нет пары открытых и закрытых ключей или вы не хотите использовать какие-либо из доступных для подключения к GitHub, то сгенерируйте новый ключ SSH, , используя указанный e-mail в качестве метки:
 
-{% include cmdout.htm cmd='ssh-keygen -t rsa -b 4096 -C "your_email@example.com"' out="> Generating public/private rsa key pair.
+{% include cl.htm cmd='ssh-keygen -t rsa -b 4096 -C "your_email@example.com"'
+out="
+> Generating public/private rsa key pair.
 > Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
 > Enter passphrase (empty for no passphrase): [Type a passphrase]
-> Enter same passphrase again: [Type passphrase again]" %} 
+> Enter same passphrase again: [Type passphrase again]
+" %}
 
 Когда вам будет предложено «Введите файл, в котором вы хотите сохранить ключ», нажмите Enter. Это принимает местоположение файла по умолчанию.
 
@@ -33,15 +36,15 @@
 
 В правом верхнем углу страницы вашего GitHub-аккаунта нажмите на фотографию своего профиля, затем нажмите «Settings».
 
-На боковой панели настроек пользователя нажмите на «SSH и GPG keys». 
+На боковой панели настроек пользователя нажмите на «SSH и GPG keys».
 
 В поле «Title» добавьте описательную метку для нового ключа.
 
 Вставьте свой ключ в поле «Key».
 
-Нажмите «Add SSH key». 
+Нажмите «Add SSH key».
 
-Если будет предложено, подтвердите свой пароль GitHub. 
+Если будет предложено, подтвердите свой пароль GitHub.
 
 ## Изменение протокола передачи данных репозитория с HTTP на SSH
 
@@ -49,22 +52,26 @@
 
 Переходим в директорию необходимого репозитория
 
-{% include cmd.htm cmd="cd path/to/REPOSITORY" %}
+{% include cl.htm cmd="cd path/to/REPOSITORY" %}
 
 Проверяем, что текущий протокол HTTP: "... _origin  https://_ ..."
 
-{% include cmdout.htm cmd="git remote -v"
-out="origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
+{% include cl.htm cmd="git remote -v"
+out="
+origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+origin  https://github.com/USERNAME/REPOSITORY.git (push)
+" %}
 
 Изменяем протокол:
 
-{% include cmd.htm cmd="git remote set-url origin git@github.com:USERNAME/REPOSITORY.git" %}
+{% include cl.htm cmd="git remote set-url origin git@github.com:USERNAME/REPOSITORY.git" %}
 
 Проверяем, что протокол изменился на GIT: "... _origin  git@github.com:_"
 
-{% include cmdout.htm cmd="git remote -v"
-out="origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
+{% include cl.htm cmd="git remote -v"
+out="
+origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+origin  https://github.com/USERNAME/REPOSITORY.git (push)
+" %}
 
-Если ранее вводилась безопасная фраза-пароль, она может быть запрошена при командах `git pull` и `git push`.
+Если ранее вводилась безопасная фраза-пароль, она может быть запрошена при командах `git pull`, `git push` и `git merge`.

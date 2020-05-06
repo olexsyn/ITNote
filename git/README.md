@@ -8,11 +8,14 @@
 
 `-s` или `--short`
 
-{% include cmdout.htm cmd="git status -s" out=" M README
+{% include cl.htm cmd="git status -s"
+out="
+ M README
 MM Rakefile
 A  lib/git.rb
 M  lib/simplegit.rb
-?? LICENSE.txt" %}
+?? LICENSE.txt
+" %}
 
 В выводе два столбца: в левом - статус, в правом - (не)модифицирован
 
@@ -23,10 +26,10 @@ M  lib/simplegit.rb
 - `MM` - модифицирован, проиндексирован и ещё раз модифицирован, т.е. на данный момент у него есть изменения которые попадут в коммит и те которые не попадут
 
 
-```
-git add file1.ext ... fileN.ext
-git add --all
-```
+{% include cl.htm cmd="git add file1.ext ... fileN.ext" %}
+
+{% include cl.htm cmd="git add --all" %}
+
 
 #### TODO!
 
@@ -36,27 +39,27 @@ git add --all
 
 #### Просмотр индексированных и неиндексированных изменений
 
-```
+{% include cl.htm cmd="
 git diff
 git diff --staged
 git diff --cached
-```
+" %}
 
 #### Выбор программы для сравнения
 
 Посмотреть, что уже установлено, и что можно можно установить:
 
-```git difftool --tool-help```
+{% include cl.htm cmd="git difftool --tool-help" %}
 
 Установить для git программу сравнения, например, _meld_
 
-```git difftool --tool=meld```
+{% include cl.htm cmd="git difftool --tool=meld" %}
 
 #### Принудительно обновить отдаленный репозиторий:
 
-{% include cmd.htm cmd="git push -f origin master" %}
+{% include cl.htm cmd="git push -f origin master" %}
 
-Но, следует понимать, что на сервере затрутся все изменения в файлах, которые были сделаны после последнего `git push`, даже если ты отправляешь всего один файл.
+![!](/i/w.png) Но, следует понимать, что на сервере затрутся все изменения в файлах, которые были сделаны после последнего `git push`, даже если ты отправляешь всего один файл.
 
 ## <a href="progit"></a> Книга Pro Git
 
