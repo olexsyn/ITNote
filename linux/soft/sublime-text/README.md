@@ -26,6 +26,6 @@
 - ![?][q] **ZenTabs** - не помню, не использую  
 - ![?][q] **RegReplace** https://facelessuser.github.io/RegReplace/usage/ - Позволяет сохранять последовательности рег.выражений для обработки текстовых файлов. <span style="r">Пока не разобрался</span>  
 
-[v]: /i/p.png
-[q]: /i/a2.png
-[c]: /i/d.png
+[v]: /i/pl.png
+[q]: /i/qu.png
+[c]: /i/rm.png
