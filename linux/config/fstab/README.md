@@ -1,6 +1,6 @@
 # Fstab
 
-> **keys**: fstab, mount, ext4, vfat
+> ![tags](/i/tg.png) fstab, mount, ext4, vfat
 
 
 {% include_relative links.md %}
