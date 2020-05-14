@@ -195,5 +195,5 @@ Links
 -----
 
 - <https://rsync.samba.org/>
-- видео: <https://www.youtube.com/watch?v=y5Eh2Ty5AH8>
+- видео: <https://www.youtube.com/watch?v=y5Eh2Ty5AH8> и [текстовая версия](https://webdesign-master.ru/blog/tools/2019-05-06-backup-lesson.html)
 
