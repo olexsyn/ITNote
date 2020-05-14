@@ -194,4 +194,6 @@ total size is 164  speedup is 0.58
 Links
 -----
 
-<https://rsync.samba.org/>
+- <https://rsync.samba.org/>
+- видео: <https://www.youtube.com/watch?v=y5Eh2Ty5AH8>
+
