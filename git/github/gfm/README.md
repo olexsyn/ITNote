@@ -7,10 +7,9 @@
 - [Типография](#typography)
 - [Заголовки](#headers)
 - [Списки](#lists)
-- [](#paragraphs)
-
+- [Параграфы](#paragraphs)
+- [Цитаты](#quotes)
 - [Специальные HTML-символы](#symbols)
-
 
 Переделать это:
 
