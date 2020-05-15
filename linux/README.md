@@ -20,13 +20,8 @@
 
 {% include cl.htm cmd="tar -xzf pages.tgz" %}
 
-[сбросить страничный кэш](https://losst.ru/kak-osvobodit-pamyat-linux):
-
-{% include cl.htm cmd="su -
-sync; echo 1 > /proc/sys/vm/drop_caches" %}
-
 - [mkdir](command/mkdir)
-
+- [сбросить страничный кэш](https://losst.ru/kak-osvobodit-pamyat-linux):
 
 {% include_relative config/contents.md %}
 
