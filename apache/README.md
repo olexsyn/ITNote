@@ -1,5 +1,9 @@
 # Apache
 
+{% include cl.htm cmd="/usr/sbin/apache2 -v"
+out="Server version: Apache/2.4.29 (Ubuntu)
+Server built:   2020-03-13T12:26:16" %}
+
 - [Apache SSI](ssi)
 
 ## Установка
