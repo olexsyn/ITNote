@@ -1,4 +1,4 @@
-## Typography
+## Типография
 
 - This text contains <i>italic</i> text.  `<i></i>`
 - This text contains <em>emphasized</em> text.  `<em></em>`
