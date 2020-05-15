@@ -1,27 +1,16 @@
 # Язык разметки GitHub Flavored Markdown
 
-- [Typography](#typography)
-
-[GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
-
 **[Markdown](https://ru.wikipedia.org/wiki/Markdown)** – визуально понятный и удобный при редактировании язык разметки для оформления текстовых документов. Обычно преобразуется в код [HTML](https://ru.wikipedia.org/wiki/HTML) для отображения информации в Интернет. [GitHub](https://github.com) расширил стандартный Markdown, добавив возможность оформления таблиц (![?][q] только<span class="r">?</span>). Кроме собственной разметки Markdown-текст может содержать в себе вставки обычного HTML-кода.
 
+## Contents
 
-{% include_relative typography.md %}
+- [Типография](#typography)
+- [Заголовки](#headers);
 
-
-что проще?
-
-```
-<span class="r">?</span>
-
-![?](/i/q.png)
-
-```
+Переделать:
 
 1. Блочные элементы
  + [Параграфы и разрывы строк](#Parag);
- + [Заголовки](#Headers);
  + [Цитаты](#Blockquotes);
  + [Списки](#Lists)
  + [Блоки кода](#CodeBlocks);
@@ -37,11 +26,25 @@
  + [Специальные символы HTML](#SpecialSymbol).
 
 
+
+[GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+
+<a name="typography"></a>
+{% include_relative typography.md %}
+
+<a name="headers"></a>
+{% include_relative headers.md %}
+
+
+что проще закодировать для привлечения внимания?
+
+текст: ```<span class="r">?</span>```
+
+или картинку: ```![?](/i/q.png)```
+
+
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
 
-# This is an `<h1>` tag
-
-Sometimes it’s useful to have different levels of headings to structure your documents. Start lines with a # to create headings. Multiple ## in a row denote smaller heading sizes.
 
 
 ## Lists
@@ -105,46 +108,6 @@ Sometimes it’s useful to have different levels of headings to structure your d
 Для того, чтобы вставить видимый перенос строки (элемент `<br/>`) необходимо окончить строку двумя пробелами и нажатием клавиши «Enter».
 Многие элементы синтаксиса Markdown выглядят и работают гораздо лучше в случае, когда их форматируют с помощью «жесткого перевода строк» (разделение строк, осуществленное самим пользователем, а не программой автоматически). К таким элементам относятся цитаты, списки и пр.
 
-### <a name="Headers"></a> Заголовки
-
-Язык разметки Markdown поддерживает 2 стиля обозначения заголовков: подчеркивание и выделение символом («#»).
-Выделение заголовков с помощью подчеркивания производится знаками равенства («=») в случае, если заголовок первого уровня, и дефисами («-») в случае, если заголовок второго уровня. Количество знаков подчеркивания не ограничивается.
-При выделении заголовков с помощью символа («#») используется от одного до шести данных символов, которые устанавливаются в начале строки (перед заголовком). В данном случае количество символов соответствует уровню заголовка. Кроме того, заголовок возможно снабдить закрывающимися символами («#»), хотя это и не является обязательным. Количество закрывающихся символов не обязано соответствовать количеству начальных символов. Уровень заголовка определяется по количеству начальных символов.
-Заголовки первого и второго уровней, выполненные с помощью подчеркивания, выглядят следующим образом:
-
-```
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
-```
-
-В результате на экран выводится следующее:
-
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
 
 ### <a name="Blockquotes"></a> Цитаты
 
