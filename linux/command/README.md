@@ -19,3 +19,4 @@ out="Some text" %}
 
 <kbd>Ctrl</kbd> + <kbd>D</kbd> - для сохранения и завершения редактирования.
 
+TODO! nano
