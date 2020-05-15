@@ -1,30 +1,13 @@
 # Язык разметки GitHub Flavored Markdown
 
-[вверх]: #top
+- [Typography](#typography)
+
 [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 
 **[Markdown](https://ru.wikipedia.org/wiki/Markdown)** – визуально понятный и удобный при редактировании язык разметки для оформления текстовых документов. Обычно преобразуется в код [HTML](https://ru.wikipedia.org/wiki/HTML) для отображения информации в Интернет. [GitHub](https://github.com) расширил стандартный Markdown, добавив возможность оформления таблиц (![?][q] только<span class="r">?</span>). Кроме собственной разметки Markdown-текст может содержать в себе вставки обычного HTML-кода.
 
 
-- This text contains <i>italic</i> text.  `<i></i>`
-- This text contains <em>emphasized</em> text.  `<em></em>`
-- This text contains <b>bold</b> text.  `<b></b>`
-- This text contains <strong>strong</strong> text.  `<strong></strong>`
-- This text contains <code>code</code> text.  `<code></code>` аналог  \`\`
-- This text contains <samp>samp</samp> text.  `<samp></samp>`
-- This text contains <kbd>kbd</kbd> text.  `<kbd></kbd>`
-- This text contains <var>var</var> text.  `<var></var>`
-- This text contains <sup>superscript</sup> text.  `<sup></sup>`
-- This text contains <sub>subscript</sub> text.  `<sub></sub>`
-- This text contains <small>small</small> text.  `<small></small>`
-
-- This text contains `<pre></pre>` text:
-
-<pre>
-pre
-</pre>
-
----
+{% include_relative typography.md %}
 
 
 что проще?
@@ -53,9 +36,6 @@ pre
  + [Автоматические ссылки](#AutomaticLinks);
  + [Специальные символы HTML](#SpecialSymbol).
 
-
-
-# <a name="top"></a> hello_python
 
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
 
@@ -106,9 +86,6 @@ Sometimes it’s useful to have different levels of headings to structure your d
 - [x] list syntax required (any unordered or ordered list supported)
 - [x] this is a complete item
 - [ ] this is an incomplete item
-
-
-[вверх]
 
 
 
@@ -522,6 +499,5 @@ Markdown поддерживает упрощённый порядок автом
 - <https://github.com/github/linguist/blob/master/lib/linguist/languages.yml>
 - [emoji](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#using-emoji) / [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet)
 
-> [вверх]
 
 [q]: /i/q.png "Вопрос"
