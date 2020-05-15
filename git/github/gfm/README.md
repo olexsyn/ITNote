@@ -5,14 +5,17 @@
 ## Contents
 
 - [Типография](#typography)
-- [Заголовки](#headers);
+- [Заголовки](#headers)
+- [Списки](#lists)
 
-Переделать:
+- [Специальные HTML-символы](#symbols)
+
+
+Переделать это:
 
 1. Блочные элементы
  + [Параграфы и разрывы строк](#Parag);
  + [Цитаты](#Blockquotes);
- + [Списки](#Lists)
  + [Блоки кода](#CodeBlocks);
  + [Горизонтальные (разделительные) линии](#Lines).
 2. Строчные элементы
@@ -23,8 +26,7 @@
 3. Дополнительные элементы
  + [Обратный слеш](#BackslashEscapes);
  + [Автоматические ссылки](#AutomaticLinks);
- + [Специальные символы HTML](#SpecialSymbol).
-
+ 
 
 
 [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
@@ -34,6 +36,9 @@
 
 <a name="headers"></a>
 {% include_relative headers.md %}
+
+<a name="lists"></a>
+{% include_relative lists.md %}
 
 
 что проще закодировать для привлечения внимания?
@@ -45,50 +50,6 @@
 
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
 
-
-
-## Lists
-
-#### Unordered (до 3 уровней)
-
-* Item 1
-* Item 2
-  * 2nd level
-    * 3rd level
-
-
-#### Ordered 1
-
-1. One
-2. Two
-3. Three
-
-#### Ordered 2 (только 2 уровня)
-
-```
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 1a
-   1. Item 2b
-   1. Item 3a
-   1. Item 4b
-```
-
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 1a
-   1. Item 2b
-   1. Item 3a
-   1. Item 4b
-
-## Task Lists
-
-- [x] @cruad, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
 
 
 
@@ -445,12 +406,10 @@ Markdown поддерживает упрощённый порядок автом
 
 В результате на экран выводится следующее: <address@example.com>
 
-##### <a name="SpecialSymbol"></a> Специальные символы HTML
 
-В языке HTML существует два символа (![?](/i/q.png) только), требующих специального рассмотрения: это символы («&lt;») и («&amp;»). Левая угловая скобка используется как начало тэга; амперсанды применяются для обозначения специального символа HTML.
-Для того чтобы использовать эти символы в их буквальном смысле, необходимо заменить их элементами HTML, а именно `&lt;` и `&amp;` соответственно.
+<a name="symbols"></a>
+{% include_relative symbols.md %}
 
-При использовании Markdown подобных действий совершать не нужно. Он позволяет использовать эти символы в исходном виде. В случае если амперсанд используется как часть спецсимвола HTML, он останется неизменным. В противном случае Markdown преобразует его в `&amp;`.
 
 См. также
 ---------
