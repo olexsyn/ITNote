@@ -1,7 +1,9 @@
 # Linux
 
-
+- [Комманды](#command)
 - [Проблемы](#trouble)
+- []()
+- [Разное]()
 
 
 
@@ -27,6 +29,7 @@ tar -xzf pages.tgz" %}
 
 {% include_relative config/contents.md %}
 
+
 {% include_relative soft/contents.md %}
 
 
@@ -34,6 +37,7 @@ tar -xzf pages.tgz" %}
 {% include_relative trouble/README.md %}
 
 
+<a name="other"></a>
 ## Разное
 
 - [Размонтирование «занятого» устройства](https://p0vidl0.info/razmontirovanie-zanyatogo-ustrojstva.html)
