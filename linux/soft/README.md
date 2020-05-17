@@ -1,11 +1,11 @@
 ## Программы
 
-{% assign page.id = '/linux/soft' -%}
+{% assign pid = '/linux/soft' -%}
 
-- [tar]({{ abs_path }}/tar)
-- [rsync]({{ abs_path }}/rsync)
-- [Sublime Text]({{ abs_path }}/sublime-text)
-- [apt]({{ abs_path }}/apt) <span class="r">DELETE!</span>
+- [tar]({{ pid }}/tar)
+- [rsync]({{ pid }}/rsync)
+- [Sublime Text]({{ pid }}/sublime-text)
+- [apt]({{ pid }}/apt) <span class="r">DELETE!</span>
 
 `page.url` | {{ page.url }}
 `page.path` | {{ page.path }}
@@ -17,6 +17,6 @@
 `site.baseurl` | {{ site.baseurl }}
 `abs_path` | abs_path
 
-{% include f.htm f="soft/README.md" %}
+{% include f.htm f="{{ pid }}/README.md" %}
 
-https://github.com/olexsyn{{ site.baseurl }}/edit/master{{ page.id }}/README.md
+https://github.com/olexsyn{{ site.baseurl }}/edit/master{{ pid }}/README.md
