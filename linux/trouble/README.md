@@ -1,5 +1,5 @@
-# Linux. Проблемы
+## Проблемы
 
-[SOLVED] "Scanning for BTRFS file system" during boot
+- "Scanning for BTRFS file system" - остановка ~15с во время загрузки [SOLVE](scanning4btrfs)
 
-{% include f.htm f="trouble.md" %}
+{% include f.htm f="trouble/README.md" %}
