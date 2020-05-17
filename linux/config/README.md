@@ -9,6 +9,7 @@
 `page.dir` | page.dir
 `page.name` | page.name
 `page.categories` | page.categories
+`site.url` | site.url
 
 
 {% include f.htm f="config/README.md" %}
