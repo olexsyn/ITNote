@@ -13,7 +13,7 @@
 `page.categories` | {{ page.categories }}
 `site.url` | {{ site.url }}
 `site.baseurl` | {{ site.baseurl }}
-`my_variable` | {{ abs_path }}
+`abs_path` | {{ abs_path }}
 
 {% include f.htm f="config/README.md" %}
 
