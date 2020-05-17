@@ -41,3 +41,5 @@ out="Some text" %}
 cmd="nano filename.ext" %}
 
 <kbd>Ctrl</kbd> + <kbd>O</kbd> - сохранить, <kbd>Ctrl</kbd> + <kbd>X</kbd> - выйти из редактора
+
+{% include f.htm f="command/README.md" %}

@@ -1,8 +1,8 @@
 ## Программы
 
-- [tar](/e-note/linux/soft/tar)
-- [rsync](/e-note/linux/soft/rsync)
-- [Sublime Text](/e-note/linux/soft/sublime-text)
+- [tar](tar)
+- [rsync](rsync)
+- [Sublime Text](sublime-text)
 - [apt](apt) <span class="r">DELETE!</span>
 
 

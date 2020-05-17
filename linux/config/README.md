@@ -1,7 +1,7 @@
 ## Файлы конфигураций
 
-- [fstab](/e-note/linux/config/fstab)
-- [crontab](/e-note/linux/soft/crontab) none
+- [fstab](fstab)
+- [crontab](crontab) <span class="r">TODO!</span>
 
-{% include f.htm="config/README.md %}
+{% include f.htm f="config/README.md" %}
 
