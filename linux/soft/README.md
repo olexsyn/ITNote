@@ -17,6 +17,6 @@
 `site.baseurl` | {{ site.baseurl }}
 `abs_path` | abs_path
 
-{% include f.htm f="soft/README.md" %}
+{% include f.htm f="{{ pid }}/README.md" %}
 
 https://github.com/olexsyn{{ site.baseurl }}/edit/master{{ pid }}/README.md
