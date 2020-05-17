@@ -1,6 +1,6 @@
 ## Разное
 
-{% abs_path = '/linux/soft' -%}
+{% assign abs_path = '/linux/soft' -%}
 
 `page.url` | {{ page.url }}
 `page.path` | {{ page.path }}
