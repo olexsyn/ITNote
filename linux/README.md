@@ -9,21 +9,21 @@
 ---
 
 <a name="command"></a>
-{% include_relative command/README.md %}
+{% include_relative command %}
 
 
 <a name="config"></a>
-{% include_relative config/README.md %}
+{% include_relative config %}
 
 
 <a name="soft"></a>
-{% include_relative soft/README.md %}
+{% include_relative soft %}
 
 
 <a name="trouble"></a>
-{% include_relative trouble/README.md %}
+{% include_relative trouble %}
 
 
 <a name="other"></a>
-{% include_relative other/README.md %}
+{% include_relative other %}
 
