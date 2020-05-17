@@ -1,5 +1,10 @@
 # Linux
 
+
+- [Проблемы](#trouble)
+
+
+
 ## Команды
 
 [сбросить и снова включить своп](swap): <span class="r">TODO!</span>
@@ -23,6 +28,11 @@ tar -xzf pages.tgz" %}
 {% include_relative config/contents.md %}
 
 {% include_relative soft/contents.md %}
+
+
+<a name="trouble"></a>
+{% include_relative trouble/README.md %}
+
 
 ## Разное
 
