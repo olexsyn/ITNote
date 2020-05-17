@@ -1,9 +1,9 @@
 ## Файлы конфигураций
 
-{% assign my_variable = 'TEXT' %}
+{%- assign abs_path = '/e-note/linux/config' -%}
 
-- [fstab](fstab) 
-- [crontab](crontab) <span class="r">TODO!</span>
+- [fstab]({{abs_path}}/fstab) 
+- [crontab]({{abs_path}}/crontab) <span class="r">TODO!</span>
 
 `page.url` | {{ page.url }}
 `page.path` | {{ page.path }}
@@ -13,7 +13,7 @@
 `page.categories` | {{ page.categories }}
 `site.url` | {{ site.url }}
 `site.baseurl` | {{ site.baseurl }}
-`my_variable` | {{ my_variable }}
+`my_variable` | {{ abs_path }}
 
 {% include f.htm f="config/README.md" %}
 
