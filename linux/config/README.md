@@ -1,9 +1,7 @@
 ## Файлы конфигураций
 
-{% assign abs_path = '/e-note/linux/config' -%}
-
-- [fstab]({{abs_path}}/fstab) 
-- [crontab]({{abs_path}}/crontab) <span class="r">TODO!</span>
+- [fstab](fstab)
+- [crontab](crontab) <span class="r">TODO!</span>
 
 `page.url` | {{ page.url }}
 `page.path` | {{ page.path }}
