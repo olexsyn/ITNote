@@ -13,5 +13,4 @@
 `site.baseurl` | {{ site.baseurl }}
 `abs_path` | {{ abs_path }}
 
-{% include f.htm f="config/README.md" %}
 
