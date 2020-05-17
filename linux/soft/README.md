@@ -1,7 +1,9 @@
-# Soft
+## Программы
 
-{% include_relative contents.md %}
-
+- [tar](/e-note/linux/soft/tar)
+- [rsync](/e-note/linux/soft/rsync)
+- [Sublime Text](/e-note/linux/soft/sublime-text)
 - [apt](apt) <span class="r">DELETE!</span>
-- [rsync](rsync)
-- [Sublime Text](sublime-text)
+
+
+{% include f.htm f="soft/README.md" %}

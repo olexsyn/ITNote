@@ -1,4 +1,7 @@
-# Config
+## Файлы конфигураций
 
-{% include_relative contents.md %}
+- [fstab](/e-note/linux/config/fstab)
+- [crontab](/e-note/linux/soft/crontab) none
+
+{% include f.htm="config/README.md %}
 
