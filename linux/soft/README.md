@@ -1,6 +1,6 @@
 ## Программы
 
-{% assign abs_path = '/e-note/linux/soft' -%}
+{% assign page.id = '/linux/soft' -%}
 
 - [tar]({{ abs_path }}/tar)
 - [rsync]({{ abs_path }}/rsync)
@@ -15,6 +15,8 @@
 `page.categories` | {{ page.categories }}
 `site.url` | {{ site.url }}
 `site.baseurl` | {{ site.baseurl }}
-`abs_path` | {{ abs_path }}
+`abs_path` | abs_path
 
 {% include f.htm f="soft/README.md" %}
+
+https://github.com/olexsyn{{ site.baseurl }}/edit/master{{ page.id }}/README.md
