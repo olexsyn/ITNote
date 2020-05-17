@@ -1,5 +1,7 @@
 ## Файлы конфигураций
 
+{% assign my_variable = 'TEXT' %}
+
 - [fstab](fstab) 
 - [crontab](crontab) <span class="r">TODO!</span>
 
@@ -10,7 +12,8 @@
 `page.name` | {{ page.name }}
 `page.categories` | {{ page.categories }}
 `site.url` | {{ site.url }}
-
+`site.baseurl` | {{ site.baseurl }}
+`my_variable` | {{ my_variable }}
 
 {% include f.htm f="config/README.md" %}
 
