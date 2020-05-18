@@ -3,6 +3,8 @@
 - ![+][pl] [Scanning for BTRFS file system](scanning4btrfs) - остановка ~15с во время загрузки
 - ![+][pl] Reverce scroll direction (Natural Scrolling)
 
+[bug](https://bugzilla.xfce.org/show_bug.cgi?id=11193)
+
 Отключить Reverce scroll direction в настройках touchpad! Потом это:
 
 <https://askubuntu.com/questions/690512/how-to-enable-natural-scrolling-in-xfce4>
