@@ -38,4 +38,7 @@ There is still something odd: the horizontal scrolling is still wrong, This can 
 
 <span class="r">WTF?</span>
 
+Еще много написано здесь: <https://askubuntu.com/questions/91426/reverse-two-finger-scroll-direction-natural-scrolling>
+
+
 [pl]: /i/pl.png
