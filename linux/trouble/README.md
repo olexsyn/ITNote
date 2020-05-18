@@ -1,9 +1,11 @@
 ## Проблемы
 
-- ![+](/i/pl.png) [Scanning for BTRFS file system](scanning4btrfs) - остановка ~15с во время загрузки
-- Reverce scroll direction (Natural Scrolling)
+- ![+][pl] [Scanning for BTRFS file system](scanning4btrfs) - остановка ~15с во время загрузки
+- ![+][pl] Reverce scroll direction (Natural Scrolling)
 
 Отключить Reverce scroll direction в настройках touchpad! Потом это:
+
+<https://askubuntu.com/questions/690512/how-to-enable-natural-scrolling-in-xfce4>
 
 I searched a lot and also found a bugreport about it, but the solution was easy:
 
@@ -34,3 +36,6 @@ There is still something odd: the horizontal scrolling is still wrong, This can 
     echo 'pointer = 1 2 3 4 5 7 6 8 9 10 11 12' >> .Xmodmap
     xmodmap .Xmodmap
 
+<span class="r">WTF?</span>
+
+[pl]: /i/pl.png
