@@ -1,5 +1,9 @@
 # Apache
 
+- Установка
+- SSI
+- ModRewrite
+
 ## Веорсия, стоп, старт, рестарт
 
 {% include cl.htm cmd="/usr/sbin/apache2 -v"
