@@ -1,4 +1,4 @@
-# ![](/i/enote_32.png) E-Note
+# ![](/i/enote_logo.png) E-Note
 
 > <small>Небольшой блокнотик для экспериментов с GitHub.</small>
 
