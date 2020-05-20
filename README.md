@@ -1,5 +1,7 @@
 # ![](/i/enote_logo.png) E-Note
 
+<h1><img src="/i/enote_logo.png" alt="logo" />E-Note</h1>
+
 > <small>Небольшой блокнот для записей и экспериментов с GitHub.</small>
 
 ---
