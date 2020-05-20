@@ -1,6 +1,4 @@
-# ![](/i/enote_logo.png) E-Note
-
-<h1><img src="/i/enote_logo.png" alt="logo" />E-Note</h1>
+<h2><img src="{{ site.baseurl }/i/enote_logo.png" alt="logo" />E-Note</h2>
 
 > <small>Небольшой блокнот для записей и экспериментов с GitHub.</small>
 
