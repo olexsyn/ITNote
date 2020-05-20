@@ -38,4 +38,5 @@ out="Some text" %}
 {% include cl.htm
 cmd="nano filename.ext" %}
 
-<kbd>Ctrl</kbd> + <kbd>O</kbd> - сохранить, <kbd>Ctrl</kbd> + <kbd>X</kbd> - выйти из редактора
+<kbd>Ctrl</kbd> + <kbd>O</kbd>, <Enter> - сохранить,
+<kbd>Ctrl</kbd> + <kbd>X</kbd> - выйти из редактора
