@@ -27,7 +27,10 @@ The best method that have worked for me to make this reboot-safe is to add your 
 
     sudo nano /etc/X11/Xsession.d/80synaptics
 
-Add just the synclient commands in that file: `synclient VertScrollDelta=-58`
+Add just the synclient commands in that file: 
+    
+    synclient VertScrollDelta=-58
+    synclient HorizScrollDelta=-58
 
 (should be owned by root, with permissions 644)
 
