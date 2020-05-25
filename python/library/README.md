@@ -2,6 +2,7 @@
 
 ## Стандартные 
 
+- [email / smtplib](smtplib)
 - [subprocess](subprocess)
 
 ## Сторонние
