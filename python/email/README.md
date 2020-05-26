@@ -1,5 +1,7 @@
 # Отправка email
 
+<span class="r">TODO!</span> Проверь работу с `Cc:` и `Bcc:`
+
 ## Защищенное STARTTLS, с авторизацией на SMTP сервере
 
 ```python
@@ -56,4 +58,5 @@ smtpObj.quit()
 
 ## Links
 
-* [Работа с почтой — модули email / smtplib](https://python-scripts.com/send-email-smtp-python)
+- [Работа с почтой — модули email / smtplib](https://python-scripts.com/send-email-smtp-python)
+- Perl: <http://ans.kiev.ua/wiki/perl/sendmail>, 
