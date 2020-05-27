@@ -7,4 +7,5 @@
 
 ## Сторонние
 
+- [Jinja2](jinja)
 - [BeautifulSoup](beautifulsoup)
