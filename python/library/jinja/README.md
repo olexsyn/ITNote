@@ -1,5 +1,7 @@
 # Jinja2
 
+## Install
+
 {% include cl.htm cmd="pip3 install Jinja2"
 out="...
 Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
@@ -18,3 +20,8 @@ Consider using the `--user` option or check the permissions." %}
 out="...
 Installing collected packages: MarkupSafe, Jinja2
 Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
+
+## Links
+
+- https://pypi.org/project/Jinja2/
+- <https://lectureswww.readthedocs.io/6.www.sync/2.codding/3.templates/jinja2.html>
