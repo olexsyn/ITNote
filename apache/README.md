@@ -3,6 +3,7 @@
 - Установка
 - SSI
 - ModRewrite
+- SSL (см ниже)
 
 ## Веорсия, стоп, старт, рестарт
 
@@ -75,6 +76,46 @@ apache2ctl configtest  # выводит ошибку в конфиге Apache. �
 
 {% include cl.htm cmd="sudo a2ensite test.net
 service apache2 reload" %}
+
+
+## SSL
+
+```
+/etc/httpd/conf/vhosts/domainname1.dom
+
+<VirtualHost domainname1.dom:80>
+    ServerAdmin webmaster@domainname1.dom
+    DocumentRoot "/home/user/http/domainname1.dom"
+    ServerName domainname1.dom
+    ServerAlias domainname1.dom
+    ErrorLog "/var/log/httpd/domainname1.dom-error_log"
+    CustomLog "/var/log/httpd/domainname1.dom-access_log" common
+
+    <Directory "/home/user/http/domainname1.dom">
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost domainname1.dom:443>
+    ServerAdmin webmaster@domainname1.dom
+    DocumentRoot "/home/user/http/domainname1.dom"
+    ServerName domainname1.dom:443
+    ServerAlias domainname1.dom:443
+    ErrorLog "/var/log/httpd/domainname1.dom-error_log"
+    CustomLog "/var/log/httpd/domainname1.dom-access_log" common
+
+    <Directory "/home/user/http/domainname1.dom">
+        Require all granted
+    </Directory>
+
+    SSLEngine on          How to create a self-signed SSL Certificate ... https://www.akadia.com/services/ssh_test_certificate.html
+    SSLCertificateFile "/etc/httpd/conf/server.crt"                  <--------------------------
+    SSLCertificateKeyFile "/etc/httpd/conf/server.key"               <--------------------------
+</VirtualHost>
+```
+
+---
+
 
 <span class="r">TODO!</span>
 
