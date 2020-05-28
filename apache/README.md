@@ -79,3 +79,4 @@ service apache2 reload" %}
 <span class="r">TODO!</span>
 
 - [Подключить виртуальный хост - a2ensite](a2ensite)
+- [Configuring Apache2 to run Python Scripts](https://www.linux.com/training-tutorials/configuring-apache2-run-python-scripts/)
