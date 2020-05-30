@@ -1,6 +1,6 @@
-Решение проблемы корректного отображения символов UTF8 при выполнении CGI-скриптов
+# Решение проблемы корректного отображения символов UTF8 при выполнении CGI-скриптов
 
-Проблема:
+#### Проблема:
 
 **TODO!** 
 
@@ -20,13 +20,13 @@ print("Content-Type: text/html\n")
 print("Привет, МИР!")
 ```
 
-Всякие decode/encode не помогают. Прописывание кодировок по умолчанию в **.htaccess** - тоже
+`charset=utf-8` в заголовках, decode/encode не помогают. Прописывание кодировок по умолчанию в **.htaccess** - тоже.
 
-HTML-страница выводится в кодировке `ANSI_X3.4-1968`
+Сгенерированная HTML-страница выводится в кодировке `ANSI_X3.4-1968`
 
-Решение:
+#### Решение:
 
-<small><a href=https://stackoverflow.com/questions/9322410/set-encoding-in-python-3-cgi-scripts" target="_blank"></small>
+<small>{% include a.htm href="https://stackoverflow.com/questions/9322410/set-encoding-in-python-3-cgi-scripts" %}</small>
 
 1\. В файле **/etc/apache2/envvars** раскоментировать (если закоментирована) строку
 ```
@@ -45,7 +45,7 @@ HTML-страница выводится в кодировке `ANSI_X3.4-1968`
 	</Directory>
 ```
 
-3\. В выводимый заголовок `Content-Type` CGI-скрипта добавлять кодировку `utf-8`
+3\. И, теперь, да: в выводимый заголовок `Content-Type` CGI-скрипта добавлять кодировку `utf-8`
 
 ```python
 print("Content-Type: text/html; charset=utf-8\n\n");  # Perl
