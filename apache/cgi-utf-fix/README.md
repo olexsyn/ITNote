@@ -1,4 +1,8 @@
+Решение проблемы корректного отображения символов UTF8 при выполнении CGI-скриптов
+
 Проблема:
+
+**TODO!** 
 
 Простой скрипт на perl или python, запускаемый, как cgi, некорректно выводят кириллицу (и другие utf символы тоже).
 
@@ -24,12 +28,12 @@ HTML-страница выводится в кодировке `ANSI_X3.4-1968`
 
 <small><a href=https://stackoverflow.com/questions/9322410/set-encoding-in-python-3-cgi-scripts" target="_blank"></small>
 
-1. В файле **/etc/apache2/envvars** раскоментировать (если закоментирована) строку
+1\. В файле **/etc/apache2/envvars** раскоментировать (если закоментирована) строку
 ```
 #. /etc/default/locale
 ```
 
-2. В конфирурационном файле виртуального хоста в разделе __ScriptAlias->Directory__ прописать строку `PassEnv LANG en_US.UTF-8`:
+2\. В конфирурационном файле виртуального хоста в разделе _ScriptAlias/Directory_ прописать строку `PassEnv LANG en_US.UTF-8`:
 
 ```apache
 	ScriptAlias /cgi-bin/ /www/example.com/cgi-bin/
@@ -37,11 +41,11 @@ HTML-страница выводится в кодировке `ANSI_X3.4-1968`
 		...
 		Options +ExecCGI -MultiViews
 		PassEnv LANG en_US.UTF-8
-    ...
-  </Directory>
+		...
+	</Directory>
 ```
 
-3. В выводимый заголовок `Content-Type` CGI-скрипта добавлять кодировку `utf-8`
+3\. В выводимый заголовок `Content-Type` CGI-скрипта добавлять кодировку `utf-8`
 
 ```python
 print("Content-Type: text/html; charset=utf-8\n\n");  # Perl
