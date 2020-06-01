@@ -1,8 +1,8 @@
 # Jinja2
 
-- {%- include a.htm href="https://jinja.palletsprojects.com/en/2.11.x/" -%}
-- {%- include a.htm href="https://pypi.org/project/Jinja2/" -%}
-- ![i](/i/in.png) {% include a.htm href="https://code-maven.com/minimal-example-generating-html-with-python-jinja" %}
+{% include a.htm href="https://jinja.palletsprojects.com/en/2.11.x/" %}
+{% include a.htm href="https://pypi.org/project/Jinja2/" %}
+![i](/i/in.png) {% include a.htm href="https://code-maven.com/minimal-example-generating-html-with-python-jinja" %}
 
 ## Install
 
