@@ -29,3 +29,4 @@ Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
 
 - {% include a.htm href="https://lectureswww.readthedocs.io/6.www.sync/2.codding/3.templates/jinja2.html" %} (есть в wiki)
 - {% include a.htm href="https://pythonru.com/uroki/6-shablony-vo-flask" short="Jinja + Flask" %}
+- {% include a.htm href="https://medium.com/@jasonrigden/jinja2-templating-engine-tutorial-4bd31fb4aea3" short="Jinja2 Templating Engine Tutorial" %}
