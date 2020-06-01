@@ -155,7 +155,7 @@
     unlink linkname
     rm -r linkname
 
-http://www.code-inside.com/sozdanie-prosmotr-i-udalenie-simvolnyih-simvolicheskih-ssyilok-v-linux
+- {% include a.htm href="http://www.code-inside.com/sozdanie-prosmotr-i-udalenie-simvolnyih-simvolicheskih-ssyilok-v-linux" %}
 
 
 ### Выводы
