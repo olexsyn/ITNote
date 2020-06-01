@@ -9,6 +9,7 @@
 - [Python](python)
 - [Git](git)
   - [GitHub](git/github)
+- [JavaScript](javascript)
 - [MySQL](mysql)
 - [HTML](html)
 - [CSS](css)
