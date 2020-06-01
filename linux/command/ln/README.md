@@ -1,31 +1,22 @@
 # Ссылки на файлы и каталоги
 
-http://habr.com/post/99653/
-
-http://habr.com/post/99746/
-
-http://rus-linux.net/book1.php?name=book1/gl-04/gl_04_04.html
-
-http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html
-
-
 Ссылки позволяют давать файлу сразу несколько имён. В файловой системе, используемой в Linux, файлы в системе распознаются по их номеру индексного дескриптора (inode number). Этот номер является уникальным во всей файловой системе. Каталог же представляет собой список номеров индексных дескрипторов и соответствующих имён файлов. Каждое имя файла в каталоге связано с некоторым индексным дескриптором.
 
 ### Жёсткие ссылки
 
 Для создания нескольких ссылок к одному файлу служит команда ln. Пусть, например, в текущем каталоге имеется файл с именем path_to. Увидеть соответствующий ему номер индексного дескриптора можно с помощью команды `ls -i`. Пример:
 
-  /home/larry# ls -i path_to 22192 path_to /home/larry#
+    /home/larry# ls -i path_to 22192 path_to /home/larry#
 
 Здесь файлу path_to соответствует индексный дескриптор номер 22192 файловой системы. К файлу path_to можно создать ещё одну ссылку и назвать её linkname. Это делается следующим образом:
 
-  /home/larry# ln path_to linkname
+    /home/larry# ln path_to linkname
 
 Теперь с помощью команды ls -i можно увидеть, что оба файла относятся к одному и тому же индексному дескриптору:
 
-  /home/larry# ls -i path_to linkname
-  22192 linkname  22192 path_to
-  /home/larry#
+    /home/larry# ls -i path_to linkname
+    22192 linkname  22192 path_to
+    /home/larry#
 
 Теперь, обращаясь к файлу path_to или linkname, мы, в действительности, будем обращаться к одному и тому же файлу. Производя изменения в файле path_to, мы можем увидеть, что они появились также и в файле linkname. Со всех точек зрения файлы path_to и linkname — это один и тот же файл.
 
@@ -33,16 +24,16 @@ http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.
 
 При удалении файла командой rm в действительности удаляется только одна ссылка на файл. Если мы теперь введём команду
 
-  /home/larry# rm path_to
+    /home/larry# rm path_to
 
 то будет удалена только ссылка под названием path_to, а ссылка linkname будет продолжать существовать. По-настоящему файл будет удалён из файловой системы только тогда, когда на него не останется больше ссылок. Обычно на один файл имеются только одна ссылка, так что команда rm его удалит. Однако если к файлу имеются множественные ссылки, то команда rm будет удалять только одну ссылку, и для того, чтобы этот файл удалить, придётся удалять все ссылки на этот файл.
 
 Команда `ls -l` выдаёт (помимо прочей информации) число ссылок на каждый файл.
 
-  /home/larry# ls -l path_to linkname
-  -rw-r--r--   2 root     root      12 Aug  5 16:51 linkname
-  -rw-r--r--   2 root     root      12 Aug  5 16:50 path_to
-  /home/larry#
+    /home/larry# ls -l path_to linkname
+    -rw-r--r--   2 root     root      12 Aug  5 16:51 linkname
+    -rw-r--r--   2 root     root      12 Aug  5 16:50 path_to
+    /home/larry#
 
 Цифра 2 во второй колонке этого списка обозначает число ссылок на файл.
 
@@ -56,20 +47,20 @@ http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.
 
 Символические ссылки создаются командой `ln -s`. Например, команда
 
-  /home/larry# ln -s path_to linkname
+    /home/larry# ln -s path_to linkname
 
 создаёт символическую ссылку по имени linkname, которая указывает на файл path_to. Если мы выдадим список командой ls -i, то мы увидим, что эти два файла имеют различные номера индексных дескрипторов.
 
-  /home/larry# ls -i path_to linkname
-  22195 linkname     22192 path_to
-  /home/larry#
+    /home/larry# ls -i path_to linkname
+    22195 linkname     22192 path_to
+    /home/larry#
 
 Однако, выдав список командой ls -l, можно увидеть, что файл linkname является символической ссылкой, указывающей на файл path_to.
 
-  /home/larry# ls -l path_to linkname
-  -rwxrwxrwx   1 root    root       3      Aug  5 16:51 linkname -> path_to
-  -rw-r--r--   1 root    root      12      Aug  5 16:50 path_to
-  /home/larry#
+    /home/larry# ls -l path_to linkname
+    -rwxrwxrwx   1 root    root       3      Aug  5 16:51 linkname -> path_to
+    -rw-r--r--   1 root    root      12      Aug  5 16:50 path_to
+    /home/larry#
 
 В символических ссылках не используются права доступа к файлу (иными словами, они всегда имеют форму rwxrwxrwx). В действительности, права доступа к символическим ссылкам определяются правами доступа к тому файлу, на который показывает символическая ссылка (в нашем примере это файл path_to).
 
@@ -77,7 +68,7 @@ http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.
 
 Ссылки широко используются в системе Linux. Особенно важны символические ссылки, которые указывают на библиотеки общего пользования, находящиеся в каталоге /lib.
 
-http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html
+- {% include a.htm href="http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html" %}
 
 ### Удаление символической ссылки
 
@@ -85,44 +76,44 @@ http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.
 
 Создадим директорию:
 
-  $ mkdir path_to
+    $ mkdir path_to
 
 Теперь символическую ссылку на нее:
 
-  $ ln -s path_to linkname
+    $ ln -s path_to linkname
 
 Попробуем удалить символическую ссылку, указывая ее со слэшем:
 
-  $ rm linkname/
-  rm: невозможно удалить `linkname/': Это не каталог
+    $ rm linkname/
+    rm: невозможно удалить `linkname/`: Это не каталог
 
 Такой же результат будет, если попробовать rmdir.
 
-  $ rmdir linkname/
-  rmdir: failed to remove `linkname/': Это не каталог
+    $ rmdir linkname/
+    rmdir: failed to remove `linkname/`: Это не каталог
 
 Или unlink:
 
-  $ unlink linkname/
-  unlink: невозможно удалить ссылку `linkname/': Это не каталог
+    $ unlink linkname/
+    unlink: невозможно удалить ссылку `linkname/': Это не каталог
 
 Удаление без слэша не вызывает никаких проблем:
 
-  $ rm linkname
+    $ rm linkname
 
 Или
 
-  $ unlink linkname
+    $ unlink linkname
 
 Или даже
 
-  $ rm -r linkname
+    $ rm -r linkname
 
 Последняя команда вполне безопасна, директория path_to не удалится.
 
 Слэш обычно подставляется при автодополнении, поэтому не удивляйтесь, если у вас не получится удалить директорию, возможно это символическая ссылка.
 
-По материалам http://www.newlinuxuser.com/howto-remove-a-symbolic-link/
+По материалам - {% include a.htm href="http://www.newlinuxuser.com/howto-remove-a-symbolic-link/" %}
 
 ### Создание, просмотр и удаление символьных (символических) ссылок в Linux
 
@@ -136,33 +127,33 @@ http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.
 
 Символьную ссылку можно создать при помощи команды `ln` с ключом -s (от "symbolic"). В качестве первого параметра пишется абсолютный адрес и имя исходного файла, в качестве второго – адрес и имя ссылки. Например:
 
-  ln -s filename linkname # создаётся символьная ссылка (symbolic link)
+    ln -s filename linkname # создаётся символьная ссылка (symbolic link)
 
 #### Просмотр символьной ссылки
 
 Посмотреть, куда ведет символьная ссылка можно командой:
 
-ls -l linkname
+    ls -l linkname
 
 В результате выполнения команды в поле stat  будет показан символ l (link).
 
-  $ ls -l ansInit.pm
-  lrwxrwxrwx 1 ans ans 50 2015-03-10 17:26 ansInit.pm -> /home/ans/www/swimming.kiev.ua/perl5lib/ansInit.pm
+    $ ls -l ansInit.pm
+    lrwxrwxrwx 1 ans ans 50 2015-03-10 17:26 ansInit.pm -> /home/ans/www/swimming.kiev.ua/perl5lib/ansInit.pm
 
 Висячие ссылки (которые указывают куда-то, где нет файла) `ls` с цветной схемой отображения показывает красным.
 
-##### Удаление символьной ссылки
+#### Удаление символьной ссылки
 
 Удалять символьную ссылку нужно как обычный файл, при удалении она не затрагивает то, куда ссылается. Если символическая ссылка указывает на файл, то ее можно просто удалить с помощью команды `rm`.
 
-  rm linkname
+    rm linkname
 
 При удалении символьной ссылки на каталог следует учитывать, что записывать команду без слеша в конце, иначе bash выдаст ошибку "невозможно удалить ссылку: Это не каталог".
 
 Корректная запись:
 
-  unlink linkname
-  rm -r linkname
+    unlink linkname
+    rm -r linkname
 
 http://www.code-inside.com/sozdanie-prosmotr-i-udalenie-simvolnyih-simvolicheskih-ssyilok-v-linux
 
@@ -174,6 +165,7 @@ http://www.code-inside.com/sozdanie-prosmotr-i-udalenie-simvolnyih-simvolicheski
 Жесткие ссылки удобно использовать при другого рода динамике системы. Например, мы администрируем сервер электронной библиотеки. Есть книга, относящаяся к математике и музыке (назовем ее «Математика и музыка»). При чем оговоримся, что эта книга никогда не будет заменена на более новую с таким же именем файла. Вполне резонно будет сделать жесткие ссылки так, чтобы книга находилась и в разделе «Математика», и в разделе «Музыка».
 
 Чаще применяют символические ссылки; это связано с динамикой изменения системы. Например, при обновлениях старые файлы удаляются, создаются новые, с теми же именами, и жесткие ссылки не обеспечат правильного поведения.
+
 ### Примеры применения ссылок
 
 есть разные оболочки (интерпретаторы команд консоли) – bash, dash и т.д. Но всегда есть файл /bin/sh – это как раз символическая ссылка на конкретную программу (выполните команду «file /bin/sh», чтобы убедится в этом). Чтобы изменить реализацию интерпретатора команд в системе – достаточно изменить символическую ссылку sh на соответствующий исполняемый файл
@@ -184,47 +176,53 @@ http://www.code-inside.com/sozdanie-prosmotr-i-udalenie-simvolnyih-simvolicheski
 
   ~/Data/Video/Movies/Into the wild/OST -> ~/Data/Music/OST/Into the wild
 
-:warning: также есть замечательный инструмент, к ссылкам отношения не имеющий, но похожий по своей работе: «mount -o bind». Я применял эту команду для выкладывания на свой ftp-сервер музыки, фильмов и т.д. (чтобы выложить файлы на ftp-сервер, необходимо было поместить их в папку /home/ftp/pub, что и делала эта команда без необходимости копировать данные)
+![!](/i/wa.png) :warning: также есть замечательный инструмент, к ссылкам отношения не имеющий, но похожий по своей работе: «mount -o bind». Я применял эту команду для выкладывания на свой ftp-сервер музыки, фильмов и т.д. (чтобы выложить файлы на ftp-сервер, необходимо было поместить их в папку /home/ftp/pub, что и делала эта команда без необходимости копировать данные)
 
 ### Наглядный пример
 
 Создадим файл file_a а содержимым «aaa»:
 
-  $ echo "aaa" > file_a
+    $ echo "aaa" > file_a
 
 Создадим на него 2 ссылки: символическую и жёсткую:
 
-  $ ln -s file_a link1
-  $ ln file_a link2
+    $ ln -s file_a link1
+    $ ln file_a link2
 
 Попробуем достучаться до файла по обеим ссылкам:
 
-  $ cat link1
-  aaa
-  $ cat link2
-  aaa
+    $ cat link1
+    aaa
+    $ cat link2
+    aaa
 
 Всё нормально. Теперь удалим оригинальный файл и попробуем достучаться ещё раз. Первая ссылка окажется битой, а по второй ссылке по-прежнему находится файл с содержимым «aaa»:
 
-  $ rm file_a
-  $ ls
-  link1 link2
-  $ cat link1
-  cat: link1: No such file or directory
-  $ cat link2
-  aaa
+    $ rm file_a
+    $ ls
+    link1 link2
+    $ cat link1
+    cat: link1: No such file or directory
+    $ cat link2
+    aaa
 
 Снова создадим файл с именем file_a, но с другим содержимым:
 
-  $ echo "bbb" > file_a
+    $ echo "bbb" > file_a
 
 А теперь снова попробуем достучаться по ссылкам. Первая ссылка снова валидна, и по ней будет находиться файл с содержимым «bbb». А по второй ссылке находится всё тот же файл с содержимым «aaa».
 
-  $ cat link1
-  bbb
-  $ cat link2
-  aaa
+    $ cat link1
+    bbb
+    $ cat link2
+    aaa
   
+## Links
+
+- {% include a.htm href="http://habr.com/post/99653/" %}
+- {% include a.htm href="http://habr.com/post/99746/" %}
+- {% include a.htm href="http://rus-linux.net/book1.php?name=book1/gl-04/gl_04_04.html" %}
+- {% include a.htm href="http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html" %}
 
 ## Keys
 
