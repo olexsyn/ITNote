@@ -13,4 +13,4 @@
 - вы получите ReferenceError если попытаетесь обратиться к ней до её объявления
 - не может быть перезаписана
 
-{% include a.html href="https://habr.com/ru/post/438880/" short="Когда использовать var, let и const в Javascript" %}
+{% include a.htm href="https://habr.com/ru/post/438880/" short="Когда использовать var, let и const в Javascript" %}
