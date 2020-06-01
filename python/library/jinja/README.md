@@ -1,5 +1,9 @@
 # Jinja2
 
+- {% include a.htm href="https://jinja.palletsprojects.com/en/2.11.x/" %}
+- {% include a.htm href="https://pypi.org/project/Jinja2/" %}
+- ![i](/i/in.phg) {% include a.htm href="https://code-maven.com/minimal-example-generating-html-with-python-jinja" %}
+
 ## Install
 
 {% include cl.htm cmd="pip3 install Jinja2"
@@ -23,5 +27,5 @@ Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
 
 ## Links
 
-- https://pypi.org/project/Jinja2/
-- <https://lectureswww.readthedocs.io/6.www.sync/2.codding/3.templates/jinja2.html>
+- {% include a.htm href="https://lectureswww.readthedocs.io/6.www.sync/2.codding/3.templates/jinja2.html" %} (есть в wiki)
+- {% include a.htm href="https://pythonru.com/uroki/6-shablony-vo-flask" short="Jinja + Flask" %}
