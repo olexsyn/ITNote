@@ -1,5 +1,7 @@
 # JavaScript
 
+- [var, let и const](var_let_const)
+
 ## JSON
 
 * <https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON>
