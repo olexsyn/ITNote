@@ -1,5 +1,9 @@
 # Проблема с SSI в связке Apache и Nginx на Mirohost
 
+**keys:** <button>mirohost</button> <button>ssi</button> <button>apache</button> <button>nginx</button>
+
+#### Проблема:
+
 SSI корректно работает только на ссылках типа
 
 `example.com/test/`
@@ -15,6 +19,3 @@ SSI корректно работает только на ссылках тип�
 
 В панели управления Mirohost, разделе "Сервер" - "Настройки Nginx" добавить в "Расширения файлов, которые не будут отдаваться как статические файлы nginx'ом" расширение `htm`.
 
-**keys:** <kbd>mirohost</kbd> <kbd>ssi</kbd> <kbd>apache</kbd> <kbd>nginx</kbd>
-
-**keys:** <button>mirohost</button> <button>ssi</button> <button>apache</button> <button>nginx</button>
