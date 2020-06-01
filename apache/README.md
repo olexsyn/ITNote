@@ -5,6 +5,7 @@
 - ModRewrite
 - SSL (см ниже)
 - [Проблема корректного отображения UTF8 в CGI-скриптах](cgi-utf-fix)
+- [Проблема с SSI в связке Apache и Nginx на Mirohost](mirohost_ssi_nginx)
 
 ## Веорсия, стоп, старт, рестарт
 
