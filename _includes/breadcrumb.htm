@@ -6,7 +6,7 @@
 	{%- for item in arr_pages -%}
 		{%- if item == '' -%}
 			{%- assign full_url = site.baseurl -%}
-			{#- картинка вместо 'home' <a href="{{ full_url }}"><img src="{{ site.baseurl }}/i/enote_sm.png" alt="home" title="home"></a> #}
+			{%- comment -%} картинка вместо 'home' <a href="{{ full_url }}"><img src="{{ site.baseurl }}/i/enote_sm.png" alt="home" title="home"></a> {%- endcomment -%}
 		    	<a href="{{ full_url }}">home</a>
 		{%- else -%}
 			{%- capture full_url %}{{ full_url }}/{{ item }}{% endcapture -%}
