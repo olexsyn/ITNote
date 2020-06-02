@@ -1,8 +1,8 @@
 # Jinja2
 
-{% include a.htm href="https://jinja.palletsprojects.com/en/2.11.x/" %}  
-{% include a.htm href="https://pypi.org/project/Jinja2/" %}  
-![i](/i/in.png) {% include a.htm href="https://code-maven.com/minimal-example-generating-html-with-python-jinja" %}
+{% include a.htm url="https://jinja.palletsprojects.com/en/2.11.x/" %}
+{% include a.htm url="https://pypi.org/project/Jinja2/" %}
+![i](/i/in.png) {% include a.htm url="https://code-maven.com/minimal-example-generating-html-with-python-jinja" %}
 
 ## Install
 
@@ -27,6 +27,6 @@ Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
 
 ## Links
 
-- {% include a.htm href="https://lectureswww.readthedocs.io/6.www.sync/2.codding/3.templates/jinja2.html" %} (есть в wiki)
-- {% include a.htm href="https://pythonru.com/uroki/6-shablony-vo-flask" short="Jinja + Flask" %}
-- {% include a.htm href="https://medium.com/@jasonrigden/jinja2-templating-engine-tutorial-4bd31fb4aea3" short="Jinja2 Templating Engine Tutorial" %}
+- {% include a.htm url="https://lectureswww.readthedocs.io/6.www.sync/2.codding/3.templates/jinja2.html" %} (есть в wiki)
+- {% include a.htm url="https://pythonru.com/uroki/6-shablony-vo-flask" text="Jinja + Flask" %}
+- {% include a.htm url="https://medium.com/@jasonrigden/jinja2-templating-engine-tutorial-4bd31fb4aea3" text="Jinja2 Templating Engine Tutorial" %}
