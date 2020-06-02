@@ -1,4 +1,6 @@
-# Создание и настройка Let's Encrypt
+# Let's Encrypt
+
+## Создание и настройка сертификата
 
 на примере Mirohost и nic.ua
 
@@ -27,3 +29,13 @@
 ### На nic.ua
 
 ![ssl на nic.ua](ssl_nic_ua.png)
+
+
+## Links
+
+[Let's Encrypt: получение сертификата по шагам](https://habr.com/ru/post/270273/) 2015-2017
+
+## Keys
+
+<button>ssl</button> <button>lets encrypt</button> <button>https</button> <button>mirohost</button> <button>nic.ua</button>
+
