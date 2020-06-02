@@ -1,8 +1,10 @@
 # Let's Encrypt
 
-## Создание и настройка сертификата
+## Создание и настройка сертификата сервере
 
-на примере Mirohost и nic.ua
+{% include a.htm url="https://habr.com/ru/post/270273/" text="Let's Encrypt: получение сертификата по шагам" %} 2015-2017
+
+на примере Mirohost
 
 Для того что бы подключить Let's Encrypt сертификат в КП необходимо прейти:  
 МОИ ДОМЕНЫ > Управление доменами > Выбрать домен  
@@ -13,6 +15,8 @@
 {% include a.htm url="https://mirohost.net/support/hosting-technical/kak-sozdat-ssl-sertifikat-v-kontrolnoj-paneli-mirohost" text="Инструкция Мирохост" %}
 
 ## Настройки домена
+
+на примере nic.ua
 
 Необходимо добавить CAA запись:
 
@@ -33,7 +37,8 @@
 
 ## Links
 
-[Let's Encrypt: получение сертификата по шагам](https://habr.com/ru/post/270273/) 2015-2017
+- {% include a.htm url="" text="" %}
+
 
 ## Keys
 
