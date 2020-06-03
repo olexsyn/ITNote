@@ -16,7 +16,7 @@
 - вы получите ReferenceError если попытаетесь обратиться к ней до ее объявления
 - не может быть перезаписана
 
-{% include a.htm url="https://habr.com/ru/post/438880/" text="Когда использовать var, let и const в Javascript" %}
+[Когда использовать var, let и const в Javascript](https://habr.com/ru/post/438880/)
 
 ## Keys
 

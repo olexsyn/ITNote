@@ -68,7 +68,7 @@
 
 Ссылки широко используются в системе Linux. Особенно важны символические ссылки, которые указывают на библиотеки общего пользования, находящиеся в каталоге /lib.
 
-- {% include a.htm url="http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html" %}
+- <http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html>
 
 ### Удаление символической ссылки
 
@@ -113,7 +113,7 @@
 
 Слэш обычно подставляется при автодополнении, поэтому не удивляйтесь, если у вас не получится удалить директорию, возможно это символическая ссылка.
 
-По материалам - {% include a.htm url="http://www.newlinuxuser.com/howto-remove-a-symbolic-link/" %}
+По материалам - <http://www.newlinuxuser.com/howto-remove-a-symbolic-link/>
 
 ### Создание, просмотр и удаление символьных (символических) ссылок в Linux
 
@@ -155,7 +155,7 @@
     unlink linkname
     rm -r linkname
 
-- {% include a.htm url="http://www.code-inside.com/sozdanie-prosmotr-i-udalenie-simvolnyih-simvolicheskih-ssyilok-v-linux" %}
+- <http://www.code-inside.com/sozdanie-prosmotr-i-udalenie-simvolnyih-simvolicheskih-ssyilok-v-linux>
 
 
 ### Выводы
@@ -219,10 +219,10 @@
 
 ## Links
 
-- {% include a.htm url="http://habr.com/post/99653/" %}
-- {% include a.htm url="http://habr.com/post/99746/" %}
-- {% include a.htm url="http://rus-linux.net/book1.php?name=book1/gl-04/gl_04_04.html" %}
-- {% include a.htm url="http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html" %}
+- <http://habr.com/post/99653/>
+- <http://habr.com/post/99746/>
+- <http://rus-linux.net/book1.php?name=book1/gl-04/gl_04_04.html>
+- <http://docs.altlinux.org/archive/2.3/junior/alt-docs-extras-linuxnovice/ch02s09.html>
 
 ## Keys
 

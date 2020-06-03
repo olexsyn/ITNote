@@ -26,7 +26,7 @@ print("Привет, МИР!")
 
 #### Решение:
 
-<small>{% include a.htm url="https://stackoverflow.com/questions/9322410/set-encoding-in-python-3-cgi-scripts" %}</small>
+<https://stackoverflow.com/questions/9322410/set-encoding-in-python-3-cgi-scripts>
 
 1\. В файле **/etc/apache2/envvars** раскоментировать (если закоментирована) строку
 ```

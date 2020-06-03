@@ -4,17 +4,17 @@
 
 ## Создание и настройка сертификата сервере
 
-{% include a.htm url="https://habr.com/ru/post/270273/" text="Let's Encrypt: получение сертификата по шагам" %} 2015-2017
+[Let's Encrypt: получение сертификата по шагам](https://habr.com/ru/post/270273/) 2015-2017
 
 на примере Mirohost
 
-Для того что бы подключить Let's Encrypt сертификат в КП необходимо прейти:  
-МОИ ДОМЕНЫ > Управление доменами > Выбрать домен  
-Выбрать > Сертификаты SSL  
-поставить галочки для ваших доменов и субдоменов (если необходимо)  
+Для того что бы подключить Let's Encrypt сертификат в КП необходимо прейти:
+МОИ ДОМЕНЫ > Управление доменами > Выбрать домен
+Выбрать > Сертификаты SSL
+поставить галочки для ваших доменов и субдоменов (если необходимо)
 Затем нажать "Создать сертификат", подождать пока активируется сертификат и потом нажать "Включить"
 
-{% include a.htm url="https://mirohost.net/support/hosting-technical/kak-sozdat-ssl-sertifikat-v-kontrolnoj-paneli-mirohost" text="Инструкция Мирохост" %}
+[Инструкция Мирохост](https://mirohost.net/support/hosting-technical/kak-sozdat-ssl-sertifikat-v-kontrolnoj-paneli-mirohost)
 
 ## Настройки домена
 
@@ -30,7 +30,7 @@
 
     example.com.  CAA 0 issuewild "comodoca.com"
 
-{% include a.htm url="https://support.dnsimple.com/articles/caa-record/" text="подробнее" %}
+[подробнее](https://support.dnsimple.com/articles/caa-record/)
 
 ### На nic.ua
 
@@ -39,10 +39,8 @@
 
 ## Links
 
-- {% include a.htm url="https://codex.so/ssl" text="Получаем бесплатный SSL сертификат от Let's Encrypt" %}
-- 
+- [Получаем бесплатный SSL сертификат от Let's Encrypt](https://codex.so/ssl)
 
-{% include a.htm url="" text="" %}
 
 ## Keys
 
