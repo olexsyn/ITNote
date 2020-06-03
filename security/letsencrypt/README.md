@@ -1,5 +1,7 @@
 # Let's Encrypt
 
+<https://letsencrypt.org/ru/docs/>
+
 ## Создание и настройка сертификата сервере
 
 {% include a.htm url="https://habr.com/ru/post/270273/" text="Let's Encrypt: получение сертификата по шагам" %} 2015-2017
@@ -37,8 +39,10 @@
 
 ## Links
 
-- {% include a.htm url="" text="" %}
+- {% include a.htm url="https://codex.so/ssl" text="Получаем бесплатный SSL сертификат от Let's Encrypt" %}
+- 
 
+{% include a.htm url="" text="" %}
 
 ## Keys
 
