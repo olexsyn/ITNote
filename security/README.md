@@ -14,5 +14,5 @@ RewriteRule (.*) /error/404/hackers.htm [F,L]
 # запросы по не защищенному протоколу и/или запросы с www
 RewriteCond %{HTTPS} !on [OR]
 RewriteCond %{HTTP_HOST} ^www\.
-RewriteRule (.*) https://YOURDOMAIN.com%{REQUEST_URI} [L,R=301]
+RewriteRule (.*) https://YOURDOMAIN.COM%{REQUEST_URI} [L,R=301]
 ```
