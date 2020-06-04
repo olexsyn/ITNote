@@ -8,7 +8,7 @@
 ```
 ## Links
 
-- [Добавление иконок для сайта в мультибраузерном и мультипплатформенном мире](https://webformyself.com/dobavlenie-ikonok-dlya-sajta-v-multibrauzernom-i-multipplatformennom-mire/)
+- ![!](/i/wa.png) [Добавление иконок для сайта в мультибраузерном и мультипплатформенном мире](https://webformyself.com/dobavlenie-ikonok-dlya-sajta-v-multibrauzernom-i-multipplatformennom-mire/)
 - [видео: Какие нужны фавиконки](https://www.youtube.com/watch?v=iG9WF8VpogY)
 - <https://github.com/audreyr/favicon-cheat-sheet>
 - см. [Everything you always wanted to know about touch icons](https://mathiasbynens.be/notes/touch-icons)
