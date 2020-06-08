@@ -11,3 +11,7 @@ _acme-challenge.swim.org.ua. 3600 IN	TXT	"ykaOuGpYzhEHIq2TF1-0GWUpUqF1roF7gd66TC
 ## Help
 
 {% include cl.htm cmd="dig -h" %}
+
+## Links
+
+<https://2whois.ru/?t=dig>
