@@ -14,5 +14,5 @@
 
 &nbsp;
 
-> ![tags](/i/tg.png) : <i>fstab</i>, <i>mount</i>, <i>ext4</i>, <i>vfat</i>
+> **Keys** : <button>fstab</button>, <button>mount</button>, <button>ext4</button>, <button>vfat</button>, <button>noatime</button>
 
