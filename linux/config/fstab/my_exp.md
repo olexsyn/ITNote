@@ -15,10 +15,10 @@
 ### Мой fstab
 
 ```
-UUID=e4f020f4-f3b7-4e5a-92ed-7f8c61963a52    /       ext4   errors=remount-ro,noatime,dirnoatime 0       1
-UUID=37cf61e0-a7eb-457a-9501-493832973f7e    /home   ext4   defaults,noatime,dirnoatime          0       2
-UUID=b011adbb-f42c-4098-9ebc-484c9266a838    somedir ext4   noauto,noatime,dirnoatime            0       2
-UUID=f4c5fc6e-9c7f-4976-be3b-63d0dcead3f1    none    swap   sw                                   0       0
+UUID=e4f...a52    /       ext4   errors=remount-ro,noatime,dirnoatime 0       1
+UUID=37c...f7e    /home   ext4   defaults,noatime,dirnoatime          0       2
+UUID=b01...838    somedir ext4   noauto,noatime,dirnoatime            0       2
+UUID=f4c...3f1    none    swap   sw                                   0       0
 ```
 ![?](/i/qu.png) Не совсем понятно... Когда в **fstab** прописать точку монтирования `/media/somedir` - то linux (lite) показывает на рабочем столе непримонтированный диск.  
 А если просто `somedir` (как в верху), то диск после загрузки не отображается. При монтировании монтируется в корень `/somedir`.
