@@ -14,5 +14,5 @@
 
 &nbsp;
 
-**Keys** : <button>fstab</button> <button>mount</button> <button>ext4</button> <button>vfat</button> <button>noatime</button>
+**Keys**: <button>fstab</button> <button>mount</button> <button>ext4</button> <button>vfat</button> <button>noatime</button>
 
