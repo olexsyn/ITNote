@@ -2,10 +2,17 @@
 
 {% include constants.htm -%}
 
+{% raw %}
 ```
 {% include warn.htm text="INFO" color ="blue" %}
 <span class="red">Only RED!</span>
 ```
+{% endraw %}
+
+{% include warn.htm text="INFO" color ="blue" %}
+
+<span class="red">Only RED!</span>
+
 
 ## Contents
 
