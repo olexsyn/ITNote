@@ -2,6 +2,11 @@
 
 {% include constants.htm -%}
 
+```
+{% include warn.htm text="INFO" color ="blue" %}
+<span class="red">Only RED!</span>
+```
+
 ## Contents
 
 - [code](#code)
