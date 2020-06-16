@@ -1,6 +1,6 @@
-# После установки Apache
+# Ошибка Could not reliably determine
 
-мы можем столкнуться с не критическим сообщением. После рестарта Apache будет выведено:
+После перезапуска Apache мы можем столкнуться с не критическим сообщением:
 
 `Could not reliably determine the server's fully qualified domain name, ...`
 
