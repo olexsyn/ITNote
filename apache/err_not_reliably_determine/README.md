@@ -25,4 +25,4 @@ Cохраняем файл и рестартуем Apache
 ----
 
 Также смотри [здесь](apache:dirs_n_files_ubuntu#warn). 
-<span class="red">TODO!</span>
+<span class="r">TODO!</span>
