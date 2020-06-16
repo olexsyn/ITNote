@@ -5,13 +5,13 @@
 {% raw %}
 ```
 {% include warn.htm text="INFO" color ="blue" %}
-<span class="red">Only RED!</span>
+<span class="r">Only RED!</span>
 ```
 {% endraw %}
 
 {% include warn.htm text="INFO" color ="blue" %}
 
-<span class="red">Only RED!</span>
+<span class="r">Only RED!</span>
 
 
 ## Contents
