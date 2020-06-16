@@ -18,28 +18,23 @@
 
 Сделать это можно командой `a2ensite`:
 
-  sudo a2ensite mysite_com
+    sudo a2ensite mysite_com
 
-или либо обычным способом:
+Которая, на самом деле просто создает символическую ссылку:
 
-  sudo ln -s /etc/apache2/sites-available/mysite_com.conf /etc/apache2/sites-enabled/mysite_com.conf
+    ln -s /etc/apache2/sites-available/mysite_com.conf /etc/apache2/sites-enabled/mysite_com.conf
 
-Рестарт:
+И перезапустить сервер одной из команд:
 
-    sudo /etc/init.d/apache2 restart
+{% include cl.htm cmd="sudo service apache2 reload
+sudo systemctl reload apache2
+sudo /etc/init.d/apache2 restart" out="
+[ok] Restarting apache2 (via systemctl): apache2.service." %}
 
-или
+Команда для отключения конфигурации виртуального хоста: `a2dissite`
 
-    service apache2 reload
-
-или
-
-    sudo systemctl reload apache2
-
-_[ ok ] Restarting apache2 (via systemctl): apache2.service._
-
-Или можем получить сообщение:
+В процессе запуска сервера можем получить сообщение:
 
 `Could not reliably determine the server's fully qualified domain name, ...`
 
-тогда, сюда - apache/not_reliably_determine {% include warn.htm text="TODO!" color ="red" %}
+Это можем ({{ site.baseurl }}/apache/err_not_reliably_determine)[испроавить так].
