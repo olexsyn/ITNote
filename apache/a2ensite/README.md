@@ -31,10 +31,10 @@ sudo systemctl reload apache2
 sudo /etc/init.d/apache2 restart" out="
 [ok] Restarting apache2 (via systemctl): apache2.service." %}
 
-Команда для отключения конфигурации виртуального хоста: `a2dissite`
+Команда для отключения конфигурации виртуального хоста: `a2dissite <SITE>`
 
 В процессе запуска сервера можем получить сообщение:
 
 `Could not reliably determine the server's fully qualified domain name, ...`
 
-Это можем ({{ site.baseurl }}/apache/err_not_reliably_determine)[испроавить так].
+Это можем [испроавить так]({{ site.baseurl }}/apache/err_not_reliably_determine).
