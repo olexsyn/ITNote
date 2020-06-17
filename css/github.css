@@ -5260,29 +5260,31 @@ a[href ^= "mailto"] {
 }
 
 .warn {
-	border: 1px solid #ffeeba;
-	color: #856404;
+	border: 1px solid #ec7e2e;
+	color: #c63f0a;
 	background-color: #fff3cd;
 	font-weight: 600;
 	font-style: normal;
-	border-radius: 0.25rem;
 	padding: 0 6px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 .info {
-	border: 1px solid #b8daff;
-	color: #004085;
-	background-color: #cce5ff;
+	border: 1px solid #78b8ff;
+	color: #0068db;
+	background-color: #f2f8ff;
 	font-weight: 600;
 	font-style: normal;
-	border-radius: 0.25rem;
-	padding: 0 6px;
+	border-radius: 0.30rem;
+	padding: 0 8px;
 }
 .dang {
-	border: 1px solid #f5c6cb;
-	color: #721c24;
-	background-color: #f8d7da;
+	border: 1px solid #f98181;
+	color: #ca1122;
+	background-color: #fff0f2;
 	font-weight: 600;
 	font-style: normal;
-	border-radius: 0.25rem;
-	padding: 0 6px;
+	border-left-style: solid;
+	padding: 0 8px;
+	border-radius: 1rem;
 }
