@@ -13,6 +13,7 @@
 
 <span class="r">Only RED!</span>
 
+<span class="warn">WARNING</span>
 
 ## Contents
 
