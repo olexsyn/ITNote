@@ -1,6 +1,6 @@
 <h1 style="padding-top:0; border-top:0"><img src="{{ site.baseurl }}/i/enote_logo.png" alt="logo" />E-Note</h1>
 
-> <small>Просто личный блокнот для записей. [Не претендую на истину](disclaimer)</small>
+> <small>Просто личный блокнот для записей. [Отказ от ответственности](disclaimer)</small>
 
 ---
 
