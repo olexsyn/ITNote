@@ -32,7 +32,7 @@ apache2ctl configtest  # выводит ошибку в конфиге Apache. �
                        # понять, где напортачено в файлах конфигурации
 ```
 
-![!](/i/wa.png) В случае появления сообщения `AH00558: httpd: Could not reliably determine the server's fully qualified` необходимо прописать `ServerName localhost` в файле **/etc/apache2/apache2.conf** (или **/etc/httpd/conf/httpd.conf**)
+<span class="dang">!</span> В случае появления сообщения `AH00558: httpd: Could not reliably determine the server's fully qualified` необходимо прописать `ServerName localhost` в файле **/etc/apache2/apache2.conf** (или **/etc/httpd/conf/httpd.conf**)
 
 ## restart и reload - разница?
 
