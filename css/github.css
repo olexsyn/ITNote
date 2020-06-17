@@ -5230,11 +5230,6 @@ pre {
 	background-color: #f8f8f8
 }
 /* ans */
-.r {
-  color: red;
-  font-size: 1.25em;
-  font-weight: bold;
-}
 .lighter {
 	color: #c4c4c4 !important
 }
@@ -5259,7 +5254,7 @@ a[href ^= "mailto"] {
 	line-height: 1
 }
 
-.warn {
+.ques {
 	border: 1px solid #ec7e2e;
 	color: #c63f0a;
 	background-color: #fff3cd;
@@ -5278,7 +5273,7 @@ a[href ^= "mailto"] {
 	border-radius: 0.30rem;
 	padding: 0 8px;
 }
-.dang {
+.warn {
 	border: 1px solid #f98181;
 	color: #ca1122;
 	background-color: #fff0f2;

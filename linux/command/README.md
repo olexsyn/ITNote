@@ -6,19 +6,19 @@
 - [tail](tail) - смотреть последние строки файла
 - [dig](dig) - посмотреть запись домена
 
-[сбросить и снова включить своп](swap): <span class="r">TODO!</span>
+[сбросить и снова включить своп](swap): <span class="warn">TODO!</span>
 
 {% include cl.htm
 cmd="sudo swapoff -a
 sudo swapon -a" %}
 
-[установить разрешения на каталоги и файлы](chmod_chown_r): <span class="r">TODO!</span>
+[установить разрешения на каталоги и файлы](chmod_chown_r): <span class="warn">TODO!</span>
 
 {% include cl.htm
 cmd="find ./catalog -type d -exec chmod 755 {} \;
 find ./catalog -type f -exec chmod 644 {} \;" %}
 
-[Создать и разархивировать tgz-архив](tar): <span class="r">TODO!</span>
+[Создать и разархивировать tgz-архив](tar): <span class="warn">TODO!</span>
 
 {% include cl.htm
 cmd="tar -czf pages.tgz ./pages
@@ -42,5 +42,5 @@ out="Some text" %}
 {% include cl.htm
 cmd="nano filename.ext" %}
 
-<kbd>Ctrl</kbd> + <kbd>O</kbd>, <kbd>Enter</kbd> - сохранить,  
+<kbd>Ctrl</kbd> + <kbd>O</kbd>, <kbd>Enter</kbd> - сохранить,
 <kbd>Ctrl</kbd> + <kbd>X</kbd> - выйти из редактора

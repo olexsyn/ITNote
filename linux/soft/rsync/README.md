@@ -74,7 +74,7 @@ photos/Photo 9.jpg
 
 Листинг 4. Выводим список с содержимым источника копирования
 
-<span class="r">TODO!</span>
+<span class="warn">TODO!</span>
 
 {% include cl.htm cmd="$ WHAT?"
 out="

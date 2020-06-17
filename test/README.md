@@ -1,23 +1,10 @@
 # Test
 
-{% include constants.htm -%}
-
-{% raw %}
-```
-{% include warn.htm text="INFO" color ="blue" %}
-<span class="r">Only RED!</span>
-```
-{% endraw %}
-
-{% include warn.htm text="INFO" color ="blue" %}
-
-<span class="r">Only RED!</span>
-
-<span class="warn">?</span> question
+<span class="ques">?</span> question
 
 <span class="info">i</span> info
 
-<span class="dang">!</span> danger
+<span class="warn">!</span> danger
 
 ## Contents
 

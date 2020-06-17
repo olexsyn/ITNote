@@ -27,7 +27,7 @@
 
 one | two | three
 
-Lorem ipsum dolor sit amet, <span class="r">?</span> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, <span class="ques">?</span> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 test test test test test
 

@@ -1,6 +1,6 @@
 # Язык разметки GitHub Flavored Markdown
 
-**[Markdown](https://ru.wikipedia.org/wiki/Markdown)** – визуально понятный и удобный при редактировании язык разметки для оформления текстовых документов. Обычно преобразуется в код [HTML](https://ru.wikipedia.org/wiki/HTML) для отображения информации в Интернет. [GitHub](https://github.com) расширил стандартный Markdown, добавив возможность оформления таблиц (![?][q] только<span class="r">?</span>). Кроме собственной разметки Markdown-текст может содержать в себе вставки обычного HTML-кода.
+**[Markdown](https://ru.wikipedia.org/wiki/Markdown)** – визуально понятный и удобный при редактировании язык разметки для оформления текстовых документов. Обычно преобразуется в код [HTML](https://ru.wikipedia.org/wiki/HTML) для отображения информации в Интернет. [GitHub](https://github.com) расширил стандартный Markdown, добавив возможность оформления таблиц (<span class="ques">?</span> только?). Кроме собственной разметки Markdown-текст может содержать в себе вставки обычного HTML-кода.
 
 ## Contents
 
@@ -24,7 +24,7 @@
 3. Дополнительные элементы
  + [Обратный слеш](#BackslashEscapes);
  + [Автоматические ссылки](#AutomaticLinks);
- 
+
 
 
 [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)

@@ -20,7 +20,7 @@ UUID=37c...f7e    /home   ext4   defaults,noatime          0       2
 UUID=b01...838    somedir ext4   noauto,noatime            0       2
 UUID=f4c...3f1    none    swap   sw                        0       0
 ```
-![?](/i/qu.png) Не совсем понятно... Когда в **fstab** прописать точку монтирования `/media/somedir` - то linux (lite) показывает на рабочем столе непримонтированный диск.  
+- <span class="ques">?</span> Не совсем понятно... Когда в **fstab** прописать точку монтирования `/media/somedir` - то linux (lite) показывает на рабочем столе непримонтированный диск.
 А если просто `somedir` (как в верху), то диск после загрузки не отображается. При монтировании монтируется в корень `/somedir`.
 
 {% include f.htm f="my_exp.md" %}
