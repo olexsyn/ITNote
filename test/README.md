@@ -13,11 +13,11 @@
 
 <span class="r">Only RED!</span>
 
-<span class="warn"> ? </span> question
+<span class="warn">??</span> question
 
 <span class="info">info</span> info
 
-<span class="dang"> ! </span> danger
+<span class="dang">!!</span> danger
 
 ## Contents
 
