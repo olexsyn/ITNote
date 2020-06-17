@@ -13,6 +13,7 @@
 ## Flexbox / Grid
 - [Решающая CSS битва: Grid против Flexbox](https://medium.com/@stasonmars/%D1%80%D0%B5%D1%88%D0%B0%D1%8E%D1%89%D0%B0%D1%8F-css-%D0%B1%D0%B8%D1%82%D0%B2%D0%B0-grid-%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2-flexbox-8fee99ab6cbd)
 - [Как работает CSS Flexbox: наглядное введение](https://tproger.ru/translations/how-css-flexbox-works/)
+- [Использование Grid для макетов страниц, а Flexbox — для макетов компонентов](https://m.habr.com/ru/company/ruvds/blog/506774/) 2020
 - [Верстаем правильно: знакомство с Flexbox и Grid](https://tproger.ru/translations/css-flexbox-grid/)
 - [CSS Grid и Flexbox: сравнение на практике](http://htmlbook.ru/blog/css-grid-i-flexbox-sravnenie-na-praktike)
 - [Grid или Flexbox?](https://habr.com/ru/company/ruvds/blog/448916/)
