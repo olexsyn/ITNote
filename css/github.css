@@ -5259,10 +5259,30 @@ a[href ^= "mailto"] {
 	line-height: 1
 }
 .warn {
-    border: 1px solid #222;
-    color: #222;
+    border: 1px solid #9f1616;
+    color: #9f1616;
     background-color: #ffffb9;
-    font-weight: normal;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 3px;
+    padding: 0 4px;
+}
+.info {
+    border: 1px solid #11368e;
+    color: #fff;
+    background-color: #2985fb;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 3px;
+    padding: 0 4px;
+}
+.dang {
+    border: 1px solid #a62626;
+    color: #fff;
+    background-color: #f00b0b;
+    font-weight: 600;
     font-style: normal;
     cursor: pointer;
+    border-radius: 3px;
+    padding: 0 4px;
 }
