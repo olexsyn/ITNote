@@ -8,7 +8,9 @@
 ```
 ## Links
 
+- <span class="warn">!</span> [Добавление иконок для сайта в мультибраузерном и мультипплатформенном мире](https://webformyself.com/dobavlenie-ikonok-dlya-sajta-v-multibrauzernom-i-multipplatformennom-mire/)
 - [видео: Какие нужны фавиконки](https://www.youtube.com/watch?v=iG9WF8VpogY)
+- [Favicon сегодня: форматы, поддержка, автоматизация](https://habr.com/ru/post/330584/) 2017
 - <https://github.com/audreyr/favicon-cheat-sheet>
 - см. [Everything you always wanted to know about touch icons](https://mathiasbynens.be/notes/touch-icons)
 - [App Icons on iPad and iPhone](https://developer.apple.com/library/ios/qa/qa1686/_index.html)
@@ -16,7 +18,7 @@
 - [Real FavIcon Generator](http://realfavicongenerator.net/blog/apple-touch-icon-the-good-the-bad-the-ugly/)
 
 
-<span class="r">TODO!</span> наведи тут порядок
+<span class="warn">TODO!</span> наведи тут порядок
 
 
 ## Примеры
@@ -108,7 +110,7 @@
 /images/safari-pinned-tab.svg
 ```
 
-**site.webmanifest** <span class="r">??</span>
+**site.webmanifest** <span class="ques">?</span>
 
 ```xml
 {

@@ -1,6 +1,6 @@
 # Отправка email
 
-<span class="r">TODO!</span> Проверь работу с `Cc:` и `Bcc:`
+<span class="warn">TODO!</span> Проверь работу с `Cc:` и `Bcc:`
 
 ## Защищенное STARTTLS, с авторизацией на SMTP сервере
 

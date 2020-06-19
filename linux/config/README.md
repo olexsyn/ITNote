@@ -1,7 +1,7 @@
 ## Файлы конфигураций
 
 - [fstab](fstab)
-- [crontab](crontab) <span class="r">TODO!</span>
+- [crontab](crontab) <span class="warn">TODO!</span>
 
 `page.url` | {{ page.url }}
 `page.path` | {{ page.path }}

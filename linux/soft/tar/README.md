@@ -91,7 +91,7 @@ tar --create --gzip --exclude-vcs --file www.tgz www
 echo "end of tar mailua"﻿
 ```
 
-<span class="r">TODO!</span> Создание многотомного архива
+<span class="warn">TODO!</span> Создание многотомного архива
 
 linux/commands/split#razrezanie_arxivov_tar_na_letu
 

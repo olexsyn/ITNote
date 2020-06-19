@@ -27,8 +27,8 @@ The best method that have worked for me to make this reboot-safe is to add your 
 
     sudo nano /etc/X11/Xsession.d/80synaptics
 
-Add just the synclient commands in that file: 
-    
+Add just the synclient commands in that file:
+
     synclient VertScrollDelta=-58
     synclient HorizScrollDelta=-58
 
@@ -41,7 +41,7 @@ There is still something odd: the horizontal scrolling is still wrong, This can 
     echo 'pointer = 1 2 3 4 5 7 6 8 9 10 11 12' >> .Xmodmap
     xmodmap .Xmodmap
 
-<span class="r">WTF?</span>
+<span class="ques">WTF?</span>
 
 Еще много написано здесь: <https://askubuntu.com/questions/91426/reverse-two-finger-scroll-direction-natural-scrolling>
 

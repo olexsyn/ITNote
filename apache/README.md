@@ -32,8 +32,12 @@ apache2ctl configtest  # выводит ошибку в конфиге Apache. �
                        # понять, где напортачено в файлах конфигурации
 ```
 
-![!](/i/wa.png) В случае появления сообщения `AH00558: httpd: Could not reliably determine the server's fully qualified` необходимо прописать `ServerName localhost` в файле **/etc/httpd/conf/httpd.conf**
+<span class="warn">!</span> В случае появления сообщения `AH00558: httpd: Could not reliably determine the server's fully qualified` необходимо прописать `ServerName localhost` в файле **/etc/apache2/apache2.conf** (или **/etc/httpd/conf/httpd.conf**)
 
+## restart и reload - разница?
+
+- **restart**: останавливает (**stop**), а затем запускает (**start**) службу Apache.
+- **reload:** изящно перезапускает службу Apache. При reload основной процесс Apache завершает работу дочерних процессов, загружает новую конфигурацию и запускает новые дочерние процессы.
 
 ## Установка
 
@@ -119,7 +123,7 @@ service apache2 reload" %}
 ---
 
 
-<span class="r">TODO!</span>
+<span class="warn">TODO!</span>
 
 - [Подключить виртуальный хост - a2ensite](a2ensite)
 - [Configuring Apache2 to run Python Scripts](https://www.linux.com/training-tutorials/configuring-apache2-run-python-scripts/)

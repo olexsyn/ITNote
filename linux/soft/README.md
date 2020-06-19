@@ -4,4 +4,4 @@
 - [ssh](ssh)
 - [rsync](rsync)
 - [Sublime Text](sublime-text)
-- [apt](apt) <span class="r">DELETE!</span>
+- [apt](apt) <span class="warn">DEL!</span>

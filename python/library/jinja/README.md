@@ -2,7 +2,7 @@
 
 - <https://jinja.palletsprojects.com/en/2.11.x/>
 - <https://pypi.org/project/Jinja2/>
-- ![i](/i/in.png) <https://code-maven.com/minimal-example-generating-html-with-python-jinja>
+- <span class="info">i</span> <https://code-maven.com/minimal-example-generating-html-with-python-jinja>
 
 ## Install
 
