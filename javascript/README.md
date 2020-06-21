@@ -13,6 +13,7 @@
 
 ## Links
 
+- [Загляни в **Keep**](https://keep.google.com/u/0/#label/js)
+
 {% include_relative js_links.md %}
 
-- [Загляни в **Keep**](https://keep.google.com/u/0/#label/js)
