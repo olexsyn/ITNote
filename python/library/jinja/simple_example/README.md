@@ -28,7 +28,6 @@
     <a href="/blog">Blog</a>
     <a href="/contact">Contact</a>
 </nav>
-
 ```
 
 **Шаблон** /home/user/local/test.net/_tpl/**_footer.htm**
@@ -79,8 +78,7 @@ print(rendered)
 
 **Вывод в браузер:**
 
-```
-
+```html
 <!DOCTYPE html>
 <html>
   <head>
