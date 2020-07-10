@@ -3,6 +3,7 @@
 - <https://jinja.palletsprojects.com/en/2.11.x/>
 - <https://pypi.org/project/Jinja2/>
 - <span class="info">i</span> <https://code-maven.com/minimal-example-generating-html-with-python-jinja>
+- [Простой пример](simple_example)
 
 ## Install
 
