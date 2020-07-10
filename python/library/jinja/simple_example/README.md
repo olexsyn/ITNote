@@ -76,3 +76,31 @@ corp = 'Копирайт'
 rendered = template.render(home='Home Page', user="Вася", corp=corp)
 print(rendered)
 ```
+
+**Вывод в браузер:**
+
+```
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Test Jinja</title>
+  </head>
+  <body>
+  	<nav>
+    <a href="/home">Home Page</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
+</nav>
+    <h3>Test 2 Jinja</h3>
+      <p>Hello Вася!</p>
+      <p>Hello Вася!</p>
+      <p>Hello Вася!</p>
+      <p>Hello Вася!</p>
+      <p>Hello Вася!</p>
+    <hr>
+<p>Copyright Копирайт</p>
+  </body>
+</html>
+```
