@@ -77,8 +77,7 @@ cmd="[mysql]> pager less -S"
 out="PAGER set to 'less -S'" %}
 
 {% include cl.htm
-cmd="[mysql]> select * from user"
-out="PAGER set to 'less -S'" %}
+cmd="[mysql]> select * from user" %}
 
 Это будет транслировать выход через инструмент командной строки less, который с этим параметром даст табличный вывод, который можно прокручивать по горизонтали и вертикали с помощью клавиш курсора.
 Выйти из просмотра можно, нажав клавишу <key>Q</key>.
