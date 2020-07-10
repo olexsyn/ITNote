@@ -37,7 +37,7 @@
 <hr>
 <p>Copyright {{ corp }}</p>
 ```
-{-% endraw %}
+{%- endraw %}
 
 **CGI-скрипт**
 
