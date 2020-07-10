@@ -41,42 +41,7 @@
 
 **CGI-скрипт**
 
-```python
-#!/usr/local/bin/python3.7
 
-import sys
-
-# Определяем, где запускается скрипт и подключаем директорию с модулями
-SERVER = 0
-
-if SERVER:
-	DIR_ROOT = '/var/www/some/server/path.net'
-else:
-	import cgitb
-	cgitb.enable()
-	DIR_ROOT = '/home/user/local/test.net'
-	PY_LIB   = DIR_ROOT + '/lib'
-	sys.path.insert(0, PY_LIB)
-
-# Подключаем установленные и свои модули
-from jinja2 import Template , Environment, FileSystemLoader
-
-# Директория с шаблонами
-TPL_DIR = DIR_ROOT + '/test.net/_tpl'
-
-# charset необходим для корректной работы с кириллицей
-print('Content-Type: text/html; charset=utf-8\n')
-
-# Подключаем шаблон test.htm, в котором подключается еще два
-env = Environment(loader=FileSystemLoader(TPL_DIR))
-template = env.get_template('test.htm')
-
-corp = 'Копирайт'
-
-# Собираем шаблон, передав строки для заполнения определенных в шаблонах переменных
-rendered = template.render(home='Home Page', user="Вася", corp=corp)
-print(rendered)
-```
 
 **Вывод в браузер:**
 
