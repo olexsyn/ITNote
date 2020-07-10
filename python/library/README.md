@@ -12,3 +12,4 @@
 
 - [Jinja2](jinja) - шаблонизатор
 - [BeautifulSoup](beautifulsoup) - разбор HTML кода
+- [Scrapy](https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3)
