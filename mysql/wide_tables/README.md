@@ -8,7 +8,7 @@
 
 {% include cl.htm
 cmd="[mysql]> use mysql;
-select * from user \G" %}
+[mysql]> select * from user \G" %}
 
 ```
 *************************** 1. row ***************************
