@@ -7,7 +7,7 @@
 - [Проблема корректного отображения UTF8 в CGI-скриптах](cgi-utf-fix)
 - [Проблема с SSI в связке Apache и Nginx на Mirohost](mirohost_ssi_nginx)
 
-## Веорсия, стоп, старт, рестарт
+## Версия, стоп, старт, рестарт
 
 {% include cl.htm cmd="/usr/sbin/apache2 -v"
 out="Server version: Apache/2.4.29 (Ubuntu)
