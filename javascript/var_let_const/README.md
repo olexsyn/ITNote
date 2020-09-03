@@ -16,8 +16,10 @@
 - вы получите ReferenceError если попытаетесь обратиться к ней до ее объявления
 - не может быть перезаписана
 
-[Когда использовать var, let и const в Javascript](https://habr.com/ru/post/438880/)
+Подробнее:
 
-## Keys
+- {% include a.htm text="learn.javascript.ru" url="https://learn.javascript.ru/let-const" %}
+- {% include a.htm text="Когда использовать var, let и const в Javascript" url="https://habr.com/ru/post/438880/" %}
 
-<button>var</button> <button>let</button> <button>const</button>
+
+**Keys: ** <i>var</i> <i>let</i> <i>const</i>
