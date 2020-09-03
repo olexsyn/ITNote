@@ -18,8 +18,8 @@
 
 Подробнее:
 
-- {% include a.htm text="learn.javascript.ru" url="https://learn.javascript.ru/let-const" %}
-- {% include a.htm text="Когда использовать var, let и const в Javascript" url="https://habr.com/ru/post/438880/" %}
+- {% include a.htm url="https://learn.javascript.ru/let-const" text="learn.javascript.ru" %}
+- {% include a.htm url="https://habr.com/ru/post/438880/" text="Когда использовать var, let и const в Javascript" %}
 
 
-**Keys: ** <i>var</i> <i>let</i> <i>const</i>
+**Keys:** <i>var</i> <i>let</i> <i>const</i>
