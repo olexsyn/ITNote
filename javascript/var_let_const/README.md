@@ -22,4 +22,4 @@
 - {% include a.htm url="https://habr.com/ru/post/438880/" text="Когда использовать var, let и const в Javascript" %}
 
 
-**Keys:** <i>var</i> <i>let</i> <i>const</i>
+**Keys**: <kbd>var</kbd> <kbd>let</kbd> <kbd>const</kbd>
