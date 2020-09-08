@@ -2,6 +2,8 @@
 
 - [var, let и const](var_let_const)
 
+{% include a.htm url="https://learn.javascript.ru/regexp-methods" text="RegExp" %}
+
 {% comment %}
 {% include_relative react.md %}
 {% include_relative jquery.md %}
