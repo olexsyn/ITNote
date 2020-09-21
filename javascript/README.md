@@ -13,6 +13,10 @@
 {% include_relative job.md %}
 {% endcomment %}
 
+## Решения
+
+[Добавить ведущий ноль](add_leading_zero)
+
 ## Links
 
 - [Загляни в **Keep**](https://keep.google.com/u/0/#label/js)
