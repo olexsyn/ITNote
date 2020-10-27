@@ -34,6 +34,7 @@ CREATE TABLE prot (
   ord      SMALLINT UNSIGNED               NOT NULL DEFAULT '0',   /* место */
   status   ENUM(`,'DNS','EXH','DSQ')      NOT NULL DEFAULT `,
   result   VARCHAR(8)                      NOT NULL DEFAULT '',    /* время, text */
+  timing   ENUM('A','S','H','?')          NOT NULL DEFAULT '?',   /* тайминг: A - автоматический, S - полуавтоматический, H - ручной */
   swrid    SMALLINT UNSIGNED               NOT NULL DEFAULT '0',
   year     YEAR(4)                         NOT NULL DEFAULT '0000',
   lname    VARCHAR(30)                     NOT NULL,               /* фамилия (lastname) */
@@ -60,7 +61,8 @@ CREATE TABLE res (
   dist     ENUM('50','100','200','400','800','1500') NOT NULL,
   swrid    SMALLINT UNSIGNED               NOT NULL DEFAULT '0',
   mstime   MEDIUMINT UNSIGNED              NOT NULL DEFAULT '0',  /* время, мс */
-  datest   DATE DEFAULT NULL, /* временно м.б. NULL т.к. есть дата соревнований */
+  timing   ENUM('A','S','H','?')          NOT NULL DEFAULT '?',  /* тайминг: A - автоматический, S - полуавтоматический, H - ручной */
+  datest   DATE DEFAULT NULL,                                     /* временно м.б. NULL т.к. есть дата соревнований */
 --
   KEY idx_comp (compid)                        /* выборка всех результатов одного соревнования */
   KEY idx_swr  (swrid)                         /* выборка результатов на разных дистанциях пловца(ов) */
@@ -80,7 +82,7 @@ CREATE TABLE res (
   part     enum('am','pm')       DEFAULT NULL,         /* раздел - утро/вечер, если NULL - то не имеет значения */
   course   enum('S','L')         NOT NULL,             /* вода - короткая/длинная */
   gender   enum('M','F')         NOT NULL,
-  stroke   enum('FRE','FLY','BCK','BRS','IMD') NOT NULL,
+  stroke   enum('FR','FL','BA','BR','IM') NOT NULL,
   dist     smallint(5)  unsigned NOT NULL,             /* дистанция, м */
   swrid    smallint(5)  unsigned DEFAULT NULL,         /* id пловца, если не найден - NULL */
   year     smallint(5)  unsigned DEFAULT NULL,         /* год рождения по протоколу! ??? */
@@ -152,7 +154,7 @@ CREATE TABLE heat (
   compid   smallint(5)  unsigned NOT NULL,             /* id соревнования 2222 */
   course   enum('S','L')         NOT NULL DEFAULT 'S', /* вода - короткая/длинная */
   gender   enum('M','F','X')     NOT NULL,
-  stroke   enum('FRE','FLY','BCK','BRS','IMD') NOT NULL,
+  stroke   enum('FR','FL','BA','BR','IM') NOT NULL,
   dist     smallint(5)  unsigned NOT NULL,             /* дистанция, м */
 
   day      tinyint      unsigned NOT NULL DEFAULT '0', /* день соревнований, первый - 0 */
@@ -166,6 +168,7 @@ CREATE TABLE heat (
   /* msqual   mediumint(8) unsigned NOT NULL DEFAULT '0', /* время квалификации или предварительное */
   rankbef  tinyint      unsigned NOT NULL DEFAULT '0', /* rank before */
   mstime   mediumint(8)          NOT NULL DEFAULT '0', /* время, мс */
+  timing   ENUM('A','S','H','?') NOT NULL DEFAULT '?',  /* тайминг: A - автоматический, S - полуавтоматический, H - ручной */
   rankaft  tinyint      unsigned NOT NULL DEFAULT '0', /* rank after */
   ordheat  tinyint               NOT NULL DEFAULT '0', /* занятое место в заплыве */
   ordevent tinyint               NOT NULL DEFAULT '0', /* общее занятое место на дистанции */
@@ -230,6 +233,7 @@ CREATE TABLE res (
   dist     ENUM('050','100','200','400','800','150') NOT NULL,
   swrid    SMALLINT UNSIGNED               NOT NULL DEFAULT '0',
   mstime   MEDIUMINT UNSIGNED              NOT NULL DEFAULT '0',  /* время, мс */
+  timing   ENUM('A','S','H','?')           NOT NULL DEFAULT '?',  /* тайминг: A - автоматический, S - полуавтоматический, H - ручной */
   datest   DATE DEFAULT NULL, /* временно м.б. NULL т.к. есть дата соревнований */
 --
   KEY idx_comp (compid)                        /* выборка всех результатов одного соревнования */
@@ -271,9 +275,11 @@ CREATE TABLE rank_st (
   rid    tinyint      unsigned NOT NULL,
   course enum('S','L')         NOT NULL,
   gender enum('M','W')         NOT NULL,
-  stroke enum('FRE','FLY','BCK','BRS','IMD') NOT NULL,
+  stroke enum('FR','FL','BA','BR','IM') NOT NULL,
   dist   smallint(5)  unsigned NOT NULL,
   mstime mediumint(8) unsigned NOT NULL,
+  timing   ENUM('A','S','H','?') NOT NULL DEFAULT '?',  /* тайминг: A - автоматический, S - полуавтоматический, H - ручной */
+
 --
   KEY key_main (course,gender,stroke,dist,mstime)
 ) ENGINE=MyISAM;
@@ -329,7 +335,7 @@ CREATE TABLE rank_st (
   course enum('S','L')         NOT NULL, /**/
   gender enum('M','W')         NOT NULL,
   dist   smallint(5)  unsigned NOT NULL,
-  stroke enum('FRE','FLY','BCK','BRS','IMD') NOT NULL,
+  stroke enum('FR','FL','BA','BR','IM') NOT NULL,
   mstime mediumint(8) unsigned NOT NULL,
 --
   KEY key_main (course,gender,stroke,dist,mstime)
