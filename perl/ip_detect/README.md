@@ -96,3 +96,4 @@ if ( $comment eq "Вы здесь в первый раз!" ) {
 print "Content-type: text/html\n\n";
 print "<h1>$comment</h1>";
 </code>
+```
