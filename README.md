@@ -14,6 +14,7 @@
 - [HTML](html)
 - [Linux](linux)
 - [MySQL](mysql)
+- [Perl](perl)
 - [Python](python)
 - [Security](security)
 - [Web Services](web-services)
