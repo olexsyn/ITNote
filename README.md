@@ -18,5 +18,6 @@
 - [Python](python)
 - [Security](security)
 - [Web Services](web-services)
+- [Авто](auto)
 - [Test](test)
 
