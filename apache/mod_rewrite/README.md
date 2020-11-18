@@ -57,8 +57,23 @@ RewriteCond %{REMOTE_ADDR} !^X.X.X.X$
 RewriteCond %{REQUEST_URI} !^site-closed.html
 RewriteRule ^.*$ site-closed.html
 ```
-
 Страницу ошибки site-closed.html необходимо поместить в корневом каталоге сайта или указать в директиве путь к ней.
+
+У меня заработал ткой вариант:
+
+```apache
+# Заглушка
+RewriteCond %{REMOTE_ADDR} !^127.0.0.2$
+RewriteCond %{REQUEST_URI} !^/stop
+RewriteRule ^.*$ stop
+RewriteCond %{REMOTE_ADDR} ^127.0.0.2$
+<IfModule mod_headers.c>
+Header append Cache-Control “no-store, no-cache, must-revalidate”
+Header append Pragma “no-cache”
+</IfModule>
+```
+Но Chrom, зараза, так кэшировал это перенаправление, что оно продолжало работать и после редактирования .htaccess. Только очистка кэша Хрома, позволяла восстановить нормальную работу.
+
 
 ## Избавиться от дублей страниц из-за слеша
 
