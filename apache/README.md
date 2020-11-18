@@ -1,9 +1,10 @@
 # Apache
 
 - Установка
-- SSI
-- ModRewrite
+- [SSI](ssi)
+- [ModRewrite](mod_rewrite)
 - SSL (см ниже)
+- [Коды ошибок](error_code)
 - [Проблема корректного отображения UTF8 в CGI-скриптах](cgi-utf-fix)
 - [Проблема с SSI в связке Apache и Nginx на Mirohost](mirohost_ssi_nginx)
 
