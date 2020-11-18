@@ -38,10 +38,12 @@ allow from X.X.X.X
 
 Этот метод обычно требуется в случае, если доступ к сайту нужно запретить для роботов или программ, имеющих динамические IP-адреса. Подробно о User-Agent мы рассказали в статье нашего блога. Для блокировки достаточно в начало файла .htaccess добавить директивы:
 
+```apache
 RewriteEngine on
 RewriteCond %{HTTP_USER_AGENT} example1 [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} example2 [NC]
 RewriteRule ^.*$ - [F]
+```
 
 Вместо example1 и example2 укажите User-agent роботов или программ, доступ для которых требуется запретить.
 
@@ -49,10 +51,12 @@ RewriteRule ^.*$ - [F]
 
 Также можно перенаправлять посетителей на собственноручно созданную страницу с сообщением о проводимых технических работах. С указанного в условии (RewriteCond) IP-адреса сайт будет отображаться по-прежнему:
 
+```apache
 RewriteEngine on
 RewriteCond %{REMOTE_ADDR} !^X.X.X.X$
 RewriteCond %{REQUEST_URI} !^site-closed.html
 RewriteRule ^.*$ site-closed.html
+```
 
 Страницу ошибки site-closed.html необходимо поместить в корневом каталоге сайта или указать в директиве путь к ней.
 
