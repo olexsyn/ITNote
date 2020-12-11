@@ -11,3 +11,12 @@
 
 - {% include a.htm url="https://ru.stackoverflow.com/questions/460207/%D0%95%D1%81%D1%82%D1%8C-%D0%BB%D0%B8-%D0%B2-python-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-switch-case" text="Есть ли в Python оператор switch case?" %}
 - {%  include a.htm url="https://pbpython.com/pdf-reports.html" text="Creating PDF Reports with Pandas, Jinja and WeasyPrint" %}
+
+
+Ошибки
+
+* `malformed header from script 'script.py': Bad header: NameError, referer: http://...`
+
+Скрипт в терминале отрабатывает без ошибок, а в браузере получаем Error 500.
+
+Одна из причин: вероятно, что скрипт пишет в лог. И когда запуск производился через терминал, то файл лога создался владельцем текущей учетной записи. При запуске через http, владелец уже `www-data` который не имеет прав записи в этот файл. Нужно просто удалить файл лога и запустить скрипт через http еще раз.
