@@ -59,7 +59,7 @@ git diff --cached
 
 <span class="warn">!</span> Но, следует понимать, что на сервере затрутся все изменения в файлах, которые были сделаны после последнего `git push`, даже если ты отправляешь всего один файл.
 
-## <a href="progit"></a> Книга Pro Git
+## <a name="progit"></a> Книга Pro Git
 
 [Pro Git book](https://git-scm.com/book/ru/v2)
 
