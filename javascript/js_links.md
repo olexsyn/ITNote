@@ -61,6 +61,13 @@
 - [Переход с jQuery на Vue](https://kirillurgant.com/notes/making-the-move-from-jquery-to-vue)
 - [Размер окна браузера в JavaScript и jQuery](https://realadmin.ru/coding/width-height-javascript.html)
 
+**Ошибки**
+
+* ERR_EMPTY_RESPONSE
+  - jquery.min.js:2 POST http://site.ua/cgi-bin/script.py net::ERR_EMPTY_RESPONSE
+
+Пришлось `$.post(...` заменить на `$.get(...` и ошибка ушла. Почему? <span class="ques">?</span> question
+
 ## JSON
 
 - <https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON>
