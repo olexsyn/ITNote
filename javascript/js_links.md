@@ -66,7 +66,7 @@
 * ERR_EMPTY_RESPONSE
   - jquery.min.js:2 POST http://site.ua/cgi-bin/script.py net::ERR_EMPTY_RESPONSE
 
-Пришлось `$.post(...` заменить на `$.get(...` и ошибка ушла. Почему? <span class="ques">?</span> question
+Пришлось `$.post(...` заменить на `$.get(...` и ошибка ушла. Почему? <span class="ques">?</span>
 
 ## JSON
 
