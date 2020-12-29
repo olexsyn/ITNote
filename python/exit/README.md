@@ -24,7 +24,7 @@ try:
  print('ignoring exit')
 ...
 ```
-{% include cl.htm cmd="" out="ignoring exit" %}
+{% include cl.htm small="ignoring exit" %}
 
 
 
