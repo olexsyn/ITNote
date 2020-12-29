@@ -28,6 +28,10 @@
 <a name="test2"></a>
 {% include_relative test2.md %}
 
+<a name="links"></a>
+{% include_relative links.md %}
+
+
 
 {% include_relative different.md %}
 
