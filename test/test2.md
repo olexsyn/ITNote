@@ -4,7 +4,7 @@
 ### Одна строка с командой
 
 ```
-{% include cl.htm cmd="rsync --port=7777 ONLY" %}
+{\% include cl.htm cmd="rsync --port=7777 ONLY" \%}
 ```
 {% include cl.htm cmd="rsync --port=7777 ONLY" %}
 
