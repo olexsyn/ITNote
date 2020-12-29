@@ -23,8 +23,8 @@ try:
  print(‘ignoring exit’)
 ...
 ```
+{% include cl.htm cmd="" out="ignoring exit" %}
 
-_ignoring exit_
 
 
 ## Завершение программ средствами модуля os
@@ -43,8 +43,8 @@ def bye():
 if __name__ ##### '__main__': bye()
 ```
 
-    python3 modul_bye.py
-    Bye world
+{% include cl.htm cmd="python3 modul_bye.py" out="Bye world" %}
+
 
 В отличие от **sys.exit**, функция **os._exit** неуязвима для инструкций обработки исключений `try/except` и `try/finally`:
 
@@ -57,9 +57,7 @@ except:
     print('This text will be ignored')
 ```
 
-    python3 bye_try_exc.py
-    Bye world
-
+{% include cl.htm cmd="python3 bye_try_exc.py" out="Bye world" %}
 
 ```python bye_try_fin.py
 from modul_bye import bye
@@ -70,8 +68,8 @@ finally:
     print('This text will be ignored')
 ```
 
-    python3 bye_try_fin.py
-    Bye world
+{% include cl.htm cmd="python3 bye_try_fin.py" out="Bye world" %}
+
 
 ## Повышаем надежность с contextlib
 
