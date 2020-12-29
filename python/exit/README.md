@@ -21,7 +21,7 @@ try:
  sys.exit()  # см. также: os._exit, Tk().quit()
 ... except SystemExit:
 ...
- print(‘ignoring exit’)
+ print('ignoring exit')
 ...
 ```
 {% include cl.htm cmd="" out="ignoring exit" %}
@@ -49,7 +49,7 @@ if __name__ ##### '__main__': bye()
 {% include cl.htm cmd="python3 modul_bye.py" out="Bye world" %}
 
 
-В отличие от **sys.exit**, функция **os._exit** неуязвима для инструкций обработки исключений `try/except` и `try/finally`:
+В отличие от **sys.exit**, функция **os.\_exit** неуязвима для инструкций обработки исключений `try/except` и `try/finally`:
 
 ```python bye_try_exc.py
 from modul_bye import bye
