@@ -1,5 +1,7 @@
 # Test
 
+[Пример большой страницы, разделенной на части для удобства](multi_part_page)
+
 <span class="ques">?</span> question
 
 <span class="info">i</span> info
