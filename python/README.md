@@ -1,7 +1,7 @@
 # Python
 
 - [Библиотеки](library)
-- [Работа с файлами](work_w_files)
+- [Работа с файлами](files)
   
 - {% include a.htm url="https://proglib.io/p/python-docs/" text="Работа с документацией в Python: поиск информации и соглашения" %}
 - {% include a.htm url="https://habr.com/ru/post/417783/" text="Списки VS кортежи. Оптимизации" %}
