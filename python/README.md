@@ -1,6 +1,7 @@
 # Python
 
 - [Библиотеки](library)
+- [Работа с файлами](work_w_files)
   
 - {% include a.htm url="https://proglib.io/p/python-docs/" text="Работа с документацией в Python: поиск информации и соглашения" %}
 - {% include a.htm url="https://habr.com/ru/post/417783/" text="Списки VS кортежи. Оптимизации" %}
@@ -10,7 +11,7 @@
 
 - [Отправка e-mail](email)
 - [Примеры CGI](cgi-examples)
-- [Удаление дубликатов](remove_dubl)
+- [Удаление дубликатов из списка. Сохранить порядок элементов](remove_dubl)
 
 ## Завершение программ
 
