@@ -5,3 +5,5 @@
 - [Как удобно посмотреть данные, когда строка вывода слишком широкая](wide_tables)
 - [Примеры таблиц swimdb](swimdb)
 
+[MariaDB Connector/Python](https://mariadb.com/docs/appdev/connector-python/)
+
