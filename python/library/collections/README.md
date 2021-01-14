@@ -1,8 +1,6 @@
 # collections
 
-namedtuple - не итерируемый. Т.е. его нельзя перебрать в цикле, используя
-ключи и/или значения. У namedtuple нет таких методов как items(), keys(),
-values(). Но есть метод _asdict(), который позволяет перебрать его, как словарь
+**namedtuple** - не итерируемый. Т.е. его нельзя перебрать в цикле, используя ключи и/или значения. У namedtuple нет таких методов как items(), keys(), values(). Но есть метод _asdict(), который позволяет перебрать его, как словарь...
 
 {% include a.htm url="https://docs.python.org/3/library/collections.html#collections.namedtuple" %}
 
