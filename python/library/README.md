@@ -5,6 +5,7 @@
 - [re](re) - регулярные выражения
 - [email / smtplib](smtplib)
 - [subprocess](subprocess)
+- [collections](collections)
 
 ## Сторонние
 
