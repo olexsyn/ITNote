@@ -15,3 +15,5 @@
 <span class="warn">!</span> danger
 ```
 {% endraw %}
+
+{% include f.htm f="visual.md" %}
