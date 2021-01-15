@@ -2,24 +2,18 @@
 
 [Пример большой страницы, разделенной на части для удобства](multi_part_page)
 
-<span class="ques">?</span> question
-
-<span class="info">i</span> info
-
-<span class="warn">!</span> danger
-
-
-<span class="ques">test</span> <span class="ques">teg1</span> <span class="ques">tegged2</span>
-
-
 ## Contents
 
+- [visual](#visual)
 - [code](#code)
 - [images](#images)
 - [test](#test2)
 - [Разное](#разное)
 
 ---
+
+<a name="visual"></a>
+{% include_relative visual.md %}
 
 <a name="code"></a>
 {% include_relative code.md %}
