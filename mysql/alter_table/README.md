@@ -63,15 +63,17 @@ mysql> desc users;
 
     mysql> ALTER TABLE t2 DROP COLUMN c;
 
-Для того чтобы **добавить новый числовой столбец** AUTO_INCREMENT с именем c:
+Для того чтобы **добавить новый числовой столбец** AUTO_INCREMENT с именем col:
 
-   mysql> ALTER TABLE t2 ADD c INT UNSIGNED NOT NULL AUTO_INCREMENT, ADD INDEX (c);
+   mysql> ALTER TABLE t2 ADD col INT UNSIGNED NOT NULL AUTO_INCREMENT, ADD INDEX (c);
 
-Заметьте, что столбец c индексируется, так как столбцы AUTO_INCREMENT должны быть индексированы, кроме того, столбец c объявляется как NOT NULL, поскольку :question: индексированные столбцы не могут быть NULL :question:.
+Заметьте, что столбец `col` индексируется (`ADD INDEX`), так как столбцы AUTO_INCREMENT должны быть индексированы, и, кроме того, не могут быть NULL. [Подробнее про NULL](/mysql/null/)
 
 Для того чтобы **изменить тип столбца** с INTEGER на TINYINT NOT NULL (оставляя имя прежним) и **изменить тип столбца** b с CHAR(10) на CHAR(20) **с переименованием** его с b на c:
 
-    mysql> ALTER TABLE t2 MODIFY a TINYINT NOT NULL, CHANGE b c CHAR(20);
+```sql
+ALTER TABLE t2 MODIFY a TINYINT NOT NULL, CHANGE b c CHAR(20);
+```
 
 Для того чтобы **добавить новый столбец** TIMESTAMP **в конец таблицы** с именем d:
 
