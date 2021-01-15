@@ -1,6 +1,6 @@
 # Test
 
-[Пример большой страницы, разделенной на части для удобства](multi_part_page)
+[Пример большой страницы, разделенной на части для удобства редактирования](multi_part_page)
 
 ## Contents
 
@@ -8,7 +8,7 @@
 - [code](#code)
 - [images](#images)
 - [test](#test2)
-- [Разное](#разное)
+- [Разное](#different)
 
 ---
 
@@ -27,8 +27,7 @@
 <a name="links"></a>
 {% include_relative links.md %}
 
-
-
+<a name="different"></a>
 {% include_relative different.md %}
 
 
