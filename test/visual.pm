@@ -6,5 +6,12 @@
 
 <span class="warn">!</span> danger
 
+{% raw %}
+```
+<span class="ques">?</span> question
 
-<span class="ques">test</span> <span class="ques">teg1</span> <span class="ques">tegged2</span>
+<span class="info">i</span> info
+
+<span class="warn">!</span> danger
+```
+{% endraw %}
