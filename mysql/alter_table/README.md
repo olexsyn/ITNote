@@ -6,20 +6,25 @@
 
 Например, чтобы **переименовать столбец** INTEGER из a в b, можно сделать следующее:
 
-    mysql> ALTER TABLE t1 CHANGE a b INTEGER;
+```sql
+ALTER TABLE t1 CHANGE a b INTEGER;
+```
 
 Если переименованный столбец был индексируемым - индекс тоже перестроится под новое имя.
 
 При **изменении типа столбца**, но не его имени синтаксис выражения CHANGE все равно требует указания обоих имен столбца, даже если они одинаковы. Например:
 
-    mysql> ALTER TABLE t1 CHANGE b b BIGINT NOT NULL;
+```sql
+ALTER TABLE t1 CHANGE b b BIGINT NOT NULL;
+```
 
 Однако начиная с версии MySQL 3.22.16a можно также использовать выражение MODIFY для **изменения типа столбца без переименовывания** его:
 
-    mysql> ALTER TABLE t1 MODIFY b BIGINT NOT NULL;
-
-
+```sql
+ALTER TABLE t1 MODIFY b BIGINT NOT NULL;
 ```
+
+```sql
 mysql> desc users;
 +--------+------------------+------+-----+------------+----------------+
 | Field  | Type             | Null | Key | Default    | Extra          |
@@ -53,55 +58,74 @@ mysql> desc users;
 
 Ниже приводятся примеры, показывающие некоторые случаи употребления команды ALTER TABLE. Пример начинается с таблицы t1, которая создается следующим образом:
 
-    mysql> CREATE TABLE t1 (a INTEGER,b CHAR(10));
+```sql
+CREATE TABLE t1 (a INTEGER,b CHAR(10));
+```
 
 Для того чтобы **переименовать таблицу** из t1 в t2:
 
-    mysql> ALTER TABLE t1 RENAME t2;
+```sql
+ALTER TABLE t1 RENAME t2;
+```
 
 Для того чтобы **удалить столбец** c:
 
-    mysql> ALTER TABLE t2 DROP COLUMN c;
+```sql
+ALTER TABLE t2 DROP COLUMN c;
+```
 
 Для того чтобы **добавить новый числовой столбец** AUTO_INCREMENT с именем col:
 
-   mysql> ALTER TABLE t2 ADD col INT UNSIGNED NOT NULL AUTO_INCREMENT, ADD INDEX (c);
+```sql
+ALTER TABLE t2 ADD col INT UNSIGNED NOT NULL AUTO_INCREMENT, ADD INDEX (col);
+```
 
 Заметьте, что столбец `col` индексируется (`ADD INDEX`), так как столбцы AUTO_INCREMENT должны быть индексированы, и, кроме того, не могут быть NULL. [Подробнее про NULL](/mysql/null/)
 
-Для того чтобы **изменить тип столбца** с INTEGER на TINYINT NOT NULL (оставляя имя прежним) и **изменить тип столбца** b с CHAR(10) на CHAR(20) **с переименованием** его с b на c:
+Для того чтобы **изменить тип столбца** ccс INTEGER на TINYINT NOT NULL (оставляя имя прежним) и **изменить тип столбца** bbb сccc CHAR(10) на CHAR(20) **с переименованием** его с bbb на ccc:
 
 ```sql
-ALTER TABLE t2 MODIFY a TINYINT NOT NULL, CHANGE b c CHAR(20);
+ALTER TABLE t2 MODIFY aaa TINYINT NOT NULL, CHANGE bbb ccc CHAR(20);
 ```
 
-Для того чтобы **добавить новый столбец** TIMESTAMP **в конец таблицы** с именем d:
+Для того чтобы **добавить новый столбец** TIMESTAMP с именем ddd **в конец таблицы**:
 
-    mysql> ALTER TABLE t2 ADD d TIMESTAMP;
+```sql
+ALTER TABLE t2 ADD ddd TIMESTAMP;
+```
 
-Вставить новый **столбец после указанного столбца**:
+Вставить новый **столбец** email **после указанного столбца** name:
 
-    mysql> ALTER TABLE contacts ADD email VARCHAR(60) AFTER name;
+```sql
+ALTER TABLE tab1 ADD email VARCHAR(60) AFTER name;
+```
 
 Вставить новый **столбец в начало таблицы**:
 
-    mysql> ALTER TABLE contacts ADD email VARCHAR(60) FIRST;
+```sql
+ALTER TABLE tab2 ADD email VARCHAR(60) FIRST;
+```
 
-Для того чтобы **добавить индекс к столбцу** d и сделать столбец a первичным ключом:
+Для того чтобы **добавить индекс к столбцу** ddd и сделать столбец aaa первичным ключом:
 
-    mysql> ALTER TABLE t2 ADD INDEX (d), ADD PRIMARY KEY (a);
+```sql
+ALTER TABLE t2 ADD INDEX (ddd), ADD PRIMARY KEY (aaa);
+```
 
 **создать индексы** к таблице
 
-    mysql> ALTER TABLE tmptab ADD FULLTEXT INDEX `idx_goods` (`goods`), ADD INDEX `idx_price` (`price`);
-
-    mysql> ALTER TABLE swr ADD UNIQUE INDEX uni_name_year (lname, fname, year);
+```sql
+ALTER TABLE tmptab ADD FULLTEXT INDEX `idx_goods` (`goods`), ADD INDEX `idx_price` (`price`);
+ALTER TABLE swr ADD UNIQUE INDEX uni_name_year (lname, fname, year);
+```
 
 **удалить индекс**
 
-    mysql> alter table vendor drop index idx_name;
+```sql
+alter table vendor drop index idx_name;
+```
 
-## См. также
+### См. также
 
 [Как посмотреть все индексы таблицы](mysql:show_index)
 
