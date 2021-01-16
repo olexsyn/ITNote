@@ -10,6 +10,7 @@
 - {%  include a.htm url="https://pbpython.com/pdf-reports.html" text="Creating PDF Reports with Pandas, Jinja and WeasyPrint" %}
 
 - [Форма + AJAX](form_ajax)
+
 - [Отправка e-mail](email)
 - [Примеры CGI](cgi-examples)
 - [Удаление дубликатов из списка. Сохранить порядок элементов](remove_dubl)
