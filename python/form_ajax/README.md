@@ -1,5 +1,6 @@
 # HTML-Form + AJAX
 
+{% raw %}
 `/_tpl/adm/ap.htm`
 
 ```html
@@ -271,3 +272,4 @@ else:
 			)
 			print(j2.render('adm/ows_show_table.htm', tpl_vars))
 ```
+{% endraw %}
