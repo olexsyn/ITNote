@@ -2,7 +2,7 @@
 
 `/usr/share/X11/xkb/symbols/ua`
 
-```
+```xml
 default  partial alphanumeric_keys
 xkb_symbols "unicode" {
 
