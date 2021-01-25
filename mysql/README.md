@@ -29,6 +29,8 @@ https://andreyex.ru/bazy-dannyx/uchebnoe-posobie-po-sql/sql-chislovye-funkcii/
 
 https://andreyex.ru/bazy-dannyx/10-rasprostranennyh-oshibok-programmirovaniya-na-sql-i-kak-ih-izbezhat/
 
+https://andreyex.ru/bazy-dannyx/baza-dannyx-mysql/11-osnovnyx-primerov-komandy-update-v-mysql/
+
 https://andreyex.ru/mysql/peremennye-mysql/ + https://andreyex.ru/mysql/peremennaya-select-into-v-mysql/
 
 https://andreyex.ru/mysql/vybor-sluchajnyh-zapisej-v-mysql/
