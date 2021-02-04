@@ -10,15 +10,15 @@
 
 ## Версия, стоп, старт, рестарт
 
-{% include cl.htm cmd="/usr/sbin/apache2 -v"
-out="Server version: Apache/2.4.29 (Ubuntu)
-Server built:   2020-03-13T12:26:16" %}
+`/usr/sbin/apache2 -v`
+```
+Server version: Apache/2.4.29 (Ubuntu)
+Server built:   2020-03-13T12:26:16
+```
 
-{% include cl.htm cmd="service apache2 stаtus" %}
+`service apache2 stаtus`
 
-{% include cl.htm cmd="<b>sudo</b> service apache2 stop|start|restart" %}
-
-{% include cl.htm cmd="" %}
+`sudo service apache2 stop|start|restart`
 
 а также, в некоторых дистрибутивах Linux:
 
