@@ -110,43 +110,42 @@ SSLSessionTickets Off
 Теперь изменим конфигурацию хоста проекта `/etc/apache2/sites-available/auto_kazka_org_ua.conf`. Строки, добавленные к стандартной конфигурации для работы ssl я пометил как `# ssl`:
 
 ```apache
-<IfModule mod_ssl.c>                                                     # ssl
-	<VirtualHost 127.0.1.77:443>                                           # ssl Внимание! Здесь порт `:80` надо заменить на `:443`!
-		ServerName auto.kazka.org.ua.loc
-		DocumentRoot /home/olex/www/kazka/auto.kazka.org.ua
+<IfModule mod_ssl.c>                                                   # ssl
+    <VirtualHost 127.0.1.77:443>                                       # ssl Внимание! Здесь порт `:80` надо заменить на `:443`!
+        ServerName auto.kazka.org.ua.loc
+        DocumentRoot /home/olex/www/kazka/auto.kazka.org.ua
 
-		SSLEngine on                                                         # ssl
-		SSLCertificateFile     /etc/ssl/certs/apache-autokazka.crt           # ssl
-		SSLCertificateKeyFile  /etc/ssl/private/apache-autokazka.key         # ssl
+        SSLEngine on                                                   # ssl
+        SSLCertificateFile     /etc/ssl/certs/apache-autokazka.crt     # ssl
+        SSLCertificateKeyFile  /etc/ssl/private/apache-autokazka.key   # ssl
 
-		<FilesMatch "\.(py|html|htm|css|js)$">                               # ssl  # Здесь было прописано нессколько расширений, я изменил на свои... Картинки не???
-			SSLOptions +StdEnvVars                                             # ssl
-		</FilesMatch>                                                        # ssl
+        <FilesMatch "\.(py|html|htm|css|js)$">                         # ssl  # все? а картинки?
+            SSLOptions +StdEnvVars                                     # ssl
+        </FilesMatch>                                                  # ssl
 
-		<Directory /home/olex/www/kazka/auto.kazka.org.ua/>
-			Options +Includes
-			AddType text/html .htm
-			AddOutputFilter INCLUDES .htm
-			AllowOverride All
-			Require all granted
-		</Directory>
+        <Directory /home/olex/www/kazka/auto.kazka.org.ua/>
+            Options +Includes
+            AddType text/html .htm
+            AddOutputFilter INCLUDES .htm
+            AllowOverride All
+            Require all granted
+        </Directory>
 
-		ScriptAlias /cgi-bin/ /home/olex/www/kazka/cgi-bin/
-		<Directory "/home/olex/www/kazka/cgi-bin">
-			AllowOverride None
-			Options +ExecCGI -MultiViews
-			Require all granted
-			# see https://olexsyn.github.io/e-note/apache/cgi-utf-fix/
-			PassEnv LANG en_US.UTF-8
-			SSLOptions +StdEnvVars                                              # ssl
-		</Directory>
+        ScriptAlias /cgi-bin/ /home/olex/www/kazka/cgi-bin/
+        <Directory "/home/olex/www/kazka/cgi-bin">
+            AllowOverride None
+            Options +ExecCGI -MultiViews
+            Require all granted
+            # see https://olexsyn.github.io/e-note/apache/cgi-utf-fix/
+            PassEnv LANG en_US.UTF-8
+            SSLOptions +StdEnvVars                                     # ssl
+        </Directory>
 
-		ErrorLog /home/olex/www/__logs/kazka_auto/error.log
-		CustomLog /home/olex/www/__logs/kazka_auto/access.log combined
+        ErrorLog /home/olex/www/__logs/kazka_auto/error.log
+        CustomLog /home/olex/www/__logs/kazka_auto/access.log combined
 
-	</VirtualHost>
-</IfModule>                                                               # ssl
-
+    </VirtualHost>
+</IfModule>                                                            # ssl
 ```
 
 ### (Рекомендуется) Изменение файла хоста HTTP для перенаправления на HTTPS
@@ -161,31 +160,33 @@ SSLSessionTickets Off
 
 ## Шаг 4 — Активация изменений в Apache
 
-Ттеперь нужно включить в Apache модули SSL и заголовков, активировать наш виртуальный хост SSL и перезапустить Apache.
+Теперь нужно включить в Apache модули SSL и заголовков, активировать наш виртуальный хост SSL и перезапустить Apache.
 
-Мы можем активровать `mod_ssl` и `mod_headers` - модули Apache, необходимые для некоторых настроек нашего сниппета SSL, с помощью команды a2enmod:
+Мы можем активровать `mod_ssl` и `mod_headers` - модули Apache, необходимые для некоторых настроек нашего сниппета SSL, с помощью команды `a2enmod`:
 
-`sudo a2enmod ssl`
-`sudo a2enmod headers`
- 
+```
+sudo a2enmod ssl
+sudo a2enmod headers
+```
+
 Теперь мы можем активировать сниппет SSL и сам виртуальный хост (если не сделали этого раньше) с помощью команды a2ensite:
 
-`sudo a2enconf ssl-params`
-`sudo a2ensite auto_kazka_org_ua`
+```
+sudo a2enconf ssl-params
+sudo a2ensite auto_kazka_org_ua
+```
  
 Мы активировали наш сайт и все необходимые модули. Теперь нам нужно проверить наши файлы на наличие ошибок в синтаксисе. Для этого можно ввести следующую команду:
 
-`sudo apache2ctl configtest`
- 
-Если проверка будет успешно пройдена, мы получим результат, выглядящий примерно так:
-
 ```
+sudo apache2ctl configtest
 Syntax OK
 ```
+Если в конфигурации нет синтаксических ошибок, мы можем безопасно перезапустить Apache для внесения изменений:
 
-Если в результатах есть сообщение Syntax OK, в вашей конфигурации нет синтаксических ошибок. Мы можем безопасно перезапустить Apache для внесения изменений:
-
-`sudo systemctl restart apache2`
+```
+sudo systemctl restart apache2`
+```
  
 ## Шаг 5 — Тестирование шифрования
 
