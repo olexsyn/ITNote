@@ -21,7 +21,6 @@ Server built:   2020-03-13T12:26:16"
 
 а также, в некоторых дистрибутивах Linux:
 
-```
 {% include cl.htm cmd="sudo systemctl stop|start|restart httpd.service
 systemctl status httpd" %}
 
@@ -42,7 +41,7 @@ systemctl status httpd" %}
 
 ## Установка
 
-`sudo apt install apache2`
+{% include cl.htm cmd="sudo apt install apache2" %}
 
 - [Apache HTTP Server Version 2.4 Documentation](http://httpd.apache.org/docs/2.4/)
   - [Introduction to Server Side Includes](http://httpd.apache.org/docs/2.4/howto/ssi.html)
