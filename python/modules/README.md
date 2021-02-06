@@ -22,6 +22,9 @@ from sys import *
 ```python
 import sys
 print(sys.path)
+# или еще лучше так:
+for item in sys.path:
+    print(item)
 ```
 
 ## Исполняемый модуль
