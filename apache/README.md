@@ -3,7 +3,7 @@
 - Установка
 - [SSI](ssi)
 - [ModRewrite](mod_rewrite)
-- SSL (см ниже)
+- [SSL](ssl)
 - [Коды ошибок](error_code)
 - [Проблема корректного отображения UTF8 в CGI-скриптах](cgi-utf-fix)
 - [Проблема с SSI в связке Apache и Nginx на Mirohost](mirohost_ssi_nginx)
@@ -84,46 +84,6 @@ apache2ctl configtest  # выводит ошибку в конфиге Apache. �
 {% include cl.htm cmd="sudo a2ensite test.net
 service apache2 reload" %}
 
-
-## SSL
-
-```
-/etc/httpd/conf/vhosts/domainname1.dom
-
-<VirtualHost domainname1.dom:80>
-    ServerAdmin webmaster@domainname1.dom
-    DocumentRoot "/home/user/http/domainname1.dom"
-    ServerName domainname1.dom
-    ServerAlias domainname1.dom
-    ErrorLog "/var/log/httpd/domainname1.dom-error_log"
-    CustomLog "/var/log/httpd/domainname1.dom-access_log" common
-
-    <Directory "/home/user/http/domainname1.dom">
-        Require all granted
-    </Directory>
-</VirtualHost>
-
-<VirtualHost domainname1.dom:443>
-    ServerAdmin webmaster@domainname1.dom
-    DocumentRoot "/home/user/http/domainname1.dom"
-    ServerName domainname1.dom:443
-    ServerAlias domainname1.dom:443
-    ErrorLog "/var/log/httpd/domainname1.dom-error_log"
-    CustomLog "/var/log/httpd/domainname1.dom-access_log" common
-
-    <Directory "/home/user/http/domainname1.dom">
-        Require all granted
-    </Directory>
-
-    SSLEngine on          How to create a self-signed SSL Certificate ... https://www.akadia.com/services/ssh_test_certificate.html
-    SSLCertificateFile "/etc/httpd/conf/server.crt"                  <--------------------------
-    SSLCertificateKeyFile "/etc/httpd/conf/server.key"               <--------------------------
-</VirtualHost>
-```
-
-- [Генерация и использование SSL-сертификатов в Linux](https://itproffi.ru/generatsiya-i-ispolzovanie-ssl-sertifikatov-v-linux/)
-- [Как выпустить самоподписанный SSL сертификат и заставить ваш браузер доверять ему](https://habr.com/ru/post/352722/)
-- [Как сгенерировать самоподписанный сертификат с помощью OpenSSL на Linux](https://unlix.ru/%D0%BA%D0%B0%D0%BA-%D1%81%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%81%D0%B0%D0%BC%D0%BE%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-%D1%81/)
 
 ---
 
