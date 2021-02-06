@@ -15,6 +15,14 @@ from sys import *
 
 Очень много и запутанно написано {% include a.htm url='https://tproger.ru/translations/guide-into-python-imports/' text='здесь' %}, загляни, на свежую голову...
 
+---
+
+Чтобы увидеть содержимое sys.path, можно сделать так:
+
+```python
+import sys
+print(sys.path)
+```
 
 ## Исполняемый модуль
 
