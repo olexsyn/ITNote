@@ -1,5 +1,11 @@
 # Синтаксис
 
+## Словники
+
+<span class="warn">DOIT!</span>
+
+https://devpractice.ru/python-lesson-9-dict/
+
 ### перегорнути словник
 
 ```python
