@@ -53,7 +53,7 @@ print("Content-Type: text/html; charset=utf-8\n\n");  # Perl
 print('Content-Type: text/html; charset=utf-8\n')  # Python
 ```
 
-<span slass="info">Увага!</span> Якщо скрипти виконуються не лише у директорії `cgi-bin`, то в інших директоріях зі скриптами слід також розмістити файл `.htaccess`:
+<span сlass="info">Увага!</span> Якщо скрипти виконуються не лише у директорії `cgi-bin`, то в інших директоріях зі скриптами слід також розмістити файл `.htaccess`:
 ```apache
 AddHandler cgi-script .py
 Options +ExecCGI -MultiViews
