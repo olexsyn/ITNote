@@ -4,7 +4,7 @@
 
 <span class="info">i</span> info
 
-<span class="warn">!</span> danger
+<span class="warn">!</span> warning
 
 {% raw %}
 ```
@@ -12,7 +12,7 @@
 
 <span class="info">i</span> info
 
-<span class="warn">!</span> danger
+<span class="warn">!</span> warning
 ```
 {% endraw %}
 
