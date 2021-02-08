@@ -36,13 +36,13 @@ print("Привет, МИР!")
 2\. В конфирурационном файле виртуального хоста в разделе _ScriptAlias/Directory_ прописать строку `PassEnv LANG en_US.UTF-8`:
 
 ```apache
-	ScriptAlias /cgi-bin/ /www/example.com/cgi-bin/
-	<Directory "/www/example.com/cgi-bin">
-		...
-		Options +ExecCGI -MultiViews
-		PassEnv LANG en_US.UTF-8
-		...
-	</Directory>
+    ScriptAlias /cgi-bin/ /www/example.com/cgi-bin/
+    <Directory "/www/example.com/cgi-bin">
+        ...
+        Options +ExecCGI -MultiViews
+        PassEnv LANG en_US.UTF-8
+        ...
+    </Directory>
 ```
 
 3\. И, теперь, да: в выводимый заголовок `Content-Type` CGI-скрипта добавлять кодировку `utf-8`
@@ -52,3 +52,13 @@ print("Content-Type: text/html; charset=utf-8\n\n");  # Perl
 
 print('Content-Type: text/html; charset=utf-8\n')  # Python
 ```
+
+<span slass="info">Увага!</span> Якщо скрипти виконуються не лише у директорії `cgi-bin`, то в інших директоріях зі скриптами слід також розмістити файл `.htaccess`:
+```apache
+AddHandler cgi-script .py
+Options +ExecCGI -MultiViews
+PassEnv LANG en_US.UTF-8
+```
+
+
+
