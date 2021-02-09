@@ -12,7 +12,7 @@ Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1 Ubuntu 18.04
 
 Дивимося, які бази є:
 
-{% include cl.htm cmd="MariaDB [(none)]> show databases;"
+{% include cl.htm cmd="MariaDB [(none)]» show databases;"
 small="
 +--------------------+
 | Database           |
@@ -28,17 +28,17 @@ small="
 
 Створюємо нову базу даних:
 
-{% include cl.htm cmd="MariaDB [(none)]> create database kazkadb;" %}
+{% include cl.htm cmd="MariaDB [(none)]» create database kazkadb;" %}
 
 
 Створюємо користувача для web-інтерфейсу, встановлюємо йому пароль:
 
-{% include cl.htm cmd="MariaDB [(none)]> CREATE USER 'kazka_user'@'localhost' IDENTIFIED BY 'PASSW_4_kazka_user';" %}
+{% include cl.htm cmd="MariaDB [(none)]» CREATE USER 'kazka_user'@'localhost' IDENTIFIED BY 'PASSW_4_kazka_user';" %}
 
 Надаємо користувачу мінімальні права для таблиць бази:
 
-{% include cl.htm cmd="MariaDB [(none)]> GRANT SELECT, INSERT, UPDATE, DELETE ON kazkadb.* TO 'kazka_user'@'localhost';"
-MariaDB [(none)]> FLUSH PRIVILEGES;" %}
+{% include cl.htm cmd="MariaDB [(none)]» GRANT SELECT, INSERT, UPDATE, DELETE ON kazkadb.* TO 'kazka_user'@'localhost';"
+MariaDB [(none)]» FLUSH PRIVILEGES;" %}
 
 ---
 
@@ -74,13 +74,17 @@ GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password'
 
 Разрешение на удаленное подключение и использование базы MySQL:
 
-  GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'
+```mysql
+GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'
+```
 
 предоставит права пользователю **dbuser**, который будет подключаться с компьютера с IP-адресом **192.168.0.55.**
 
 Создание учетной записи MySQL с правами создания резервных копий:
 
-  GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';
+```mysql
+GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';
+```
 
 ## Возможные ошибки
 
@@ -88,21 +92,20 @@ GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password'
 
 Причина: в новых версиях по умолчанию активированы политики на проверку сложности пароля. Их список можно посмотреть командой:
 
-  SHOW VARIABLES LIKE 'validate_password%';
-
+```mysql
+SHOW VARIABLES LIKE 'validate_password%';
+```
 Вывод команды будет, примерно, следующим:
 
-  +--------------------------------------+--------+
-  | Variable_name                        | Value  |
-  +--------------------------------------+--------+
-  | validate_password_check_user_name    | OFF    |
-  | validate_password_dictionary_file    |        |
-  | validate_password_length             | 8      |
-  | validate_password_mixed_case_count   | 1      |
-  | validate_password_number_count       | 1      |
-  | validate_password_policy             | MEDIUM |
-  | validate_password_special_char_count | 1      |
-  +--------------------------------------+--------+
+
+| Variable_name                        | Value  |
+| validate_password_check_user_name    | OFF    |
+| validate_password_dictionary_file    |        |
+| validate_password_length             | 8      |
+| validate_password_mixed_case_count   | 1      |
+| validate_password_number_count       | 1      |
+| validate_password_policy             | MEDIUM |
+| validate_password_special_char_count | 1      |
 
 где:
 
@@ -119,7 +122,8 @@ GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password'
 * Привести пароль в соответствие требованиям политик.
 * Отключить политику, которая не позволяет использовать желаемый пароль. Например, чтобы отключить требование использовать цифры вводим:
 
-  SET GLOBAL validate_password_number_count = 0;
+```mysql
+SET GLOBAL validate_password_number_count = 0;
+```
 
-См. также: [Права для пользователей](mysql/privileges)
-
+См. также: [Права для пользователей]({{ site.baseurl}}/mysql/privileges)
