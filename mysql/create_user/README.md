@@ -28,16 +28,16 @@ small="
 
 Створюємо нову базу даних:
 
-{% include cl.htm cmd="MariaDB [(none)]» create database kazkadb;" %}
+{% include cl.htm cmd="CREATE DATABASE kazkadb;" %}
 
 
 Створюємо користувача для web-інтерфейсу, встановлюємо йому пароль:
 
-{% include cl.htm cmd="MariaDB [(none)]» CREATE USER 'kazka_user'@'localhost' IDENTIFIED BY 'PASSW_4_kazka_user';" %}
+{% include cl.htm cmd="CREATE USER 'kazka_user'@'localhost' IDENTIFIED BY 'PASSW_4_kazka_user';" %}
 
 Надаємо користувачу мінімальні права для таблиць бази:
 
-{% include cl.htm cmd="MariaDB [(none)]» GRANT SELECT, INSERT, UPDATE, DELETE ON kazkadb.* TO 'kazka_user'@'localhost';"
+{% include cl.htm cmd="GRANT SELECT, INSERT, UPDATE, DELETE ON kazkadb.* TO 'kazka_user'@'localhost';"
 MariaDB [(none)]» FLUSH PRIVILEGES;" %}
 
 ---
