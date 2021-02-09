@@ -12,7 +12,7 @@ Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1 Ubuntu 18.04
 
 Дивимося, які бази є:
 
-{% include cl.htm cmd="MariaDB [(none)]» show databases;"
+{% include cl.htm cmd="MariaDB [(none)]> show databases;"
 small="
 +--------------------+
 | Database           |
