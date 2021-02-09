@@ -59,7 +59,7 @@ os._exit(code)  # code - необходим!
 
 `site.com/dir/file/` (index.htm)
 
-Тобто, створити директорію `file` і в неї покласти `index.htm` з вмістом _file.htm_
+Тобто, створити директорію `file` і в неї покласти `index.htm` з вмістом _file.htm_ (читай тут: [Проблема с SSI в связке Apache и Nginx на Mirohost]({{ site.baseurl }}/apache/cgi-utf-fix/)
 
 Далі, у директоріях, де планується запускати скрипти треба прописати свої файли `.htaccess`. В ньому:
 
@@ -77,4 +77,4 @@ Options +ExecCGI -MultiViews
 ```apache
 PassEnv LANG en_US.UTF-8
 ```
-Про це ще можна прочитати тут: [Корректное отображение UTF8 в CGI-скриптах](/apache/cgi-utf-fix/)
+Про це ще можна прочитати тут: [Корректное отображение UTF8 в CGI-скриптах]({{ site.baseurl }}/apache/cgi-utf-fix/)
