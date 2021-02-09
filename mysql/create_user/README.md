@@ -26,7 +26,7 @@ small="
 +--------------------+" %}
 
 
-https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user
+{% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Ссылка" %}
 
 Эта команда предоставляет права доступа пользователю и, если его не существует, создает его:
 
