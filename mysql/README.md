@@ -43,6 +43,7 @@ https://andreyex.ru/mysql/kak-sbrasyvat-znacheniya-avtoinkrementa-v-mysql/
 
 https://andreyex.ru/mysql/mariadb-protiv-mysql/
 
+
 https://andreyex.ru/mysql/kak-sopostavit-znacheniya-null-s-drugimi-znachimymi-znacheniyami/
 
 https://andreyex.ru/mysql/mysql-kommentarii-v-glubinu/
