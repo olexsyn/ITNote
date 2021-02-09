@@ -55,3 +55,22 @@ GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password'
 * список всех возможных прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage
 
 Разрешение на удаленное подключение и использование базы MySQL:
+
+
+```mysql
+GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'
+```
+
+предоставит права пользователю **dbuser**, который будет подключаться с компьютера с IP-адресом **192.168.0.55.**
+
+Создание учетной записи MySQL с правами создания резервных копий:
+
+```mysql
+GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';
+```
+
+## Возможные ошибки
+
+**ERROR 1819 (HY000): Your password does not satisfy the current policy requirements**
+
+Причина: в новых версиях по умолчанию активированы политики на проверку сложности пароля. Их список можно посмотреть командой:
