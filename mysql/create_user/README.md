@@ -26,7 +26,7 @@ small="
 +--------------------+" %}
 
 
-{% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Ссылка" %}
+Подробнее про {% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Создание пользователей MySQL/MariaDB и предоставление прав доступа" %}
 
 Эта команда предоставляет права доступа пользователю и, если его не существует, создает его:
 
