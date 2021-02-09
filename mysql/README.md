@@ -4,7 +4,7 @@
   - [Про NULL](null)
 - [ALTER TABLE](alter_table)
 - [Как удобно посмотреть данные, когда строка вывода слишком широкая](wide_tables)
-- [Права для пользователей (Priveleges)](priveleges)
+- [Права для пользователей (Privileges)](privileges)
 - [Приклад створення БД та користувача](create_user)
 - [Примеры таблиц swimdb](swimdb)
 
