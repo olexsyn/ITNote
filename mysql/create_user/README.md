@@ -25,3 +25,33 @@ small="
 | swimdb             |
 +--------------------+" %}
 
+
+https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user
+
+Эта команда предоставляет права доступа пользователю и, если его не существует, создает его:
+
+```mysql
+GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+```
+
+Описание команды:
+
+**ALL PRIVILEGES:** предоставляет полные права на использование данных.
+__ *.* :__ права предоставляются на все базы и все таблицы.
+**dbuser:** имя учетной записи.
+**localhost:** доступ для учетной записи будет предоставлен только с локального компьютера.
+**password:** пароль, который будет задан пользователю.
+**WITH GRANT OPTION:** будут предоставлены дополнительные права на изменение структуры баз и таблиц.
+
+## Другие примеры
+
+Предоставление особых прав пользователю:
+
+```mysql
+GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';
+```
+
+* права на выборку и обновление данных во всех таблицах базы **base1 **для пользователя **dbuser**
+* список всех возможных прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage
+
+Разрешение на удаленное подключение и использование базы MySQL:
