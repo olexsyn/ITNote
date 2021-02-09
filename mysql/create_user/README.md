@@ -30,14 +30,12 @@ https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user
 
 Эта команда предоставляет права доступа пользователю и, если его не существует, создает его:
 
-```sql
-GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
-```
+{% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;" %}
 
 Описание команды:
 
 - **ALL PRIVILEGES:** предоставляет полные права на использование данных.
-- {% raw %}*.*{% endraw %}: права предоставляются на все базы и все таблицы.
+- {% raw %}* . *{% endraw %}: права предоставляются на все базы и все таблицы.
 - **dbuser:** имя учетной записи.
 - **localhost:** доступ для учетной записи будет предоставлен только с локального компьютера.
 - **password:** пароль, который будет задан пользователю.
@@ -47,26 +45,20 @@ GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WIT
 
 Предоставление особых прав пользователю:
 
-```sql
-GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';
-```
+{% include cl.htm cmd="GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
 
 * права на выборку и обновление данных во всех таблицах базы `base1` для пользователя `dbuser`
 * список всех возможных прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage
 
 Разрешение на удаленное подключение и использование базы MySQL:
 
-```sql
-GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'
-```
+{% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'" %}
 
 предоставит права пользователю `dbuser`, который будет подключаться с компьютера с IP-адресом `192.168.0.55`.
 
 Создание учетной записи MySQL с правами создания резервных копий:
 
-```sql
-GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';
-```
+{% include cl.htm cmd="GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';" %}
 
 ## Возможные ошибки
 
@@ -75,9 +67,8 @@ GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES
 Причина: в новых версиях по умолчанию активированы политики на проверку сложности пароля. Их список можно посмотреть командой:
 
 
-```sql
-SHOW VARIABLES LIKE 'validate_password%';
-```
+{% include cl.htm cmd="SHOW VARIABLES LIKE 'validate_password%';" %}
+
 Вывод команды будет, примерно, следующим:
 
 
@@ -106,7 +97,7 @@ SHOW VARIABLES LIKE 'validate_password%';
 - Привести пароль в соответствие требованиям политик.
 - Отключить политику, которая не позволяет использовать желаемый пароль. Например, чтобы отключить требование использовать цифры вводим:
 
-```sql
-SET GLOBAL validate_password_number_count = 0;
-```
-См. также: [Права для пользователей]({{ site.baseurl }}/mysql/privileges)
+{% include cl.htm cmd="SET GLOBAL validate_password_number_count = 0;" %}
+
+
+См. также: [Права для пользователей]({{ site.baseurl}}/mysql/privileges)
