@@ -30,14 +30,14 @@ https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user
 
 Эта команда предоставляет права доступа пользователю и, если его не существует, создает его:
 
-```mysql
+```sql
 GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
 ```
 
 Описание команды:
 
 - **ALL PRIVILEGES:** предоставляет полные права на использование данных.
-- __ {% raw %}*.*{% endraw %} :__ права предоставляются на все базы и все таблицы.
+- {% raw %}*.*{% endraw %}: права предоставляются на все базы и все таблицы.
 - **dbuser:** имя учетной записи.
 - **localhost:** доступ для учетной записи будет предоставлен только с локального компьютера.
 - **password:** пароль, который будет задан пользователю.
@@ -47,7 +47,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WIT
 
 Предоставление особых прав пользователю:
 
-```mysql
+```sql
 GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';
 ```
 
@@ -56,7 +56,7 @@ GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password'
 
 Разрешение на удаленное подключение и использование базы MySQL:
 
-```mysql
+```sql
 GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'
 ```
 
@@ -64,7 +64,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'
 
 Создание учетной записи MySQL с правами создания резервных копий:
 
-```mysql
+```sql
 GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';
 ```
 
@@ -75,13 +75,14 @@ GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES
 Причина: в новых версиях по умолчанию активированы политики на проверку сложности пароля. Их список можно посмотреть командой:
 
 
-```mysql
+```sql
 SHOW VARIABLES LIKE 'validate_password%';
 ```
 Вывод команды будет, примерно, следующим:
 
 
 | Variable_name                        | Value  |
+| ------------------------------------ | :----: |
 | validate_password_check_user_name    | OFF    |
 | validate_password_dictionary_file    |        |
 | validate_password_length             | 8      |
@@ -105,8 +106,7 @@ SHOW VARIABLES LIKE 'validate_password%';
 - Привести пароль в соответствие требованиям политик.
 - Отключить политику, которая не позволяет использовать желаемый пароль. Например, чтобы отключить требование использовать цифры вводим:
 
-```mysql
+```sql
 SET GLOBAL validate_password_number_count = 0;
 ```
-
-См. также: [Права для пользователей]({{ site.baseurl}}/mysql/privileges)
+См. также: [Права для пользователей]({{ site.baseurl }}/mysql/privileges)
