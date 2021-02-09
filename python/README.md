@@ -59,7 +59,9 @@ os._exit(code)  # code - необходим!
 
 `site.com/dir/file/` (index.htm)
 
-Тобто, створити директорію `file` і в неї покласти `index.htm` з вмістом _file.htm_ (читай тут: [Проблема с SSI в связке Apache и Nginx на Mirohost]({{ site.baseurl }}/apache/cgi-utf-fix/)
+Тобто, створити директорію `file` і в неї покласти `index.htm` з вмістом _file.htm_
+
+див.: [Проблема с SSI в связке Apache и Nginx на Mirohost]({{ site.baseurl }}/apache/mirohost_ssi_nginx/)
 
 Далі, у директоріях, де планується запускати скрипти треба прописати свої файли `.htaccess`. В ньому:
 
