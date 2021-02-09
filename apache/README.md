@@ -7,7 +7,6 @@
 - [Коды ошибок](error_code)
 - [Проблема корректного отображения UTF8 в CGI-скриптах](cgi-utf-fix)
 - [Apache і Мирохост](mirohost)
-- [Проблема с SSI в связке Apache и Nginx на Mirohost](mirohost_ssi_nginx)
 
 ## Версия, стоп, старт, рестарт
 
