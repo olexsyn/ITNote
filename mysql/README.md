@@ -10,20 +10,18 @@
 
 Заходимо під root'ом в MySQL (MariaDB):
 
-```
-sudo mysql -uroot -p
-[sudo] password for olex: 
+{% include cl.htm cmd="sudo mysql -uroot -p"
+small="[sudo] password for olex: 
 Enter password: 
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 47
 Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1 Ubuntu 18.04
-...
-```
+..." %}
 
 Дивимося, які бази є:
 
-```
-MariaDB [(none)]> show databases;
+{% include cl.htm cmd="MariaDB [(none)]> show databases;"
+small="
 +--------------------+
 | Database           |
 +--------------------+
@@ -33,27 +31,23 @@ MariaDB [(none)]> show databases;
 | mysql              |
 | performance_schema |
 | swimdb             |
-+--------------------+
-```
++--------------------+" %}
+
 
 Створюємо нову базу даних:
 
-```
-MariaDB [(none)]> create database kazkadb;
-```
+{% include cl.htm cmd="MariaDB [(none)]> create database kazkadb;" %}
+
 
 Створюємо користувача для web-інтерфейсу, встановлюємо йому пароль:
 
-```
-MariaDB [(none)]> CREATE USER 'kazka_user'@'localhost' IDENTIFIED BY 'PASSW_4_kazka_user';
-```
+{% include cl.htm cmd="MariaDB [(none)]> CREATE USER 'kazka_user'@'localhost' IDENTIFIED BY 'PASSW_4_kazka_user';" %}
 
 Надаємо користувачу мінімальні права для таблиць бази:
 
-```
-MariaDB [(none)]> GRANT SELECT, INSERT, UPDATE, DELETE ON kazkadb.* TO 'kazka_user'@'localhost';
-MariaDB [(none)]> FLUSH PRIVILEGES;
-```
+{% include cl.htm cmd="MariaDB [(none)]> GRANT SELECT, INSERT, UPDATE, DELETE ON kazkadb.* TO 'kazka_user'@'localhost';"
+MariaDB [(none)]> FLUSH PRIVILEGES;" %}
+
 
 ---
 
