@@ -1,10 +1,11 @@
-## Команды
+# Linux. Команды
 
-{% include_relative dirs_n_files.md %}
-
+- [ln](ln) - ссылки (жесткие и символические) на файлы и каталоги
 - [history](history) - последние команды в консоли
 - [grep](grep)
 - [dig](dig) - посмотреть запись домена
+
+{% include_relative dirs_n_files.md %}
 
 [сбросить и снова включить своп](swap): <span class="warn">TODO!</span>
 
