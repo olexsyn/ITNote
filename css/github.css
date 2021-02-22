@@ -5216,15 +5216,13 @@ pre {
 	font-weight: bold
 }
 .highlight .nf {
-	color: #990000;
-	font-weight: bold
+	color: #2a65a7
 }
 .highlight .nl {
-	color: #990000;
-	font-weight: bold
+	color: #304614
 }
 .highlight .nn {
-	color: #555555
+	color: #6646a0
 }
 .highlight .nt {
 	color: #000080
@@ -5242,8 +5240,7 @@ pre {
 	color: #008080
 }
 .highlight .ow {
-	color: #000000;
-	font-weight: bold
+	color: #d73a49
 }
 .highlight .o {
 	color: #d14;
