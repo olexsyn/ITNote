@@ -5114,8 +5114,7 @@ pre {
 	font-weight: bold
 }
 .highlight .kn {
-	color: #000000;
-	font-weight: bold
+	color: #cb2431;
 }
 .highlight .kp {
 	color: #000000;
@@ -5130,8 +5129,7 @@ pre {
 	font-weight: bold
 }
 .highlight .k, .highlight .kv {
-	color: #000000;
-	font-weight: bold
+    color: #990000;
 }
 .highlight .mf {
 	color: #009999
@@ -5150,6 +5148,9 @@ pre {
 }
 .highlight .m, .highlight .mb, .highlight .mx {
 	color: #009999
+}
+.highlight .sa {
+	color: #d73a49
 }
 .highlight .sb {
 	color: #d14
@@ -5185,7 +5186,7 @@ pre {
 	color: #990073
 }
 .highlight .s {
-	color: #d14
+	color: #2b9456
 }
 .highlight .na {
 	color: #008080
@@ -5245,8 +5246,7 @@ pre {
 	font-weight: bold
 }
 .highlight .o {
-	color: #000000;
-	font-weight: bold
+	color: #d14;
 }
 .highlight .w {
 	color: #bbbbbb
