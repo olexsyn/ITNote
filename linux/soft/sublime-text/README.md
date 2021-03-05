@@ -2,6 +2,8 @@
 
 [Как можно подправить package](edit_package) (на примере темы Afterglow)
 
+[Sublime-Text Shortcuts](https://shortcutworld.com/Sublime-Text/linux/Sublime-Text_Shortcuts)
+
 ## Плагины
 
 Сначала необходимо установить Package Control: `Tools` -> `Command Palette` -> `Install Package Control` 
