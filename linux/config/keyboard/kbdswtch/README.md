@@ -65,4 +65,51 @@ rm /tmp/~clip.tmp /tmp/~sel.tmp
 # notify-send "Change Layout" -t 2000
 ```
 
+Нужно сохранить этот скрипт, дать права на выполнениее, в настройках клавиатуры добавить его, например, на клавишу Pause
+
+<span class="info">i</span> Должна быть установлена маленькая утилитка `xdotool`
+
+  sudo apt install xdotool
+
 <span class="warn">!</span> Бывает, не работает в некоторых окошках
+
+
+Было бы неплохо и сразу поменять раскладку индикатора, но не получается пока...
+
+```
+# опционально меняем раскладку !!! не работает у меня !!!
+# xdotool key Shift_L+Capslock
+
+# это "setxkbmap 'ua'" -  переключает раскладку, но "вешает" индикатор
+# LANG1="us"
+# LANG2="ua"
+# CURRENT_LANG=$(setxkbmap -query | tail -n 1 | cut -f6 -d ' ')
+# if [ "$CURRENT_LANG" = $LANG1 ]; then
+#     setxkbmap $LANG2
+# else
+#     setxkbmap $LANG1
+# fi
+
+#LANG="us"
+#CURRENT_LANG=$(setxkbmap -query | tail -n 1 | cut -f6 -d ' ')
+#if [ "$CURRENT_LANG" = $LANG ]; then
+#    #xdotool key Shift_L+Capslock
+#	xdotool keydown Shift_L+Capslock
+#	sleep 1
+#	xdotool keyup Shift_L+Capslock
+#else
+#	xdotool keydown Capslock
+#	sleep 1
+#	xdotool keyup Capslock
+#fi
+
+# этот вариант тоже не прокатил
+#xdotool keydown Shift+Shift
+#sleep 1
+#xdotool keyup Shift+Shift
+
+# shift иногда может залипать, это решает проблему
+# xdotool key Shift
+
+# notify-send "Change Layout" -t 2000
+```
