@@ -42,7 +42,8 @@ with open('path_to/file', mode) as f:
 
 
 - исключения
-- работа с двумя файлами одновременно
+
+## Работа с двумя файлами одновременно
 
 ``` python
 with open(fname + '.inp') as f_inp:
