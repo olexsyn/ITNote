@@ -4,9 +4,14 @@
 - [Модули](modules)
 - [Библиотеки](library)
 - [Работа с файлами](files)
-  
+
+## Строки
+- {% include a.htm url="https://pythonru.com/osnovy/stroki-python" text="Строки в python 3: методы, функции, форматирование" %}
 - {% include a.htm url="https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format" text="Форматирование строк с помощью format()" %}
 - {% include a.htm url="https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python" text="10 примеров использования методов строк в python" %}
+
+---
+
 - {% include a.htm url="https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python" text="Как использовать модуль datetime" %}
 - {% include a.htm url="https://pythonru.com/primery/asinhronnost-python-na-primere" text="Асинхронность python на примере asyncio" %}
 - {% include a.htm url="https://proglib.io/p/python-docs/" text="Работа с документацией в Python: поиск информации и соглашения" %}
