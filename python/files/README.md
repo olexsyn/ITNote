@@ -8,7 +8,7 @@
 
 Прочитать файл целиком
 
-``` python
+```python
 f = open('path_to/file.txt', mode)
     text = f.read()
 f.close()
@@ -37,7 +37,7 @@ f.close()
 
 ## with
 
-``` python
+```python
 with open('path_to/file', mode) as f:
     text = f.read()
 ```
@@ -45,11 +45,23 @@ with open('path_to/file', mode) as f:
 Отличие от `open()`: python самостоятельно закрывает файл, разработчику нет необходимости помнить об этом. Не вызываются исключения при открытии файла (например, если файл не существует).
 
 
-- исключения
+## Пример работы с файлом с исключениями
+
+```python
+try:
+   fh = open("testfile", "w")
+   try:
+      fh.write("This is my test file for exception handling!!")
+   finally:
+      print ("Going to close the file")
+      fh.close()
+except IOError:
+   print ("Error: can\'t find file or read data")
+```
 
 ## Работа с двумя файлами одновременно
 
-``` python
+```python
 with open(fname + '.inp') as f_inp:
 	with open(fname + '.out', 'w') as f_out:
 		for line in f_inp:
