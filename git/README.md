@@ -35,9 +35,14 @@ M  lib/simplegit.rb
 
 ### Добавить файл(ы) в последний комит
 
-{% include cl.htm cmd="git commit -m 'New commit comment'" --amend %}
+{% include cl.htm cmd="git commit -m 'New commit comment' --amend" %}
 
 В некоторых источниках говорится, чтобы оставить прежний комментарий сделайте так: `-m ''`. Но так не работает: Aborting commit due to empty commit message.
+
+### Просмотр истории комитов
+
+{% include cl.htm cmd="git log
+git log --stat"%}
 
 
 #### TODO!
