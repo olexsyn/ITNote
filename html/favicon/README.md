@@ -8,6 +8,7 @@
 ```
 ## Links
 
+- <span class="warn">!</span> [realfavicongenerator.net](https://realfavicongenerator.net/) - free service
 - <span class="warn">!</span> [Добавление иконок для сайта в мультибраузерном и мультипплатформенном мире](https://webformyself.com/dobavlenie-ikonok-dlya-sajta-v-multibrauzernom-i-multipplatformennom-mire/)
 - [видео: Какие нужны фавиконки](https://www.youtube.com/watch?v=iG9WF8VpogY)
 - [Favicon сегодня: форматы, поддержка, автоматизация](https://habr.com/ru/post/330584/) 2017
