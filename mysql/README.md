@@ -4,6 +4,7 @@
   - [Про NULL](null)
 - [ALTER TABLE](alter_table)
 - [Клонування таблиць](clone_table)
+- [LIMIT з кінця таблиці](limit_from_end)
 - [Как удобно посмотреть данные, когда строка вывода слишком широкая](wide_tables)
 - [Права для пользователей. Privileges](privileges)
 - [Приклад створення БД та користувача](create_user)
