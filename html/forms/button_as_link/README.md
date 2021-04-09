@@ -6,9 +6,36 @@
   </form>
 ```
 
-## Bootstrap
+## Submit та звичайні кнопки (Bootstrap)
 
 ```html
-  <form action="/signup/" method="POST">
+  <form id="exampleForm" action="/signup/" method="POST">
     <button type="submit" class="btn btn-primary">Реєстрація</button>
   </form>
+```
+```javascript
+<script>
+  ...
+  $("#exampleForm").submit(function(e)
+  {
+    ...
+  })
+</script>
+```
+<hr>
+
+```html
+  <input type="button" id="bGo" value="Перейти" class="btn btn-primary" />
+```
+```javascript
+<script>
+  ...
+  $("#bGo").click(function(e)
+  {
+    ...
+  })
+</script>
+```
+
+<button type="submit" class="btn btn-outline-success btn-sm w-100">Редагувати</button>
+			
