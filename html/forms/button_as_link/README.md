@@ -19,7 +19,7 @@
   $("#exampleForm").submit(function(e)
   {
     ...
-  })
+  });
 </script>
 ```
 <hr>
@@ -33,7 +33,7 @@
   $("#bGo").click(function(e)
   {
     ...
-  })
+  });
 </script>
 ```
 
