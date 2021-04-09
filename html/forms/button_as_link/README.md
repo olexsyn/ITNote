@@ -9,6 +9,12 @@
 ## Submit та звичайні кнопки (Bootstrap)
 
 ```html
+<a href="#somewhere" class="btn btn-primary">Go somewhere</a>
+```
+
+<hr>
+
+```html
   <form id="exampleForm" action="/signup/" method="POST">
     <button type="submit" class="btn btn-primary">Реєстрація</button>
   </form>
@@ -22,6 +28,7 @@
   });
 </script>
 ```
+
 <hr>
 
 ```html
