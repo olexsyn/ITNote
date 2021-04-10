@@ -1,6 +1,10 @@
 # Модули
 
 - [getpass](getpass)
+- tkinter 
+  - <https://docs.python.org/3/library/tkinter.html>
+  - встановлення: `sudo apt install python3-tk`
+  - перевірка: `python3 -m tkinter`
 
 ---
 
