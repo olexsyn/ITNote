@@ -10,6 +10,23 @@
 - {% include a.htm url="https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format" text="Форматирование строк с помощью format()" %}
 - {% include a.htm url="https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python" text="10 примеров использования методов строк в python" %}
 
+## Арифметика
+
+### Три простых способа поменять знак числа на противоположный
+
+```python
+positive_digit = 30
+
+b = positive_digit * -1
+print(b)  # -30
+
+c = 0 - positive_digit
+print(c)  # -30
+
+d = - positive_digit
+print(d)  # -30
+```
+
 ---
 
 - {% include a.htm url="https://pythonru.com/osnovy/znachenija-iskljuchenij-i-oshibok-v-python" text="Обработка ошибок и исключений" %}
