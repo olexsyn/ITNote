@@ -10,6 +10,67 @@
 - [Приклад створення БД та користувача](create_user)
 - [Примеры таблиц swimdb](swimdb)
 
+## Изменить значение AUTO_INCREMENT
+
+```sql
+ALTER TABLE tbl_name AUTO_INCREMENT = 100
+```
+
+## Добавить столбец с порядковым номером строк в запросе
+
+К сожалению в MySQL нет стандартной функции, которая бы отдавала нам порядковый номер каждой строки. В других базах данных она есть. В ORACLE для этого есть переменная rownum, а в PostgreSQL и msSQL функция ROW_NUMBER().
+
+Пишем свой вариант для MySQL:
+
+```sql
+set @n:=0;
+Query OK, 0 rows affected (0.000 sec)
+select @n:=@n+1 as num, lname, fname, year from prot;
++------+------------------------+--------------------+------+
+| num  | lname                  | fname              | year |
++------+------------------------+--------------------+------+
+|    1 | Котенко                | Николай            | 2007 |
+|    2 | Ткаченко               | Данііл             | 2007 |
+|    3 | Дорошенко              | Олександр          | 2007 |
+|    4 | Власенко               | Тимофій            | 2007 |
+|    5 | Мелешко                | Игор               | 2008 |
+|    6 | Малиш                  | Денис              | 2008 |
+|    7 | Синящок                | Федір              | 2008 |
+|    8 | Олевич                 | Богдан             | 2007 |
+|    9 | Борох                  | Ярослав            | 2007 |
+|   10 | Риков                  | Владислав          | 2008 |
+...
+```
+еще: http://www.sql-tutorial.ru/ru/book_row_number_function/page2.html
+
+
+## Посмотреть все индексы таблицы
+
+```sql
+SHOW INDEX FROM table_name;
+mysql> show index from rank_st;
++---------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table   | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++---------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| rank_st |          0 | PRIMARY  |            1 | id          | A         |         416 |     NULL | NULL   |      | BTREE      |         |               |
+| rank_st |          1 | key_main |            1 | course      | A         |           2 |     NULL | NULL   |      | BTREE      |         |               |
+| rank_st |          1 | key_main |            2 | gender      | A         |           4 |     NULL | NULL   |      | BTREE      |         |               |
+| rank_st |          1 | key_main |            3 | stroke      | A         |          19 |     NULL | NULL   |      | BTREE      |         |               |
+| rank_st |          1 | key_main |            4 | dist        | A         |          69 |     NULL | NULL   |      | BTREE      |         |               |
+| rank_st |          1 | key_main |            5 | mstime      | A         |         416 |     NULL | NULL   |      | BTREE      |         |               |
++---------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+```
+
+- <http://ans.kiev.ua/wiki/mysql/indexes/choose_index> 
+  - <http://ans.kiev.ua/wiki/mysql/btree_hash> BTREE и HASH индексы
+  - <http://ans.kiev.ua/wiki/mysql/fulltext0> FULLTEXT
+  - <http://ans.kiev.ua/wiki/mysql/fulltext1> FULLTEXT, MATCH/AGAINST
+  - <http://ans.kiev.ua/wiki/mysql/fulltext_dubua> Полнотекстовый поиск типа FULLTEXT Дюбуа :book: стр.199-205
+
+Индексы в MySQL (ruhighload)
+Индексы в MySQL: многоколоночные индексы против комбинированных индексов :habr:
+Основы индексирования и возможности EXPLAIN
+
 ---
 
 - Внешние ключи
