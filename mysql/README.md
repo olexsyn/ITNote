@@ -3,6 +3,7 @@
 - [Типы данных](datatype)
   - [Про NULL](null)
 - [ALTER TABLE](alter_table)
+- [Auto_increment](auto_increment)
 - [Клонування таблиць](clone_table)
 - [LIMIT з кінця таблиці](limit_from_end)
 - [Как удобно посмотреть данные, когда строка вывода слишком широкая](wide_tables)
@@ -10,11 +11,6 @@
 - [Приклад створення БД та користувача](create_user)
 - [Примеры таблиц swimdb](swimdb)
 
-## Изменить значение AUTO_INCREMENT
-
-```sql
-ALTER TABLE tbl_name AUTO_INCREMENT = 100
-```
 
 ## Добавить столбец с порядковым номером строк в запросе
 
