@@ -1,8 +1,8 @@
 # JavaScript
 
 - [jQuery](jquery)
-- [React][react]
-- [Vue][vue]
+- [React](react)
+- [Vue](vue)
 
 - [var, let и const](var_let_const)
 
