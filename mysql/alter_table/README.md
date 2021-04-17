@@ -125,6 +125,17 @@ ALTER TABLE swr ADD UNIQUE INDEX uni_name_year (lname, fname, year);
 alter table vendor drop index idx_name;
 ```
 
+```sql
+DROP INDEX index_name ON tbl_name
+```
+подробиці: <https://dev.mysql.com/doc/refman/8.0/en/drop-index.html>
+
+Щоб видалити первинний ключ (а він завжди має ім'я `PRIMARY`) - вкажіть його ім'я у лапках, оскільки `PRIMARY` - це зарезервоване слово:
+
+```sql
+DROP INDEX `PRIMARY` ON tab1;
+```
+
 ### См. также
 
 [Как посмотреть все индексы таблицы](mysql:show_index)
