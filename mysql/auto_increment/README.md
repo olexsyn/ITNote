@@ -40,9 +40,8 @@ CREATE TABLE `car` (
 ### За допомогою SHOW TABLE STATUS
 
 ```sql
-SHOW TABLE STATUS FROM `autodb` WHERE `name` LIKE 'car' \G
+SHOW TABLE STATUS FROM `kazkadb` LIKE 'car' \G
 ```
-- * `name` - просто 'name'. Або 'Name', або 'NAME' 
 ```
 *************************** 1. row ***************************
            Name: car
