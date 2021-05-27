@@ -1,8 +1,8 @@
 #SourcesList
 
-[Apt](../../apt/) downloads packages from one or more software repositories (sources) and installs them onto your computer.
+[Apt](../../soft/apt/) downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
-[Apt]({{ site.baseurl }}/linux/config/sourceslist/)
+[Apt]({{ site.baseurl }}/linux/soft/apt/)
 
 {% include cl.htm cmd="cd /etc/apt/sources.list.d" %}
 
