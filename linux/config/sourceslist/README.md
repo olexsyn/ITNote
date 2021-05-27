@@ -7,7 +7,7 @@
 {% include cl.htm cmd="cd /etc/apt/sources.list.d" %}
 
 {% include cl.htm cmd="ls -la"
-out="
+small="
 total 48
 drwxr-xr-x 2 root root 4096 бер 31 23:38 .
 drwxr-xr-x 7 root root 4096 бер 31 23:39 ..
