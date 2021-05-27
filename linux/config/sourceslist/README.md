@@ -2,7 +2,7 @@
 
 [Apt](../../soft/apt/) downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
-[Apt]({{ site.baseurl }}/linux/soft/apt/)
+{% include a.htm url="https://debian-handbook.info/browse/ru-RU/stable/apt.html#sect.apt-sources.list" text="См. подробнее" %}
 
 {% include cl.htm cmd="cd /etc/apt/sources.list.d" %}
 
