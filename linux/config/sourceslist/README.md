@@ -2,7 +2,9 @@
 
 [Apt](../../apt/) downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
-{% include cl.htm cmd="cd /etc/apt/sources.list.d"}
+[Apt]({{ site.baseurl }}/linux/config/sourceslist/)
+
+{% include cl.htm cmd="cd /etc/apt/sources.list.d" %}
 
 {% include cl.htm cmd="ls -la"
 out="
