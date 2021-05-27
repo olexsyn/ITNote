@@ -1,6 +1,6 @@
 #SourcesList
 
-[Apt]({{ site.baseurl }}/linux/soft/apt/) downloads packages from one or more software repositories (sources) and installs them onto your computer.
+[Apt](../../apt/) downloads packages from one or more software repositories (sources) and installs them onto your computer.
 
 {% include cl.htm cmd="cd /etc/apt/sources.list.d"}
 
