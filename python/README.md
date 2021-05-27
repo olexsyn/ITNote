@@ -35,6 +35,7 @@ print(d)  # -30
 ---
 
 - {% include a.htm url="https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python" text="Как использовать модуль datetime" %}
+- {% include a.htm url="https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html" text="Цветной вывод текста в Python" %}
 - {% include a.htm url="https://pythonru.com/primery/asinhronnost-python-na-primere" text="Асинхронность python на примере asyncio" %}
 - {% include a.htm url="https://proglib.io/p/python-docs/" text="Работа с документацией в Python: поиск информации и соглашения" %}
 - {% include a.htm url="https://habr.com/ru/post/417783/" text="Списки VS кортежи. Оптимизации" %}
