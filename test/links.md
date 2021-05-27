@@ -24,7 +24,7 @@
 Для того, чтобы ссылки на другие сайты открывались в новом окне прописал в `e-note/_includes/a.htm` такой код
 
 {% raw %}
-```
+```html
 <a href="{{ include.url }}" target="_blank" rel="nofollow">
 {%- if include.text -%}
   {{ include.text }}
