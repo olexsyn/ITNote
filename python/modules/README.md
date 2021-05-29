@@ -1,6 +1,9 @@
 # Модули
 
 - [getpass](getpass)
+- hashlib
+  - `hash_object = hashlib.md5(stri.encode())`
+  - `hash = hash_object.hexdigest()  # 'bb649c83dd1ea5c9d9dec9a18df0ffe9'`
 - tkinter 
   - <https://docs.python.org/3/library/tkinter.html>
   - встановлення: `sudo apt install python3-tk`
