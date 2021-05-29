@@ -3,6 +3,7 @@
 - `clear` - очищает окно терминала, или <kbd>Ctrl</kbd>+<kbd>L</kbd>
 - `reset` - восстановить исходные параметры окна терминала
 
+<span class="warn">TODO!</span> посмотри <http://www.linux-ink.ru/static/SL.5.1_Docs/Russification/Docs/sbs-sl-ru/index.html> пункт 4 
 
 - [ln](ln) - ссылки (жесткие и символические) на файлы и каталоги
 - [history](history) - последние команды в консоли
