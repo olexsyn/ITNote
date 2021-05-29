@@ -5,8 +5,6 @@
 - [grep](grep)
 - [dig](dig) - посмотреть запись домена
 
-{% include_relative dirs_n_files.md %}
-
 [сбросить и снова включить своп](swap): <span class="warn">TODO!</span>
 
 {% include cl.htm
@@ -45,3 +43,6 @@ cmd="nano filename.ext" %}
 
 <kbd>Ctrl</kbd> + <kbd>O</kbd>, <kbd>Enter</kbd> - сохранить,
 <kbd>Ctrl</kbd> + <kbd>X</kbd> - выйти из редактора
+
+
+{% include_relative dirs_n_files.md %}
