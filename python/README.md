@@ -11,6 +11,10 @@
 - {% include a.htm url="https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python" text="10 примеров использования методов строк в python" %}
 - [Ведущие нули](strings/leading_zeros/)
 
+## Списки
+
+  - [Функции any и all](list/any_all/)
+
 ## Арифметика
 
 ### Три простых способа поменять знак числа на противоположный
