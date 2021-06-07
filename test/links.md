@@ -36,11 +36,11 @@
 На страницах ссылка оформляется так:
 
 ```
-{% include a.htm url="https://github.com" %}
+{% include a.htm url="https://link.to" text="Lenk Description" %}
 ```
 {% endraw %}
 
-Для отличия по цвету (зеленые - мои, синие - чужие) в css:
+Для отличия по цвету (зеленые - локальные, синие - внешние) в css:
 
 ```css
 a {
