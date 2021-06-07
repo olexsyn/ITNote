@@ -37,6 +37,7 @@
 
 ```
 {% include a.htm url="https://link.to" text="Lenk Description" %}
+{% include a.htm url="" text="" %}  # for copy
 ```
 {% endraw %}
 
