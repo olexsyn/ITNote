@@ -21,5 +21,3 @@
 - [Авто](auto)
 - [Test](test)
 
-Ntct2
-
