@@ -4,6 +4,7 @@
 - [Модули](modules)
 - [Библиотеки](library)
 - [Работа с файлами](files)
+- [Виртуальное окружение](virtualenv)
 
 ## Строки
 - {% include a.htm url="https://pythonru.com/osnovy/stroki-python" text="Строки в python 3: методы, функции, форматирование" %}
