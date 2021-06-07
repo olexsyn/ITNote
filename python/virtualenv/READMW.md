@@ -1,23 +1,24 @@
 # Виртуальное окружение
 
 - `2018_Python_Tricks_-_Dan-Bader.pdf` p.271
-- [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs/) (EN)
-- [Виртуальная среда Python – Основы](https://python-scripts.com/virtualenv)
-- [Виртуальные среды](https://codecamp.ru/documentation/python/868/virtual-environments)
-- [pyenv - Simple Python version management](https://github.com/pyenv/pyenv)
-  - [https://khashtamov.com/ru/pyenv-python/](Pyenv: удобный менеджер версий python)
-  - [PyEnv - Менеджер версий python](https://habr.com/ru/post/203516/) Habr
-  - [Использование нескольких версий Python на unix-подобных операционных системах](https://ru.hexlet.io/blog/posts/ispolzovanie-neskolkih-versiy-python-na-unix-podobnyh-operatsionnyh-sistemah) 
+- []() (EN)
+- {% include a.htm url="https://docs.python-guide.org/dev/virtualenvs/" text="Pipenv & Virtual Environments" %}
+- {% include a.htm url="Виртуальная среда Python – Основы" text="Виртуальная среда Python – Основы" %}
+- {% include a.htm url="https://codecamp.ru/documentation/python/868/virtual-environments" text="Виртуальные среды" %}
+- {% include a.htm url="https://github.com/pyenv/pyenv" text="pyenv - Simple Python version management" %}
+  - {% include a.htm url="https://khashtamov.com/ru/pyenv-python/" text="Pyenv: удобный менеджер версий python" %}
+  - {% include a.htm url="https://habr.com/ru/post/203516/" text="PyEnv - Менеджер версий python" %} Habr
+  - {% include a.htm url="https://ru.hexlet.io/blog/posts/ispolzovanie-neskolkih-versiy-python-na-unix-podobnyh-operatsionnyh-sistemah" text="Использование нескольких версий Python на unix-подобных операционных системах" %} 
 
 
 ## Установка pyenv
 
-- https://github.com/pyenv/pyenv#installation
-- https://github.com/pyenv/pyenv/blob/master/COMMANDS.md
+- {% include a.htm url="https://github.com/pyenv/pyenv#installation" %}
+- {% include a.htm url="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md" %}
 
 Должны быть установлены curl, git и gcc
 
-На странице проекта ссылка на автоматический инсталлятор https://github.com/pyenv/pyenv-installer
+На странице проекта ссылка на автоматический инсталлятор {% include a.htm url="https://github.com/pyenv/pyenv-installer" %}
 
 Ссылка на запуск инсталлятора:
 
@@ -53,3 +54,47 @@ and finally, restart your shell:
 
     $ exec $SHELL
 
+#### Примечание для Linux Lite
+
+При попытке инсталлировать необходимую версию Питона через **pyenv**, оказалось, не хватает модулей CPython. Пришлось его ставить...
+
+    $ git clone https://github.com/python/cpython
+
+Потом делаем это:
+
+```
+sudo apt install build-essential python-dev python-setuptools python-pip python-smbus
+sudo apt install libncursesw5-dev libgdbm-dev libc6-dev
+sudo apt install zlib1g-dev libsqlite3-dev tk-dev
+sudo apt install libssl-dev openssl
+sudo apt install libffi-dev
+
+cd ~/cpython
+./configure
+make
+sudo make altinstall
+```
+Ждем долго и нудно, в итоге получаем свежайшую версию Питона в `/usr/local/bin/` и нужные модули для установки различных версий Питона через **pyenv**.
+
+Получил варнинги:
+
+WARNING: The directory '/home/olex/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+
+WARNING: The directory '/home/olex/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+
+Просто создал эти директории: `.cache/pip/http`
+
+## После установки
+
+Смотрим, что мы можем установить:
+
+    pyenv install --list
+
+И устанавливаем, например:
+
+    pyenv install 3.7.2
+
+<span class="info">i</span> Простой способ заставить выполнятся скрипты на нужной версии Питона - создать файл **.python-version** в директории скриптов в котором прописать необходимую версию, например: 
+```
+3.7.2
+```
