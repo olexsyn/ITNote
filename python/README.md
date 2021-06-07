@@ -33,7 +33,39 @@ d = - positive_digit
 print(d)  # -30
 ```
 
+## Аргументы командной строки
+
+```python
+import sys
+
+if __name__ == '__main__':
+	if len(sys.argv)<=2:
+		print('usage:', sys.argv[0], '<integer1> <integer2>')
+		sys.exit(1)
+
+	val1 = round(float(sys.argv[1]))
+	val2 = round(float(sys.argv[2]))
+	print('Сумма целых чисел:', val1+val2)
+```
+
+```
+  $ python argv.py
+  usage: argv.py <integer1> <integer2>
+
+  $ python argv.py 3 5
+  Сумма целых чисел: 8
+
+  $ python argv.py 3.2 5.7
+  Сумма целых чисел: 9
+
+  $ python argv.py -3.2 5.3
+  Сумма целых чисел: 2
+```
+
+см. также [argparse, click и др.](library)
+
 ---
+
 
 - {% include a.htm url="https://pythonru.com/osnovy/znachenija-iskljuchenij-i-oshibok-v-python" text="Обработка ошибок и исключений" %}
 - {% include a.htm url="https://pythonworld.ru/tipy-dannyx-v-python/isklyucheniya-v-python-konstrukciya-try-except-dlya-obrabotki-isklyuchenij.html" text="Конструкция try - except для обработки исключений" %}
