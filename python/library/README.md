@@ -7,6 +7,8 @@
 - [subprocess](subprocess)
 - [collections](collections)
 
+- см. также {% include a.htm url="https://pythonz.net/references/named/pakety-i-modyli/" text="Пакеты и модули, входящие в состав стандартной библиотеки" %}
+
 ## Сторонние
 
 - [Зачем использовать python -m pip](https://habr.com/ru/company/otus/blog/475392/)
