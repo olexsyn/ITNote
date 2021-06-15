@@ -1,3 +1,3 @@
 # Типы данных Python
 
-{% include f.htm f="idx_content.md" %}
+{% include_relative idx_content.md %}
