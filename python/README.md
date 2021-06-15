@@ -1,18 +1,14 @@
 # Python
 
-- [Синтаксис](syntax)
-- [Модули](modules)
-- [Библиотеки](library)
-- [Работа с файлами](files)
-- [Виртуальное окружение](virtualenv)
+{% include_relative idx_content.md %}
 
-## Строки
+### Строки
 - {% include a.htm url="https://pythonru.com/osnovy/stroki-python" text="Строки в python 3: методы, функции, форматирование" %}
 - {% include a.htm url="https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format" text="Форматирование строк с помощью format()" %}
 - {% include a.htm url="https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python" text="10 примеров использования методов строк в python" %}
 - [Ведущие нули](strings/leading_zeros/)
 
-## Списки
+### Списки
 
   - [Функции any и all](list/any_all/)
 
