@@ -1,0 +1,3 @@
+- [Список list](list)
+- [Кортеж tuple](tuple)
+- [Словарь dict](dict)
