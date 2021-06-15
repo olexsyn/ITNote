@@ -2,6 +2,10 @@
 
 ## Словники
 
+## Многоточие ...
+
+[Многоточие](ellipsis)
+
 <span class="warn">DOIT!</span>
 
 https://devpractice.ru/python-lesson-9-dict/
