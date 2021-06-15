@@ -1,6 +1,24 @@
 # Словари в Python
 
-Создание пустого словаря:
+- [Создание](create)
+- [Доступ к элементами](access)
+- 
+- [visual](#visual)
+- [code](#code)
+- [images](#images)
+- [test](#test2)
+- [links](#links)
+- [Разное](#different)
+
+---
+
+<a name="visual"></a>
+{% include_relative visual.md %}
+
+<a name="code"></a>
+{% include_relative code.md %}
+
+## Создание пустого словаря:
 
 ```python
 dict_sample1 = {}
