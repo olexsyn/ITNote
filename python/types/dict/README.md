@@ -12,11 +12,11 @@
 
 ---
 
-<a name="visual"></a>
-{% include_relative visual.md %}
+<a name="create"></a>
+{# include_relative create.md #}
 
-<a name="code"></a>
-{% include_relative code.md %}
+<a name="access"></a>
+{# include_relative access.md #}
 
 ## Создание пустого словаря:
 
