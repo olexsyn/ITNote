@@ -63,3 +63,4 @@ True
 all(i.isdigit() for i in '10.1.1.a'.split('.'))
 False
 ```
+DOIT https://pythonist.ru/kak-ispolzovat-funkczii-all-i-any-v-python/
