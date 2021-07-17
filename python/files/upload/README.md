@@ -1,6 +1,6 @@
 # Загрузка файлов пользователя на сервер
 
-См. <https://developer.mozilla.org/ru/docs/Web/HTML/Element/Input/file> - есть пример выбора нескольких графических файлов с определением размера и демонстрацией их эскизов. Здесь более родробно: <https://developer.mozilla.org/ru/docs/Web/API/File/Using_files_from_web_applications>
+См. <https://developer.mozilla.org/ru/docs/Web/HTML/Element/Input/file> - есть пример выбора нескольких графических файлов с определением размера и демонстрацией их эскизов. Здесь более родробно + "drag and drop": <https://developer.mozilla.org/ru/docs/Web/API/File/Using_files_from_web_applications>
 
 ## Простейшая форма выбора файла и кнопки "Upload"
 
