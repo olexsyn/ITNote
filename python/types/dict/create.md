@@ -63,9 +63,35 @@ dict_sample = {
 ## Перебор словаря
 
 ```python
-for k,v in dict_sample.items():
-    print(k, '->', v)
+for k, v in dict_sample.items():
+    print(k, '>', v)
 ```
+```
+one > mango
+two > banana
+```
+
+## Перебор словаря по ключам
+
+```python
+for key in dict_sample.keys():
+    print(key, '>', dict_sample[key])
+```
+```
+one > mango
+two > banana
+```
+## Перебор значений словаря
+
+```python
+for i in dict_sample.values():
+    print(i)
+```
+```
+mango
+banana
+```
+
 
 {% include f.htm f="create.md" %}
 
