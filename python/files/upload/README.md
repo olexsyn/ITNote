@@ -12,7 +12,7 @@
 	<form enctype="multipart/form-data" action = "upl.py" method = "post">
 	<p>File: <input type="file" name="uplfile" /></p>
 	<p><input type="submit" value="Upload" /></p>
-</form>
+	</form>
 </body>
 </html>
 ```
@@ -54,6 +54,20 @@ print('Content-Type: text/html\n')
 print(f'{message}')
 ```
 
+### Стилизовать форму/кнопку выбора файлов 
+
+```html
+<html>
+<body>
+	<form enctype="multipart/form-data" action = "test_upl.py" method = "post">
+	<input type="file" id="uplfile" name="uplfile" style="display:none">
+	<p><label for="uplfile">Click me to select file</label></p>
+	</form>
+</body>
+</html>
+```
+
+
 ## Форма без кнопки Upload - файл загружается сразу после его выбора
 
 **HTML** _some.htm_
@@ -68,7 +82,7 @@ print(f'{message}')
 	<p>File: <input type="file" id="uplfile" name="uplfile" /></p>
 	<span id="msg"></span><br/>
 	<iframe name='hidden_frame' id="hidden_frame" style='display:none'></iframe>
-</form>
+	</form>
 <script>
 	$(document).ready(function () {
 	$("#uplfile").change(function() {
