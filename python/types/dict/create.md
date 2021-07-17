@@ -1,4 +1,4 @@
-# Создание словаря
+# Словари (dict)
 
 ## Создание пустого словаря:
 
@@ -58,6 +58,13 @@ dict_sample = {
     1: {'student1': 'Nicholas', 'student2': 'John', 'student3': 'Mercy'}, 
     2: {'course1': 'Computer Science', 'course2': 'Mathematics', 'course3': 'Accounting'}
 }
+```
+
+## Перебор словаря
+
+```python
+for k,v in dict_sample.items():
+    print(k, '->', v)
 ```
 
 {% include f.htm f="create.md" %}
