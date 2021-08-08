@@ -3,7 +3,7 @@
 - `2018_Python_Tricks_-_Dan-Bader.pdf` p.271
 - {% include a.htm url="https://docs.python-guide.org/dev/virtualenvs/" text="Pipenv & Virtual Environments" %} (EN)
 - {% include a.htm url="https://python-scripts.com/virtualenv" text="Виртуальная среда Python – Основы" %}
-  - задача **pyvenv** - разделять модули
+  - задача **pyvenv** - разделять модули  `sudo apt install python3-venv`
   - задача **pyenv** – разделять версии Python
     - {% include a.htm url="https://github.com/pyenv/pyenv" text="pyenv - Simple Python version management" %}
     - {% include a.htm url="https://khashtamov.com/ru/pyenv-python/" text="Pyenv: удобный менеджер версий python" %}
