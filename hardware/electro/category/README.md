@@ -1,4 +1,4 @@
-# Категории втоматических выключателей
+# Категории автоматических выключателей
 
 <https://chint-electric.ru/kategorii-avtomaticheskih-vyklyuchatelej-a-b-c-d-k-z>
 
