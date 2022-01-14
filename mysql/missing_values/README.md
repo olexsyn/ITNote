@@ -1,31 +1,31 @@
-# MySQL. Выборка отсутствующих значений в одной из двух таблиц данных
+# Найти записи, которые присутствуют в одной таблице и отсутствуют во второй
 
-```
-mysql> SELECT COUNT(agrelink.iid) FROM agrelink LEFT JOIN item ON (agrelink.iid=item.id) WHERE item.id IS NULL;
-+---------------------+
-| COUNT(agrelink.iid) |
-+---------------------+
-|              231635 |
-+---------------------+
-1 row in set (12.03 sec)
+Если ваша СУБД не умеет выполнять вложенные запросы (например, MySQL версий ниже 4.1), то вариант такой:
 
-mysql> select count(*) from item;
-+----------+
-| count(*) |
-+----------+
-|   668470 |
-+----------+
-1 row in set (0.00 sec)
-
-mysql> select count(*) from agrelink;
-+----------+
-| count(*) |
-+----------+
-|   900105 |
-+----------+
-1 row in set (0.00 sec)
+```mysql
+SELECT * FROM table1
+         LEFT JOIN table2 ON table1.id=table2.id
+        WHERE table2.id IS NULL;
 ```
 
-`900105 - 668470 = 231635`
+Для СУБД, умеющих выполнять подзапросы, есть еще два варианта: с использованием конструкции `NOT IN` и с использованием `NOT EXISTS`.
 
-Назад на [MySQL](:mysql)
+```mysql
+SELECT * FROM table1
+        WHERE id NOT IN (
+            SELECT id FROM table2 
+             WHERE id IS NOT NULL
+        );
+```
+
+Вариант с `NOT IN` всегда **быстрее** варианта с `NOT EXIST` в случаях, когда _число записей в таблице table1 больше числа записей в таблице table2_.
+
+```mysql
+SELECT * FROM table1
+        WHERE NOT EXISTS (
+             SELECT id FROM table2
+              WHERE id=table1.id
+        );
+```
+
+Если известно, что _table2 имеет больше записей, чем table2_, то `NOT IN` будет выполняться быстрее только на таблицах с небольшим числом записей (до сотен тысяч записей), а _на больши́х объемах выигрывает_ `NOT EXIST`. Причем, чем больше записей в таблице table2 тем существеннее разница в скорости выполнения. Но только при наличии индекса по полю id.
