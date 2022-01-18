@@ -31,13 +31,19 @@ AddHandler cgi-script .py
 Options +ExecCGI -MultiViews
 ```
 Якщо нема цієї опції скрипти .pl та .py на моєму локальному Apache
-не показують кирилицю. Вперше з цим зіткнувся на Linux Lite. 
+**не показують кирилицю**. Вперше з цим зіткнувся на Linux Lite. 
 На сервері Мирохосту все працює і без цієї опції. Але вона і не заважає,
 тому просто її залишив, щоб не мати розбіжностей з .htaccess на локалці:
 
 ```apache
 PassEnv LANG en_US.UTF-8
 ```
+Крім цього, для коректного відображення кирилиці, у скриптах повинна бути строка з `charset=utf-8`:
+
+```python
+print("Content-Type: text/html; charset=utf-8\n")
+```
+
 Про це ще можна прочитати тут: [Корректное отображение UTF8 в CGI-скриптах]({{ site.baseurl }}/apache/cgi-utf-fix/)
 
 <a name="ssi-fail"></a>
