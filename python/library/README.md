@@ -16,6 +16,13 @@
 - [Jinja2](jinja) - шаблонизатор
 - [BeautifulSoup](beautifulsoup) - разбор HTML кода
 - [Scrapy](https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3)
+- [icecream - PyPI](https://pypi.org/project/icecream/)
+  * [Отладка кода на Python с помощью icecream]https://nuancesprog.ru/p/13211/)
+  * [Хватит использовать print для отладки в Python: переходите на Icecream](https://proglib.io/p/hvatit-ispolzovat-print-dlya-otladki-v-python-perehodite-na-icecream-2021-01-20)
+- [Colorama - PyPI](https://pypi.org/project/colorama/)
+  * [Цветной вывод текста в Python: Colorama](https://pythonru.com/biblioteki/tsvetnoj-vyvod-teksta-v-python-colorama)
+  * [Цветной вывод текста в Python](https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html)
+
 - {% include a.htm url="https://pypi.org/project/icecream/" text="icecream - PyPI" %}>
   * {% include a.htm url="https://nuancesprog.ru/p/13211/" text="Отладка кода на Python с помощью icecream" %}>
   * {% include a.htm url="https://proglib.io/p/hvatit-ispolzovat-print-dlya-otladki-v-python-perehodite-na-icecream-2021-01-20" text="Хватит использовать print для отладки в Python: переходите на Icecream" %}>
