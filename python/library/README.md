@@ -16,6 +16,9 @@
 - [Jinja2](jinja) - шаблонизатор
 - [BeautifulSoup](beautifulsoup) - разбор HTML кода
 - [Scrapy](https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3)
+- {% include a.htm url="https://pypi.org/project/icecream/" text="icecream - PyPI" %}>
+  - {% include a.htm url="https://nuancesprog.ru/p/13211/" text="Отладка кода на Python с помощью icecream" %}>
+  - {% include a.htm url="https://proglib.io/p/hvatit-ispolzovat-print-dlya-otladki-v-python-perehodite-na-icecream-2021-01-20" text="Хватит использовать print для отладки в Python: переходите на Icecream" %}>
 
 
 ### Модуль argparse
