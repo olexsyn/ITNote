@@ -5,6 +5,16 @@
 - [call - системные всплывающие уведомления](call)
 - [Выполнение shell команд с Python](os-system_subprocess-run)
 
+пример cgi-скрипта, который выводит версию Python:
+
+```python
+import subprocess
+
+print("Content-Type: text/html\n\n")
+version = subprocess.run(["python3","-V"], stdout=subprocess.PIPE, text=True)
+print('<h3>',version.stdout,'</h3>')
+```
+
 Подробнее:
 
 - <https://docs.python.org/3/library/subprocess.html>
