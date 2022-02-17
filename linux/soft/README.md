@@ -6,4 +6,5 @@
 - [rsync](rsync)
 - [Sublime Text](sublime-text)
 - [Gwenview](gwenview)
+- [PDFshuffler](pdfshuffler)
 - [apt](apt) <span class="warn">DEL!</span>
