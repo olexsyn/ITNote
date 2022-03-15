@@ -1,5 +1,7 @@
 # Словари (dict)
 
+см.: <https://webdevblog.ru/kak-perebrat-slovar-v-python/>
+
 ## Создание пустого словаря:
 
 ```python
