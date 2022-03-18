@@ -11,6 +11,7 @@
 
 ## Сторонние
 
+- [Как проверить какие модули Python установлены](which_modules)
 - [Зачем использовать python -m pip](https://habr.com/ru/company/otus/blog/475392/)
 
 - [Jinja2](jinja) - шаблонизатор
