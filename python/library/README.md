@@ -24,12 +24,6 @@
   * [Цветной вывод текста в Python: Colorama](https://pythonru.com/biblioteki/tsvetnoj-vyvod-teksta-v-python-colorama)
   * [Цветной вывод текста в Python](https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html)
 
-- {% include a.htm url="https://pypi.org/project/icecream/" text="icecream - PyPI" %}
-  * {% include a.htm url="https://nuancesprog.ru/p/13211/" text="Отладка кода на Python с помощью icecream" %}
-  * {% include a.htm url="https://proglib.io/p/hvatit-ispolzovat-print-dlya-otladki-v-python-perehodite-na-icecream-2021-01-20" text="Хватит использовать print для отладки в Python: переходите на Icecream" %}
-- {% include a.htm url="https://pypi.org/project/colorama/" text="Colorama - PyPI" %}, {% include a.htm url="https://pythonru.com/biblioteki/tsvetnoj-vyvod-teksta-v-python-colorama" text="Цветной вывод текста в Python: Colorama" %}, {% include a.htm url="https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html" text="Цветной вывод текста в Python" %}
-
-
 ### Модуль argparse
 
 `/home/olex/www/python/github/hello-python/modules/argparse/argp.py`
