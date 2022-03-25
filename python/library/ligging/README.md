@@ -260,5 +260,95 @@ if __name__ == '__main__':
 TypeError: write() takes exactly one argument (2 given)
 ```
 
+Логування трасування забезпечує критичну видимість помилок у часі. Ви можете досліджувати, коли і чому вони сталися.
+
+Багаторядкові винятки легко читаються, але якщо ви поєднуєте свої журнали із зовнішнім сервісом, то далі можна перетворити їх на JSON, щоб гарантувати коректний аналіз. Тепер ми покажемо, як використовувати для цього python-json-logger.
+
+## Уніфікація
+
+У цьому розділі ми покажемо, як форматувати журнали в JSON, додавати атрибути користувача, а також централізувати та аналізувати дані.
+
+## Логування в JSON
+
+Згодом пошук лога стане складним завданням, якщо логи розподілені між серверами, сервісами і файлами. Якщо ви централізували логи за допомогою, знатимете, де шукати, а не входити вручну на кожен сервер.
+
+JSON  —  найкраща практика для централізації за допомогою сервісу управління: комп'ютери легко аналізують цей стандартний структурований формат. У JSON логах легко поводитися з атрибутами: не потрібно оновлювати конвеєри обробки при їх додаванні або видаленні.
+
+Спільнота Python розробила бібліотеки, що конвертують логи в JSON. Використовуємо [python-json-logger](https://github.com/madzak/python-json-logger). Встановлення:
+
+```
+pip install python-json-logger
+```
+
+Тепер оновіть файл конфігурації для налаштування існуючого модуля форматування або додавання нового (`[formatter_json]` у прикладі нижче). Він повинен використовувати [pythonjsonlogger.jsonlogger.JsonFormatter](https://github.com/madzak/python-json-logger#using-a-config-file). У розділі `format` можна вказати атрибути, необхідні для кожного запису:
+
+```ini
+[loggers]
+keys=root,lowermodule
+
+[handlers]
+keys=consoleHandler,fileHandler
+
+[formatters]
+keys=simpleFormatter,json
+
+[logger_root]
+level=DEBUG
+handlers=consoleHandler
+
+[logger_lowermodule]
+level=DEBUG
+handlers=fileHandler
+qualname=lowermodule
+
+[handler_consoleHandler]
+class=StreamHandler
+level=DEBUG
+formatter=simpleFormatter
+args=(sys.stdout,)
+
+[handler_fileHandler]
+class=FileHandler
+level=DEBUG
+formatter=json
+args=("/home/emily/myapp.log",)
+
+[formatter_json]
+class=pythonjsonlogger.jsonlogger.JsonFormatter
+format=%(asctime)s %(name)s %(levelname)s %(message)s
+
+[formatter_simpleFormatter]
+format=%(asctime)s %(name)s - %(levelname)s:%(message)s
+```
+
+Консольні логи, як і раніше, відповідають `simpleFormatter` для зручності читання, але логи, створені логером `lowermodule`, тепер пишуться в JSON.
+
+При включенні `pythonjsonlogger.jsonlogger.JsonFormatter` у конфігурацію функція `fileConfig()` повинна мати можливість створювати `JsonFormatter`, поки виконується код із середовища, де імпортується `pythonjsonlogger`.
+
+Якщо ви не використовуєте файлову конфігурацію, потрібно імпортувати `python-json-logger`, а також визначити обробник та модуль форматування, [як описано в документації](https://github.com/madzak/python-json-logger#integrating-with-pythons-logging-framework):
+
+```python
+from pythonjsonlogger import jsonlogger
+
+logHandler = logging.StreamHandler()formatter = jsonlogger.JsonFormatter()logHandler.setFormatter(formatter)logger.addHandler(logHandler)
+
+logger = logging.getLogger()
+```
+
+Почему JSON предпочтительнее, особенно когда речь идёт о сложных или подробных записях? Вернёмся к примеру многострочной трассировки:
+
+```
+2019-03-27 21:01:58,191 lowermodule - ERROR:[Errno 2] No such file or directory: 'nonexistentfile.txt'Traceback (most recent call last):  File "/home/emily/logstest/lowermodule.py", line 14, in word_count    with open(myfile, 'r') as f:FileNotFoundError: [Errno 2] No such file or directory: 'nonexistentfile.txt'
+```
+
+Цей лог легко читати у файлі або консолі. Але якщо він обробляється платформою управління та правила багаторядкового агрегування не налаштовані, то кожен рядок може відображатись як окремий лог. Це ускладнить точне відновлення подій. Тепер, коли ми логуємо трасування виключень у JSON, програма створює єдиний журнал:
+
+```json
+{"asctime": "2019-03-28 17:44:40,202", "name": "lowermodule", "levelname": "ERROR", "message": "[Errno 2] No such file or directory: 'nonexistentfile.txt'", "exc_info": "Traceback (most recent call last):\n  File \"/home/emily/logstest/lowermodule.py\", line 19, in word_count\n    with open(myfile, 'r') as f:\nFileNotFoundError: [Errno 2] No such file or directory: 'nonexistentfile.txt'"}
+```
+
+Сервіс логування може легко інтерпретувати цей JSON і показати всю інформацію про трасування, включаючи exc_info:
+
+
 
 
