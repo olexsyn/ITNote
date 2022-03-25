@@ -74,3 +74,191 @@ def word_count(myfile):
 ## Конфігурування
 
 Наслідуючи кращі практики, використовуємо метод отримання імені лога модуля:
+
+```
+logger = logging.getLogger(name)
+```
+`__name__` ссылается на полное имя модуля, из которого вызван метод `getLogger`. Это вносит ясность. Например, приложение включает `lowermodule.py`, вызываемый из `uppermodule.py`. Тогда `getLogger(__name__)` выведет имя ассоциированного модуля. Пример с форматом лога, включающим его имя:
+
+```python
+# lowermodule.py
+import logging
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)s %(levelname)s:%(message)s')
+logger = logging.getLogger(__name__)
+
+def word_count(myfile):
+    try:
+        with open(myfile, 'r') as f:
+            file_data = f.read()
+            words = file_data.split(" ")
+            final_word_count = len(words)
+            logger.info("this file has %d words", final_word_count)
+            return final_word_count
+    except OSError as e:
+        logger.error("error reading the file")
+[...]
+
+# uppermodule.py
+
+import logging
+import lowermodule 
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)s %(levelname)s:%(message)s')
+logger = logging.getLogger(__name__)
+
+def record_word_count(myfile):
+    logger.info("starting the function")
+    try:
+        word_count = lowermodule.word_count(myfile)
+        with open('wordcountarchive.csv', 'a') as file:
+            row = str(myfile) + ',' + str(word_count)
+            file.write(row + '\n')
+    except:
+        logger.warning("could not write file %s to destination", myfile)
+    finally:
+        logger.debug("the function is done for the file %s", myfile)
+```
+
+Послідовний запуск uppermodule.py для існуючого та не існуючого файлів дасть таку відповід:
+
+```
+2019-03-27 21:16:41,200 __main__ INFO:starting the function
+2019-03-27 21:16:41,200 lowermodule INFO:this file has 44 words
+2019-03-27 21:16:41,201 __main__ DEBUG:the function is done for the file myfile.txt
+2019-03-27 21:16:41,201 __main__ INFO:starting the function
+2019-03-27 21:16:41,202 lowermodule ERROR:[Errno 2] No such file or directory: 'nonexistentfile.txt'
+2019-03-27 21:16:41,202 __main__ DEBUG:the function is done for the file nonexistentfile.txt
+```
+
+Ім'я модуля логера слід відразу за тимчасовою міткою. Якщо ви не використовували `getLogger`, ім'я модуля відображається як `root`, ускладнюючи визначення джерела. `uppermodule.py` відображається як `__main__` (основний), тому що це модуль верхнього рівня.
+
+Зараз два логи налаштовуються двома викликами `basicConfig`. Далі ми покажемо, як налаштувати безліч балок з одним викликом `fileConfig`.
+
+## fileConfig
+
+`fileConfig` та `dictConfig` дозволяють реалізувати більш гнучке логування на основі файлів або словника. Воно використовується в Django та Flask. У файлі конфігурації має бути три секції:
+
+- `[loggers]`  —  імена логерів.
+- `[handlers]`  —  типи обробників: fileHandler, consoleHander.
+- `[formatters]`  —  формати логів.
+
+Кожна секція має мати списки. Уточнюючі секції ключів (наприклад, для певного типу обробника) повинні мати такий формат: `[<ІМ'Я_СЕКЦІЇ>_<ІМ'Я_КЛЮЧА>]`. Файл **logging.ini** може виглядати так:
+
+```ini
+[loggers]
+keys=root
+
+[handlers]
+keys=fileHandler
+
+[formatters]
+keys=simpleFormatter
+
+[logger_root]
+level=DEBUG
+handlers=fileHandler
+
+[handler_fileHandler]
+class=FileHandler
+level=DEBUG
+formatter=simpleFormatter
+args=("/path/to/log/file.log",)
+
+[formatter_simpleFormatter]
+format=%(asctime)s %(name)s - %(levelname)s:%(message)s
+```
+
+Документація рекомендує прикріплювати кожен обробник до одного лога, прописувати основні налаштування в кореневому (root) лозі та уточнювати їх у дочірніх, а не дублювати те саме в дочірніх логах. Докладніше у документації. У цьому прикладі ми вказали в root налаштування для обох логів, що позбавило нас дублювання коду.
+
+Замість `logging.basicConfig(level=logging.DEBUG, format=’%(asctime)s %(name)s %(levelname)s:%(message)s’)` у кожному модулі ми можемо зробити так:
+
+```
+import logging.configlogging.config.fileConfig('/path/to/logging.ini', disable_existing_loggers=False)logger = logging.getLogger(name)
+```
+
+Цей код відключає існуючі не кореневі логери, включені за замовчуванням. Не забудьте імпортувати `logging.config`. Крім того, перегляньте документацію логування на основі словника.
+
+## Логування виключень
+
+Щоб `logging.error` перехоплювало трасування, встановіть `sys.exc_info` у `True`. Нижче приклад із включеним та вимкненим параметром:
+
+```python
+# lowermodule.py
+
+logging.config.fileConfig('/path/to/logging.ini', disable_existing_loggers=False)
+logger = logging.getLogger(__name__)
+
+def word_count(myfile):
+    try:
+    # считаем слова, логируем результат.
+    [...]
+    except OSError as e:
+        logger.error(e)
+        logger.error(e, exc_info=True)
+[...]
+```
+
+Відповідь для неіснуючого файлу:
+
+```
+2019-03-27 21:01:58,191 lowermodule - ERROR:[Errno 2] No such file or directory: 'nonexistentfile.txt'
+2019-03-27 21:01:58,191 lowermodule - ERROR:[Errno 2] No such file or directory: 'nonexistentfile.txt'
+Traceback (most recent call last):
+  File "/home/emily/logstest/lowermodule.py", line 14, in word_count
+    with open(myfile, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'nonexistentfile.txt'
+```
+
+Перший рядок  —  виведення без трасування, другий і далі  —  з трасуванням. Крім того, за допомогою `logger.exception` можна логувати певний виняток без додаткових втручань у код.
+
+## Перехоплення необроблених винятків
+
+Ви не можете передбачити та обробити всі винятки, але можете логувати необроблені винятки, щоб досліджувати їх пізніше.
+
+Необроблений виняток виникає поза `try...except` або коли ви не включаєте потрібний тип виключення в `except`. Наприклад, якщо програма виявляє `TypeError`, а ваш `except` обробляє тільки `NameError`, виняток передається в інші `try`, доки не зустріне потрібний тип.
+
+Якщо нічого не зустрілося, виняток стає необробленим. Інтерпретатор викликає `sys.excepthook` з трьома аргументами: клас виключення, його екземпляр та трасування. Ця інформація зазвичай з'являється в `sys.stderr`, але якщо ви налаштували свій лог для виведення файлу, `traceback` не логується.
+
+Ви можете використовувати стандартну бібліотеку `traceback` для форматування трасування та її включення до балки. Перепишемо `word_count()` так, щоб вона намагалася записати кількість слів у файл. Невірна кількість аргументів у `write()` викликає виняток:
+
+```python
+# lowermodule.py
+import logging.config
+import traceback
+
+logging.config.fileConfig('logging.ini', 
+disable_existing_loggers=False)
+logger = logging.getLogger(__name__)
+
+def word_count(myfile):
+    try:
+        # считаем слова, логируем результат.
+        with open(myfile, 'r+') as f:
+            file_data = f.read()
+            words = file_data.split(" ")
+            final_word_count = len(words)
+            logger.info("this file has %d words", final_word_count)
+            f.write("this file has %d words", final_word_count)
+            return final_word_count
+    except OSError as e:
+        logger.error(e, exc_info=True)
+    except:
+        logger.error("uncaught exception: %s", traceback.format_exc())
+        return False
+if __name__ == '__main__':
+    word_count('myfile.txt')
+```
+
+При виконанні цього коду виникне `TypeError`, що не обробляється в `try-except`. Однак воно логується завдяки коду, включеному до другого виразу `except`:
+
+```
+# виключення не обробляється, але логується
+2019-03-28 15:22:31,121 lowermodule - ERROR:uncaught exception: Traceback (most recent call last):
+  File "/home/emily/logstest/lowermodule.py", line 23, in word_count
+    f.write("this file has %d words", final_word_count)
+TypeError: write() takes exactly one argument (2 given)
+```
+
+
+
