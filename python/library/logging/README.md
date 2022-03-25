@@ -1,5 +1,7 @@
 # Логи в Python. Налаштування та централізація
 
+[How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
+
 ## Вступ
 
 Вбудований модуль Python `logging` розроблений для того, щоб дати вам детальне уявлення про програми з мінімальними налаштуваннями. Чи починаєте ви роботу або вже працюєте, у посібнику ви побачите, як налаштувати цей модуль, щоб допомогти знайти потрібний рядок коду.
@@ -338,15 +340,79 @@ logger = logging.getLogger()
 Почему JSON предпочтительнее, особенно когда речь идёт о сложных или подробных записях? Вернёмся к примеру многострочной трассировки:
 
 ```
-2019-03-27 21:01:58,191 lowermodule - ERROR:[Errno 2] No such file or directory: 'nonexistentfile.txt'Traceback (most recent call last):  File "/home/emily/logstest/lowermodule.py", line 14, in word_count    with open(myfile, 'r') as f:FileNotFoundError: [Errno 2] No such file or directory: 'nonexistentfile.txt'
+2019-03-27 21:01:58,191 lowermodule - ERROR:[Errno 2] No such file or directory: 'nonexistentfile.txt'Traceback
+(most recent call last):  File "/home/emily/logstest/lowermodule.py", line 14, in word_count
+with open(myfile, 'r') as f:FileNotFoundError: [Errno 2] No such file or directory: 'nonexistentfile.txt'
 ```
 
 Цей лог легко читати у файлі або консолі. Але якщо він обробляється платформою управління та правила багаторядкового агрегування не налаштовані, то кожен рядок може відображатись як окремий лог. Це ускладнить точне відновлення подій. Тепер, коли ми логуємо трасування виключень у JSON, програма створює єдиний журнал:
 
 ```json
-{"asctime": "2019-03-28 17:44:40,202", "name": "lowermodule", "levelname": "ERROR", "message": "[Errno 2] No such file or directory: 'nonexistentfile.txt'", "exc_info": "Traceback (most recent call last):\n  File \"/home/emily/logstest/lowermodule.py\", line 19, in word_count\n    with open(myfile, 'r') as f:\nFileNotFoundError: [Errno 2] No such file or directory: 'nonexistentfile.txt'"}
+{"asctime": "2019-03-28 17:44:40,202", "name": "lowermodule", "levelname": "ERROR",
+"message": "[Errno 2] No such file or directory: 'nonexistentfile.txt'",
+"exc_info": "Traceback (most recent call last):\n  File \"/home/emily/logstest/lowermodule.py\", line 19, in word_count\n    with open(myfile, 'r') as f:\nFileNotFoundError: [Errno 2] No such file or directory: 'nonexistentfile.txt'"}
 ```
 
-Сервіс логування може легко інтерпретувати цей JSON і показати всю інформацію про трасування, включаючи exc_info:
+Сервіс логування може легко інтерпретувати цей JSON і показати всю інформацію про трасування, включаючи `exc_info`:
 
+
+![log_expl.png](log_expl.png)
+
+
+## Атрибути користувача
+
+Ще одна перевага  —  додавання атрибутів, аналізованих зовнішнім сервісом керування автоматично. Раніше ми налаштували `format` для [стандартних атрибутів](https://docs.python.org/3/library/logging.html#logrecord-attributes). Можна логувати атрибути користувача, використовуючи поле `python-json-logs`. Нижче ми створили атрибут, який відстежує тривалість операції за секунди:
+
+```python
+# lowermodule.py
+import logging.config
+import traceback
+import time
+
+def word_count(myfile):
+    logger = logging.getLogger(__name__)
+    logging.fileConfig('logging.ini', disable_existing_loggers=False)
+    try:
+        starttime = time.time()
+        with open(myfile, 'r') as f:
+            file_data = f.read()
+            words = file_data.split(" ")
+            final_word_count = len(words)
+            endtime = time.time()
+            duration = endtime - starttime 
+            logger.info("this file has %d words", final_word_count, extra={"run_duration":duration})
+            return final_word_count
+    except OSError as e:
+        [...]
+```
+
+У системі управління атрибути аналізуються так:
+
+
+![log_expl2.png](log_expl2.png)
+
+
+Якщо ви використовуєте платформу моніторингу, то можете [побудувати графік та попередити](https://docs.datadoghq.com/logs/explorer/?tab=measures#visualization) про велике `run_duration`. Ви також можете експортувати цей графік на панель моніторингу, коли захочете візуалізувати його поряд із продуктивністю:
+
+
+![log_expl3.png](log_expl3.png)
+
+
+Використовуєте ви `python-json-logger` або іншу бібліотеку для форматування, ви можете легко настроїти логи для включення інформації, що аналізується зовнішньою платформою управління.
+
+## Логи та інші джерела даних
+
+Після такої централізації ви можете почати вивчати логи разом із розподіленими трасуваннями запитів та метриками інфраструктури. Такі служби, як Datadog, можуть поєднувати журнали з метриками та даними моніторингу продуктивності, щоб допомогти вам побачити повну картину.
+
+Якщо ви оновите формат для включення `dd.trace_iddd.span_id`, система керування автоматично зіставить журнали та трасування кожного запиту. Це означає, що під час перегляду трасування ви можете просто натиснути на вкладку “логи” у поданні трасування, щоб переглянути всі логи, створені під час конкретного запиту:
+
+
+![gobpython.png](gobpython.png)
+
+
+Можна переміщатися в іншому напрямку: від журналу до трасування запиту, що створив журнал. Дивіться нашу [документацію](https://docs.datadoghq.com/tracing/advanced/connect_logs_and_traces/?tab=python) для отримання більш детальної інформації про автоматичну кореляцію логів та трасування для швидкого усунення неполадок.
+
+## Висновок
+
+Ми розглянули рекомендації щодо налаштування стандартної бібліотеки логування Python для створення інформативних логів, їх маршрутизації та перехоплення трасування винятків. Також ми побачили, як централізувати та аналізувати логи в JSON за допомогою платформи управління логами.
 
