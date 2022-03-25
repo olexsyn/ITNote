@@ -2,12 +2,13 @@
 
 ## Стандартные 
 
-- [re](re) - регулярные выражения
-- [email / smtplib](smtplib)
-- [subprocess](subprocess)
-- [collections](collections)
+* [re](re) - регулярные выражения
+* [email / smtplib](smtplib)
+* [subprocess](subprocess)
+* [collections](collections)
+* [logging](logging)
 
-- см. также {% include a.htm url="https://pythonz.net/references/named/pakety-i-modyli/" text="Пакеты и модули, входящие в состав стандартной библиотеки" %}
+* см. также [Пакеты и модули, входящие в состав стандартной библиотеки](https://pythonz.net/references/named/pakety-i-modyli/)
 
 ## Сторонние
 
