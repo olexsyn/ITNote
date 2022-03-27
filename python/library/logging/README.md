@@ -2,6 +2,8 @@
 
 [How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
 
+https://nuancesprog.ru/p/5980/
+
 ## Вступ
 
 Вбудований модуль Python `logging` розроблений для того, щоб дати вам детальне уявлення про програми з мінімальними налаштуваннями. Чи починаєте ви роботу або вже працюєте, у посібнику ви побачите, як налаштувати цей модуль, щоб допомогти знайти потрібний рядок коду.
