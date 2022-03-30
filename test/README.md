@@ -198,6 +198,10 @@ drwxr-xr-x        4096 2009/08/23 08:56:19 .
 
 ## Links
 
+Full [`sql.RawBytes`](https://golang.org/pkg/database/sql/#RawBytes) support.
+
+Full `[sql.RawBytes](https://golang.org/pkg/database/sql/#RawBytes)` support.
+
 ### Абсолютные и относительные
 
 Можно указать абсолютную, "от корня", но при этом, нужно использовать переменную _site.baseurl_:
