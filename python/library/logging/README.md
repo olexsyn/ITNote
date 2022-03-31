@@ -2,7 +2,7 @@
 
 * джерело: [How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
 * переклад на рос.: https://nuancesprog.ru/p/5980/
-* див. також: https://khashtamov.com/ru/python-logging/
+* див. також: https://khashtamov.com/ru/python-logging/ , https://habr.com/ru/post/513966/
 * оф. док.: [https://**docs.python.org/3**/library/logging.html](https://docs.python.org/3/library/logging.html)
 
 ## Вступ
