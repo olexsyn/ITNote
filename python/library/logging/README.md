@@ -1,8 +1,9 @@
-# Логи в Python. Налаштування та централізація
+# Логи в Python. Модуль logging
 
-[How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
-
-https://nuancesprog.ru/p/5980/
+* джерело: [How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
+* переклад на рос.: https://nuancesprog.ru/p/5980/
+* див. також: https://khashtamov.com/ru/python-logging/
+* оф. док.: [https://**docs.python.org/3**/library/logging.html](https://docs.python.org/3/library/logging.html)
 
 ## Вступ
 
@@ -177,13 +178,16 @@ format=%(asctime)s %(name)s - %(levelname)s:%(message)s
 
 Замість `logging.basicConfig(level=logging.DEBUG, format=’%(asctime)s %(name)s %(levelname)s:%(message)s’)` у кожному модулі ми можемо зробити так:
 
-```
-import logging.configlogging.config.fileConfig('/path/to/logging.ini', disable_existing_loggers=False)logger = logging.getLogger(name)
+```python
+import logging.config
+
+logging.config.fileConfig('/path/to/logging.ini', disable_existing_loggers=False)
+logger = logging.getLogger(__name__)
 ```
 
-Цей код відключає існуючі не кореневі логери, включені за замовчуванням. Не забудьте імпортувати `logging.config`. Крім того, перегляньте документацію логування на основі словника.
+Цей код відключає існуючі не кореневі логери, включені за замовчуванням. Не забудьте імпортувати `logging.config`. Крім того, [перегляньте документацію](https://docs.python.org/3.7/howto/logging.html#configuring-logging) логування на основі словника.
 
-## Логування виключень (exceptions)
+## Логування виключень (exceptions) та трасування
 
 Щоб `logging.error` перехоплювало трасування, встановіть `sys.exc_info` у `True`. Нижче приклад із включеним та вимкненим параметром:
 
