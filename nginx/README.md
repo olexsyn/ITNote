@@ -1,7 +1,5 @@
 # Nginx
 
-v.5
-
 ## Links
 
 - {% include a.htm text="Установка Nginx в Ubuntu 20.04"
