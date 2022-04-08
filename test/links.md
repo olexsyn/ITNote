@@ -45,8 +45,8 @@
 
 ```css
 a {
-	color: green;
-	text-decoration: none
+  color: green;
+  text-decoration: none
 }
 
 a[href ^= "http"] {
