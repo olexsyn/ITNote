@@ -36,8 +36,8 @@
 На страницах ссылка оформляется так:
 
 ```
-{% include a.htm url="https://link.to" text="Link Description" %}
-{% include a.htm url="" text="" %}  # for copy
+{% include a.htm text="Link Description" url="https://link.to" %}
+{% include a.htm text="" url="" %}  # для копіювання
 ```
 {% endraw %}
 
@@ -57,6 +57,25 @@ a[href ^= "mailto"] {
   color: #0366d6;
 }
 ```
+
+### Проблема з моїми посиланнями у списках
+
+- {% include a.htm text="Посилання 1" url="https://olexsyn.github.io/" %}
+  - {% include a.htm text="Посилання 2" url="https://olexsyn.github.io/e-note/" %}
+- {% include a.htm text="Посилання 3" url="https://olexsyn.github.io/" -%}
+  - {% include a.htm text="Посилання 4" url="https://olexsyn.github.io/e-note/" %}
+
+Чомусь, темплейт вставляє `<p>` параграфи в код і список роз’їзжається. Поки що таке рішення:
+
+- {% include a.htm text="Посилання 1" url="https://olexsyn.github.io/" -%}.
+  - {% include a.htm text="Посилання 2" url="https://olexsyn.github.io/e-note/" -%}.
+- {% include a.htm text="Посилання 3" url="https://olexsyn.github.io/" -%}.
+  - {% include a.htm text="Посилання 4" url="https://olexsyn.github.io/e-note/" -%}.
+
+- {% include a.htm text="Посилання 1" url="https://olexsyn.github.io/" -%}&nbsp;
+  - {% include a.htm text="Посилання 2" url="https://olexsyn.github.io/e-note/" -%}&nbsp;
+- {% include a.htm text="Посилання 3" url="https://olexsyn.github.io/" -%}&nbsp;
+  - {% include a.htm text="Посилання 4" url="https://olexsyn.github.io/e-note/" -%}&nbsp;
 
 
 {% include f.htm f="links.md" %}
