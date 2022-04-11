@@ -27,7 +27,7 @@ systemctl status httpd" %}
 {% include cl.htm cmd="/etc/init.d/apache2 status
 /etc/init.d/apache2 stop|start|restart|reload|force-reload" %}
 
-{% include cl.htm cmd="apache2ctl configtest" %}  
+{% include cl.htm cmd="sudo apache2ctl configtest" %}  
 
 выводит ошибку в конфиге Apache. Помогает
 понять, где напортачено в файлах конфигурации
