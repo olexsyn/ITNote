@@ -10,6 +10,28 @@
 
 {% include cl.htm cmd="git clone git@github.com:NICKNAME/REP.git" %}
 
+### просмотр удаленных репозиториев
+
+{% include cl.htm cmd="git remote"
+out="origin" %}
+
+Если вы клонировали репозиторий, то увидите как минимум `origin` -- имя по умолчанию, которое Git дает серверу, с которого производилось клонирование. Можно также указать ключ `-v`, чтобы просмотреть адреса для чтения и записи, привязанные к репозиторию:
+
+{% include cl.htm cmd="git remote -v"
+out="origin	git@github.com:olexsyn/e-note.git (fetch)
+origin	git@github.com:olexsyn/e-note.git (push)"
+%}
+
+[подробнее...](https://git-scm.com/book/ru/v2/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git-%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D1%83%D0%B4%D0%B0%D0%BB%D1%91%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F%D0%BC%D0%B8)
+
+# добавить удалённый репозиторий и присвоить ему имя (shortname)
+
+{% include cl.htm cmd="git remote add <shortname> <url>" %}
+
+{% include cl.htm cmd="git remote add e-note git@github.com:olexsyn/e-note.git" %}
+
+Теперь вместо указания полного пути мы можем использовать 'e-note'.
+
 ### получение изменений с сервера
 
 {% include cl.htm cmd="git fetch origin" %}
@@ -20,7 +42,7 @@
 
 ## отправка изменений на сервер
 
-Когда вы хотите поделиться своими наработками, вам необходимо отправить их в удалённый репозиторий.
+Когда вы хотите поделиться своими наработками, вам необходимо отправить их в удаленный репозиторий.
 
 {% include cl.htm cmd="git push remote-name branch-name" %}
 
@@ -47,7 +69,7 @@ M  lib/simplegit.rb
 - <code>A&middot;</code> - файлы добавленные в отслеживаемые
 - <code>&middot;M</code> - модифицирован и НЕ проиндексирован
 - <code>M&middot;</code> - модифицирован и проиндексирован
-- `MM` - модифицирован, проиндексирован и ещё раз модифицирован, т.е. на данный момент у него есть изменения которые попадут в коммит и те которые не попадут
+- `MM` - модифицирован, проиндексирован и еще раз модифицирован, т.е. на данный момент у него есть изменения которые попадут в коммит и те которые не попадут
 
 
 {% include cl.htm cmd="git add file1.ext file2.ext ..." %}
