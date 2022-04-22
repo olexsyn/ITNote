@@ -5,11 +5,6 @@
 
 <span class="warn">TODO!</span> посмотри <http://www.linux-ink.ru/static/SL.5.1_Docs/Russification/Docs/sbs-sl-ru/index.html> пункт 4 
 
-- [ln](ln) - ссылки (жесткие и символические) на файлы и каталоги
-- [history](history) - последние команды в консоли
-- [grep](grep)
-- [dig](dig) - посмотреть запись домена
-
 [сбросить и снова включить своп](swap): <span class="warn">TODO!</span>
 
 {% include cl.htm
