@@ -98,7 +98,6 @@ hr {
 }
 button, input, select, textarea {
 	font: inherit;
-	margin: 0
 }
 optgroup {
 	font-weight: bold
@@ -136,8 +135,7 @@ textarea {
 	overflow: auto
 }
 [type="checkbox"], [type="radio"] {
-	box-sizing: border-box;
-	padding: 0
+	box-sizing: border-box
 }
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
 	height: auto
