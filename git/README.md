@@ -44,7 +44,7 @@ origin	git@github.com:olexsyn/e-note.git (push)"
 
 Когда вы хотите поделиться своими наработками, вам необходимо отправить их в удаленный репозиторий.
 
-{% include cl.htm cmd="git push remote-name branch-name" %}
+{% include cl.htm cmd="git push REMOTE-NAME BRANCH-NAME" %}
 
 Чтобы отправить вашу ветку main на сервер origin (клонирование обычно настраивает оба этих имени автоматически), вы можете выполнить следующую команду для отправки ваших коммитов:
 
