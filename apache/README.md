@@ -1,6 +1,8 @@
 # Apache
 
-- Установка
+- Установка Apache
+- [файл .htaccess](htaccess)
+- [директива Directory](directory)
 - [SSI](ssi)
 - [ModRewrite](mod_rewrite)
 - [SSL](ssl)

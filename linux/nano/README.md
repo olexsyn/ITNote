@@ -19,3 +19,8 @@
 
 - Включить выключить перенос строк — <kbd>Alt</kbd>-<kbd>L</kbd>
 - Переход на строку с указанным номером — <kbd>Alt</kbd>-<kbd>G</kbd>
+
+- Вырезать строку — <kbd>Ctrl</kbd>-<kbd>K</kbd> или <kbd>F9</kbd>
+- Вставить вырезанную строку — <kbd>Ctrl</kbd>-<kbd>U</kbd> или <kbd>F10</kbd>
+
+<kbd></kbd>-<kbd></kbd>
