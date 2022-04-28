@@ -135,7 +135,8 @@ textarea {
 	overflow: auto
 }
 [type="checkbox"], [type="radio"] {
-	box-sizing: border-box
+	box-sizing: border-box;
+	margin-right: 0.5em
 }
 [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
 	height: auto
