@@ -60,3 +60,5 @@ The rendered output looks like this:
   "lastName": "Smith",
   "age": 25
 }
+
+{% include f.htm f="code.md" %}

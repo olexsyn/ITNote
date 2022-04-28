@@ -1,5 +1,4 @@
-<a name="typography"></a>
-## Типография
+## Типография {#typography}
 
 - This text contains <i>italic</i> text.  `<i></i>`
 - This text contains <em>emphasized</em> text.  `<em></em>`
@@ -20,5 +19,21 @@
 <pre>
 pre
 </pre>
+
+
+Markdown воспринимает звёздочки «*» и символы подчёркивания «_» как признаки смыслового выделения текста:
+
+*This text will be italic*  `*text*`
+_This will also be italic_  `_text_`
+
+**This text will be bold**  `**text**`
+__This will also be bold__  `__text__`
+
+_You **can** combine them_  `_You **can** combine them_`
+*You __can__ combine them*  `*You __can__ combine them*`
+
+~~Strikethrough~~  `~~Strikethrough~~`
+
+
 
 {% include f.htm f="typography.md" %}

@@ -1,6 +1,4 @@
-<a name="headers"></a>
-
-## Заголовки
+## Заголовки {#headers}
 
 # This is an `<h1>` tag
 
