@@ -25,6 +25,7 @@
 - [ssh](ssh) -
 - [tail](tail) - выводит конец файла
 - [tar](tar) - архиватор
+- [terminal](terminal) - термінал
 - [touch](touch) - создать пустой файл
 
 
