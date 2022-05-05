@@ -1,7 +1,6 @@
-Установка и настройка ProFTPd на Ubuntu Server
-Обновлено Обновлено: 03.07.2021 Опубликовано Опубликовано: 28.03.2020
+# Установка и настройка ProFTPd на Ubuntu Server
 
-Используемые термины: FTP, Linux, Ubuntu.
+<https://www.dmosk.ru/miniinstruktions.php?mini=proftpd-ubuntu> (VPN)
 
 Среди возможностей ProFTPd есть использование виртуальных пользователей с uid системных учетных записей, работа по FTP через TLS, использование виртуальных пользователей с хранением их в отдельном файле или базе данных. Мы рассмотрим настройку всех этих возможностей сервера FTP на примере Linux Ubuntu 18.04 и 20.04. Инструкция также, во многом, подойдет для настройки на Debian.
 
@@ -15,114 +14,118 @@
     Использование MySQL
 Настройка прав для пользователей FTP
 Настройка логов
-Читайте также
-Настройка системы
+
+## Настройка системы
 
 Подготовим нашу операционную систему для корректной работы сервера FTP. Для этого настроим синхронизацию времени и правила в Firewall.
-1. Время
+
+### 1. Время
 
 Для корректного отображения времени создания файлов, необходимо синхронизировать его с внешним источником. Также необходимо задать корректный часовой пояс. Для этого вводим команду:
 
-timedatectl set-timezone Europe/Moscow
+    timedatectl set-timezone Europe/Kyiv
 
-* в данном примере мы задаем зону по московскому времени. Список все доступных зон можно посмотреть командой timedatectl list-timezones.
+* в данном примере мы задаем зону по киевскому времени. Список все доступных зон можно посмотреть командой timedatectl list-timezones.
 
 Устанавливаем chrony:
 
-apt-get install chrony
+    apt-get install chrony
 
 ... и разрешаем его запуск при загрузке системы:
 
-systemctl enable chrony
-2. Брандмауэр
+    systemctl enable chrony
+
+### 2. Брандмауэр
 
 Если в нашем сервере используется фаервол (по умолчанию, он работает с разрешающими правилами), разрешаем порты:
 
-    20 — для передачи данных.
-    21 — для передачи команд.
-    с 60000 по 65535 — набор для пассивного обмена FTP. Данный диапазон может быть любым из свободных, но практика показывает, что данные значения работают стабильнее.
+- 20 — для передачи данных.
+- 21 — для передачи команд.
+- с 60000 по 65535 — набор для пассивного обмена FTP. Данный диапазон может быть любым из свободных, но практика показывает, что данные значения работают стабильнее.
 
 В зависимости от утилиты управления брандмауэром, дальнейшие действия будут отличаться.
-а) Iptables
+
+#### а) Iptables
 
 Если для управления netfilter мы используем утилиту Iptables, то вводим команду:
 
-iptables -I INPUT -p tcp --match multiport --dports 20,21,60000:65535 -j ACCEPT
+    iptables -I INPUT -p tcp --match multiport --dports 20,21,60000:65535 -j ACCEPT
 
 Для сохранения правил можно использовать утилиту:
 
-apt-get install iptables-persistent
+    apt-get install iptables-persistent
+    netfilter-persistent save
 
-netfilter-persistent save
-
-б) UFW
+#### б) UFW
 
 В ufw команда будет следующей:
 
-ufw allow 20,21,60000:65535/tcp
-Установка и запуск с базовыми параметрами
+    ufw allow 20,21,60000:65535/tcp
+
+## Установка и запуск с базовыми параметрами
 
 Установка ProFTPd на Ubuntu выполняется следующей командой:
 
-apt-get install proftpd
+    apt-get install proftpd
 
 Открываем основной конфигурационный файл:
 
-vi /etc/proftpd/proftpd.conf
+    nano /etc/proftpd/proftpd.conf
 
 Редактируем значения для параметров:
 
-UseIPv6 off
+    UseIPv6 off
 
-* где UseIPv6 — разрешаем или запрещает использование IPv6. Если в нашей среде будет использоваться IP версии 6, то значение данной опции должно быть on. 
+- _где **UseIPv6** — разрешаем или запрещает использование IPv6. Если в нашей среде будет использоваться IP версии 6, то значение данной опции должно быть on_.
 
 Снимаем комментарий для опции PassivePorts и задаем ей следующее значение:
 
-PassivePorts 60000 65535
+    PassivePorts 60000 65535
 
-* где 60000 - 65535 — диапазон динамических портов для пассивного режима.
+- _где **60000 - 65535** — диапазон динамических портов для пассивного режима_.
 
 Разрешаем автозапуск FTP-серверу и перезапускаем его:
 
-systemctl enable proftpd
-
-systemctl restart proftpd
+    systemctl enable proftpd
+    systemctl restart proftpd
 
 Готово — пробуем подключиться к серверу, использую любые FTP-клиенты, например, FileZilla, Total Commander или браузер. В качестве логина и пароля используем учетную запись пользователя Ubuntu.
 
 Если мы хотим использовать выделенную учетную запись для FTP, то создаем ее командой:
 
-useradd ftpuser -m
+    useradd ftpuser -m
 
 Задаем ей пароль:
 
-passwd ftpuser
+    passwd ftpuser
 
 Если мы хотим, чтобы учетная запись не могла покидать пределы своей домашней директории, в настройках ProFTPd снимаем комментарий с опции:
 
-vi /etc/proftpd/proftpd.conf
+    nano /etc/proftpd/proftpd.conf
 
-DefaultRoot                     ~
+    DefaultRoot                     ~
 
 И перезапускаем сервис:
 
-systemctl restart proftpd
-Шифрование при передаче данных
+    systemctl restart proftpd
+
+## Шифрование при передаче данных
 
 Следующим этапом настроим передачу данных через TLS.
 
 В конфигурационном файле сервера ftp снимаем комментарий для строки:
 
-vi /etc/proftpd/proftpd.conf
+    nano /etc/proftpd/proftpd.conf
 
-Include /etc/proftpd/tls.conf
+    Include /etc/proftpd/tls.conf
 
-Открываем конфигурационный файл tls.conf:
+Открываем конфигурационный файл **tls.conf**:
 
-vi /etc/proftpd/tls.conf
+    nano /etc/proftpd/tls.conf
 
 Снимаем комментарии для следующих настроек:
 
+```
 TLSEngine                       on
 TLSLog                          /var/log/proftpd/tls.log
 TLSProtocol                     SSLv23
@@ -135,72 +138,127 @@ TLSOptions                      NoCertRequest EnableDiags NoSessionReuseRequired
 TLSVerifyClient                 off
 ...
 TLSRequired                     on
+```
 
-* параметр TLSRequired можно задать в значение off, если мы не хотим требовать от клиента соединения по TLS.
+- _параметр **TLSRequired** можно задать в значение off, если мы не хотим требовать от клиента соединения по TLS_.
 
 Приводим значение для одного из раскомментированных параметров к следующему:
 
-TLSProtocol                     SSLv23 TLSv1.2
+    TLSProtocol                     SSLv23 TLSv1.2
 
-* мы добавили TLSv1.2 для поддержки более актуального протокола шифрования. В противном случае, некоторые старые клиенты могут возвращать ошибку Error in protocol version.
+* _мы добавили **TLSv1.2** для поддержки более актуального протокола шифрования. В противном случае, некоторые старые клиенты могут возвращать ошибку **Error in protocol version**_.
 
 Генерируем сертификат:
 
-openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/private/proftpd.key -out /etc/ssl/certs/proftpd.crt -subj "/C=RU/ST=SPb/L=SPb/O=Global Security/OU=IT Department/CN=ftp.dmosk.local/CN=ftp"
+    openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/private/proftpd.key -out /etc/ssl/certs/proftpd.crt -subj "/C=RU/ST=SPb/L=SPb/O=Global Security/OU=IT Department/CN=ftp.dmosk.local/CN=ftp"
 
-* где ftp.dmosk.local — имя сервера в формате FQDN (не принципиально).
+* _где **ftp.dmosk.local** — имя сервера в формате FQDN (не принципиально)_.
 
 Перезапускаем ProFTPd:
 
-systemctl restart proftpd
-Использование виртуальных пользователей
+    systemctl restart proftpd
+
+## Использование виртуальных пользователей
 
 Для безопасности рекомендуется использовать не реальных пользователей системы, а виртуальных. Мы рассмотрим процесс их хранения в файле или базе данных.
-Хранение в файле
+
+### Хранение в файле
 
 Создаем виртуального пользователя командой:
 
-ftpasswd --passwd --file=/etc/proftpd/ftpd.passwd --name=ftpvirt --uid=33 --gid=33 --home=/var/tmp --shell=/usr/sbin/nologin
+    ftpasswd --passwd --file=/etc/proftpd/ftpd.passwd --name=ftpvirt --uid=33 --gid=33 --home=/var/tmp --shell=/usr/sbin/ nologin
 
 * где: 
 
-    /etc/proftpd/ftpd.passwd — путь до файла, в котором хранятся пользователи; 
-    ftpvirt — имя пользователя (логин); 
-    uid и gid — идентификаторы пользователя и группы системной учетной записи (например, www-data); 
-    /var/tmp — домашний каталог пользователя; 
-    /usr/sbin/nologin — оболочка, запрещающая локальный вход пользователя в систему.
+- _**/etc/proftpd/ftpd.passwd** — путь до файла, в котором хранятся пользователи;_
+- _**ftpvirt** — имя пользователя (логин);_
+- _**uid** и **gid** — идентификаторы пользователя и группы системной учетной записи (например, www-data);_
+- _**/var/tmp** — домашний каталог пользователя;_
+- _**/usr/sbin/nologin** — оболочка, запрещающая локальный вход пользователя в систему._
+
+---
+
+> Это информация из другой статьи (<https://ixnfo.com/nastroyka-proftpd-s-virtualnyimi-polzovatelyami-v-fayle.html>)
+
+После этой команды будет создан файл /etc/proftpd/ftpd.passwd схожей структуры с /etc/passwd.
+UID и GID можно указывать любые, желательно кроме 0 (это root) и тех что указаны в /etc/passwd.
+Можно также указать UID и GID аналогичные как у пользователя в /etc/passwd, например 33 как у пользователя www-data, чтобы предоставить похожие права к веб файлам и указать домашней директорией /var/www.
+Можно создавать пользователей с одинаковыми UID и GID, разными домашними директориями и с учетом что им запрещено выходить выше уровня своей директории (параметр DefaultRoot ~ в конфигурации сервера).
+
+Модуль mod_auth_file требует чтобы доступ к чтению и записи на файл /etc/proftpd/ftpd.passwd был запрещен для всех пользователей, по этому укажем права:
+
+    chmod 640 /etc/proftpd/ftpd.passwd
+    chown proftpd:root /etc/proftpd/ftpd.passwd
+
+Иначе будет ошибка при запуске proftpd:
+
+    mod_auth_file/1.0: unable to use world-readable AuthUserFile ‘/etc/proftpd/ftpd.passwd’: Операция не позволена
+
+Создадим файл ftpd.group:
+
+    sudo ftpasswd --group --name=nogroup --file=/etc/proftpd/ftpd.group --gid=60 --member test
+
+Проверим правильность конфигурации:
+
+    sudo proftpd -t
+
+Перезапустим ProFTPd чтобы применить изменения:
+
+    sudo /etc/init.d/proftpd restart
+
+Так как пароли в файле хранятся в шифрованном виде, то менять пароль пользователю можно так:
+
+    sudo ftpasswd --passwd --file=/etc/proftpd/ftpd.passwd --name=test --change-password
+
+Можно заблокировать/разблокировать пользователя (добавляется/убирается символ ! в файле ftpd.passwd перед хешем пароля, тем самым делая невозможным подключение пользователя):
+
+    sudo ftpasswd --passwd --file=/etc/proftpd/ftpd.passwd --name=test2 --lock
+    sudo ftpasswd --passwd --file=/etc/proftpd/ftpd.passwd --name=test --unlock
+
+Удалить пользователя можно так:
+
+    sudo ftpasswd --passwd --file=/etc/proftpd/ftpd.passwd --name=test --delete-user
+
+ftpasswd является скриптом написанным на Perl, обычно находится в /usr/sbin/ftpasswd.
+
+---
+
 
 Открываем конфигурационный файл proftpd:
 
-vi /etc/proftpd/proftpd.conf
+    nano /etc/proftpd/proftpd.conf
 
 Снимаем комментарий или редактируем опцию (если не сделали это раньше):
 
-DefaultRoot                     ~
+    DefaultRoot                     ~
 
 * данная опция говорит о том, что корневой директорией для пользователя будет домашняя директория. Это нужно, чтобы FTP-пользователи не могли выйти за пределы дозволенного и видеть на сервере сайты друг друга.
 
 Создаем дополнительный конфигурационный файл для proftpd:
 
-vi /etc/proftpd/conf.d/virtual_file.conf
+nano /etc/proftpd/conf.d/virtual_file.conf
 
+```
 RequireValidShell off
 AuthUserFile /etc/proftpd/ftpd.passwd
 AuthPAM off
-LoadModule mod_auth_file.c
-AuthOrder mod_auth_file.c
+# LoadModule mod_auth_file.c  # ! у меня эти строки выдавали ошибку, мол alredy loaded
+# AuthOrder mod_auth_file.c   # ! и AuthOrder has already be...
+```
 
 Перезапускаем сервис FTP-сервера:
 
 systemctl restart proftpd
-Хранение в MariaDB (MySQL)
+
+### Хранение в MariaDB (MySQL)
 
 Настройку разделим на два этапа:
 
-    Установку и настройку СУБД.
-    конфигурирование FTP-сервера.
+- Установку и настройку СУБД.
+- конфигурирование FTP-сервера.
 
 В качестве СУБД будем использовать MariaDB / MySQL.
+
 СУБД
 
 Устанавливаем на Ubuntu СУБД и модуль mysql для ProFTPd:
@@ -258,7 +316,7 @@ UNIQUE (`userid`)
 
 Открываем конфигурационный файл для proftpd:
 
-vi /etc/proftpd/proftpd.conf
+nano /etc/proftpd/proftpd.conf
 
 Снимаем комментарий для подключения файла sql.conf:
 
@@ -266,7 +324,7 @@ Include /etc/proftpd/sql.conf
 
 Открываем на редактирование файл sql.conf:
 
-vi /etc/proftpd/sql.conf
+nano /etc/proftpd/sql.conf
 
 Приводим его к виду:
 
@@ -296,14 +354,14 @@ SqlLogFile /var/log/proftpd/sql.log
 
 Создаем дополнительный конфигурационный файл для proftpd:
 
-vi /etc/proftpd/conf.d/virtual_mysql.conf
+nano /etc/proftpd/conf.d/virtual_mysql.conf
 
 RequireValidShell               off
 AuthOrder                       mod_sql.c
 
 Открываем файл modules.conf:
 
-vi /etc/proftpd/modules.conf
+nano /etc/proftpd/modules.conf
 
 Снимаем комментарии для следующих строк:
 
@@ -320,7 +378,7 @@ systemctl restart proftpd
 
 Разберем пример, когда нам нужно будет к одной и той же папке дать разные права — одному пользователю только на чтение, другому на чтение и запись.
 
-vi /etc/proftpd/conf.d/rights.conf
+nano /etc/proftpd/conf.d/rights.conf
 
 Добавляем:
 
