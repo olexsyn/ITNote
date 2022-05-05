@@ -60,5 +60,59 @@ Options +ExecCGI -MultiViews
 PassEnv LANG en_US.UTF-8
 ```
 
+Див. також
+https://stackoverflow.com/questions/4374455/how-to-set-sys-stdout-encoding-in-python-3
 
+python3.7
 
+```python
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+```
+---
+
+https://stackoverflow.com/questions/4374455/how-to-set-sys-stdout-encoding-in-python-3
+
+---
+
+```
+У меня была похожая проблема. Для меня изначально переменная среды LANG не была установлена (вы можете проверить это, запустив env )
+
+$ python3 -c 'import locale; print(locale.getdefaultlocale())'
+(None, None)
+$ python3 -c 'import locale; print(locale.getpreferredencoding())'
+ANSI_X3.4-1968
+
+Доступные локали для меня были (на свежем изображении Ubuntu 18.04 Docker):
+
+$ locale -a
+C
+C.UTF-8
+POSIX
+
+Поэтому я выбрал utf-8:
+
+$ export LANG="C.UTF-8"
+
+И тогда все работает
+
+$ python3 -c 'import locale; print(locale.getdefaultlocale())'
+('en_US', 'UTF-8')
+$ python3 -c 'import locale; print(locale.getpreferredencoding())'
+UTF-8
+
+Если вы выберете locale, который недоступен, например
+
+export LANG="en_US.UTF-8"
+
+это не сработает:
+
+$ python3 -c 'import locale; print(locale.getdefaultlocale())'
+('en_US', 'UTF-8')
+$ python3 -c 'import locale; print(locale.getpreferredencoding())'
+ANSI_X3.4-1968
+
+и вот почему locale выдает сообщения об ошибках:
+
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+```
