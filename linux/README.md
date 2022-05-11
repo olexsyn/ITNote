@@ -1,5 +1,7 @@
 # Linux
 
+<https://www.stationx.net/linux-command-line-cheat-sheet/>
+
 - [apt](apt) - менеджер пакетов
 - [cat](cat) - показать содержимое файла
 - [cd](cd) - изменить директорию
