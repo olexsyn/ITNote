@@ -152,6 +152,10 @@
 
 {% raw %}
 ```
+{% include cl.htm cmd="..." out="..." %}
+```
+
+```
 {% include cl.htm cmd="rsync --port=7777 mymachine.example.com::pickup/"
 out="
 Hello! Welcome to Martin's rsync server.
