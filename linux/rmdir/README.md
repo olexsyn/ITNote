@@ -8,7 +8,7 @@
 
 Синтаксис:
 
-{% include cl.htm cmd="<b>rmdir</b> [OPTION]... DIRECTORY..." %}
+    rmdir [OPTION]... DIRECTORY...
 
 Якщо каталог не порожній, ви отримаєте помилку.
 
