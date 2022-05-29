@@ -6,7 +6,8 @@
 
 Синтаксис:
 
-    unlink filename
+    unlink FILE
+    unlink OPTION
 
 Де filename - ім'я файлу, який потрібно видалити. У разі успіху команда не видає жодного результату і повертає нуль.
 
@@ -22,4 +23,26 @@
 
 У системах GNU/Linux за допомогою **unlink** не можна видалити каталог.
 
-Див. також: [rm](../rm), [rmdir](../rmdir)
+
+## unlink --help
+
+{% include cl.htm cmd="<b>unlink</b> --help"
+out="Usage: unlink FILE
+  or:  unlink OPTION
+Call the unlink function to remove the specified FILE.
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/unlink>
+or available locally via: info '(coreutils) unlink invocation'
+" %}
+
+
+## Див. також:
+
+- [rm](../rm)
+- [rmdir](../rmdir)
+- <http://www.gnu.org/software/coreutils/unlink>
+
