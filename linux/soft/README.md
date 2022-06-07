@@ -8,3 +8,4 @@
 - [Gwenview](gwenview)
 - [PDFshuffler](pdfshuffler)
 - [apt](apt) <span class="warn">DEL!</span>
+- [xfce4-systemload-plugin](xfce4-systemload-plugin)
