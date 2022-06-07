@@ -20,4 +20,4 @@ XDG_PICTURES_DIR="$HOME/img"
 XDG_VIDEOS_DIR="$HOME/video"
 ```
 
-Пе
+    sudo xdg-user-dirs-update
