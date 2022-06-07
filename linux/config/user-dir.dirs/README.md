@@ -20,4 +20,8 @@ XDG_PICTURES_DIR="$HOME/img"
 XDG_VIDEOS_DIR="$HOME/video"
 ```
 
+Вказані каталоги необхідно створити, потім:
+
     sudo xdg-user-dirs-update
+
+Ярлики з `Desktop` скопіювати або перенести в `desktop`.
