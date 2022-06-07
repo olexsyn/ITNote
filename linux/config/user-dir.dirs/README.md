@@ -20,6 +20,8 @@ XDG_PICTURES_DIR="$HOME/img"
 XDG_VIDEOS_DIR="$HOME/video"
 ```
 
+(Не використовую каталог `Public` за призначенням, це в мене - каталог для розробки `dev`) 
+
 Вказані каталоги необхідно створити, потім:
 
     sudo xdg-user-dirs-update
