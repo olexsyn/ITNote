@@ -9,3 +9,4 @@
 - [PDFshuffler](pdfshuffler)
 - [apt](apt) <span class="warn">DEL!</span>
 - [xfce4-systemload-plugin](xfce4-systemload-plugin)
+- [xfce4-battery-plugin](xfce4-battery-plugin) (actualy for laptops)
