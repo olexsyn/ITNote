@@ -32,3 +32,8 @@
 [v]: /i/pl.png
 [q]: /i/qu.png
 [c]: /i/rm.png
+
+## My settings
+
+```
+```
