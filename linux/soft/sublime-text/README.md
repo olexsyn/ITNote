@@ -35,5 +35,35 @@
 
 ## My settings
 
-```
+```json
+{
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/Color Highlighter/themes/ans-white.tmTheme",
+	"default_line_ending": "unix",
+	"detect_indentation": false,
+	"draw_white_space": "all",
+	"font_face": "JetBrains Mono",
+	// "font_face": "Droid Sans Mono Regular",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"margin": 0,
+	"move_to_limit_on_up_down": true,
+	"predawn_findreplace_small": true,
+	"predawn_tabs_small": true,
+	"rulers":
+	[
+		79
+	],
+	"scroll_past_end": false,
+	"show_definitions": false,
+	"sidebar_size_13": true,
+	"tabs_small": true,
+	"theme": "Default Dark.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"trim_automatic_white_space": false,
+	"trim_trailing_white_space_on_save": true,
+}
 ```
