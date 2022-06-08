@@ -1,6 +1,6 @@
 # Apache
 
-- Установка Apache
+- [Установка и настройка Apache](install)
 - [файл .htaccess](htaccess)
 - [директива Directory](directory)
 - [SSI](ssi)
@@ -41,17 +41,6 @@ systemctl status httpd" %}
 - **restart**: останавливает (**stop**), а затем запускает (**start**) службу Apache.
 - **reload:** изящно перезапускает службу Apache. При reload основной процесс Apache завершает работу дочерних процессов, загружает новую конфигурацию и запускает новые дочерние процессы.
 
-## Установка
-
-{% include cl.htm cmd="sudo apt install apache2" %}
-
-- [Apache HTTP Server Version 2.4 Documentation](http://httpd.apache.org/docs/2.4/)
-  - [Introduction to Server Side Includes](http://httpd.apache.org/docs/2.4/howto/ssi.html)
-  - [nginx в связке с ssi](http://nginx.org/ru/docs/http/ngx_http_ssi_module.html) - [nginx](http://nginx.org/ru/)
-
-- [Apache SSI](ssi)
-- [Подключить SSI - a2enmod](a2enmod)
-- [Как подключить mod_rewrite](mod_rewrite)
 
 ## Подключить виртуальный хост
 
