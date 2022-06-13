@@ -14,17 +14,36 @@
 
 [help.github ... working-with-ssh-key-passphrases](https://help.github.com/en/articles/working-with-ssh-key-passphrases).
 
-Если у вас нет пары открытых и закрытых ключей или вы не хотите использовать какие-либо из доступных для подключения к GitHub, то сгенерируйте новый ключ SSH, , используя указанный e-mail в качестве метки:
+Якщо у вас немає пари відкритих і закритих ключів або ви не хочете використовувати будь-які доступні для підключення до GitHub, то згенеруйте новий ключ SSH, , використовуючи вказаний e-mail як позначка:
 
-{% include cl.htm cmd='ssh-keygen -t rsa -b 4096 -C "your_email@example.com"'
-out="
-> Generating public/private rsa key pair.
-> Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
-> Enter passphrase (empty for no passphrase): [Type a passphrase]
-> Enter same passphrase again: [Type passphrase again]
+{% include cl.htm cmd='ssh-keygen -t ed25519 -C "your_email@example.com"'
+out="Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/olex/.ssh/id_ed25519): /home/olex/.ssh/my_key
+Created directory '/home/olex/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/olex/.ssh/my_key
+Your public key has been saved in /home/olex/.ssh/my_key.pub
+The key fingerprint is:
+SHA256:DALKyEu8zwu08jo3gPcUVjmrjOXpP4wSUy27jQHNKf5 your_email@example.com
+The key's randomart image is:
++--[ED25519 256]--+
+|. .o=..          |
+|*o o.=.          |
+|++o +.o          |
+|. .. = o .       |
+| .  . + S        |
+|   . + =         |
+|    o.E..        |
+|    +@oO+        |
+|   o++X=*o       |
++----[SHA256]-----+
 " %}
 
-Когда вам будет предложено «Введите файл, в котором вы хотите сохранить ключ», нажмите Enter. Это принимает местоположение файла по умолчанию.
+> Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:
+> `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+
+Коли вам буде запропоновано «Введіть файл, у якому потрібно зберегти ключ», натисніть Enter. Це приймає розташування файлу за замовчуванням.
 
 ![!](/i/w.png) Также вы можете ввести безопасную ключевую фразу <samp>passphrase</samp>, но при этом она будет запрашиваться при сетевых операция с Git , как `push`, `pull` и `fetch`. Если вы хотите избежать необходимости вводить вашу парольную фразу каждый раз, вы можете использовать [ssh-agent для хранения учетных данных](../ssh-agent) парольной фразы личного ключа один раз за сеанс терминала.
 
