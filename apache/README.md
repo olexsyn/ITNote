@@ -44,41 +44,9 @@ systemctl status httpd" %}
 
 ## Подключить виртуальный хост
 
-Начиная с версии 2.4 у конфигурационного файла виртуального хоста должно быть расширение `.conf`.
-Пример файла конфигурации хоста test.net (файл **/etc/apache2/sites-available/test.net.conf**):
-
-```apache
-<VirtualHost 127.0.1.2:80>
-	ServerName test.net.loc
-	DocumentRoot /home/olex/www/test.net/test.net
-	<Directory /home/olex/www/test.net/test.net/>
-		Options +Includes
-		AddType text/html .htm
-		AddOutputFilter INCLUDES .htm
-		AllowOverride All
-		Require all granted
-	</Directory>
-
-	ScriptAlias /cgi-bin/ /home/olex/www/test.net/cgi-bin/
-	<Directory "/home/olex/www/test.net/cgi-bin">
-		AllowOverride None
-		Options +ExecCGI -MultiViews
-		Require all granted
-	</Directory>
-
-	ErrorLog /home/olex/www/__logs/test.net/error.log
-	CustomLog /home/olex/www/__logs/test.net/access.log combined
-</VirtualHost>
-```
-
-{% include cl.htm cmd="sudo a2ensite test.net
-service apache2 reload" %}
-
-
----
+- [Подключить виртуальный хост - a2ensite](a2ensite)
 
 
 <span class="warn">TODO!</span>
 
-- [Подключить виртуальный хост - a2ensite](a2ensite)
 - [Configuring Apache2 to run Python Scripts](https://www.linux.com/training-tutorials/configuring-apache2-run-python-scripts/)

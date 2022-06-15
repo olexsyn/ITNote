@@ -25,6 +25,10 @@ Lisp...
 
 {% include cl.htm cmd="sudo a2enmod cgi" %}
 
+## Подключить виртуальный хост
+
+[a2ensite](../a2ensite)
+
 !!TODO!!
 
 - [Apache HTTP Server Version 2.4 Documentation](http://httpd.apache.org/docs/2.4/)

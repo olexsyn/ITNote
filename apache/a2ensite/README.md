@@ -1,40 +1,67 @@
-# Подключить сайт
+## Подключить сайт
 
-Конфигурационные файлы для виртуальных хостов хранятся в **/etc/apache2/sites-available/**
+Конфигурационные файлы для виртуальных хостов хранятся в `/etc/apache2/sites-available/`
 
 Для Apache, начиная с версии 2.4 у файла должно быть расширение `.conf`
 
-Пример файла конфигурации хоста "mysite.com" (файл `/etc/apache2/sites-available/mysite_com.conf`):
+Пример файла конфигурации хоста **mysite.com** (файл `/etc/apache2/sites-available/mysite_com.conf**`):
 
+Конфігураційні файли для віртуальних хостів зберігаються в `/etc/apache2/sites-available/`
+
+Для Apache, починаючи з версії 2.4, у файла має бути розширення `.conf`
+
+Приклад файлу конфігурації хоста **mysite.com** (файл `/etc/apache2/sites-available/mysite_com.conf**`):
+
+```apache
+<VirtualHost 127.0.1.2:80>
+	ServerName site.com.loc
+	DocumentRoot /home/olex/www/site/site.com
+	<Directory /home/olex/www/site/site.com/>
+		Options +Includes
+		AddType text/html .htm
+		AddOutputFilter INCLUDES .htm
+		AllowOverride All
+		Require all granted
+		# see https://olexsyn.github.io/e-note/apache/cgi-utf-fix/
+		PassEnv LANG en_US.UTF-8
+	</Directory>
+
+	ScriptAlias /cgi-bin/ /home/olex/www/site/cgi-bin/
+	<Directory "/home/olex/www/site/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews
+		Require all granted
+		# see https://olexsyn.github.io/e-note/apache/cgi-utf-fix/
+		PassEnv LANG en_US.UTF-8
+	</Directory>
+
+	ErrorLog /home/olex/www/__logs/site/error.log
+	CustomLog /home/olex/www/__logs/site/access.log combined
+</VirtualHost>
 ```
-  <VirtualHost *:80>
-    ServerName mysite.com
-    ServerAlias www.mysite.com
-    DocumentRoot /var/www/mysite.com/www
-  </VirtualHost>
-```
 
-Для того, что бы конфигурация читалась Апачем, нужно добавить ссылку на файл конфигурации хоста в **/etc/apache2/sites-enabled/**.
+Для того, щоб Apache прочитав конфігурацію, потрібно додати символічне посилання на файл конфігурації в каталозі `/etc/apache2/sites-enabled/`.
 
-Сделать это можно командой `a2ensite`:
+Зробити це можна командою **a2ensite**:
 
-    sudo a2ensite mysite_com
+{% include cl.htm cmd="sudo a2ensite mysite_com" %}
 
-Которая, на самом деле просто создает символическую ссылку:
+> яка, насправді, просто створює символічне посилання:
+> `sudo ln -s /etc/apache2/sites-available/mysite_com.conf /etc/apache2/sites-enabled/mysite_com.conf`
 
-    ln -s /etc/apache2/sites-available/mysite_com.conf /etc/apache2/sites-enabled/mysite_com.conf
+перевірити наявність помилок у синтаксисі:
 
-И перезапустить сервер одной из команд:
+{% include cl.htm cmd="sudo apache2ctl configtest"
+out="Syntax OK" %}
 
-{% include cl.htm cmd="sudo service apache2 reload
-sudo systemctl reload apache2
-sudo /etc/init.d/apache2 restart" out="
-[ok] Restarting apache2 (via systemctl): apache2.service." %}
+та перезапустити http-сервер:
 
-Команда для отключения конфигурации виртуального хоста: `a2dissite <SITE>`
+{% include cl.htm cmd="systemctl reload apache2" %}
 
-В процессе запуска сервера можем получить сообщение:
+**Команда для відключення конфігурації** віртуального хоста:
 
-`Could not reliably determine the server's fully qualified domain name, ...`
+{% include cl.htm cmd="sudo a2dissite <SITE>" %}
 
-Это можем [испроавить так]({{ site.baseurl }}/apache/err_not_reliably_determine).
+> В процессе запуска сервера можем получить сообщение:
+> `Could not reliably determine the server's fully qualified domain name, ...`
+> Це можна [виправити так]({{ site.baseurl }}/apache/err_not_reliably_determine).
