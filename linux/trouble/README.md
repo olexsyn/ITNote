@@ -1,5 +1,6 @@
 ## Проблемы
 
+- [Failed to start casper-md5check Verify Live ISO checksums](casper-md5check)
 - ![+][pl] [Scanning for BTRFS file system](scanning4btrfs) - остановка ~15с во время загрузки
 - ![+][pl] Reverce scroll direction (Natural Scrolling)
 
