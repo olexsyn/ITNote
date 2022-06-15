@@ -38,10 +38,10 @@
 
 Зробити це можна командою **a2ensite**:
 
-{% include cl.htm cmd="sudo a2ensite mysite_com" %}
+{% include cl.htm cmd="sudo a2ensite site_com" %}
 
 > яка, насправді, просто створює символічне посилання:  
-> `sudo ln -s /etc/apache2/sites-available/mysite_com.conf /etc/apache2/sites-enabled/mysite_com.conf`
+> `sudo ln -s /etc/apache2/sites-available/site_com.conf /etc/apache2/sites-enabled/site_com.conf`
 
 перевірити наявність помилок у синтаксисі:
 
@@ -54,7 +54,7 @@ out="Syntax OK" %}
 
 **Команда для відключення конфігурації** віртуального хоста:
 
-{% include cl.htm cmd="sudo a2dissite <SITE>" %}
+{% include cl.htm cmd="sudo a2dissite site_com" %}
 
 > У процесі запуску сервера можемо отримати повідомлення:  
 > `Could not reliably determine the server's fully qualified domain name, ...`  
