@@ -34,7 +34,10 @@ systemctl status httpd" %}
 выводит ошибку в конфиге Apache. Помогает
 понять, где напортачено в файлах конфигурации
 
-<span class="warn">!</span> В случае появления сообщения `AH00558: httpd: Could not reliably determine the server's fully qualified` необходимо прописать `ServerName localhost` в файле **/etc/apache2/apache2.conf** (или **/etc/httpd/conf/httpd.conf**)
+> <span class="warn">!</span> В случае появления сообщения  
+> `AH00558: httpd: Could not reliably determine the server's fully qualified`  
+> необходимо прописать `ServerName localhost`  
+> в файле **/etc/apache2/apache2.conf** (или **/etc/httpd/conf/httpd.conf**)
 
 ## restart и reload - разница?
 
