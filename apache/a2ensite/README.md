@@ -1,11 +1,5 @@
 ## Подключить сайт
 
-Конфигурационные файлы для виртуальных хостов хранятся в `/etc/apache2/sites-available/`
-
-Для Apache, начиная с версии 2.4 у файла должно быть расширение `.conf`
-
-Пример файла конфигурации хоста **mysite.com** (файл `/etc/apache2/sites-available/mysite_com.conf**`):
-
 Конфігураційні файли для віртуальних хостів зберігаються в `/etc/apache2/sites-available/`
 
 Для Apache, починаючи з версії 2.4, у файла має бути розширення `.conf`
@@ -46,7 +40,7 @@
 
 {% include cl.htm cmd="sudo a2ensite mysite_com" %}
 
-> яка, насправді, просто створює символічне посилання:
+> яка, насправді, просто створює символічне посилання:  
 > `sudo ln -s /etc/apache2/sites-available/mysite_com.conf /etc/apache2/sites-enabled/mysite_com.conf`
 
 перевірити наявність помилок у синтаксисі:
@@ -62,6 +56,6 @@ out="Syntax OK" %}
 
 {% include cl.htm cmd="sudo a2dissite <SITE>" %}
 
-> В процессе запуска сервера можем получить сообщение:
-> `Could not reliably determine the server's fully qualified domain name, ...`
+> У процесі запуску сервера можемо отримати повідомлення:  
+> `Could not reliably determine the server's fully qualified domain name, ...`  
 > Це можна [виправити так]({{ site.baseurl }}/apache/err_not_reliably_determine).
