@@ -2,7 +2,7 @@
 
 Шаблон GitHub'а для проектів на Python
 
-```
+```ini
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
