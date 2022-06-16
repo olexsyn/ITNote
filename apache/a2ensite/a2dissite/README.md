@@ -1,3 +1,8 @@
+# a2dissite
+
+**a2dissite** (**a**pache**2** **dis**able **site**)
+
+```bash
 #!/bin/bash
 avail=/etc/httpd/conf/sites-enabled/$1.conf
 enabled=/etc/httpd/conf/sites-enabled
@@ -21,3 +26,4 @@ echo  -e "Success! $avail has been removed!\nsudo systemctl restart httpd"
 exit 0
 fi
 fi
+```

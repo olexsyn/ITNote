@@ -1,3 +1,8 @@
+# a2ensite
+
+**a2ensite** (**a**pache**2** **en**able **site**)
+
+```bash
 #!/bin/bash
 if test -d /etc/httpd/conf/sites-available && test -d /etc/httpd/conf/sites-enabled ; then
 echo "-------------------------------"
@@ -28,3 +33,4 @@ echo  -e "Virtual host $avail does not exist!\nPlease see avail virtual hosts:\n
 exit 0
 fi
 fi
+```
