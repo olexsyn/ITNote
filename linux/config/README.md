@@ -2,6 +2,7 @@
 
 - [Моя українська розкладка з російськими літерами](keyboard)
 - [config/user-dirs.dirs](user-dir.dirs)
+- [ssd disk](ssd)
 
 ## Файлы конфигураций
 
