@@ -1,7 +1,5 @@
 # Keyboard
 
-Скрипт для переконвертування тексту, що набраний не на тій розклдці [kbdswtch](kbdswtch)
-
 `/usr/share/X11/xkb/symbols/ua`
 
 ```xml
