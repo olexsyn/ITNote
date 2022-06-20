@@ -1,6 +1,7 @@
-# Файлы настройки Linux
+# Налаштування Linux
 
-- [Моя українська розкладка з російськими літерами](keyboard)
+- [ua розкладка з додатковими ru літерами](keyboard)
+- [kbdswtch - скрипт для перекидання тексту з однієї розкладки в іншу](keyboard/kbdswtch) (En-Uk)
 - [config/user-dirs.dirs](user-dir.dirs)
 - [ssd disk](ssd)
 
