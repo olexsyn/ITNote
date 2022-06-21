@@ -70,7 +70,7 @@ out="&gt; origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
 
 {% include cl.htm cmd="git remote set-url origin git@github.com:USERNAME/REPOSITORY.git" %}
 
-Перевіряемо, що протокол змінився на **GIT**: `origin  git@github.com:_"
+Перевіряемо, що протокол змінився на **GIT**: `origin  git@github.com:`
 
 {% include cl.htm cmd="git remote -v"
 out="&gt; origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
