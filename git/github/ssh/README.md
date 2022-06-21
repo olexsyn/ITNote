@@ -14,18 +14,25 @@
 
 [help.github ... working-with-ssh-key-passphrases](https://help.github.com/en/articles/working-with-ssh-key-passphrases).
 
-Якщо у вас немає пари відкритих і закритих ключів або ви не хочете використовувати будь-які доступні для підключення до GitHub, то згенеруйте новий ключ SSH, , використовуючи вказаний e-mail як позначка:
+Якщо у вас немає пари відкритих і закритих ключів або ви не хочете використовувати будь-які доступні для підключення до GitHub, то згенеруйте новий ключ SSH, використовуючи свій e-mail як ідентифікатор:
 
-{% include cl.htm cmd='ssh-keygen -t ed25519 -C "your_email@example.com"'
+{% include cl.htm cmd='ssh-keygen -t ed25519 -C "mylogin@example.com"' %}
+
+> Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:
+> `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+
+У вас буде запитано ім'я файлу (треба вводити повний шлях, бажано у `/home/user/.ssh/`), та пароль
+
+{% include cl.htm cmd='ssh-keygen -t ed25519 -C "mylogin@example.com"'
 out="Generating public/private ed25519 key pair.
-Enter file in which to save the key (/home/olex/.ssh/id_ed25519): /home/olex/.ssh/my_key
+Enter file in which to save the key (/home/olex/.ssh/id_ed25519): /home/olex/.ssh/mylogin
 Created directory '/home/olex/.ssh'.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in /home/olex/.ssh/my_key
-Your public key has been saved in /home/olex/.ssh/my_key.pub
+Your identification has been saved in /home/olex/.ssh/mylogin
+Your public key has been saved in /home/olex/.ssh/mylogin.pub
 The key fingerprint is:
-SHA256:DALKyEu8zwu08jo3gPcUVjmrjOXpP4wSUy27jQHNKf5 your_email@example.com
+SHA256:DALKyEu8zwu08jo3gPcUVjmrjOXpP4wSUy27jQHNKf5 mylogin@example.com
 The key's randomart image is:
 +--[ED25519 256]--+
 |. .o=..          |
@@ -39,9 +46,6 @@ The key's randomart image is:
 |   o++X=*o       |
 +----[SHA256]-----+
 " %}
-
-> Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:
-> `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
 Коли вам буде запропоновано «Введіть файл, у якому потрібно зберегти ключ», натисніть Enter. Це приймає розташування файлу за замовчуванням.
 
