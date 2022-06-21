@@ -14,7 +14,7 @@
 
 {% include cl.htm cmd='ssh-keygen -t ed25519 -C "nickname@example.com"' %}
 
-> Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:
+> Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:  
 > `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
 У вас буде запитано ім'я файлу (треба вводити повний шлях, бажано у `/home/user/.ssh/`), та пароль
@@ -36,7 +36,7 @@ The key's randomart image is:
 
 [docs.github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
-Скопіюйте ключ SSH у буфер обміну. Для цього достатньо скопіювати вміст файлу **~/.ssh/nickname.pub**.
+Скопіюйте вміст файлу **~/.ssh/nickname.pub** у буфер обміну. Це ваш публічний ключ SSH.
 
 У верхньому правому куті сторінки вашого GitHub-аккаунта натисніть на фотографію свого профілю, потім натисніть «Settings».
 
@@ -44,7 +44,7 @@ The key's randomart image is:
 
 У полі «Title» додайте описову позначку для нового ключа.
 
-Скопіюйте зміст свого публічного (`.pub`) ключа у поле «Key», та натисніть «Add SSH key».
+Вставте з буферу обміну зміст свого публічного ключа у поле «Key», та натисніть «Add SSH key».
 
 Якщо буде запропоновано, підтвердіть пароль свій пароль на GitHub.
 
@@ -60,30 +60,30 @@ The key's randomart image is:
 {% include cl.htm cmd="cd path/to/REPOSITORY" %}
 
 Отримайте список посилань на віддалений репозиторій.
-Перевіяємо, що поточний протокол `HTTP`: `origin  https:// ...`, якийми хочемо змінити:
+Перевіяємо, що поточний протокол **HTTP**: `origin  https:// ...`, який ми хочемо змінити:
 
 {% include cl.htm cmd="git remote -v"
 out="&gt; origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-     &gt; origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
+&gt; origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 
 Змінюємо протокол:
 
 {% include cl.htm cmd="git remote set-url origin git@github.com:USERNAME/REPOSITORY.git" %}
 
-Перевіряемо, що протокол змінився на `GIT`: `origin  git@github.com:_"
+Перевіряемо, що протокол змінився на **GIT**: `origin  git@github.com:_"
 
 {% include cl.htm cmd="git remote -v"
 out="&gt; origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
-     &gt; origin  git@github.com:USERNAME/REPOSITORY.git (push)" %}
+&gt; origin  git@github.com:USERNAME/REPOSITORY.git (push)" %}
 
 Якщо раніше вводилася безпечна фраза-пароль, її може буде запитано під час команд `git pull`, `git push` і `git merge`.
 
 
 ## Додавання вашого ключа SSH до ssh-agent
 
-[docs.github.com/](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[docs.github.com](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-Якщо ви не хочете вводити свою парольну фразу щоразу, коли використовуєте свій ключ SSH, ви можете додати його до агента SSH, який керує вашими ключами SSH і запам’ятовує вашу парольну фразу.
+Якщо ви не хочете вводити свою парольну фразу щоразу, коли надсилаєте або отримуєте дані з серверу GitHub, ви можете додати його до агента SSH, який керує вашими ключами і запам’ятовує вашу парольну фразу.
 
 Запустіть ssh-агент у фоновому режимі.
 
@@ -94,4 +94,3 @@ out='&gt; Агент pid 59566' %}
 
 {% include cl.htm cmd='ssh-add ~/.ssh/nickname' %}
 
-Додайте ключ SSH до свого облікового запису на GitHub. Додаткову інформацію див. у розділі «Додавання нового ключа SSH до вашого облікового запису GitHub».
