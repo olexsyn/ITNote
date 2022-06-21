@@ -55,7 +55,7 @@ The key's randomart image is:
 
 [help.github ... adding-a-new-ssh-key-to-your-github-account](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
-Скопируйте ключ SSH в буфер обмена. Для этого достаточно скоприровать содержимое файла **~/.ssh/id_rsa.pub** в буфер обмена.
+Скопируйте ключ SSH в буфер обмена. Для этого достаточно скоприровать содержимое файла **~/.ssh/mylogin.pub** в буфер обмена.
 
 В правом верхнем углу страницы вашего GitHub-аккаунта нажмите на фотографию своего профиля, затем нажмите «Settings».
 
