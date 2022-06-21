@@ -1,118 +1,97 @@
-# Подключение к GitHub через SSH
+# Підключення до GitHub через SSH
 
-[help.github ... connecting-to-github-with-ssh](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+[docs.githubh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 
-Используя протокол SSH, вы можете подключаться и аутентифицироваться на удаленных серверах и сервисах. С помощью ключей SSH вы можете подключаться к GitHub без указания имени пользователя или пароля когда отправляете локальные правки в GitHub-репозиторий.
+Використовуючи протокол SSH, ви можете підключатися та аутентифікуватися на віддалених серверах і сервісах. За допомогою ключа SSH ви можете підключитися до GitHub без вказівок імені користувача або пароля, коли відправляєте локальні правки в репозиторії GitHub.
 
-Перед созданием ключа SSH вы можете проверить директорию **~/.ssh**, есть ли у вас какие-либо существующие ключи. По умолчанию имена открытых ключей имеют одно из следующих значений:
+Перед створенням ключа SSH перевірте каталог **~/.ssh**, можливо, у вас вже є наявні ключі. Зазвичай імена відкритих (публічних) ключів мають розширення `.pub`
 
-- id_rsa.pub
-- id_ecdsa.pub
-- id_ed25519.pub
+## Створення нового ключа SSH
 
-## Создание ключей SSH
-
-[help.github ... working-with-ssh-key-passphrases](https://help.github.com/en/articles/working-with-ssh-key-passphrases).
+[docs.github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 Якщо у вас немає пари відкритих і закритих ключів або ви не хочете використовувати будь-які доступні для підключення до GitHub, то згенеруйте новий ключ SSH, використовуючи свій e-mail як ідентифікатор:
 
-{% include cl.htm cmd='ssh-keygen -t ed25519 -C "mylogin@example.com"' %}
+{% include cl.htm cmd='ssh-keygen -t ed25519 -C "nickname@example.com"' %}
 
 > Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:
 > `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
 У вас буде запитано ім'я файлу (треба вводити повний шлях, бажано у `/home/user/.ssh/`), та пароль
 
-{% include cl.htm cmd='ssh-keygen -t ed25519 -C "mylogin@example.com"'
+{% include cl.htm cmd='ssh-keygen -t ed25519 -C "nickname@example.com"'
 out="Generating public/private ed25519 key pair.
-Enter file in which to save the key (/home/olex/.ssh/id_ed25519): /home/olex/.ssh/mylogin
-Created directory '/home/olex/.ssh'.
+Enter file in which to save the key (/home/user/.ssh/id_ed25519): /home/user/.ssh/nickname
+Created directory '/home/user/.ssh'.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in /home/olex/.ssh/mylogin
-Your public key has been saved in /home/olex/.ssh/mylogin.pub
+Your identification has been saved in /home/user/.ssh/nickname
+Your public key has been saved in /home/user/.ssh/nickname.pub
 The key fingerprint is:
-SHA256:DALKyEu8zwu08jo3gPcUVjmrjOXpP4wSUy27jQHNKf5 mylogin@example.com
+SHA256:DALKyEu8zwu08jo3gPcUVjmrjOXpP4wSUy27jQHNKf5 nickname@example.com
 The key's randomart image is:
-+--[ED25519 256]--+
-|. .o=..          |
-|*o o.=.          |
-|++o +.o          |
-|. .. = o .       |
-| .  . + S        |
-|   . + =         |
-|    o.E..        |
-|    +@oO+        |
-|   o++X=*o       |
-+----[SHA256]-----+
-" %}
+..." %}
 
-Коли вам буде запропоновано «Введіть файл, у якому потрібно зберегти ключ», натисніть Enter. Це приймає розташування файлу за замовчуванням.
+## Додавання нового ключа SSH до вашого облікового запису GitHub
 
-![!](/i/w.png) Также вы можете ввести безопасную ключевую фразу <samp>passphrase</samp>, но при этом она будет запрашиваться при сетевых операция с Git , как `push`, `pull` и `fetch`. Если вы хотите избежать необходимости вводить вашу парольную фразу каждый раз, вы можете использовать [ssh-agent для хранения учетных данных](../ssh-agent) парольной фразы личного ключа один раз за сеанс терминала.
+[docs.github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
-## Добавление нового ключа SSH в вашу учетную запись GitHub
+Скопіюйте ключ SSH у буфер обміну. Для цього достатньо скопіювати вміст файлу **~/.ssh/nickname.pub**.
 
-[help.github ... adding-a-new-ssh-key-to-your-github-account](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+У верхньому правому куті сторінки вашого GitHub-аккаунта натисніть на фотографію свого профілю, потім натисніть «Settings».
 
-Скопируйте ключ SSH в буфер обмена. Для этого достаточно скоприровать содержимое файла **~/.ssh/mylogin.pub** в буфер обмена.
+На бічній панелі налаштувань користувача натисніть «SSH и GPG keys».
 
-В правом верхнем углу страницы вашего GitHub-аккаунта нажмите на фотографию своего профиля, затем нажмите «Settings».
+У полі «Title» додайте описову позначку для нового ключа.
 
-На боковой панели настроек пользователя нажмите на «SSH и GPG keys».
+Скопіюйте зміст свого публічного (`.pub`) ключа у поле «Key», та натисніть «Add SSH key».
 
-В поле «Title» добавьте описательную метку для нового ключа.
+Якщо буде запропоновано, підтвердіть пароль свій пароль на GitHub.
 
-Вставьте свой ключ в поле «Key».
 
-Нажмите «Add SSH key».
+## Зміна протоколу передачі даних репозиторію з HTTP на SSH
 
-Если будет предложено, подтвердите свой пароль GitHub.
 
-## Изменение протокола передачи данных репозитория с HTTP на SSH
+[help.github](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh)
 
-[help.github ... switching-remote-urls](https://help.github.com/en/github/using-git/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh)
 
-Переходим в директорию необходимого репозитория
+Відкрийте термінал. Перейдіть у свій свій локальний git-проект:
 
 {% include cl.htm cmd="cd path/to/REPOSITORY" %}
 
-Проверяем, что текущий протокол HTTP: "... _origin  https://_ ..."
+Отримайте список посилань на віддалений репозиторій.
+Перевіяємо, що поточний протокол `HTTP`: `origin  https:// ...`, якийми хочемо змінити:
 
 {% include cl.htm cmd="git remote -v"
-out="
-origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-origin  https://github.com/USERNAME/REPOSITORY.git (push)
-" %}
+out="&gt; origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+     &gt; origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 
-Изменяем протокол:
+Змінюємо протокол:
 
 {% include cl.htm cmd="git remote set-url origin git@github.com:USERNAME/REPOSITORY.git" %}
 
-Проверяем, что протокол изменился на GIT: "... _origin  git@github.com:_"
+Перевіряемо, що протокол змінився на `GIT`: `origin  git@github.com:_"
 
 {% include cl.htm cmd="git remote -v"
-out="
-origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-origin  https://github.com/USERNAME/REPOSITORY.git (push)
-" %}
+out="&gt; origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+     &gt; origin  git@github.com:USERNAME/REPOSITORY.git (push)" %}
 
-Если ранее вводилась безопасная фраза-пароль, она может быть запрошена при командах `git pull`, `git push` и `git merge`.
+Якщо раніше вводилася безпечна фраза-пароль, її може буде запитано під час команд `git pull`, `git push` і `git merge`.
 
 
 ## Додавання вашого ключа SSH до ssh-agent
 
-Перш ніж додати новий ключ SSH до ssh-agent для керування вашими ключами, вам слід було перевірити наявні ключі SSH та створити новий ключ SSH.
+[docs.github.com/](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+Якщо ви не хочете вводити свою парольну фразу щоразу, коли використовуєте свій ключ SSH, ви можете додати його до агента SSH, який керує вашими ключами SSH і запам’ятовує вашу парольну фразу.
 
 Запустіть ssh-агент у фоновому режимі.
 
 {% include cl.htm cmd='eval "$(ssh-agent -s)"'
 out='&gt; Агент pid 59566' %}
 
-Залежно від вашого середовища вам може знадобитися використовувати іншу команду. Наприклад, вам може знадобитися використовувати root-доступ, запустивши sudo -s -H перед запуском ssh-agent, або вам може знадобитися використовувати exec ssh-agent bash або exec ssh-agent zsh для запуску ssh-agent.
+Додайте свій закритий (приватний) ключ SSH до ssh-agent:
 
-Додайте свій закритий ключ SSH до ssh-agent. Якщо ви створили свій ключ з іншим ім’ям або додаєте існуючий ключ з іншою назвою, замініть id_ed25519 у команді ім’ям вашого файлу приватного ключа.
-
-{% include cl.htm cmd='ssh-add ~/.ssh/mylogin' %}
+{% include cl.htm cmd='ssh-add ~/.ssh/nickname' %}
 
 Додайте ключ SSH до свого облікового запису на GitHub. Додаткову інформацію див. у розділі «Додавання нового ключа SSH до вашого облікового запису GitHub».
