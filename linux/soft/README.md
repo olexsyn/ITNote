@@ -6,6 +6,7 @@
 - [rsync](rsync)
 - [Sublime Text](sublime-text)
 - [Gwenview](gwenview)
+- VeraCrypt [downloads](https://veracrypt.fr/en/Downloads.html) | [documentation](https://veracrypt.fr/en/Documentation.html)
 - [PDFshuffler](pdfshuffler)
 - [apt](apt) <span class="warn">DEL!</span>
 - [xfce4-systemload-plugin](xfce4-systemload-plugin)
