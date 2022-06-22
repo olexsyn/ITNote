@@ -137,3 +137,9 @@ view_zoom_out=Ctrl+-
 view_zoom_to_fill=Shift+F
 view_zoom_to_fit=F
 ```
+
+див.
+- /home/olex/.config/gwenviewrc
+- /home/olex/.local/share/kxmlgui5/gwenview/gwenviewui.rc
+
+
