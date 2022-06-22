@@ -67,3 +67,36 @@
 	"trim_trailing_white_space_on_save": true,
 }
 ```
+
+**Sublime keymap:**
+
+```json
+[
+	{ "keys": ["f8"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
+
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+shift+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	{ "keys": ["shift+f9"], "command": "sort_lines", "args": {"remove_duplicates": true} },
+	{ "keys": ["ctrl+alt+shift+f9"], "command": "sort_lines", "args": {"reverse": true} },
+
+	{ "keys": ["ctrl+2"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["ctrl+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": ["ctrl+3"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+
+	{ "keys": ["ctrl+alt+w"], "command": "swap_case" },
+
+	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+	{ "keys": ["ctrl+alt+a"], "command": "trim_leading_whitespace" },
+
+	{ "keys": ["ctrl+alt+w"], "command": "next_bookmark" },
+	{ "keys": ["ctrl+alt+u"], "command": "prev_bookmark" },
+	{ "keys": ["ctrl+alt+o"], "command": "set_mark" },
+
+	{ "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+
+	{ "keys": ["ctrl+b"], "command": "toggle_bookmark" },
+
+]
+```
