@@ -16,11 +16,9 @@ Cохраняем файл и рестартуем Apache:
 
 ## Apache 2.4
 
-Создаем/отредактировать файл **/etc/apache2/httpd.conf**
+Відкриваємо файл **/etc/apache2/apache2.conf** і додаємо рядок `ServerName localhost`
 
-Куда прописываем `ServerName localhost`
-
-Cохраняем файл и рестартуем Apache
+Зберігаємо файл та перезапускаємо Apache
 
 ----
 
