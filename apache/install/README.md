@@ -29,6 +29,10 @@ Lisp...
 
 [a2ensite](../a2ensite)
 
+## Якщо потрібен протокол `HTTPS`
+
+[робимо це](../ssl)
+
 !!TODO!!
 
 - [Apache HTTP Server Version 2.4 Documentation](http://httpd.apache.org/docs/2.4/)
