@@ -50,6 +50,10 @@ small="
 * права на выборку и обновление данных во всех таблицах базы `base1` для пользователя `dbuser`
 * список всех возможных прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage. [Докладніше](../privileges)
 
+Користувач, що має право змінювати додавати, редагувати, видаляти дані у таблицях однієї бази, створювати тимчасові (для сесії) таблиці:
+
+{% include cl.htm cmd="GRANT SELECT, UPDATE, INSERT, DELETE, LOCK TABLES, CREATE TEMPORARY, CREATE VIEW TABLES ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
+
 Разрешение на удаленное подключение и использование базы MySQL:
 
 {% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'" %}
