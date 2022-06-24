@@ -28,7 +28,7 @@ small="
 
 Подробнее про {% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Создание пользователей MySQL/MariaDB и предоставление прав доступа" %}
 
-Эта команда предоставляет права доступа пользователю и, если его не существует, создает его:
+Данный метод позволяет одной командой сразу и создать пользователя, и дать ему права. Но, начиная с MySQL 8, она возвращает ошибку — разработчики запретили ее использование и сначала требуется создать пользователя (с помощью CREATE USER).
 
 {% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;" %}
 
@@ -52,7 +52,7 @@ small="
 
 Користувач, що має право змінювати додавати, редагувати, видаляти дані у таблицях однієї бази, створювати тимчасові (для сесії) таблиці:
 
-{% include cl.htm cmd="GRANT SELECT, UPDATE, INSERT, DELETE, LOCK TABLES, CREATE TEMPORARY, CREATE VIEW TABLES ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
+{% include cl.htm cmd="GRANT SELECT, UPDATE, INSERT, DELETE, LOCK TABLES, CREATE TEMPORARY TABLES, CREATE VIEW ON base1.* TO 'dbuser'@'localhost';" %}
 
 Разрешение на удаленное подключение и использование базы MySQL:
 
