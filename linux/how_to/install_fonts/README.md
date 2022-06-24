@@ -1,6 +1,6 @@
 # Як встановити шрифти
 
-Завантажте шрифт(и). (Наприклад [JetBrains Mono](https://www.jetbrains.com/lp/mono/))
+Завантажте шрифт(и). (Наприклад {% include a.htm text="JetBrains Mono" url="https://www.jetbrains.com/lp/mono/" %})
 
 Розпакуйте або скопіюйте файли **.ttf** у 
 
