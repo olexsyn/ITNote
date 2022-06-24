@@ -48,7 +48,7 @@ small="
 {% include cl.htm cmd="GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
 
 * права на выборку и обновление данных во всех таблицах базы `base1` для пользователя `dbuser`
-* список всех возможных прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage
+* список всех возможных прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage. [Докладніше](../privileges)
 
 Разрешение на удаленное подключение и использование базы MySQL:
 
