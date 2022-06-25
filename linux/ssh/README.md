@@ -4,7 +4,7 @@
 - [Помилки](#errors)
   - [SSH не заходить на потрібний пост з помилкою: Unable to negotiate with...](#err_unable_to_negotiate_with)
 
-## Застосування {usage}
+## Застосування {#usage}
 
 {% include cl.htm cmd="ssh user@66.225.228.206" %}
 
@@ -27,9 +27,9 @@ Host user
 ssh root
 ssh user" %}
 
-## Помилки {errors}
+## Помилки {#errors}
 
-### SSH не заходить на потрібний пост з помилкою: Unable to negotiate with...  {err_unable_to_negotiate_with}
+### SSH не заходить на потрібний пост з помилкою: Unable to negotiate with...  {#err_unable_to_negotiate_with}
 
 {% include cl.htm cmd="ssh SOMEHOSTNAME"
 out="Unable to negotiate with 1.2.3.4 port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss" %}
