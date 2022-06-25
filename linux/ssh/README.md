@@ -21,7 +21,7 @@ Host user
     Hostname 66.225.228.206
 ```
 
-и тогда так:
+и тоді так:
 
 {% include cl.htm cmd="ssh a
 ssh root
@@ -41,9 +41,9 @@ out="Unable to negotiate with 1.2.3.4 port 22: no matching host key type found. 
 Версія OpenSSH, включена в 16.04, відключає `ssh-dss`. Є акуратна сторінка зі застарілою інформацією, яка містить цю проблему: http://www.openssh.com/legacy.html  
 Коротше кажучи, вам слід додати опцію `-oHostKeyAlgorithms=+ssh-dss` до SSH-команди:
 
-ssh -oHostKeyAlgorithms=+ssh-dss root@192.168.8.109
+{% include cl.htm cmd="ssh -oHostKeyAlgorithms=+ssh-dss root@192.168.8.109" %}
 
-Ви також можете додати шаблон хоста у свій ~/.ssh/config, щоб вам не потрібно було щоразу вказувати ключовий алгоритм:
+Ви також можете додати шаблон хоста у свій **~/.ssh/config**, щоб вам не потрібно було щоразу вказувати ключовий алгоритм:
 
 ```
 Host SHORTNAME
