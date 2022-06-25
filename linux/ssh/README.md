@@ -36,7 +36,7 @@ out="Unable to negotiate with 1.2.3.4 port 22: no matching host key type found. 
 
 #### Рішення:
 
-[link](https://askubuntu.com/questions/836048/ssh-returns-no-matching-host-key-type-found-their-offer-ssh-dss)
+[askubuntu.com](https://askubuntu.com/questions/836048/ssh-returns-no-matching-host-key-type-found-their-offer-ssh-dss)
 
 Версія OpenSSH, включена в 16.04, відключає `ssh-dss`. Є акуратна сторінка зі застарілою інформацією, яка містить цю проблему: http://www.openssh.com/legacy.html  
 Коротше кажучи, вам слід додати опцію `-oHostKeyAlgorithms=+ssh-dss` до SSH-команди:
