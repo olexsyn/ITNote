@@ -9,6 +9,7 @@
 ## Решения
 
 [Добавить ведущий ноль](add_leading_zero)
+[Більше одгого відео YouTube на одній сторінці](several_youtube_video_on_page)
 
 ## Links
 
