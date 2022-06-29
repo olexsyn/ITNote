@@ -1,4 +1,24 @@
-# Виртуальное окружение
+# Віртуальне оточення
+
+каталоги Python зазвичай:
+
+```
+/work/www/kazka/adm.kazka.org.ua/py
+/usr/lib/python310.zip
+/usr/lib/python3.10
+/usr/lib/python3.10/lib-dynload
+/usr/local/lib/python3.10/dist-packages
+/usr/lib/python3/dist-packages
+```
+каталоги Python з вірт. оточенням **/work/www/site/.venv**:
+
+```
+/work/www/kazka/adm.kazka.org.ua/py
+/usr/lib/python310.zip
+/usr/lib/python3.10
+/usr/lib/python3.10/lib-dynload
+/work/www/site/.venv/lib/python3.10/site-packages
+```
 
 - `2018_Python_Tricks_-_Dan-Bader.pdf` p.271
 - {% include a.htm url="https://docs.python-guide.org/dev/virtualenvs/" text="Pipenv & Virtual Environments" %} (EN)
