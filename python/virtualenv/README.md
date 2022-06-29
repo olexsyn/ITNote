@@ -3,7 +3,7 @@
 каталоги Python зазвичай:
 
 ```
-/work/www/kazka/adm.kazka.org.ua/py
+/work/www/site/adm.site.ua/py
 /usr/lib/python310.zip
 /usr/lib/python3.10
 /usr/lib/python3.10/lib-dynload
@@ -13,7 +13,7 @@
 каталоги Python з вірт. оточенням **/work/www/site/.venv**:
 
 ```
-/work/www/kazka/adm.kazka.org.ua/py
+/work/www/site/adm.site.ua/py
 /usr/lib/python310.zip
 /usr/lib/python3.10
 /usr/lib/python3.10/lib-dynload
