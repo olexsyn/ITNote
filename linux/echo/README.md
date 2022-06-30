@@ -32,7 +32,7 @@
 
 Хотя это и не обязательно, рекомендуется заключать аргументы, передаваемые в `echo` в двойные или одинарные кавычки.
 
-При использовании одинарных кавычек `&#39;&#39;` буквальное значение каждого символа, заключенного в кавычки, будет сохранено. Переменные и команды расширяться не будут.
+При использовании одинарных кавычек `''` буквальное значение каждого символа, заключенного в кавычки, будет сохранено. Переменные и команды расширяться не будут.
 
 ## Примеры
 
@@ -51,16 +51,16 @@
 {% include cl.htm cmd="echo &#39;Hello &quot;Linuxize&quot;&#39;" %}
 {% include cl.htm cmd="echo &quot;Hello &quot;Linuxize&quot;&quot;" %}
 
-```Hello &quot;Linuxize&quot;```
+```Hello "Linuxize"```
 
 
 ### Отобразите строку текста, содержащую одинарную кавычку
 
 Чтобы напечатать одинарную кавычку, заключите ее в двойные кавычки или используйте кавычки <a target="_blank" rel="nofollow" href="https://routerus.com/goto/https://www.gnu.org/software/bash/manual/html_node/ANSI_002dC-Quoting.html"  rel="noopener" target="_blank">ANSI-C</a> .
-{% include cl.htm cmd="echo &quot;I&#39;m a Linux user.&quot;" %}
-{% include cl.htm cmd="echo $&#39;I&#39;ma Linux user.&#39;" %}
+{% include cl.htm cmd="echo \"I'm a Linux user\"" %}
+{% include cl.htm cmd="echo $'I'm a Linux user.'" %}
 
-```I&#39;m a Linux user.```
+```I'm a Linux user.```
 
 
 ### Вывести сообщение, содержащее специальные символы
@@ -81,11 +81,11 @@
 
 **Перенаправить в файл**
 
-Вместо отображения вывода на экране вы можете перенаправить его в файл с помощью операторов `&gt;` , `&gt;&gt;` .
+Вместо отображения вывода на экране вы можете перенаправить его в файл с помощью операторов &gt;, &gt;&gt; .
 
-{% include cl.htm cmd="echo -e &#39;The only true wisdom is in knowing you know nothing.nSocrates&#39; &gt;&gt; /tmp/file.txt" %}
+{% include cl.htm cmd="echo -e &#39;The only true wisdom is in knowing you know nothing. Socrates&#39; &gt;&gt; /tmp/file.txt" %}
 
-Если файл file.txt не существует, команда создаст его. При использовании `&gt;` файл будет перезаписан, а <a href="/bash-append-to-file/">символ</a> `&gt;&gt;` <a href="/bash-append-to-file/">добавит вывод в файл</a> .
+Если файл file.txt не существует, команда создаст его. При использовании &gt; файл будет перезаписан, а <a href="/bash-append-to-file/">символ</a> &gt;&gt; <a href="/bash-append-to-file/">добавит вывод в файл</a> .
 
 Используйте команду <a href="/linux-cat-command/">`cat`</a> для просмотра содержимого файла:
 
