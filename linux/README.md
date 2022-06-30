@@ -37,6 +37,7 @@
 
 - [Як...](how_to)
   - [встановити шрифти](how_to/install_fonts)
+  - [восстановить работоспособность USB диска/флешки после записи ISO или установки ОС](recovery_usbflash)
   - [mount -bind](https://access.redhat.com/documentation/ru-ru/red_hat_enterprise_linux/6/html/global_file_system_2/s1-manage-pathnames)
 
 
