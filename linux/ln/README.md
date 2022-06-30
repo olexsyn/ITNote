@@ -6,19 +6,19 @@
 
 **Як можна створити?** Якщо в тій же директорії, то все просто:
 
-{% include cl.htm cmd="ls -s real_file.ext symlink_to_real_file.ext" %}
+{% include cl.htm cmd="ln -s real_file.ext symlink_to_real_file.ext" %}
 
 Але для чого це? Найчастіше (або, напевно, завжди!) є сенс створювати сімлінки в іншому місці. При цьому, краще вказувати повні шляхи:
 
-{% include cl.htm cmd="ls -s /home/user/doc/my_file.ext /home/user/articles/my_file_(link).ext" %}
+{% include cl.htm cmd="ln -s /home/user/doc/my_file.ext /home/user/articles/my_file_(link).ext" %}
 
 А якщо так, то сімлінк створиться з тією ж назвою, що у реального файла:
 
-{% include cl.htm cmd="ls -s /home/user/doc/my_file.ext /home/user/articles/" %}
+{% include cl.htm cmd="ln -s /home/user/doc/my_file.ext /home/user/articles/" %}
 
 Також можна робити лінки на директорії:
 
-{% include cl.htm cmd="ls -s /home/user/backup /home/user/articles/only_for_reading" %}
+{% include cl.htm cmd="ln -s /home/user/backup /home/user/articles/only_for_reading" %}
 
 
 ## Детально:
