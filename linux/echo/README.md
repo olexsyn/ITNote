@@ -137,3 +137,4 @@
 
 ![echo](echo.jpg)
 
+<https://routerus.com/echo-command-in-linux-with-examples/>
