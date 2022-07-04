@@ -1,6 +1,6 @@
 # Создание самоподписанных сертификатов SSL для Apache в (Debian based) Linux
 
-На основе {% include a.htm url="https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04-ru" text="digitalocean.com Tutorials" %}
+На основе {% include a.htm url="https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04-ru" text="digitalocean.com Tutorials" %}
 
 Самоподписанный сертификат шифрует данные, которыми ваш сервер обменивается с любыми клиентами. Однако поскольку он не подписан доверенным центром сертификации из числа встроенных в браузеры, пользователи не могут использовать этот сертификат для автоматической проверки подлинности вашего сервера.
 
