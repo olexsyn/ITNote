@@ -1,24 +1,16 @@
-# Ссылки (жесткие и символические) на файлы и каталоги
+# Посилання (жорсткі та символічні) на файли та каталоги
 
 ## Стисло:
 
-Поки що використовую лише символічні посилання. **Для чого?** Щоб не дублювати (наприклад, великі) файли. Або краще правити один файл, і він змінится в усіх інших місцях, де є на нього посилання. Або ж ні! Усі посилання, будуть вести на змінений файл. Так коректніше.
+{% include cl.htm cmd="ln -s /home/user/doc/real_file.ext /home/user/articles/symlink_to_real_file.ext" %}
 
-**Як можна створити?** Якщо в тій же директорії, то все просто:
+Якщо не вказати ім'я сімлінка, то він створиться з тією ж назвою, що у реального файла:
 
-{% include cl.htm cmd="ln -s real_file.ext symlink_to_real_file.ext" %}
-
-Але для чого це? Найчастіше (або, напевно, завжди!) є сенс створювати сімлінки в іншому місці. При цьому, краще вказувати повні шляхи:
-
-{% include cl.htm cmd="ln -s /home/user/doc/my_file.ext /home/user/articles/my_file_(link).ext" %}
-
-А якщо так, то сімлінк створиться з тією ж назвою, що у реального файла:
-
-{% include cl.htm cmd="ln -s /home/user/doc/my_file.ext /home/user/articles/" %}
+{% include cl.htm cmd="ln -s /home/user/doc/real_file.ext /home/user/articles/" %}
 
 Також можна робити лінки на директорії:
 
-{% include cl.htm cmd="ln -s /home/user/backup /home/user/articles/only_for_reading" %}
+{% include cl.htm cmd="ln -s /home/user/backup /home/user/articles/readonly" %}
 
 
 ## Детально:
