@@ -39,7 +39,7 @@ Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 
 Створити користувача без будь-яких прав:
 
-{% include cl.htm cmd="CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
+{% include cl.htm pref="mysql&gt;" cmd="CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
 
 **Можемо отримати помилку** про недостатній рівень захищеності пароля:
 
