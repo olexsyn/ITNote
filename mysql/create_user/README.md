@@ -37,15 +37,47 @@ Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 
 ## Створення користувача та видача прав
 
-Створити користувача без будь-яких прав. Після цього права призначаються командою 'GRANT'.
+Створити користувача без будь-яких прав:
 
 {% include cl.htm cmd="CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
 
+**Можемо отримати помилку** про недостатній рівень захищеності пароля:
+
+`ERROR 1819 (HY000): Your password does not satisfy the current policy requirements`
+
+У нових версіях за замовчуванням активовано політику на перевірку складності пароля. Подивимося поточні налаштування:
+
+{% include cl.htm cmd="SHOW VARIABLES LIKE 'validate_password%';"
+small="+--------------------------------------+--------+
+| Variable_name                        | Value  |
++--------------------------------------+--------+
+| validate_password.check_user_name    | ON     |
+| validate_password.dictionary_file    |        |
+| validate_password.length             | 8      |
+| validate_password.mixed_case_count   | 1      |
+| validate_password.number_count       | 1      |
+| validate_password.policy             | MEDIUM |
+| validate_password.special_char_count | 1      |
++--------------------------------------+--------+" %}
+
+- **validate_password_check_user_name** – пароль не повинен збігатися з ім'ям користувача.
+- **validate_password_dictionary_file** - використовувати спеціальний файл із словником заборонених паролів.
+- **validate_password_length** – мінімальна довжина пароля.
+- **validate_password_mixed_case_count** - скільки, як мінімум, має бути символів у малій та великій розкладках.
+- **validate_password_number_count** - яку мінімальну кількість цифр використовувати у паролі.
+- **validate_password_policy** – дозволяє задати певний набір правил. Доступні значення LOW (або 0), MEDIUM (1), STRONG (2).
+- **validate_password_special_char_count** - мінімальна кількість спеціальних символів (наприклад, # або !).
+
+Можемо змінити деякі параметри:
+
+{% include cl.htm cmd="SET GLOBAL validate_password.special_char_count = 0;"
+small="Query OK, 0 rows affected (0,02 sec)" %}
+
+Тепер можемо створити користувача з паролем без спеціальних символів.
+
+Після цього права призначаються командою 'GRANT':
+
 {% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost';" %}
-
-
-
-Подробнее про {% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Создание пользователей MySQL/MariaDB и предоставление прав доступа" %}
 
 До MySQL 8 можна було однією командою і створити користувача, і надати йому права:
 
@@ -53,23 +85,23 @@ Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 
 Але, починаючи з версії 8, разробники заборонили її використання. Необхідно спочатку створити користувача (CREATE USER).
 
-Описание команды:
+Опис команди:
 
-- **ALL PRIVILEGES:** предоставляет полные права на использование данных.
-- `*.*`: права предоставляются на все базы и все таблицы.
-- **dbuser:** имя учетной записи.
-- **localhost:** доступ для учетной записи будет предоставлен только с локального компьютера.
-- **password:** пароль, который будет задан пользователю.
-- **WITH GRANT OPTION:** будут предоставлены дополнительные права на изменение структуры баз и таблиц.
+- **ALL PRIVILEGES:** надає повні права на використання даних.
+- `*.*`: права надаються на всі бази та всі таблиці.
+- **dbuser:** ім'я облікового запису.
+- **localhost:** доступ до облікового запису буде надано лише з локального комп'ютера.
+- **password:** пароль, який буде заданий користувачеві.
+- **WITH GRANT OPTION:** будуть надані додаткові права на зміну структури баз та таблиць.
 
-## Другие примеры
+## Інші приклади
 
-Предоставление особых прав пользователю:
+**Надання особливих прав користувачу:**
 
 {% include cl.htm cmd="GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
 
-* права на выборку и обновление данных во всех таблицах базы `base1` для пользователя `dbuser`
-* список всех возможных прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage. [Докладніше](../privileges)
+* права на вибірку та оновлення даних у всіх таблицях бази `base1` для користувача `dbuser`
+* список всіх можливих прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage. [Докладніше](../privileges)
 
 Користувач, що має право змінювати додавати, редагувати, видаляти дані у таблицях однієї бази, створювати тимчасові (для сесії) таблиці:
 
@@ -85,44 +117,7 @@ Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 
 {% include cl.htm cmd="GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';" %}
 
-## Возможные ошибки
+## Див також
 
-**ERROR 1819 (HY000): Your password does not satisfy the current policy requirements**
-
-Причина: в новых версиях по умолчанию активированы политики на проверку сложности пароля. Их список можно посмотреть командой:
-
-
-{% include cl.htm cmd="SHOW VARIABLES LIKE 'validate_password%';" %}
-
-Вывод команды будет, примерно, следующим:
-
-
-| Variable_name                        | Value  |
-| ------------------------------------ | :----: |
-| validate_password_check_user_name    | OFF    |
-| validate_password_dictionary_file    |        |
-| validate_password_length             | 8      |
-| validate_password_mixed_case_count   | 1      |
-| validate_password_number_count       | 1      |
-| validate_password_policy             | MEDIUM |
-| validate_password_special_char_count | 1      |
-
-где:
-
-- **validate_password_check_user_name** - пароль не должен совпадать с именем пользователя.
-- **validate_password_dictionary_file** - использовать специальный файл со словарем запрещенных паролей.
-- **validate_password_length** - минимальная длина пароля.
-- **validate_password_mixed_case_count** - сколько, как минимум, должно быть символов в малой и большой раскладках.
-- **validate_password_number_count** - какое минимальное количество цифр использовать в пароле.
-- **validate_password_policy** - позволяет задать определенный набор правил. Доступны значения LOW (или 0), MEDIUM (1), STRONG (2).
-- **validate_password_special_char_count** - минимальное количество специальных символов (например, # или !).
-
-**Решение:**
-
-- Привести пароль в соответствие требованиям политик.
-- Отключить политику, которая не позволяет использовать желаемый пароль. Например, чтобы отключить требование использовать цифры вводим:
-
-{% include cl.htm cmd="SET GLOBAL validate_password_number_count = 0;" %}
-
-
-См. также: [Права для пользователей]({{ site.baseurl}}/mysql/privileges)
+- [Права для пользователей]({{ site.baseurl}}/mysql/privileges)
+- {% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Создание пользователей MySQL/MariaDB и предоставление прав доступа" %}
