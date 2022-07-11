@@ -6,7 +6,7 @@
 
 Якщо палоль є:
 
-{% include cl.htm cmd="sudo mysql -uroot -p"
+{% include cl.htm pref="$" cmd="sudo mysql -uroot -p"
 small="[sudo] password for olex: 
 Enter password: 
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
@@ -16,7 +16,7 @@ Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1 Ubuntu 18.04
 
 Якщо система налаштована на вхід без паролю:
 
-{% include cl.htm cmd="sudo mysql"
+{% include cl.htm pref="$" cmd="sudo mysql"
 small="Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 8
 Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
@@ -27,11 +27,11 @@ Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 
 Список користувачів:
 
-{% include cl.htm cmd="SELECT user, host FROM mysql.user;" %}
+{% include cl.htm pref="mysql&gt;" cmd="SELECT user, host FROM mysql.user;" %}
 
 Список привілеїв (для кожного користувача виглядає окремо):
 
-{% include cl.htm cmd="SHOW GRANTS FOR 'root'@'localhost';" %}
+{% include cl.htm pref="mysql&gt;" cmd="SHOW GRANTS FOR 'root'@'localhost';" %}
 
 * де `'root'@'localhost'` — обліковий запис, на який дивимося привілеї. Якщо упустити FOR, команда видасть результат користувача, під яким виконано підключення до СУБД.
 
@@ -47,7 +47,7 @@ Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 
 У нових версіях за замовчуванням активовано політику на перевірку складності пароля. Подивимося поточні налаштування:
 
-{% include cl.htm cmd="SHOW VARIABLES LIKE 'validate_password%';"
+{% include cl.htm pref="mysql&gt;" cmd="SHOW VARIABLES LIKE 'validate_password%';"
 small="+--------------------------------------+--------+
 | Variable_name                        | Value  |
 +--------------------------------------+--------+
@@ -70,14 +70,16 @@ small="+--------------------------------------+--------+
 
 Можемо змінити деякі параметри:
 
-{% include cl.htm cmd="SET GLOBAL validate_password.special_char_count = 0;"
+{% include cl.htm pref="mysql&gt;"
+cmd="SET GLOBAL validate_password.special_char_count = 0;"
 small="Query OK, 0 rows affected (0,02 sec)" %}
 
 Тепер можемо створити користувача з паролем без спеціальних символів.
 
 Після цього права призначаються командою 'GRANT':
 
-{% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost';" %}
+{% include cl.htm pref="mysql&gt;"
+cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost';" %}
 
 До MySQL 8 можна було однією командою і створити користувача, і надати йому права:
 
@@ -98,14 +100,18 @@ small="Query OK, 0 rows affected (0,02 sec)" %}
 
 **Надання особливих прав користувачу:**
 
-{% include cl.htm cmd="GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
+{% include cl.htm pref="mysql&gt;"
+cmd="GRANT SELECT, UPDATE ON base1.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
 
 * права на вибірку та оновлення даних у всіх таблицях бази `base1` для користувача `dbuser`
 * список всіх можливих прав: all privileges, alter, create, create temporary tables, delete, drop, execute, file, index, insert, lock tables, process, references, reload, replication client, replication slave, select, show databases, shutdown, super, update, usage. [Докладніше](../privileges)
 
 Користувач, що має право змінювати додавати, редагувати, видаляти дані у таблицях однієї бази, створювати тимчасові (для сесії) таблиці:
 
-{% include cl.htm cmd="GRANT SELECT, UPDATE, INSERT, DELETE, LOCK TABLES, CREATE TEMPORARY TABLES, CREATE VIEW ON base1.* TO 'dbuser'@'localhost';" %}
+{% include cl.htm pref="mysql&gt;" 
+cmd="GRANT
+  SELECT, UPDATE, INSERT, DELETE, LOCK TABLES, CREATE TEMPORARY TABLES, CREATE VIEW
+ON base1.* TO 'dbuser'@'localhost';" %}
 
 Разрешение на удаленное подключение и использование базы MySQL:
 
@@ -115,7 +121,10 @@ small="Query OK, 0 rows affected (0,02 sec)" %}
 
 Создание учетной записи MySQL с правами создания резервных копий:
 
-{% include cl.htm cmd="GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';" %}
+{% include cl.htm pref="mysql&gt;"
+cmd="GRANT 
+  SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES
+ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';" %}
 
 ## Див також
 
