@@ -1,6 +1,10 @@
 # Приклад створення БД, та користувача
 
+## Вхід
+
 Заходимо під root'ом в MySQL (MariaDB):
+
+Якщо палоль є:
 
 {% include cl.htm cmd="sudo mysql -uroot -p"
 small="[sudo] password for olex: 
@@ -10,27 +14,44 @@ Your MariaDB connection id is 47
 Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1 Ubuntu 18.04
 ..." %}
 
-Дивимося, які бази є:
+Якщо система налаштована на вхід без паролю:
 
-{% include cl.htm cmd="MariaDB [(none)]> show databases;"
-small="
-+--------------------+
-| Database           |
-+--------------------+
-| autodb             |
-| information_schema |
-| library            |
-| mysql              |
-| performance_schema |
-| swimdb             |
-+--------------------+" %}
+{% include cl.htm cmd="sudo mysql"
+small="Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
+..." %}
+
+
+## Переглянути існуючих користувачів та їх привілеї
+
+Список користувачів:
+
+{% include cl.htm cmd="SELECT user, host FROM mysql.user;" %}
+
+Список привілеїв (для кожного користувача виглядає окремо):
+
+{% include cl.htm cmd="SHOW GRANTS FOR 'root'@'localhost';" %}
+
+* де `'root'@'localhost'` — обліковий запис, на який дивимося привілеї. Якщо упустити FOR, команда видасть результат користувача, під яким виконано підключення до СУБД.
+
+## Створення користувача та видача прав
+
+Створити користувача без будь-яких прав. Після цього права призначаються командою 'GRANT'.
+
+{% include cl.htm cmd="CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'password';" %}
+
+{% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost';" %}
+
 
 
 Подробнее про {% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Создание пользователей MySQL/MariaDB и предоставление прав доступа" %}
 
-Данный метод позволяет одной командой сразу и создать пользователя, и дать ему права. Но, начиная с MySQL 8, она возвращает ошибку — разработчики запретили ее использование и сначала требуется создать пользователя (с помощью CREATE USER).
+До MySQL 8 можна було однією командою і створити користувача, і надати йому права:
 
-{% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;" %}
+`GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;`
+
+Але, починаючи з версії 8, разробники заборонили її використання. Необхідно спочатку створити користувача (CREATE USER).
 
 Описание команды:
 
