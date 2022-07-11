@@ -5272,7 +5272,6 @@ a[href ^= "mailto"] {
 .prefix {
 	color: #b3b3b3;
 	cursor: none;
-	margin-bottom: 0px !important
 }
 .output {
 	color: #d9d9d9;
