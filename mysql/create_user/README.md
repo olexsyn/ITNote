@@ -28,6 +28,10 @@ Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 
 {% include cl.htm pref="mysql&gt;" cmd="CREATE DATABASE IF NOT EXISTS db_name;" %}
 
+<https://dev.mysql.com/doc/refman/8.0/en/create-database.html>
+
+<https://mariadb.com/kb/ru/create-database/>
+
 ## Переглянути існуючих користувачів та їх привілеї
 
 Список користувачів:
