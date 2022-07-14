@@ -124,7 +124,8 @@ ON base1.* TO 'dbuser'@'localhost';" %}
 
 Разрешение на удаленное подключение и использование базы MySQL:
 
-{% include cl.htm cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'" %}
+{% include cl.htm pref="mysql&gt;" 
+cmd="GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'192.168.0.55' IDENTIFIED BY 'password'" %}
 
 предоставит права пользователю `dbuser`, который будет подключаться с компьютера с IP-адресом `192.168.0.55`.
 
@@ -134,6 +135,16 @@ ON base1.* TO 'dbuser'@'localhost';" %}
 cmd="GRANT 
   SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER, LOCK TABLES
 ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'backup';" %}
+
+## Оновити всі надані привілеї
+
+{% include cl.htm pref="mysql&gt;" cmd="FLUSH PRIVILEGES;" %}
+
+Оновити всі привілеї з таблиць привілеїв у базі даних mysql. Якщо сервер запущено з опцією --skip-grant-table, це знову активує таблиці привілеїв.
+
+<https://dev.mysql.com/doc/refman/8.0/en/privilege-changes.html>
+
+<https://mariadb.com/kb/en/flush/>
 
 ## Див також
 
