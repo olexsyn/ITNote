@@ -22,6 +22,11 @@ Your MySQL connection id is 8
 Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
 ..." %}
 
+## Створення бази даних
+
+{% include cl.htm pref="mysql&gt;" cmd="CREATE DATABASE db_name;" %}
+
+{% include cl.htm pref="mysql&gt;" cmd="CREATE DATABASE IF NOT EXISTS db_name;" %}
 
 ## Переглянути існуючих користувачів та їх привілеї
 
