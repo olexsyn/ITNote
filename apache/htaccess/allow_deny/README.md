@@ -13,8 +13,8 @@
 ```apache
 Order Deny,Allow
 # (або Allow,Deny – в залежності від того, що потрібно)
-Deny from all (или адрес хоста)
-Allow from all (или адрес хоста)
+Deny from all  # (або адреса хоста)
+Allow from all  # (або адреса хоста)
 ```
 
 Наприклад:
