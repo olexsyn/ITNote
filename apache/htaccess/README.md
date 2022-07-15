@@ -1,5 +1,7 @@
 # Файл .htaccess
 
+[Фільтр IP-адрес у .htaccess. Обмеження або надання доступу](allow_deny)
+
 Какие параметры можно переписать в файлах _**.htaccess**_ определяется директивой `AllowOverride`. Для разрешения переопределения всех деректив нужно добавить в конфигурацию сайта строку:
 
 ```apache
@@ -21,24 +23,4 @@ AllowOverride All
 ./
 ./olimp/
 ./olimp/staff/
-```
-
-Пример  
-Предоставим права с помощью файлов _**.htaccess**_, нужно создать соответственно файл `/var/www/html/logos/info1/.htaccess`:
-
-```apache
-Options +Indexes
-Order deny,allow
-Deny from all
-Allow from 192.168.100.11
-Allow from 192.168.100.17
-```
-
-и файл `/var/www/html/logos/info2/.htaccess`:
-
-```apache
-AuthType Basic
-AuthName "Boss"
-AuthUserFile "/var/www/main_users"
-Require valid-user
 ```
