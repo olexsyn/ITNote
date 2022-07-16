@@ -2,6 +2,8 @@
 
 Gwenview - функціональний, з гнучким налаштуванням переглядач зображень від KDE. Але його можна встановити і в інших оточеннях, наприклад, у XFCE.
 
+https://userbase.kde.org/Gwenview/uk
+
 ## Встановлення
 
 {% include cl.htm cmd="sudo apt install gwenview" %}
