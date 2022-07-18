@@ -53,57 +53,65 @@ out="<b>kimageformat-plugins</b>/jammy,now 5.92.0-0ubuntu1 amd64 [installed]
 
 У Linux Lite 6.0, (не знаю, як справи у батьківської Ubuntu 22.04) Gwenview встановлюється без жодної "гарячої" комбінації і працює лише через меню та панелі кнопок. Це можна виправити, створивши і завантаживши файл-схему (`Параметри` -> `Налаштувати клавіатурні скорочення` -> `Керування схемами` -> `Додаткові дії` -> `Імпортувати схему`)
 
-Файл **gwenview.shortcuts**, який можна імпортувати у програму:
+Файл **gwenview.shortcuts**, який можна імпортувати у програму. Експорт, налаштувань буде наново переформатовано, можливо, навіть не всі комбінації будуть відтворені, тому зберігаю його тут:
 
 ```ini
 [Shortcuts]
+# файл - додати каталог до вибраних
 add_folder_to_places=none
 align_with_sidebar=none
 browse=Esc
-# обрізати
+# редагувати - обрізати
 crop=Shift+C
-# видалити файл
+# файл - видалити
 deletefile=Shift+Del
 edit_copy=none
 edit_cut=none
 edit_location=none
 edit_paste=none
+# редагувати - повернути останні відхилені зміни
 edit_redo=Ctrl+Shift+Z
+# редагувати теги (не працює коректно)
 edit_tags=none
+# редагувати - відхилити останні зміни
 edit_undo=Ctrl+Z
-# копіювати файл
+# файл - копіювати
 file_copy_to=F5; C
 # створити каталог
 file_create_folder=F7
+# створити посилання?
 file_link_to=none
-# перенести
+# файл - перенести
 file_move_to=F6
 file_open=Ctrl+O
 file_open_containing_folder=none
 file_open_recent=none
 file_open_with=none
 file_print=none
+# вийти з програми
 file_quit=Q
-# перейменувати файл
+# файл - перейменувати
 file_rename=F2
-# ? чим відр. від reload ?
+# ? чим відр. від reload?
 file_restore=none
-# st
+# файл - зберегти
 file_save=Ctrl+S
-# st
+# # файл - зберегти як
 file_save_as=Ctrl+Shift+S
+# файл - показати властивості
 file_show_properties=Alt+Return
+# файл - видалити у кошик
 file_trash=Del
-# розвернути по вертикалі
+# редагувати - розвернути по вертикалі
 flip=V
 fullscreen=Ctrl+Shift+F; F11
-# st
+# перегляд - стандартна комбінація (home)
 go_first=Home; A
-# st
+# перегляд - стандартна комбінація (end)
 go_last=End; Z
-# ??
+# перегляд - вперед
 go_next=Space; PgDown; Right
-# ??
+# перегляд - назад
 go_previous=Backspace; PgUp; Left
 go_start_page=none
 go_up=Alt+Up
@@ -116,13 +124,16 @@ help_report_bug=none
 help_whats_this=Shift+F1
 leave_fullscreen=none
 mainToolBar=none
-# розвернути по горизонталі
+# редагувати - розвернути по горизонталі
 mirror=H
+# панель команд
 open_kcommand_bar=Ctrl+Alt+I
 options_configure=Ctrl+Shift+,
 options_configure_keybinding=Ctrl+Alt+,
 options_configure_toolbars=none
+# інтерфейс - меню
 options_show_menubar=Alt+M
+# інтерфейс - смужка статусу
 options_show_statusbar=F3
 rate_0=none
 rate_1=none
@@ -130,37 +141,49 @@ rate_2=none
 rate_3=none
 rate_4=none
 rate_5=none
+# редагувати - виправити "червоні очі"
 red_eye_reduction=Shift+E
-# ? чим відр. від file_restore ?
+# ? чим відр. від file_restore?
 reload=Shift+F5
 replace_location=none
-# змінити розмір
+# редагувати - змінити розмір
 resize=Shift+R
-# повернути ліворуч
+# редагувати - повернути ліворуч
 rotate_left=L
-# повернути лправоруч
+# редагувати - повернути праворуч
 rotate_right=R
+# файл - поділитися
 share=none
 sort_desc=none
+# інтерфейс
 switch_application_language=none
+# ??
 synchronize_views=Ctrl+Y
+# ??
 toggle_operations_sidebar=none
 # показати/сховати бокову панель
 toggle_sidebar=F4
+# перегляд - слайдшоу
 toggle_slideshow=none
+# інтерфейс - показати мініатюри
 toggle_thumbnailbar=Ctrl+B
 view=none
+# перегляд - актуальний розмір (O)riginal
 view_actual_size=O
 view_background_colormode_auto=none
 view_background_colormode_dark=none
 view_background_colormode_light=none
 view_background_colormode_neutral=none
 view_toggle_birdeyeview=none
+# перегляд - збільшити
 view_zoom_in=+; =
+# перегляд - зменшити
 view_zoom_out=-;\s
-# розширити до максимуму по меньшій стороні (картинка буде обрізана по більшій стороні)
+# розтягти зображення до максимуму по меншій стороні
+# (весь екран буде заповнений, але зображення буде обрізане по більшій стороні)
 view_zoom_to_fill=Ctrl+F
-# розширити до максимуму по більшій стороні (картинка повністю)
+# розтягти зображення до максимуму по більшій стороні
+# (вся картинка буде повністю на екрані)
 view_zoom_to_fit=F
 ```
 
