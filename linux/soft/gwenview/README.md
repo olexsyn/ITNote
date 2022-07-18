@@ -4,6 +4,8 @@ Gwenview - функціональний, з гнучким налаштуван�
 
 https://userbase.kde.org/Gwenview/uk
 
+[Gwenview 21.08 worse image quality when enlarging images](https://www.reddit.com/r/kde/comments/slwmyn/gwenview_2108_worse_image_quality_when_enlarging/)
+
 ## Встановлення
 
 {% include cl.htm cmd="sudo apt install gwenview" %}
