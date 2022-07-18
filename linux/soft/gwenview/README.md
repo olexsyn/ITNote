@@ -58,38 +58,52 @@ out="<b>kimageformat-plugins</b>/jammy,now 5.92.0-0ubuntu1 amd64 [installed]
 add_folder_to_places=none
 align_with_sidebar=none
 browse=Esc
+# обрізати
 crop=Shift+C
+# видалити файл
 deletefile=Shift+Del
-edit_copy=Ctrl+C; Ctrl+Ins
-edit_cut=Ctrl+X; Shift+Del
-edit_location=F6
-edit_paste=Ctrl+V; Shift+Ins
+edit_copy=none
+edit_cut=none
+edit_location=none
+edit_paste=none
 edit_redo=Ctrl+Shift+Z
-edit_tags=Ctrl+T
+edit_tags=none
 edit_undo=Ctrl+Z
-file_copy_to=C
+# копіювати файл
+file_copy_to=F5; C
+# створити каталог
 file_create_folder=F7
-file_link_to=F9
-file_move_to=X
+file_link_to=none
+# перенести
+file_move_to=F6
 file_open=Ctrl+O
 file_open_containing_folder=none
 file_open_recent=none
 file_open_with=none
 file_print=none
 file_quit=Q
+# перейменувати файл
 file_rename=F2
+# ? чим відр. від reload ?
 file_restore=none
+# st
 file_save=Ctrl+S
+# st
 file_save_as=Ctrl+Shift+S
 file_show_properties=Alt+Return
 file_trash=Del
-flip=Shift+H
+# розвернути по вертикалі
+flip=V
 fullscreen=Ctrl+Shift+F; F11
+# st
 go_first=Home; A
+# st
 go_last=End; Z
-go_next=Space; PgDown
-go_previous=Backspace; PgUp
-go_start_page=Alt+Home; Home Page
+# ??
+go_next=Space; PgDown; Right
+# ??
+go_previous=Backspace; PgUp; Left
+go_start_page=none
 go_up=Alt+Up
 hamburger_menu=none
 help_about_app=none
@@ -100,7 +114,8 @@ help_report_bug=none
 help_whats_this=Shift+F1
 leave_fullscreen=none
 mainToolBar=none
-mirror=Ctrl+H
+# розвернути по горизонталі
+mirror=H
 open_kcommand_bar=Ctrl+Alt+I
 options_configure=Ctrl+Shift+,
 options_configure_keybinding=Ctrl+Alt+,
@@ -114,29 +129,36 @@ rate_3=none
 rate_4=none
 rate_5=none
 red_eye_reduction=Shift+E
-reload=F5; Refresh
+# ? чим відр. від file_restore ?
+reload=Shift+F5
 replace_location=none
+# змінити розмір
 resize=Shift+R
-rotate_left=Ctrl+L
-rotate_right=Ctrl+R
+# повернути ліворуч
+rotate_left=L
+# повернути лправоруч
+rotate_right=R
 share=none
 sort_desc=none
 switch_application_language=none
 synchronize_views=Ctrl+Y
 toggle_operations_sidebar=none
+# показати/сховати бокову панель
 toggle_sidebar=F4
 toggle_slideshow=none
 toggle_thumbnailbar=Ctrl+B
 view=none
-view_actual_size=0
+view_actual_size=O
 view_background_colormode_auto=none
 view_background_colormode_dark=none
 view_background_colormode_light=none
 view_background_colormode_neutral=none
 view_toggle_birdeyeview=none
-view_zoom_in=Ctrl++; Ctrl+=
-view_zoom_out=Ctrl+-
-view_zoom_to_fill=Shift+F
+view_zoom_in=+; =
+view_zoom_out=-;\s
+# розширити до максимуму по меньшій стороні (картинка буде обрізана по більшій стороні)
+view_zoom_to_fill=Ctrl+F
+# розширити до максимуму по більшій стороні (картинка повністю)
 view_zoom_to_fit=F
 ```
 
