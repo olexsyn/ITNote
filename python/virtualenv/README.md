@@ -1,5 +1,8 @@
 # Віртуальне оточення
 
+    python3 -m venv .env
+    source .env/bin/activate
+
 каталоги Python зазвичай:
 
 ```
