@@ -10,7 +10,7 @@
 
 Також можна робити лінки на директорії:
 
-{% include cl.htm cmd="ln -s /home/user/backup /home/user/articles/readonly" %}
+{% include cl.htm cmd="ln -s /work/www(_real) /home/user/www(_link)" %}
 
 
 ## Детально:
