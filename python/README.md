@@ -81,6 +81,8 @@ if __name__ == '__main__':
 - {%  include a.htm url="https://pbpython.com/pdf-reports.html" text="Creating PDF Reports with Pandas, Jinja and WeasyPrint" %}
 
 - [Форма + AJAX](form_ajax)
+- {% include a.htm url="https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html" text="" %}
+- [Локализация приложений на Python](localization)
 
 - [Отправка e-mail](email)
 - [Примеры CGI](cgi-examples)
