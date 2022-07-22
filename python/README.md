@@ -16,6 +16,13 @@
 - [Функции sum, min и max](list/sum_min_max/)
 - [Метод списка list.sort() и функция sorted()](list/sort_sorted)
 
+
+### Словари
+
+{% include a.htm url="https://pythobyte.com/how-to-merge-two-dictionaries-in-python-48547651/" text="Как объединить два словаря в Python" %}
+
+
+
 ## Арифметика
 
 ### Три простых способа поменять знак числа на противоположный
