@@ -1,4 +1,4 @@
-- [Синтаксис](syntax)
+- [Синтаксис](syntax) Також див. [Python. Конспект](python_abstract)
 - [Типы данных](types)
 - [Модули](modules)
 - [Библиотеки](library)
