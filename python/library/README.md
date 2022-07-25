@@ -24,6 +24,8 @@
 - [Colorama - PyPI](https://pypi.org/project/colorama/)
   * [Цветной вывод текста в Python: Colorama](https://pythonru.com/biblioteki/tsvetnoj-vyvod-teksta-v-python-colorama)
   * [Цветной вывод текста в Python](https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html)
+- [Practical Cryptography for Developers - PBKDF2](https://cryptobook.nakov.com/mac-and-key-derivation/pbkdf2)
+
 
 ### Модуль argparse
 
