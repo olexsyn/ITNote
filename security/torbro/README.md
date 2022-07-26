@@ -2,6 +2,8 @@
 
 ## Прибрати рамки вікна
 
-```about:config``` > search ```letter``` > select ```privacy.resistFingerprinting.letterboxing``` > set to ```False```
+```about:config``` > search "```boxing```"
+
+подвійний клік на ```privacy.resistFingerprinting.letterboxing``` встановлює у ```False```
 
 
