@@ -2,6 +2,10 @@
 
 [Electro](electro)
 
+## Canon PIXMA E3340
+
+https://www.canon-europe.com/support/consumer_products/products/printers/inkjet/other_pixma/pixma-e3340.html?type=drivers&language=en&os=linux
+
 ## Timer Feron TM22
 
 https://www.youtube.com/watch?v=_Nz2YFG575k
@@ -19,7 +23,7 @@ https://www.youtube.com/watch?v=_Nz2YFG575k
 
 # . hardware
 
-## Мой планшет Samsung
+## планшет Samsung
 
 **_Samsung Galaxy Tab 2 7"_** ()
 
@@ -27,7 +31,7 @@ https://www.youtube.com/watch?v=_Nz2YFG575k
 
 [Как разобрать Самсунг Галакси Таб 2 - YouTube](https://www.youtube.com/watch?v=dUN2zrVLFI8)
 
-## Мой нетбук
+## нетбук
 
 **_Samsung N143 Plus//** (NP-N143-DP04UA)  http:_www.samsung.com/ua_ru/support/model/NP-N143-DP04UA
 
