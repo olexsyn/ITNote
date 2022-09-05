@@ -51,7 +51,7 @@ out="Syntax OK" %}
 
 та перезапустити http-сервер:
 
-{% include cl.htm cmd="systemctl reload apache2" %}
+{% include cl.htm cmd="sudo systemctl reload apache2" %}
 
 **Команда для відключення конфігурації** віртуального хоста:
 
