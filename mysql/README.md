@@ -6,6 +6,7 @@
 - [ALTER TABLE](alter_table)
 - [Auto_increment](auto_increment)
 - [Клонування таблиць](clone_table)
+- [Завантаження даних з файлу](load_data_from_file)
 - [LIMIT](limit)
   - [LIMIT з кінця таблиці](limit_from_end)
 - [Выборка случайны записей](rand_strings)
