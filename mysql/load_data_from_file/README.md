@@ -2,7 +2,7 @@
 
 ### Помилка mysql Can't get stat of (Errcode: 13 "Permission denied")
 
-**MariaDB (MySQL?)**: Скоріш за все при використанні ```LOAD DATA INFILE ``` ти отримаєш повідомлення про "Permission denied". Ніякі призначення файлу власника "mysql" (як написано далі у статті), або дозволів типу "777" не вплитнуть на результат запиту. Тому що MariaDB за замовчуванням не  завантажує файли з директорій користувачів. Читай [ось тут](https://mariadb.com/kb/en/systemd/#configuring-access-to-home-directories).
+**MariaDB (MySQL?)**: Скоріш за все при використанні ```LOAD DATA INFILE ``` ти отримаєш повідомлення про "Permission denied". Ніякі призначення файлу власника "mysql" (як написано далі у статті), або дозволів типу "777" не вплитнуть на результат запиту. Тому що MariaDB за замовчуванням не  завантажує файли з директорій користувачів. Читай тут: [MariaDB](https://mariadb.com/kb/en/systemd/#configuring-access-to-home-directories) | [MySQL](https://dev.mysql.com/doc/refman/8.0/en/load-data.html).
 
 створюємо директорію (якщо нема):
 ```
