@@ -1,12 +1,14 @@
 # MySQL
 
+- [MariaDB Connector/Python](https://mariadb.com/docs/appdev/connector-python/)
+- [MySQL Connector/Python Developer Guide](https://dev.mysql.com/doc/connector-python/en/)
 - [Типы данных](datatype)
   - [Про NULL](null)
   - [Datetime или timestamp](https://habr.com/ru/post/61391/)
 - [ALTER TABLE](alter_table)
 - [Auto_increment](auto_increment)
 - [Клонування таблиць](clone_table)
-- [Завантаження даних з файлу](load_data_from_file)
+- [Завантаження даних з файлу](load_data_from_file) - LOAD DATA INFILE
 - [LIMIT](limit)
   - [LIMIT з кінця таблиці](limit_from_end)
 - [Выборка случайны записей](rand_strings)
@@ -116,6 +118,5 @@ https://andreyex.ru/mysql/mysql-kommentarii-v-glubinu/
 
 
 
-[MariaDB Connector/Python](https://mariadb.com/docs/appdev/connector-python/)
 
 [Как установить PostgreSQL на Ubuntu 20.04](https://andreyex.ru/ubuntu/kak-ustanovit-postgresql-na-ubuntu-20-04/)
