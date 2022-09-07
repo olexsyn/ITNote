@@ -5,6 +5,8 @@
 - [Vue](vue)
 
 - [var, let и const](var_let_const)
+- [XMLHttpRequest](https://learn.javascript.ru/xmlhttprequest/)
+  - [XMLHttpRequest POST, формы и кодировка](https://learn.javascript.ru/xhr-forms)
 
 ## Решения
 
