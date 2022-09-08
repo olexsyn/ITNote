@@ -1,4 +1,4 @@
-# MySQL
+# MySQL .
 
 - [MariaDB Connector/Python](https://mariadb.com/docs/appdev/connector-python/)
 - [MySQL Connector/Python Developer Guide](https://dev.mysql.com/doc/connector-python/en/)
