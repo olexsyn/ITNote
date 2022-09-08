@@ -1,4 +1,4 @@
-# MySQL .
+# MySQL
 
 - [MariaDB Connector/Python](https://mariadb.com/docs/appdev/connector-python/)
 - [MySQL Connector/Python Developer Guide](https://dev.mysql.com/doc/connector-python/en/)
@@ -73,9 +73,9 @@ mysql> show index from rank_st;
   - <http://ans.kiev.ua/wiki/mysql/fulltext1> FULLTEXT, MATCH/AGAINST
   - <http://ans.kiev.ua/wiki/mysql/fulltext_dubua> Полнотекстовый поиск типа FULLTEXT Дюбуа :book: стр.199-205
 
-Индексы в MySQL (ruhighload)
-Индексы в MySQL: многоколоночные индексы против комбинированных индексов :habr:
-Основы индексирования и возможности EXPLAIN
+- Индексы в MySQL (ruhighload)
+- Индексы в MySQL: многоколоночные индексы против комбинированных индексов :habr:
+- Основы индексирования и возможности EXPLAIN
 
 ---
 
@@ -94,11 +94,11 @@ mysql> show index from rank_st;
   - https://andreyex.ru/bazy-dannyx/uchebnoe-posobie-po-sql/sql-cartesian-ili-cross-joins/
   
 
-https://andreyex.ru/bazy-dannyx/bd-mysql/vnutrennee-soedinenie-mysql/
+- https://andreyex.ru/bazy-dannyx/bd-mysql/vnutrennee-soedinenie-mysql/
 
-https://andreyex.ru/bazy-dannyx/uchebnoe-posobie-po-sql/sql-strokovye-funkcii/
+- https://andreyex.ru/bazy-dannyx/uchebnoe-posobie-po-sql/sql-strokovye-funkcii/
 
-https://andreyex.ru/bazy-dannyx/uchebnoe-posobie-po-sql/sql-chislovye-funkcii/
+- https://andreyex.ru/bazy-dannyx/uchebnoe-posobie-po-sql/sql-chislovye-funkcii/
 
 https://andreyex.ru/bazy-dannyx/10-rasprostranennyh-oshibok-programmirovaniya-na-sql-i-kak-ih-izbezhat/
 
