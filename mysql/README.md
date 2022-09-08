@@ -5,6 +5,7 @@
 - [Типы данных](datatype)
   - [Про NULL](null)
   - [Datetime или timestamp](https://habr.com/ru/post/61391/)
+- [Коректне сортування українських літер](sort_ukr)
 - [ALTER TABLE](alter_table)
 - [Auto_increment](auto_increment)
 - [Клонування таблиць](clone_table)
