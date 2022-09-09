@@ -1,8 +1,8 @@
 # Завантаження даних з файлу
 
-### Помилка mysql Can't get stat of (Errcode: 13 "Permission denied")
+### Помилка mysql: Can't get stat of '/home/user/datafile.txt' (Errcode: 13 "Permission denied")
 
-**MariaDB (MySQL?)**: Скоріш за все при використанні ```LOAD DATA INFILE ``` ти отримаєш повідомлення про "Permission denied". Ніякі призначення файлу власника "mysql" (як написано далі у статті), або дозволів типу "777" не вплитнуть на результат запиту. Тому що MariaDB за замовчуванням не  завантажує файли з директорій користувачів. Читай тут: [MariaDB](https://mariadb.com/kb/en/systemd/#configuring-access-to-home-directories) | [MySQL](https://dev.mysql.com/doc/refman/8.0/en/load-data.html).
+**MariaDB / (MySQL?)**: Скоріш за все при використанні ```LOAD DATA INFILE ``` ти отримаєш повідомлення про "Permission denied". Ніякі призначення файлу власника "mysql" (як написано далі у статті), або дозволів типу "777" не вплитнуть на результат запиту. Тому що MariaDB  / (MySQL?) за замовчуванням не завантажує файли з директорій користувачів. Читай тут: [MariaDB](https://mariadb.com/kb/en/systemd/#configuring-access-to-home-directories) / ([MySQL](https://dev.mysql.com/doc/refman/8.0/en/load-data.html)).
 
 створюємо директорію (якщо нема):
 ```
@@ -16,16 +16,14 @@ sudo tee /etc/systemd/system/mariadb.service.d/dontprotecthome.conf <<EOF
 ProtectHome=false
 EOF
 ```
-Сказано перезавантажити демон...
+Пперезавантажуємо mysql/mariadb...
 ```
-sudo systemctl daemon-reload
+sudo service mysql restart
 ```
-...але запрацювало в мене лише після перезавантаження компа. (Хоча, можливо, треба було спробувати вийти та знову зайти в клієнт SQL)
-
-
-https://andreyex.ru/bazy-dannyx/baza-dannyx-mysql/10-primerov-vxodnoj-zagruzki-dannyx-iz-tekstovogo-fajla-v-tablicy-mysql/
 
 ## 10 Примеров входной загрузки данных из текстового файла в таблицы MySQL
+
+https://andreyex.ru/bazy-dannyx/baza-dannyx-mysql/10-primerov-vxodnoj-zagruzki-dannyx-iz-tekstovogo-fajla-v-tablicy-mysql/
 
 Если у вас есть данные в текстовом файле, вы можете легко загрузить их в одну или несколько таблиц в базе данных.
 
